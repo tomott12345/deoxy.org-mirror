@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+<ShortName>deoxy video</ShortName>
+<Description>video search at deoxy.org</Description>
+<Tags>deoxy video</Tags>
+<Image height="16" width="16" type="image/vnd.microsoft.icon">http://deoxy.org/img/smpte.ico</Image>
+<Url type="text/html" template="http://deoxy.org/videx?q={searchTerms}" />
+<Url type="application/opensearchdescription+xml" rel="self" template="http://deoxy.org/opensearch/videx.xml" />
+<Query role="example" searchTerms="dna" />
+</OpenSearchDescription>

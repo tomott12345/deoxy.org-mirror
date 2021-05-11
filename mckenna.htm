@@ -1,0 +1,1166 @@
+<html>
+<head>
+<title>Terence McKenna Land</title>
+<META name="description" content="Deep hypermedia library dedicated to Terence McKenna">
+<META HTTP-EQUIV="Keywords" CONTENT="terence mckenna gaia entheogen psychedelic psilocybin ching timewave zero eschaton eschatology ethnopharmacology ethnobotany shamanism shaman cyberethnopharmacology omega hyperspace dmt elves physics consciousness life biology nature light meme tryptamine dimethyltryptamine terence archaic revival mckenna mushroom dream dreamtime oversoul saucer revolution visible language virtual reality tyke apocalypse alchemy language reality magic dennis mckenna fractal time morphogenetic resonance dna psychoactive ayhuasca alien hyperdimension mckenna">
+<META NAME="description" CONTENT="index">
+<LINK REL="home"       HREF="index.html">
+<LINK REL="search"     HREF="http://deoxy.org/find">
+<LINK REL="stylesheet" HREF="inc/css/deoxy.org.css" TYPE="text/css">
+<LINK REL="alternate"  HREF="cgi/nu.pl@rss=1" TITLE="recent changes at deoxy.org" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/news/cloud?rss=1" TITLE="deoxy news cloud" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/news/cloud/today?rss=1" TITLE="deoxy news cloud today" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="news/feeds/moonphase.xml" TITLE="lunar phases" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/video/random/rss" TITLE="random video" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="koans@rss=1" TITLE="random koan" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="iching/random/rss" TITLE="random iching hexagram" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/cgi/randlink.pl?rss=1" TITLE="random link at deoxy.org" TYPE="application/rss+xml">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/find.xml"  title="deoxy find">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/news.xml"  title="deoxy news">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/newstoday.xml"  title="deoxy news today">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/videx.xml" title="deoxy video">
+<style type="text/css">input.wikiform { background-color:#111111; font-size:13px; color:#909090; border:0px; cursor:pointer; }</style>
+<meta name="MSSmartTagsPreventParsing" content="true">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="robots" content="all">
+
+<LINK REL="stylesheet" HREF="inc/css/print.css" TYPE="text/css" MEDIA="print">
+<script type="text/javascript" src="bin/chatterwindow.js"></script>
+<script type="text/javascript" src="bin/cookies.js"></script>
+<script type="text/javascript">
+function openVideo(id) {
+ var s = 'screenX=100,screenY=100,left=100,top=100,width=640,height=565,'
+ var x = 'resizable=1,status=0,menubar=0,toolbar=0,location=0,scrollbars=0'
+ window.open('http://deoxy.org/video/'+id,'',s+x)}
+</script>
+
+<script type="text/javascript" src="bin/flux.js"></script>
+<SCRIPT LANGUAGE="JavaScript"><!--
+/* Javascript Countdown Timer (version 1.0) Copyright (C) 1997 Andrew Turi  All Rights Reserved. Permission given to use this script provided that this copyright notice remains in tact. [E-mail: andrew@2-cool.com] */
+var timerID;
+var timerRunning = false;
+var today = new Date();
+var count = new Date();
+var secPerDay = 0;
+var minPerDay = 0;
+var hourPerDay = 0;
+var secsLeft = 0;
+var secsRound = 0;
+var secsRemain = 0;
+var minLeft = 0;
+var minRound = 0;
+var dayRemain = 0;
+var minRemain = 0;
+var Expire = 0;
+var timeRemain = 0;
+var timeRemain2 = 0;
+var timeUp = "Timewave Zero in full effect"    // enter text to be displayed when countdown is finished
+var time = "0 days, 0 hours, 0 minutes, 0 seconds" //do not modify this text
+
+function stopclock() {
+  if (timerRunning) {
+    clearTimeout(timerID);
+    timerRunning = false;
+  }
+}
+
+function startclock () {
+  stopclock();
+  showtime();
+}
+
+function showtime () {
+  today = new Date();
+
+  //unmark either of the two following lines
+  //count = new Date("December 21, 2012");       // enter date to count down to (use the same format)
+  count = new Date(document.clock.indate.value); // let the user enter the date to count down to in the input box
+
+secsPerDay = 1000 ;
+minPerDay = 60 * 1000 ;
+hoursPerDay = 60 * 60 * 1000;
+PerDay = 24 * 60 * 60 * 1000;
+PerYear = 24 * 60 * 60 * 1000 * 365;
+Expire = (count.getTime() - today.getTime())
+
+/*Seconds*/
+secsLeft = (count.getTime() - today.getTime()) / minPerDay;
+secsRound = Math.round(secsLeft);
+secsRemain = secsLeft - secsRound;
+secsRemain = (secsRemain < 0) ? secsRemain = 60 - ((secsRound - secsLeft) * 60) : secsRemain = (secsLeft - secsRound) * 60;
+secsRemain = Math.round(secsRemain);
+
+/*Minutes*/
+minLeft = ((count.getTime() - today.getTime()) / hoursPerDay);
+minRound = Math.round(minLeft);
+minRemain = minLeft - minRound;
+minRemain = (minRemain < 0) ? minRemain = 60 - ((minRound - minLeft)  * 60) : minRemain = ((minLeft - minRound) * 60);
+minRemain = Math.round(minRemain - 0.495);
+
+/*Hours*/
+hoursLeft = ((count.getTime() - today.getTime()) / PerDay);
+hoursRound = Math.round(hoursLeft);
+hoursRemain = hoursLeft - hoursRound;
+hoursRemain = (hoursRemain < 0) ? hoursRemain = 24 - ((hoursRound - hoursLeft)  * 24) : hoursRemain = ((hoursLeft - hoursRound) * 24);
+hoursRemain = Math.round(hoursRemain - 0.5);
+
+/*Days*/
+daysLeft    = ((count.getTime() - today.getTime()) / PerYear);
+daysRound   = Math.round(daysLeft);
+daysRemain  = daysLeft - daysRound;
+daysRemain  = (daysRemain < 0) ? daysRemain = 365 - ((daysRound - daysLeft)  * 365) : daysRemain = ((daysLeft - daysRound) * 365);
+daysRemain  = Math.round(daysRemain - 0.5);
+daysLeft    = ((count.getTime() - today.getTime()) / PerDay);
+daysLeft    = (daysLeft);
+daysRound   = Math.round(daysLeft);
+daysRemain2 = daysRound;
+
+/*Years*/
+yearsLeft   = ((count.getTime() - today.getTime()) / PerYear);
+yearsLeft   = (yearsLeft);
+yearsRound  = Math.round(yearsLeft);
+yearsRemain = yearsRound - 1;
+
+/*Fixes*/
+if (yearsRemain == 1) yearsRemain = yearsRemain + " year, ";
+        else yearsRemain = yearsRemain + " years, "; 
+if (daysRemain == 1) daysRemain = daysRemain + " day, ";
+        else daysRemain = daysRemain + " days, "; 
+if (daysRemain2 == 1) daysRemain2 = daysRemain2 + " day, ";
+        else daysRemain2 = daysRemain2 + " days "; 
+if (hoursRemain == 1) hoursRemain = hoursRemain + " hour,  ";
+        else hoursRemain = hoursRemain + " hours,  ";
+if (minRemain == 1) minRemain = minRemain + " minute,  ";
+        else minRemain = minRemain + " minutes,  ";
+if (secsRemain == 1) secsRemain = secsRemain + " second";
+        else secsRemain = secsRemain + " seconds";
+
+/*Time*/
+timeRemain = yearsRemain + daysRemain + hoursRemain + minRemain + secsRemain;
+//shows the number of days, hours, secs, minutes until...
+timeRemain2 = daysRemain2 + hoursRemain + minRemain + secsRemain;
+//shows the number of years, days, hours, secs, minutes until...
+timeRemain3 = daysRemain2
+//shows the days until...
+
+window.status = "";
+document.clock.face.value  = timeRemain;
+document.clock.face2.value = timeRemain2;
+document.clock.face3.value = timeRemain3;
+timerID = setTimeout("showtime()",1000);
+timerRunning = true;
+
+if (Expire <= 0) {
+  document.clock.face.value = time;  // choose either "time" or "timeUp"  (without quotes)
+  stopclock();
+  }
+}
+
+var param = new Array();
+var qs = window.location.search.substring(1);
+if (qs) {
+  qs = qs.replace(/\+/g, ' ')
+  var arg = qs.split('&')
+  for (var i=0; i<arg.length; i++) {
+    var duo = arg[i].split('=')
+    var key = unescape(duo[0])
+    var val;
+    if (duo.length == 2)
+      val = unescape(duo[1])
+    else
+      val = key
+    param[key] = val
+  }
+}
+//--></SCRIPT>
+</head>
+<body bgcolor="#000000" text="#66aa66" link="#fafffa" vlink="#aaffcc" onLoad="startclock()">
+<a name=top></a>
+<a name="top"></a><div id=_header>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr bgcolor="#111111">
+<td nowrap rowspan=2 bgcolor="#000000" width="20" background='gif/background2.jpg'>&nbsp;</td>
+<td nowrap rowspan=2 bgcolor="#000000" align=center style=width:90px;><a
+ href="index.html"
+ title=deoxy.org
+ target=_top><!-- img
+ src="http://deoxy.org/gif/ooleft_left.gif" border=0 
+--><img src="vi/AjDvdsCe3lg.jpg" style=height:68px;width:100%;margin-left:1px; border=0></a></td>
+<form action='http://deoxy.org/cgi/jump.pl' method="post">
+<td nowrap align="right" background='img/vortex0b.gif'>
+
+<table cellspacing="0" cellpadding="0" border=0 background='gif/background2.jpg'><tr><td nowrap>
+<select name="to" class="select" onChange="x=this.options[this.selectedIndex].value;location.href=x.match(/^http:/)?x:'http://deoxy.org/'+x;">
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="nu.htm">&nbsp;&nbsp;\_updates</option>
+<!-- option value="watts.htm">alanwatts</option -->
+<!-- option value="alephnull">aleph</option -->
+<option value="8brains.htm">circuits</option>
+<option value="8basic.htm">&nbsp;&nbsp;\_scripts</option>
+
+
+
+<!-- option value="ct">crimethinc</option -->
+<option value="gacwao">defrag</option>
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="contact">&nbsp;&nbsp;|_contact</option>
+<option VALUE="http://m.deoxy.org">&nbsp;&nbsp;|_mobile</option>
+<!-- option value="wiki/Deoxy/Help">&nbsp;&nbsp;|_help</option -->
+<option value="meme/DNA">DNA</option>
+<option value="find">Find?</option>
+<!-- option value="forum">forum</option>
+<option value="newposts">&nbsp;&nbsp;|_newposts</option -->
+<!-- option value="hyper.htm">hyperspace</option -->
+<option value="iching">IChing</option>
+<option value="iching/random">&nbsp;&nbsp;\_random</option>
+<option value="imagine.mil">imagine.mil</option>
+<option value="inc.htm">incunabula</option>
+<!-- option value="http://irc.deoxy.org">IRC status</option -->
+<option value="koans">koans</option>
+<option value="koan/random">&nbsp;&nbsp;\_random</option>
+
+<option value="media">media</option>
+<option value="media/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="meme">meme</option>
+<option value="meme/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="news">news</option>
+<option VALUE="news/cloud/today">&nbsp;&nbsp;|_today</option>
+<option VALUE="news/digestc">&nbsp;&nbsp;|_digest</option>
+<option VALUE="news/view">&nbsp;&nbsp;|_category</option>  
+<option VALUE="http://m.deoxy.org/news">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\_mobile</option>
+<option value="omega.htm">omega</option>
+<option value="pdfa">PDFA</option>
+<option value="index/People">People</option>
+<option value="leary.htm">&nbsp;&nbsp;|_Leary</option>
+<option value="lilly.htm">&nbsp;&nbsp;|_Lilly</option>
+<option value="mckenna.htm">&nbsp;&nbsp;|_McKenna</option>
+<option value="media/McLuhan">&nbsp;&nbsp;|_McLuhan</option>
+<option value="raw.htm">&nbsp;&nbsp;|_RAWilson</option>
+<option value="philo.htm">philosophos</option>
+<option value="cgi/randlink.pl?go">random</option>
+<option value="rss.htm">RSS</option>
+<!-- option value="time/sabbats.htm">sabbats</option>
+<option value="shaman.htm">shaman</option -->
+<option value="stats">stats</option>
+<option value="maps">&nbsp;&nbsp;\_map</option>
+<!-- option value="tcrime.htm">thoughtcrime</option -->
+<option value="topics">topics</a>
+<option value="nu.htm">&nbsp;&nbsp;\_cloud</option>
+<option value="nu.htm">updates</option>
+<option value="wiki/Deoxy/Video">video</option>
+<option value="videx">&nbsp;&nbsp;|_index</option>
+<option value="vidcloud">&nbsp;&nbsp;|_cloud</option>
+<option value="vidimg">&nbsp;&nbsp;|_images</option>
+<option VALUE="warnings.htm">warnings</option>
+<!-- option value="wiki">wiki</option>
+<option value="wiki/Recent">&nbsp;&nbsp;|_changes</option>
+<option value="wiki/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="online">who's online</option -->
+</select>
+
+<input type="hidden" name="from" value='/mckenna.htm'>
+<noscript><input type="Submit" value="go" class="button"></noscript>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></form>
+
+<form action="http://translate.google.com/translate" method="post" target="_top" name="trans" id="trans"><td nowrap align="center">
+<input type="Submit" value="to" class="button" title="Google translation">
+<select name="tl" class="select" title="Google translation">
+<option value=af>Afrikaans</option>
+<option value=sq>Albanian</option>
+<option value="ar">Arabic</option>
+<option value=hy>Armenian</option>
+<option value=az>Azerbaijani</option>
+<option value=eu>Basque</option>
+<option value=be>Belarusian</option>
+<option value=bn>Bengali</option>
+<option value=bs>Bosnian</option>
+<option value="bg">Bulgarian</option>
+<option value=my>Burmese</option>
+<option value="ca">Catalan</option>
+<option value=ceb>Cebuano</option>
+<option value=ny>Chichewa</option>
+<option value="zh-CN">Chinese CN</option>
+<option value="zh-TW">Chinese TW</option>
+<option value="hr">Croatian</option>
+<option value="cs">Czech</option>
+<option value="da">Danish</option>
+<option value="nl">Dutch</option>
+<option value=eo>Esperanto</option>
+<option value="et">Estonian</option>
+<option value="tl">Filipino</option>
+<option value="fi">Finnish</option>
+<option value="fr">French</option>
+<option value="gl">Galacian</option>
+<option value=ka>Georgian</option>
+<option value="de">German</option>
+<option value="el">Greek</option>
+<option value=gu>Gujarati</option>
+<option value=ht>Haitian Creole</option>
+<option value=ha>Hausa</option>
+<option value="iw">Hebrew</option>
+<option value="hi">Hindi</option>
+<option value=hmn>Hmong</option>
+<option value="hu">Hungarian</option>
+<option value=is>Icelandic</option>
+<option value=ig>Igbo</option>
+<option value="id">Indonesian</option>
+<option value=ga>Irish</option>
+<option value="it">Italian</option>
+<option value="ja">Japanese</option>
+<option value=jw>Javanese</option>
+<option value=kn>Kannada</option>
+<option value=kk>Kazakh</option>
+<option value=km>Khmer</option>
+<option value="ko">Korean</option>
+<option value=lo>Lao</option>
+<option value=la>Latin</option>
+<option value="lv">Latvian</option>
+<option value="lt">Lithuanian</option>
+<option value=mk>Macedonian</option>
+<option value=mg>Malagasy</option>
+<option value=ms>Malay</option>
+<option value=ml>Malayalam</option>
+<option value="mt">Maltese</option>
+<option value=mi>Maori</option>
+<option value=mr>Marathi</option>
+<option value=mn>Mongolian</option>
+<option value=ne>Nepali</option>
+<option value="no">Norwegian</option>
+<option value=fa>Persian</option>
+<option value="pl">Polish</option>
+<option value="pt">Portuguese</option>
+<option value=pa>Punjabi</option>
+<option value="ro">Romanian</option>
+<option value="ru">Russian</option>
+<option value="sr">Serbian</option>
+<option value=st>Sesotho</option>
+<option value=si>Sinhala</option>
+<option value="sk">Slovak</option>
+<option value="sl">Slovenian</option>
+<option value=so>Somali</option>
+<option value="es" selected>Spanish</option>
+<option value=su>Sundanese</option>
+<option value=sw>Swahili</option>
+<option value="sv">Swedish</option>
+<option value=tg>Tajik</option>
+<option value=ta>Tamil</option>
+<option value=te>Telugu</option>
+<option value="th">Thai</option>
+<option value="tr">Turkish</option>
+<option value="uk">Ukrainian</option>
+<option value=ur>Urdu</option>
+<option value=uz>Uzbek</option>
+<option value="vi">Vietnamese</option>
+<option value=cy>Welsh</option>
+<option value=yi>Yiddish</option>
+<option value=yo>Yoruba</option>
+<option value=zu>Zulu</option></select>
+<input type=hidden name=sl value="en">
+<input type=hidden name=hl value="en">
+<input type=hidden name=ie value="UTF-8">
+<input type=hidden name=u id=u value='http://deoxy.org/mckenna.htm'>
+</td></form>
+
+
+<td align="right" valign="middle" nowrap>
+<table cellspacing="0" cellpadding="0" border=0><tr>
+<form action=http://deoxy.org/find method=get name=sitesearchform>
+<td nowrap align=right valign="middle">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name=q size=15 class="input" title="search deoxy.org">
+<input type="Submit" value="find" class="button" title="search deoxy.org"></TD>
+</form></tr></table>
+</td></tr></table>
+
+</td></tr><SCRIPT TYPE="text/javascript">
+document.trans.tl.selectedIndex=Math.floor(Math.random()*(document.trans.tl.length+1))
+</script><tr><td bgcolor="#111111" background="img/thin_horizontal_lines.gif" 
+style=white-space:nowrap;overflow:hidden;>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+<td style="background-image:url('gif/background2.jpg');background-position:40 0;" width=20>&nbsp;</td>
+<td style=background-image:url(img/thin_horizontal_lines.gif);>
+<div style=overflow:hidden;white-space:nowrap;>&nbsp;<small>[an error occurred while processing this directive]</small></div></td>
+
+<td width=20>&nbsp;</td>
+<form action=http://deoxy.org/cgi/jump.pl method=get target=_blank>
+<td align="right"><div style=overflow:hidden;display:none;>
+<font color="#909090"><a href="nu.htm"><font color="#ffffff" size="-1">New</font></a> : <font size="-1">
+<a href="wiki/Deoxy/Video.html" ><font color=#ffffff size=-2>Video</font></a> : <a href="http://deoxy.org/video/ubuTR5vXISA" onclick="window.open('http://deoxy.org/video?v=ubuTR5vXISA','','screenX=50,screenY=50,left=50,top=50,width=640,height=565,resizable=1,status=0,menubar=0,toolbar=0,location=0,scrollbars=0'); return false;" ><font color=#ffffff size=-2>DMT - The Spirit Molecule 1/5</font></a>
+
+</font></font></div></td>
+
+<td style="background-image:url('gif/background2.jpg');background-position:0 0;" width=20>&nbsp;</td>
+</form></tr></table>
+</td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="#000000" align="right" background="gif/background2.jpg">
+<table><tr><form action="http://deoxy.org/cgi/jump.pl"><td>
+	<select name="to" class="select" 
+	onChange="if (this.options[this.selectedIndex].value != 'none') location.href='http://deoxy.org/'+this.options[this.selectedIndex].value">
+        <option value='none'>Related to Terence McKenna Land<option value='index/People'>People:<option value="watts.htm">&nbsp;&nbsp;Alan Watts Lectures and Essays<option value="media/Antero_Alli">&nbsp;&nbsp;Antero Alli<option value="media/BuckyFuller">&nbsp;&nbsp;BuckyFuller<option value="media/Burroughs">&nbsp;&nbsp;Burroughs<option value="media/Derrick_Jensen">&nbsp;&nbsp;Derrick Jensen<option value="lilly.htm">&nbsp;&nbsp;Dr. John C. Lilly, M.D.<option value="leary.htm">&nbsp;&nbsp;Dr. Timothy Leary, Ph.D.<option value="gz.htm">&nbsp;&nbsp;Gracie and Zarkov<option value="media/HakimBey">&nbsp;&nbsp;HakimBey<option value="media/Huxley">&nbsp;&nbsp;Huxley<option value="media/Jeremy_Narby">&nbsp;&nbsp;Jeremy Narby<option value="media/McLuhan">&nbsp;&nbsp;McLuhan<option value="media/Parenti">&nbsp;&nbsp;Parenti<option value="media/PKD">&nbsp;&nbsp;PKD<option value="meme/RalphNader">&nbsp;&nbsp;RalphNader<option value="raw.htm">&nbsp;&nbsp;Robert Anton Wilson<option value="alephnull/index.htm">&nbsp;&nbsp;The Web site of aleph<option value="meme/Tong">&nbsp;&nbsp;Tong<option value="tribe.htm">&nbsp;&nbsp;Tribes connected to tribes connected to deo...<option value="annex/whoami.htm">&nbsp;&nbsp;Who Am !?</select>&nbsp;<noscript><input type="Submit" value="go" class="button"></noscript>
+	<input type="hidden" name="from" value="/mckenna.htm"></td></form></tr></table>
+</td></tr></table></div><p>
+
+
+
+<table width=90% cellpadding=3 cellspacing=0 align=center><tr><td bgcolor="#001100" align=center>
+<table width=100% cellpadding=3 cellspacing=0 align=center><tr><td bgcolor="#112211" align=center>
+<table width=100% cellpadding=3 cellspacing=0 align=center><tr><td bgcolor="#223322" align=center>
+<table width=100% cellpadding=8 cellspacing=0 align=center><tr><td bgcolor="#334433" align=center>
+
+<a href="carrierw.htm">
+<img src="img/terencemckenna.jpg" alt="terence at home" width=100% border=0> <!-- 600 height=256 border=0 -->
+<!-- img src="gif/t_proto3.jpg" alt="carrier wave" width=607 height=210 border=0 --></a>
+
+</td></tr><tr><td bgcolor="#112211"><h1>
+
+<p align=center><font color=#bbccbb>
+T e r e n c e M c K e n n a L a n d
+</font></p></h1>
+
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+
+<p>
+<table border=0 align=center cellpadding=8 cellspacing=0 width=80%><tr><td>
+Terence McKenna <font size="-1">(<a href="http://www.abrupt.org/LOGOS/mystery.html">1946&mdash;2000</a>)</font> has been studying the ontological foundations of <a 
+href="shaman.htm">Shamanism</a> and the <a href="http://www.ethnopharmacology.org/" target="remotes">Ethnopharmacology</a> of 
+spiritual transformation for the past quarter century. An innovative theoretician and spellbinding orator, Terence has emerged as a 
+powerful voice for the psychedelic movement and the emergent societal tendency he calls <a href="t_adt.htm#arc"><em>The Archaic 
+Revival</em></a>. Poetically  dispensing enlightened social criticism and new theories of the fractal dynamics of time, Terence 
+deobfuscates many aspects of the visionary lexicon, and then some. As <a href="http://www.alexgrey.com" target="remotes">Artist Alex 
+Grey</a> suggests, "In the <a href="omega.htm">twilight of human history</a>, McKenna's prescription for salvation is just so crazy 
+it might work."<p><br>
+</td></tr>
+<tr><td>
+
+</td></tr></table>
+
+<blockquote><br clear=all><p>
+
+<table bgcolor=#001100 cellspacing=0 cellpadding=3 border=0 align=right><tr><td>
+<table bgcolor=#112211 cellspacing=0 cellpadding=3 border=0><tr><td>
+<table bgcolor=#223322  cellspacing=0 cellpadding=8 border=0><tr><td>
+
+<font size="-1">
+<a href="mckenna.htm#word">Written Word</a><br>
+<a href="mckenna.htm#sword">Spoken Word</a><br>
+&nbsp;<b><a href="mckenna.htm#media">Audio/Video</a></b><br>
+<!-- &nbsp;<a href="#video">Video</a><br>
+&nbsp;<a href="#audio">Audio</a><br -->
+&nbsp;<a href="mckenna.htm#text">Text</a><br>
+<a href="mckenna.htm#int">Interviews</a><br>
+<a href="mckenna.htm#enc">Encounters</a><br>
+<a href="mckenna.htm#rev">Reviews</a><br>
+<a href="mckenna.htm#tz">Timewave Zero</a><br>
+<a href="mckenna.htm#misc">Misc</a><br>
+<a href="mckenna.htm#req">Required Reading</a><br>
+<a href="mckenna.htm#other">Related websites</a><br></font>
+
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+
+<ul>
+<li><a href="t_biblio.htm">Bibliography</a>
+<li><a href="t_quotes.htm">Some quotes</a>
+<!-- li><a href="http://deoxy.org/forum/showthreaded.pl?Cat=&Board=quotes&Number=3079">Quote database at deoxy 
+forum</a -->
+<li><a href="http://en.wikipedia.org/wiki/Terence_McKenna" title="at wikipedia">Biography</a>
+
+<!-- p><li><a href="http://deoxy.org/forum/postlist.pl?Cat=4&Board=mckenna">Terence McKenna Land Forum</a><br>
+<small><tt>A place to explore the visions<br>
+ of this extraordinary memetic architect.<br></tt></small><br -->
+
+<h2><img src="gif/tflora.gif" width=24 height=54 border=0> &nbsp; <a name="word">Written Word</a></h2>
+
+<a href="t_ppp.htm"><font size="+3">Plan <font size="+1">/</font> Plant <font size="+1">/</font> Planet</font></a><br><strong>The Plan where the Plants save the Planet.</strong> 
+
+<p align=center><a href="gaia/g_mind.htm"><font size="+4">the gaian mind</font></a>
+<br><strong>cut-up from the works of Terence McKenna</strong>
+
+<p><font size="-1">The phantastic classic</font><br>
+<a href="t_thc.htm"><font size="+2">Tryptamine Hallucinogens and Consciousness</font></a>.<br>
+<a href="bmushrmd.htm"><img align=right src="gif/tmush.gif" border=0 width=56 height=37 vspace=20></a>
+<p><font size="-1">The <em>critically</em> <strong>dense</strong></font><br>
+<a href="t_newmap.htm"><font size="+2">New Maps of Hyperspace</font></a>.<br>
+<p>
+<ul>
+<li><big><a href="h_thunch.htm">Quantum Resonance in the Synaptic Field</a></big>
+<li><a href="t_model.htm"><b>Geometric Model of the Psychedelic Experience</b></a>
+</ul>
+
+<p><font size="+2">
+"This is not necessarily the truth,<br></font>
+<big>this is what Wittgenstein would have called<br></big>
+an exercise in searching for that which is true enough."<br>
+<tt><font size=+3><a href="t_timebi.htm">The Great Timestream Bifurcation</a></font></tt></font>
+<a href="media/McKenna.1.html">
+<img align=right src="gif/mcmaya.jpg" width=200 height=260 hspace=12 vspace=22 border=0></a>
+<p><br><a href="mushword.htm">
+<font size="5">The Mushroom Speaks!</font></a>
+<p><br>
+<font size="+1">Our collective conclusion seems to be that nature, both in whole and in many parts, is magically self-reflecting and aware <a href="trialog.htm">E N T I T I E S</a>. 
+<font size="-1">(<a href="mckenna.htm">McKenna</a>, <a 
+href="http://www.sheldrake.org/" target="remotes">Sheldrake</a> and <a 
+href="http://www.ralph-abraham.org/" target="remotes">Abraham</a>)</font></font>
+
+<h2><img src="gif/tflora.gif" width=24 height=54 border=0> &nbsp; <a name="sword">Spoken Word</a></h2>
+<br clear=all>
+
+<a name=media></a>
+<a name=audio></a>
+<font size="+2">Audio/<a name=video href="http://deoxy.org/videx?q=Terence%20McKenna&amp;pop=1" target=vidframe title="reload video frame">Video</a></font><p>
+</blockquote>
+
+<table border=0 cellpadding=3 cellspacing=0 width=80% align=center><tr bgcolor="#001100"><td>
+<table border=0 cellpadding=3 cellspacing=0 width=100%><tr bgcolor="#112211"><td>
+<table border=0 cellpadding=3 cellspacing=0 width=100%><tr bgcolor="#223322"><td>
+
+<iframe        
+ name=vidframe     
+ src=http://deoxy.org/videx?q=Terence%20McKenna&pop=1
+ style=width:100%;height:440px;
+ scrolling=auto frameborder=0><li><a
+ href=http://deoxy.org/videx/Terence+McKenna>deoxy.video search results for Terence McKenna</a><p>
+</iframe><p>          
+
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+
+
+<blockquote>
+<ul><li><b><a href="media/McKenna.1.html">media/McKenna</a></b> streaming audio and video
+</ul>
+
+<blockquote><p><br>
+<b><a href="http://www.sheldrake.org" target="remotes">Rupert Sheldrake</a></b> hosts many <a href="http://www.sheldrake.org/realaudio/" target="remotes">excellent realaudio
+streams</a> including <i>Trialogues at the Edge of the Millenium</i>
+<a href="http://www.sheldrake.org/realaudio/Trialogu.ram">Part I</a> and <a href="http://www.sheldrake.org/realaudio/trialouge_west.ram">
+Part II led by Terence</a> (1.5 hours each)
+
+<p>
+<a href="http://www.nvo.com/cd/trip/" target="remotes">The Trip Receptacles</a> : MP3 clips from all-psychedelic, all-entheogen radio,
+transmitted via KPFA in Berkeley with Stanislav Grof, Alexander (Sasha) Shulgin, <a href="leary.htm">Timothy Leary</a>, Terence McKenna,
+Albert Hoffman, <a href="hs_cehn.htm#clin">Rick Strassman</a>, Fritjof Capra, <a href="pdfa/marijuana.htm">Andrew Weil</a>, D.M. Turner
+and many others.
+
+<!-- li><a href="http://web.archive.org/web/20050306000806/www.bluehoney.org/tmckenna.htm" target="remotes"><b> Bluehoney Multimedia</b></a> hosts several MP3 clips of various 
+lectures.-->
+
+<p>
+<a href="http://www.webtrance.co.za/usenet.htm" target="remotes"><b>Several rare video clips</b></a> at Global Webtrance.
+
+</blockquote>
+<p align=center>
+
+<a href="t_heyman.htm"><big><big>Let Talk With Terence!</big></big></a></p>
+
+<p><br>
+<h2><img src="gif/tflora.gif" width=24 height=54 border=0> &nbsp; <a name="text">Spoken Word Transcriptions</a></h2>
+
+<p>
+Transcription of <a href="http://web.archive.org/web/19980703043747/http://www.zuvuya.demon.co.uk/" target="remotes">Zuvuya'</a>s <a href="t_matrix.htm">
+<strong>Dream Matrix Telemetry</strong></a>
+<p><font size="+1">Two chapters from the audio version of <em>True Hallucinations</em> 
+not included in the printed book!
+<a href="t_ovrsol.htm"><font size="4">
+Oversoul as Saucer</font></a> and
+<a href="t_ovrsol.htm#21"><font size="4">Open Ending</font></a>.</font>
+<p><font size="+1">Words from the <a href="t_adt.htm"><strong>Alien Dreamtime CD</strong></a>:</font><br>
+<a href="t_adt.htm#arc">Archaic Revival</a>, <a href="t_adt.htm#ali">Alien Love</a>, 
+<a href="t_adt.htm#spe">Speaking in Tongues</a> and <a href="t_adt.htm#tim">Timewave Zero</a>.</blockquote>
+<a href="t3_oOo.htm">
+<img align=right src="gif/tmush.gif" width=56 height=37 hspace=30 border=0></a>
+<p align=center><font size=+2>
+<a href="hyper.htm">Hyperspace</a>, the Gaian supermind,<br> global rave telepathy, and more in<br>
+<a href="t_re-evo.htm"><strong>Re-Evolution</strong></a>.</p><blockquote>
+<p align=right><font size=+1><a href="t_langvr.htm">
+Ordinary Language, Visible Language, and Virtual Reality</a>.</font></font>
+<p align=right><font size="+1">Excerpts from <em>A Weekend with Terence McKenna</em><br> parts 
+<a href="t_weeke1.htm">ONE</a> and
+<a href="t_weeke2.htm">TWO</a>.</font>
+<p align=right><img align=left src="gif/tproto2d.jpg" width=416 height=157 hspace=8 vspace=8> 
+<font size="+1">The monstrously vast</font><br> 
+<a href="t_camden.htm"><font size=+3>Camden<br> Centre<br> Talk</font></a>.<br clear=all>
+<p><a href="t_noncon.htm">
+The <font size="+1">Non-Ordinary Conhibition Rhetoric</font> of Terence 
+McKenna</a>
+<br clear=all></blockquote>
+
+<p>
+<table cellpadding=8 border=0 width=90%><tr><td>
+<img align=left src="gif/tmush.gif" width=56 height=37 hspace=12 vspace=12></td>
+<td align=center>A fragment of the workshop Mind and Time,<br>
+Spirit and Matter which describes the<br>
+elven <a href="hyper.htm">hyperspace</a> experience and <br>
+<a href="h_timind.htm"><font size="+3">The Tykes</font></a>.</td>
+<td>
+<a href="iching.1.html"><img align=right src="gif/iching.gif" vspace=30 width=72 height=47 border=0></a></td></tr></table>
+
+<ul>
+<li><a href="http://www.ratical.com/many_worlds/UILN.html" target="remotes">
+<b>Imagination in the Light of Nature</b></a><br>
+<li><a href="http://www.well.com/user/davidu/tmalchemy.html" target="remotes">
+Lectures on Alchemy</a><br>
+</ul>
+
+<ul>
+<strong><em><a href="http://www.abrupt.org" target="remotes" name="abrupt">Abrupt</a> Transcriptions</em></strong>
+<tt>
+<li><a href="http://www.abrupt.org/LOGOS/tm980728.html" target="remotes">
+<font size="+2">Live at Wetlands Preserve</font></a><br>
+<font size="+1">New York City, July 28, 1998</font> - Realaudio <a href="audio/wetlands.ram">stream</a> or <a href="audio/wetlands.rm">download</a>
+<li><a href="http://www.abrupt.org/LOGOS/tm970423.html" target="remotes">
+<font size="+2">Live at The Lighthouse</font></a><br>
+<font size="+1">New York City, April 23, 1997</font>
+<li><a href="http://web.archive.org/web/20000816214934/http://www.levity.com/eschaton/talks/042596.html" target="remotes">
+<font size="+2">Live at St. John's Cathedral</font></a><br>
+<font size="+1">New York City, April 25, 1996</font>
+<li><a href="http://web.archive.org/web/20000816214948/http://www.levity.com/eschaton/talks/062093.html" target="remotes">
+<font size="+2">Live at Fez</font></a><br>
+<font size="+1">New York City, June 20, 1993</font></tt></ul>
+
+<blockquote>
+
+
+<h2><img src="gif/tflora.gif" width=24 height=54 border=0> &nbsp; <a name="int">Interviews</a></h2>
+<ul>
+
+
+<li><a href="t_sunami.htm">bOING bOING #10</a>, 1992
+<li><a href="t_highx.htm">High Times</a>, 1992
+<li><a href="t_mondo2.htm">Mondo 2000</a>, 1993
+<li><a href="t_omni.htm">OMNI Magazine</a>, 1993</a>
+<li><a href="t_compu.htm">CompuServe</a>, 1993
+<li><a href="t_sdt.htm">Sex, Drugs, Computers</a>, 1999
+
+<p><li><strong>Terence McKenna on <i>The Art Bell Show</i></strong>
+<!-- 
+05-22-1997
+03-19-1998
+04-01-1999
+06-16-1999
+-->
+<ol>
+<li><strong>05-22-1997 &#151;</strong> MP3 <a href="http://mckenna.psychedelic-library.org/Terence%20McKenna%20on%20Art%20Bell%20-%205-97%20-%20part%201%20rc.mp3">Part1 (11MB)</a> and <a href="http://mckenna.psychedelic-library.org/Terence%20McKenna%20on%20Art%20Bell%20-%205-97%20-%20part%202%20rc.mp3">Part2 (12MB)</a> - <a href="tmab_5-22-97.htm">transcript</a>
+
+<li><strong>03-19-1998 &#151;</strong> MP3 <a href="http://mckenna.psychedelic-library.org/Terence%20McKenna%20on%20Art%20Bell%20-%203-98%20-%20p1%20(static%20at%20begining)%20rc.mp3">12MB</a>
+
+<li><strong>04-01-1999 &#151;</strong> <a href="tmab_4-1-99.htm">transcript</a>
+
+<li><strong>03-07-2001 &#151;</strong> Dennis McKenna MP3 <a href="http://mckenna.psychedelic-library.org/Dennis%20McKenna%20on%20Art%20Bell%20p1of2%203-07-01%20rc.mp3">Part1 (12MB)</a> and <a href="http://mckenna.psychedelic-library.org/Dennis%20McKenna%20on%20Art%20Bell%20p2of2%203-07-01%20rc.mp3">Part2 (6MB)</a>
+
+</ol>
+<p><font size="+1">Nonlocal</font><br>
+
+<li>Trip Magazine <a href="http://www.tripzine.com/features.asp?id=terence1" target="remotes">
+Part 1</a> and <a href="http://www.tripzine.com/features.asp?id=tm2" target="remotes">
+Part 2</a>
+
+<li><a href="http://www.disinfo.com/archive/pages/article/id1515/pg2/" target="remotes">
+terence mckenna: mind contagions</a>
+
+<li><a href="http://www.sirbacon.org/dick.htm" target="remotes"><b>I UNDERSTAND PHILIP K. DICK</b></a>
+
+<li>
+<a href="http://www.levity.com/orfeo/index.html" target="remotes">
+ORFEO dialog between Robert Hunter and Terence McKenna</a>
+
+<li>Spanish Translations at <i><a href="http://s3r3bro.net/arx/terewebo/t_mckenna.htm" target="_blank">Textos de Terence McKenna</a></i>
+
+<li>Struck By Noetic Lightning: <a href="http://frontwheeldrive.com/terence_mckenna.html" target="remotes">Terence McKenna Meets the Machine Elves of Hyperspace</a>
+
+<li><a href="http://www.maps.org/news-letters/v10n2/10206mck.html" target="remotes">Terence McKenna Speaks...</a> in this interview by Jon Hanna and Sylvia Thyssen at the 1999 AllChemical Arts Conference 
+
+<li><a href="http://www.salvia-divinorum-scotland.co.uk/quotes/mckenna/prejudice.htm" target="remotes">
+Prejudice Against Psychedelics</a> <font size="-1">(excerpt)</font>
+
+<li>San Francisco Chronicle Examiner: 
+<a href="http://web.archive.org/web/19990203101007/http://paranoia.lycaeum.org/psychedelics/mckenna/apocalypse" target="remotes">
+Apocalypse Soon</a>
+
+<li>New History magazine: <a href="http://web.archive.org/web/19990127091339/http://members.aol.com/discord23/mckenna.htm" target="remotes">
+Mushrooms, Sex and Society</a>
+
+<li><a href="http://web.archive.org/web/19991009024016/http://www.talkcity.com/religions/bodyandsoul/mckenna0916.html" target="remotes">
+Body & Soul Live Chat Transcript</a>
+
+<li><a href="http://web.archive.org/web/19991104192458/http://www.levity.com/mavericks/terence.htm" target="remotes">
+Mushrooms, Elves and Magic</a>
+
+<li><a href="http://www.hootenanny.com/hoot/4/mckenna.html" target="remotes">
+Hootenanny talks with Terence McKenna</a>
+
+<li><a href="http://web.archive.org/web/20031207015324/http://www.uncarved.demon.co.uk/2012/mckenna.html" target="remotes">
+Terence in London, 11/10/96 </a>
+
+<li>Inner Views Cyberzine: <a href="http://web.archive.org/web/19961112073352/http://www.newageinfo.com/articles/intervie/2mush.htm" target="remotes">
+A Fungus Amoung Us</a>
+<p>
+<li><a href="t_peterm.htm">Interview with Timewave Zero programmer Peter Meyer</a>
+
+<li>Ken Adams of Rose X discusses Terence's video "Alien Dreamtime" and film "Strange Attractor" in 
+<a href="http://web.archive.org/web/20010303011238/http://www.fringecore.com/magazine/m1-4.html">An Excursion into the Overmind</a>
+</ul>
+
+<h2><img src="gif/tflora.gif" width=24 height=54 border=0> &nbsp; <a name="enc">Encounters with Terence</a></h2>
+<ul>
+
+<li><a href="http://web.archive.org/web/20020616032634/http://www.digitalspace.com/worlds/fan-terencem/" target="remotes">
+Terence McKenna's Virtual Reality Powwow</a>
+
+<li><a href="http://www.nmi.org/tm.html" target="remotes">
+Life After History: November 9-15, 1997 with Terence McKenna</a>
+
+<li><a href="http://www.tweak.com/muck/dement/dement1a.html" target="remotes">
+DeMenT: Notes on a Weekend with Terence McKenna</a>
+
+<a href="t1_oOo.htm" name="rev">
+<img align=right src="gif/tmush.gif" width=56 height=37 border=0 hspace=12></a>
+
+
+<li><a href="http://www.webtrance.co.za/webter.html" target="remotes">
+Terence Mckenna and Schwann at Rustlers in South Africa</a>
+
+<li><a href="http://www.links.net/daze/96/04/25/" target="remotes">
+25 april, 1996 space dinner drugs technology and artistic elite</a>
+
+<p><br>
+<table border=0 cellpadding=3 cellspacing=0><tr bgcolor="#001100"><td>
+<table border=0 cellpadding=3 cellspacing=0><tr bgcolor="#112211"><td>
+<table border=0 cellpadding=3 cellspacing=0><tr bgcolor="#223322"><td>
+<font size="-1"><strong>
+<table border="0" cellpadding="0" cellspacing="0">
+
+<tr><td><font size="+5">&nbsp;</font></td><td>
+Terence McKenna <a href="t_morph.htm">joined the ancestors</a> at 2:15 a.m. Pacific time, April 3, 2000. He went on his way in
+peace surrounded by loved ones. Thank you for <i>being,</i> Terence.
+<p align=center>
+"I'll try to be around and about. But if I'm not, then you know that I'm behind your eyelids, and I'll meet you there." <font
+size="-1">Kona, September 1999</font><br><br>
+
+<font size="-1">
+<a href="http://www.wired.com/wired/archive/8.05/mckenna.html" target="remotes">Terence McKenna's Last Trip</a> . <a
+href="http://www.mkzdk.org/annals/tmobit.html" target="remotes">obituary</a> . <a href="http://www.webtrance.co.za/hawaii.htm"
+target="remotes">eulogy</a> . <a href="http://mysticfire.com/ntsc/welcome/terencemem.html"
+target="remotes">memorial</a><br></font>
+
+<p align="right">
+<a href="terencemckenna-vs-theblackhole.htm"><b>TERENCE MCKENNA VS. THE BLACK HOLE</b></a><br>
+Terence on death and dying, by Erik Davis<br>
+
+</td><td><font size="+5">&nbsp;</font>
+
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+
+
+</ul>
+
+<h2><img src="gif/tflora.gif" width=24 height=54 border=0> &nbsp; Reviews: Good, Bad and Ugly</h2>
+
+<ul>
+<li>Richard Evans <a href="t_schult.htm">
+Schultes reviews Food of the Gods</a>
+
+<li>Paco Xander Nathan reviews <a href="t_twzrev.htm">
+Timewave Zero</a> from bOINGbOING #10
+
+<li><a href="t_swiss.htm">Highlights of Swiss UFO Conference</a>
+
+<li><a href="t_ladder.htm">
+A psychedelic trip up the ladder of evolution</a>
+
+<li><a href="http://web.archive.org/web/19990915001146/http://www.wcug.wwu.edu/~wfront/1998/June/accent89.html" target=_blank>
+McKenna trips over alien message</a>
+
+<li><a href="http://web.archive.org/web/19961022182653/http://www.hotwired.com/books/96/01/mckenna.html" target="remotes">
+Hotwired reviews <em>Surfing Finnegans Wake</em></a>
+
+<li><a href="http://www.levity.com/rubric/mckenna.html" target="remotes">
+Omega Man: A Profile of Terence McKenna</a>
+
+<li><a href="http://web.archive.org/web/19990128153714/http://wn.apc.org/wmail/issues/941215/wm941215-31.html" target="remotes">Paradise found in a mushroom</a>
+
+<li><a href="http://lycaeum.org/~lux/features/renegade.htm" target="remotes">
+Renegade in Babylon</a> <font size="-1">Terence McKenna and the Descent into Chaos</font>
+
+<li><a href="http://web.archive.org/web/20010418003900/http://www.altculture.com/.index/aentries/m/mckennaxt.html" target="remotes">
+alt.culture: McKenna, Terence</a>
+
+<li>Terence gets torn up in this 
+<a href="t_nahole.htm">Food of the Gods Review</a>
+<li>A scathing review of the man and his ideas: <a href="t_sham.htm">
+Sham-Man</a>.
+</ul>
+
+<p><br><p align=justify><br>
+<a href="iching/random.1.html"><img src="gif/iching.gif" width=72 height=47 border=0 align=bottom></a> &nbsp; <a name=twz></a><a name=tz><font size=+2>T I M E W A V E &nbsp; Z E R 
+O</font></a></p>
+
+<ul>
+<li><font size="+1">Documents</font>
+<ul>
+
+<li><a href="http://web.archive.org/web/20080125095543/http://www.levity.com/eschaton/waveexplain.html" target="remotes">
+Derivation of the Timewave from the King Wen Sequence of Hexagrams</a> by Terence McKenna
+<ul>
+<li><a href="iching/twz.html">King Wen Sequence First order of difference</a>
+<li><a href="http://web.archive.org/web/20020202110021/littlestcat.com/iching/" target="remotes">
+Intro to the I Ching</a></ul>
+
+<li><a href="http://web.archive.org/web/20080215041039/http://www.levity.com/eschaton/Why2012.html" target="remotes">
+The How and Why of the Mayan End Date in 2012 AD</a> <small>by John Major Jenkins</small>
+
+<li><a href="http://www.fourmilab.ch/rpkp/autopsy.html" target="remotes">
+Autopsy for a Mathematical Hallucination?</a> <small>by Matthew Watkins</small>
+
+<li><a href="http://www.johnsheliak.com/SubSpace_Bridge_Domain/Sheliak_Formalization.pdf" target="remotes">
+A Mathematical and Philosophical Re-Examination of the <br>
+Foundations of TimeWave Zero and Novelty Theory <small>PDF</small></a> <small>by John Sheliak</small>
+
+<!-- li><a href="http://web.archive.org/web/20021211105748/serendipity.magnet.ch/twz/gyrus/river.htm" target="remotes">
+The End of the River</a>&#151;<small>A critical view of Linear Apocalyptic Thought.</small -->
+</ul>
+
+<p>
+<b><!-- a href="http://web.archive.org/web/20040216040213/http://serendipity.nofadz.com/ft/index.html" target="remotes" -->
+At best Novelty Theory <br>
+&nbsp; is a way to waste one's time <br>
+&nbsp;&nbsp; in a mildly entertaining manner. <br><!-- /a --></b>
+&nbsp;&nbsp;&nbsp; &#151;Peter Meyer, <i>Timewave Zero Programmer</i>
+
+<p>
+
+<!-- li><font size="+1">Software</font -->
+
+<!-- ul>
+<li><a href="http://www.hermetic.ch/frt/frt.htm">Fractal Time (Timewave Zero) Software</a>
+<li><a href="http://web.archive.org/web/19980711021032/serendipity.nofadz.com/ft/twz/tw.html" target=_blank>C Code for Calculation of the Timewave Value</a> TW.C
+<li><a href="http://web.archive.org/web/20000817214254/serendipity.nofadz.com/ft/wg/wen_grph.html" target=_blank>Software for Generating Sets of 384 Numbers</a> WEN_GRPH
+</ul -->
+</ul>
+
+</blockquote>
+<p><br clear=all>
+
+<table align=center border=0><tr><FORM NAME="clock"><td>
+
+<table border="0" cellpadding="3" cellspacing="0"><tr><td bgcolor="#505050">
+<table border="0" cellpadding="3" cellspacing="0"><tr><td bgcolor="#909090">
+<font color="#404040" size="-1"><b>Timewave Zero Countdown</b></font>
+<table border="0" cellpadding="4" cellspacing="0">
+<tr><td colspan="2" bgcolor="#808080">
+<INPUT TYPE="hidden" SIZE="55" NAME="face2">
+<INPUT TYPE="text" SIZE="53" NAME="face"></td></tr>
+<tr><td align="center" bgcolor="#707070"><INPUT TYPE="text" SIZE="9" NAME="face3"></td>
+<td align="right" bgcolor="#606060"><INPUT TYPE="text" SIZE="20" NAME="indate" VALUE="December 21, 2012">
+<font size="-1">
+<INPUT TYPE="button" VALUE="Monitor" onClick="startclock()"></font></td></tr></table>
+</td></tr></table></td></tr></table>
+
+</td></FORM></tr></table>
+
+<p><br><blockquote>
+
+<h2><a name="misc">Misc</a></h2>
+<ul>
+<li><a href="http://www.bbc.co.uk/worldservice/sci_tech/features/health/medicinedrugs/plants.shtml" target="remotes">Plants of Power</a> <font size="-1"><em>BBC World Service Education</em> radio series about mind-altering<br>drugs in nature and culture. RealAudio and Transcripts!</font><br>
+<li><a href="http://web.archive.org/web/19970616113013/http://www.leary.com/news/Politics/Terrence.html" target="remotes">
+We'd Love to Turn You Off</a><br>
+<font size="-1">The Veteran Administration's bad trip over Psychedelic Futurist Terence McKenna</font>
+<li><a href="http://easyweb.easynet.co.uk/~dumber/bluff.htm" target="remotes">Bluffer's Guide to Being Aware</a> <font size="-1">of Terence McKenna, Heraclitis and E=MC<font size="-2"><sup>2</sup></font></font>
+<li><a href="http://dieoff.org/page21.htm" target="remotes">Electronic Heroin</a> <font size="-1"><em>- Television is by nature the dominator drug par excellence.</em></font>
+<li><a href="http://web.archive.org/web/20000117062811/http://shaman.lycaeum.org/~martins/M2/borges2_tm.html" target="remotes">
+Where does Terence McKenna get his ideas?</a>
+<li><a href="http://web.archive.org/web/19990427070905/http://www.newdream.net/~sage/damn.html" target="remotes">damn.this.oppression</a>
+</ul>
+
+<p align=center><b><big><a href="http://www.abrupt.org/img/logos/mystery.png" target="remotes">Terence McKenna's Mysterium Tremendum</a></big></b><br>
+<font size=-1>GUARANTEED TO FLATTEN EVEN THE MOST RESISTANT EGO</font><br></p>
+
+
+<h2><a name="req">Required Reading</a></h2>
+<a href="t_oOo.htm">
+<img align=left src="gif/piximush.jpg" hspace=8 width=63 height=98 border=0></a>
+<ul>
+<li><a href="dmt.htm"><font size="+3">DMT</font></a>
+<li><a href="dmtpro.htm">DMT profile</a>
+<li><a href="dmtpharm.htm">DMT abstract</a>
+<li><a href="trypfaq.htm">Tryptamine Carriers FAQ</a>
+<li><a href="dmt_ott.htm">DMT chemistry and pharmacology</a>
+<li><a href="trypgif.htm">Tryptamines Molecular Structures GIF</a>
+<li><a href="gz_howy.htm">DMT - How and Why to Get Off</a>
+<li><a href="http://www.shroomery.org/index/par/3170" target="remotes">
+Psilocybin Mushroom FAQ</a>
+<li><a href="http://www.druglibrary.org/schaffer/lsd/munn.htm" target="target">
+The Mushrooms of Language</a>
+</ul>
+
+<p align=center><a name="other" href="time/randomhex.htm"><img src="gif/wenstrip.gif" width=513 height=49 border=0></a></p>
+
+<h2>Related web pages</h2>
+
+<p align=right><a href="hooray.htm"><img align=left src="gif/elf.gif" hspace=10 vspace=25 width=65 height=72 border=0></a>
+And now, valued webling, it is time for you to step off the edge of <em>everything</em> and into the center of the memepool. This next link will deposit in your cache, and upon the phosphors of your monitor, the webpage of the wizard himself. <strong>Prepare to enter Terence McKenna's Alchemical Garden at the Edge of Time:</strong><p>
+<a href="http://web.archive.org/web/19971110205550/http://www.levity.com/eschaton/hyperborea.html" target="remotes">
+<img align=right src="gif/hyperbor.gif" border=0 width=432 vspace=22 height=72 alt="HYPERBOREA"></a><p>
+<br clear=all>
+<ul>
+<li><strong>deoxy</strong> <a href="shaman.htm">Shamanism</a>, <a href="hs_cehn.htm">Hyperspace</a>, <a href="omega.htm">Omega</a> and <a href="gz.htm">Gracie &amp; Zarkov</a> pages 
+
+
+<li><a href="http://www.disinfo.com/archive/pages/dossier/id12/pg1/" target="remotes">
+disinfo : Terence McKenna</a>
+
+<li><a href="http://fusionanomaly.net/terencemckenna.html" target="remotes">
+fUSION Anomaly, Terence McKenna</a>
+
+<li><a href="http://www.stariq.com/pagetemplate/article.asp?PageID=1038" target="remotes">
+Terence McKenna: Modern Shaman</a>
+
+<li>Esalen Institute's 
+<a href="http://www.well.com/user/suscon/esalen/" target="remotes">
+Sustainability Consciousness Conference</a>.
+<ul><li><a href="http://www.well.com/user/suscon/esalen/dayone.html" target="remotes">
+DAY ONE: The End of the World?</a> <tt>transcript and realaudio</tt></ul>
+
+<li><a href="http://www.granarybooks.com/books/ely/ely1.html" target="remotes">
+<font size="+1"><em>Synesthesia</em></font> by Terence McKenna & Timothy Ely</a>
+
+<li><a href="http://web.archive.org/web/19990427015206/http://www.man.ac.uk/MVC/research/fungi/fungi.html" target="remotes">
+Graphical Simulation of Filamentous Fungal Growth</a>
+
+<li><a href="http://www.mv.com/ipusers/dhabolt/dad/linkmagic.html" target="remotes">
+mycoElectronica: Magic Mushroom Sites</a>
+
+<li>Center for Spirituality and Health: 
+<a href="http://www.csh.umn.edu/csh/about/centerstaff/mcKenna/home.html" target="remotes">Dennis McKenna, Ph.D.</a>
+
+</ul><p align=center>
+<font size=+2><a href="http://mv.lycaeum.org/Finnegan/" target="remotes">
+Finnegans Wake Concordex</a></font>
+<ul>
+
+<a href="t2_oOo.htm">
+<img align=right src="gif/pixie.jpg" width=42 height=72 border=0></a>
+
+</ul>
+<li><strong><font size="+1">Audio and Video Transmissions</font></strong>
+<ul>
+<li><b><a href="http://sound.photosynthesis.com/TERENCE_M.html" target="remotes">
+The complete Terence McKenna at SoundPhotosynthesis</a></b>
+
+<li><a href="http://mysticfire.com/ntsc/76297/76297.html" target="remotes">
+Terence McKenna Catalog at Mystic Fire</a>
+<ul><li><a href="http://www.mysticfire.com/ntsc/projects/coinc.htm" target="remotes">
+COINCIDENCIA OPPOSITORUM: THE UNION OF OPPOSITES</a></ul>
+
+
+<li>
+<font size="-1">Thinking Allowed Innerwork Videos</font><br>
+Terence McKenna <a href="http://www.thinkingallowed.com/iwl-p.html#w061" target="remotes"><em>
+A Magical Journey</em></a> and <a href="http://www.thinkingallowed.com/q31-40.html#q364" target="remotes"><em>
+Aliens and Archetypes</em></a>
+</ul>
+
+<p align=center>
+<img src="gif/butterf.jpg" hspace=8 width=90 height=61>
+<a href="http://web.archive.org/web/19990128151218/http://142.232.132.45/dedocs/Macd.htm" target="remotes">
+<img src="gif/butterf.jpg" hspace=8 width=60 height=40 border=0></a>
+<img src="gif/butterf.jpg" hspace=8 width=120 height=81>
+<a href="http://web.archive.org/web/19990128191533/http://142.232.132.45/dedocs/binfo.htm" target="remotes">
+<img src="gif/butterf.jpg" hspace=8 width=45 height=30 border=0></a><br>
+<img src="gif/butterf.jpg" hspace=8 width=30 height=20>
+<a href="http://www.learnblues.com/tiescm/in_a_gadda_da_vida_single_version.htm" target="remotes">
+<img align=middle src="gif/butterf.jpg" hspace=8 width=150 height=101 border=0></a>
+<img src="gif/butterf.jpg" hspace=8 width=38 height=25></p>
+<br clear=all>
+<a href="index.html" onmouseover='ooHoriz("1")' onmouseout='ooHoriz("0")'>
+<img src="gif/oo-horiz.gif" width=108 height=61 name="flux" alt="Make a forward escape" border=0></a>
+<a href="contact.htm"><img src="gif/dimitri.jpg" width=117 height=21 border=0></a></blockquote>
+
+</blockquote><br clear=all>
+
+<div id=_footer>
+<div id=tabl style=top:0px;width:100%;margin:0px;margin-bottom:0px;>
+<table width="100%" border="0" cellspacing="0" cellpadding="4" align="center">
+
+<script type="text/javascript">
+function resizeMC(mode) {
+ var t = document.getElementById('mc')
+ var h = t.offsetHeight
+ var d = 440
+ if (mode == 'inc') h = h + 50
+ if (mode == 'dec') h = h - 50
+ if (mode == 'set') h = d
+ t.style.height = h + 'px'
+ if (h < 390) { h = d }
+ setCookie('fh',h,mcCookieExpires,'/')
+}
+var fh = getCookie('fh')
+var mcCookieExpires = new Date()
+mcCookieExpires.setTime(mcCookieExpires.getTime() + 365 * 24 * 60 * 60 * 1000)
+mcCookieExpires.toGMTString()
+
+function gomc(what) {
+ var whereto = what.options[what.selectedIndex].value;
+ if (whereto)
+  parent.mc.location.href = whereto;
+}
+document.write('<form target="mc" name="xJump">');
+</script><noscript>
+<form action="http://deoxy.org/cgi/jump.pl" target="mc" name="xJump">
+</noscript>
+
+<tr bgcolor="#111111"><td>
+
+<table width=100% cellspacing="0" cellpadding="4" border="0">
+<tr bgcolor="#222222">
+
+<td background="img/thin_horizontal_lines.gif">
+
+<font color="#888888" size="-2"><a
+ href="index.html" title="deoxy.org" rel=nofollow><b><font color="#888888">DEOXY</font></b></a> &nbsp; <font size="-3">&gt;</font>
+
+&nbsp; <a
+ href="contact.html" target=mc title=contact rel=nofollow><font color=#aaaaaa>CONTACT</font></a>
+
+ &#183; <a
+ href="news/frame.htm" target="mc" title="view news here" rel=nofollow><font color="#aaaaaa">NEWS</font></a>
+
+ &#183; <a
+ href="http://deoxy.org/vid" target="mc" title="watch video here" rel=nofollow><font color="#aaaaaa">VIDEO</font></a> : <a 
+ href="http://deoxy.org/videx?pop=1" target="mc" title="list new video" rel=nofollow><font color="#aaaaaa">NEW</font></a>&mdash;<a
+ href="http://deoxy.org/videx?pop=1&seen=1" target="mc" title="recently watched video" rel=nofollow><font color="#aaaaaa">WATCHED</font></a>&mdash;<a
+ href="http://deoxy.org/videx?pop=1&rand=1" target="mc" title="random video list" rel=nofollow><font color="#aaaaaa">RANDOM</font></a>
+</font></td>
+
+<td align="center" background="img/thin_horizontal_lines.gif">
+<font color="#888888" size="-2"><INPUT
+ type="button" class="button" value="&lt;" id=mcback title="rewind frame"><INPUT
+ type="button" class="button" value="&gt;" onClick="parent.mc.history.forward()" title="frame forward">
+<select name="to" class="select" onChange="gomc(this)" onDblClick="gomc(this)">
+<option value="http://deoxy.org/time/d2k/acalc/index.htm">Astro</option>
+<option value=http://deoxy.org/chatr>Chatter</option>
+<option value="http://deoxy.org/find#code">Cloud</option>
+<option value=http://deoxy.org/chatcloud?s=1>&nbsp;|_Chat</option>
+<option value="http://deoxy.org/topicloud?target=_blank">&nbsp;|_Topics</option>
+<option value="http://deoxy.org/vidcloud?s=1&m=1&small=1&js=1">&nbsp;|_Video</option>
+<option value="http://deoxy.org/news/cloud?n=10&m=1&s=1&t=_blank">&nbsp;|_News</option>
+<option value="http://deoxy.org/news/cloud/today?n=5&m=1&s=1&t=_blank">&nbsp;\__Today</option>
+<option value="http://deoxy.org/colors">Colors</option>
+<option value="http://deoxy.org/contact" selected>Contact</option>
+<option value="http://deoxy.org/find?target=_blank">Find</option>
+<!-- option value="http://deoxy.org/chat/java.htm">IRC</option -->
+<option value="http://deoxy.org/map">Map</option>
+<option value="http://deoxy.org/searchbot">Search</option>
+<option value="http://deoxy.org/time/d2k/today3.htm">Today</option>
+<option value="http://deoxy.org/vid">Video</option>
+</select>
+
+</font></td></form>
+
+<td align="right" nowrap background="img/thin_horizontal_lines.gif" width=100>
+<font color="#888888" size="-1">
+<!-- a href="/axis_dd.htm" target=mc><font color="#aaaaaa" title=off rel=nofollow>x</font></a -->&nbsp;
+<a onclick=resizeMC('dec')><font color="#aaaaaa" title=shrink>&ndash;</font></a>&nbsp;
+<a onclick=resizeMC('inc')><font color="#aaaaaa" title=grow>+</font></a>&nbsp;
+<a onclick=resizeMC('set')><font color="#444444" title="reset height">o</font></a>&nbsp;
+<a
+ href="chatr.html" target=cbWin rel=nofollow
+ onclick="if (mc.location.href.match(/chatr/)) { mc.location.href='http://deoxy.org/axis_dd.htm' } chatterWindow(); return false;"
+ title="open chatter window"><font color="#aaaaaa">^</font></a>&nbsp;
+
+</font></td></tr>
+
+<tr><td colspan=3>
+
+<script type="text/javascript">
+document.write('<iframe src="http://deoxy.org/')document.write('news/frame.htm')document.write('" style="width:100%;height:')
+
+if (fh) {
+ document.write(fh)
+} else {
+ document.write('440')
+}
+document.write('px;padding:0px;margin:0px;" frameborder=0 border=0 id=mc name=mc>embed requires iframes</iframe>')
+
+document.getElementById('mcback').onclick = function () {
+ if (window.frames['mc'].location.hash !== '#mcstop') {
+  window.history.back()
+ }
+ return false
+}
+window.frames['mc'].onload = function () {
+ this.location.hash = 'mcstop'
+}
+</script>
+
+<noscript><iframe
+ src="axis_dd.htm"
+ style="width:100%;height:440px;padding:0px;margin:0px;"
+ frameborder=0 border=0 id=mc name=mc>
+embed requires iframes</iframe></noscript>
+
+</td></tr></table></td></tr></table></div>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+<tr bgcolor="#202020">
+<td width="33%" background="img/vortex0b.gif">&nbsp;
+&nbsp;<a
+ onclick=resizeMC('dec')><font color="#aaaaaa" title=shrink>&ndash;</font></a>&nbsp;&nbsp;<a
+ onclick=resizeMC('inc')><font color="#666666" title=grow>+</font></a>&nbsp;&nbsp;<a
+ onclick=resizeMC('set')><font color="#444444" title="reset height">o</font></a>
+</td>
+
+<td align="center">
+
+<table border="0" cellspacing="0" cellpadding="0" bgcolor="#000000" width=100%><tr>
+<td width="33%" bgcolor=#101010 background="gif/background2.jpg">&nbsp;</td>
+
+<td align=center>
+
+<a href='mckenna.htm#top'>
+<img src="gif/arrow_u.gif" style="width: 15px; height: 15px; 
+border: 0; margin-right: 10px; margin-left: 10px;" alt="top"  /></a>
+
+</td>
+
+<td width="33%" bgcolor=#101010 background="gif/background2.jpg">&nbsp;
+
+</td></tr></table>
+
+</td>
+
+<td width='33%' align='right' valign='middle' background="img/vortex0b.gif"><!-- a 
+ href="http://deoxy.org/meme/Perl"><img
+ src="http://deoxy.org/img/perlpower.gif" 
+ width="80" height="15" border="0" vspace=0></a>&nbsp;--><a name=end
+ href="rss.html"><img
+ src="img/rss2.gif"
+ width="80" height="15" border="0" vspace=0></a>&nbsp;</td>
+</tr></table></div>
+<script type="text/javascript">
+
+
+if (self == top) {
+ var links = document.getElementsByTagName('a')
+ for (var i=0; i<links.length; i++) {
+  var t = links[i].getAttribute('target')
+  if (t == 'remotes') {
+   links[i].setAttribute('target','_top')
+  }
+ }
+}
+</script>
+</body>
+</html>

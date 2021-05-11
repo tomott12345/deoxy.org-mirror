@@ -1,0 +1,794 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>A Memetic Lexicon</title>
+<LINK REL="home"       HREF="index.html">
+<LINK REL="search"     HREF="http://deoxy.org/find">
+<LINK REL="stylesheet" HREF="inc/css/deoxy.org.css" TYPE="text/css">
+<LINK REL="alternate"  HREF="cgi/nu.pl@rss=1" TITLE="recent changes at deoxy.org" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/news/cloud?rss=1" TITLE="deoxy news cloud" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/news/cloud/today?rss=1" TITLE="deoxy news cloud today" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="news/feeds/moonphase.xml" TITLE="lunar phases" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/video/random/rss" TITLE="random video" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="koans@rss=1" TITLE="random koan" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="iching/random/rss" TITLE="random iching hexagram" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/cgi/randlink.pl?rss=1" TITLE="random link at deoxy.org" TYPE="application/rss+xml">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/find.xml"  title="deoxy find">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/news.xml"  title="deoxy news">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/newstoday.xml"  title="deoxy news today">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/videx.xml" title="deoxy video">
+<style type="text/css">input.wikiform { background-color:#111111; font-size:13px; color:#909090; border:0px; cursor:pointer; }</style>
+<meta name="MSSmartTagsPreventParsing" content="true">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="robots" content="all">
+
+<LINK REL="stylesheet" HREF="inc/css/print.css" TYPE="text/css" MEDIA="print">
+<script type="text/javascript" src="bin/chatterwindow.js"></script>
+<script type="text/javascript" src="bin/cookies.js"></script>
+<script type="text/javascript">
+function openVideo(id) {
+ var s = 'screenX=100,screenY=100,left=100,top=100,width=640,height=565,'
+ var x = 'resizable=1,status=0,menubar=0,toolbar=0,location=0,scrollbars=0'
+ window.open('http://deoxy.org/video/'+id,'',s+x)}
+</script>
+
+</head>
+
+<body link="#cc0000" vlink="#cc0000" bgcolor="#f0f0f0" text="#000000">
+<a name="top"></a><div id=_header>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr bgcolor="#111111">
+<td nowrap rowspan=2 bgcolor="#000000" width="20" background='gif/background2.jpg'>&nbsp;</td>
+<td nowrap rowspan=2 bgcolor="#000000" align=center style=width:90px;><a
+ href="index.html"
+ title=deoxy.org
+ target=_top><!-- img
+ src="http://deoxy.org/gif/ooleft_left.gif" border=0 
+--><img src="vi/ExEcomR4cas.jpg" style=height:68px;width:100%;margin-left:1px; border=0></a></td>
+<form action='http://deoxy.org/cgi/jump.pl' method="post">
+<td nowrap align="right" background='img/vortex0b.gif'>
+
+<table cellspacing="0" cellpadding="0" border=0 background='gif/background2.jpg'><tr><td nowrap>
+<select name="to" class="select" onChange="x=this.options[this.selectedIndex].value;location.href=x.match(/^http:/)?x:'http://deoxy.org/'+x;">
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="nu.htm">&nbsp;&nbsp;\_updates</option>
+<!-- option value="watts.htm">alanwatts</option -->
+<!-- option value="alephnull">aleph</option -->
+<option value="8brains.htm">circuits</option>
+<option value="8basic.htm">&nbsp;&nbsp;\_scripts</option>
+
+
+
+<!-- option value="ct">crimethinc</option -->
+<option value="gacwao">defrag</option>
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="contact">&nbsp;&nbsp;|_contact</option>
+<option VALUE="http://m.deoxy.org">&nbsp;&nbsp;|_mobile</option>
+<!-- option value="wiki/Deoxy/Help">&nbsp;&nbsp;|_help</option -->
+<option value="meme/DNA">DNA</option>
+<option value="find">Find?</option>
+<!-- option value="forum">forum</option>
+<option value="newposts">&nbsp;&nbsp;|_newposts</option -->
+<!-- option value="hyper.htm">hyperspace</option -->
+<option value="iching">IChing</option>
+<option value="iching/random">&nbsp;&nbsp;\_random</option>
+<option value="imagine.mil">imagine.mil</option>
+<option value="inc.htm">incunabula</option>
+<!-- option value="http://irc.deoxy.org">IRC status</option -->
+<option value="koans">koans</option>
+<option value="koan/random">&nbsp;&nbsp;\_random</option>
+
+<option value="media">media</option>
+<option value="media/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="meme">meme</option>
+<option value="meme/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="news">news</option>
+<option VALUE="news/cloud/today">&nbsp;&nbsp;|_today</option>
+<option VALUE="news/digestc">&nbsp;&nbsp;|_digest</option>
+<option VALUE="news/view">&nbsp;&nbsp;|_category</option>  
+<option VALUE="http://m.deoxy.org/news">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\_mobile</option>
+<option value="omega.htm">omega</option>
+<option value="pdfa">PDFA</option>
+<option value="index/People">People</option>
+<option value="leary.htm">&nbsp;&nbsp;|_Leary</option>
+<option value="lilly.htm">&nbsp;&nbsp;|_Lilly</option>
+<option value="mckenna.htm">&nbsp;&nbsp;|_McKenna</option>
+<option value="media/McLuhan">&nbsp;&nbsp;|_McLuhan</option>
+<option value="raw.htm">&nbsp;&nbsp;|_RAWilson</option>
+<option value="philo.htm">philosophos</option>
+<option value="cgi/randlink.pl?go">random</option>
+<option value="rss.htm">RSS</option>
+<!-- option value="time/sabbats.htm">sabbats</option>
+<option value="shaman.htm">shaman</option -->
+<option value="stats">stats</option>
+<option value="maps">&nbsp;&nbsp;\_map</option>
+<!-- option value="tcrime.htm">thoughtcrime</option -->
+<option value="topics">topics</a>
+<option value="nu.htm">&nbsp;&nbsp;\_cloud</option>
+<option value="nu.htm">updates</option>
+<option value="wiki/Deoxy/Video">video</option>
+<option value="videx">&nbsp;&nbsp;|_index</option>
+<option value="vidcloud">&nbsp;&nbsp;|_cloud</option>
+<option value="vidimg">&nbsp;&nbsp;|_images</option>
+<option VALUE="warnings.htm">warnings</option>
+<!-- option value="wiki">wiki</option>
+<option value="wiki/Recent">&nbsp;&nbsp;|_changes</option>
+<option value="wiki/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="online">who's online</option -->
+</select>
+
+<input type="hidden" name="from" value='/memelex.htm'>
+<noscript><input type="Submit" value="go" class="button"></noscript>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></form>
+
+<form action="http://translate.google.com/translate" method="post" target="_top" name="trans" id="trans"><td nowrap align="center">
+<input type="Submit" value="to" class="button" title="Google translation">
+<select name="tl" class="select" title="Google translation">
+<option value=af>Afrikaans</option>
+<option value=sq>Albanian</option>
+<option value="ar">Arabic</option>
+<option value=hy>Armenian</option>
+<option value=az>Azerbaijani</option>
+<option value=eu>Basque</option>
+<option value=be>Belarusian</option>
+<option value=bn>Bengali</option>
+<option value=bs>Bosnian</option>
+<option value="bg">Bulgarian</option>
+<option value=my>Burmese</option>
+<option value="ca">Catalan</option>
+<option value=ceb>Cebuano</option>
+<option value=ny>Chichewa</option>
+<option value="zh-CN">Chinese CN</option>
+<option value="zh-TW">Chinese TW</option>
+<option value="hr">Croatian</option>
+<option value="cs">Czech</option>
+<option value="da">Danish</option>
+<option value="nl">Dutch</option>
+<option value=eo>Esperanto</option>
+<option value="et">Estonian</option>
+<option value="tl">Filipino</option>
+<option value="fi">Finnish</option>
+<option value="fr">French</option>
+<option value="gl">Galacian</option>
+<option value=ka>Georgian</option>
+<option value="de">German</option>
+<option value="el">Greek</option>
+<option value=gu>Gujarati</option>
+<option value=ht>Haitian Creole</option>
+<option value=ha>Hausa</option>
+<option value="iw">Hebrew</option>
+<option value="hi">Hindi</option>
+<option value=hmn>Hmong</option>
+<option value="hu">Hungarian</option>
+<option value=is>Icelandic</option>
+<option value=ig>Igbo</option>
+<option value="id">Indonesian</option>
+<option value=ga>Irish</option>
+<option value="it">Italian</option>
+<option value="ja">Japanese</option>
+<option value=jw>Javanese</option>
+<option value=kn>Kannada</option>
+<option value=kk>Kazakh</option>
+<option value=km>Khmer</option>
+<option value="ko">Korean</option>
+<option value=lo>Lao</option>
+<option value=la>Latin</option>
+<option value="lv">Latvian</option>
+<option value="lt">Lithuanian</option>
+<option value=mk>Macedonian</option>
+<option value=mg>Malagasy</option>
+<option value=ms>Malay</option>
+<option value=ml>Malayalam</option>
+<option value="mt">Maltese</option>
+<option value=mi>Maori</option>
+<option value=mr>Marathi</option>
+<option value=mn>Mongolian</option>
+<option value=ne>Nepali</option>
+<option value="no">Norwegian</option>
+<option value=fa>Persian</option>
+<option value="pl">Polish</option>
+<option value="pt">Portuguese</option>
+<option value=pa>Punjabi</option>
+<option value="ro">Romanian</option>
+<option value="ru">Russian</option>
+<option value="sr">Serbian</option>
+<option value=st>Sesotho</option>
+<option value=si>Sinhala</option>
+<option value="sk">Slovak</option>
+<option value="sl">Slovenian</option>
+<option value=so>Somali</option>
+<option value="es" selected>Spanish</option>
+<option value=su>Sundanese</option>
+<option value=sw>Swahili</option>
+<option value="sv">Swedish</option>
+<option value=tg>Tajik</option>
+<option value=ta>Tamil</option>
+<option value=te>Telugu</option>
+<option value="th">Thai</option>
+<option value="tr">Turkish</option>
+<option value="uk">Ukrainian</option>
+<option value=ur>Urdu</option>
+<option value=uz>Uzbek</option>
+<option value="vi">Vietnamese</option>
+<option value=cy>Welsh</option>
+<option value=yi>Yiddish</option>
+<option value=yo>Yoruba</option>
+<option value=zu>Zulu</option></select>
+<input type=hidden name=sl value="en">
+<input type=hidden name=hl value="en">
+<input type=hidden name=ie value="UTF-8">
+<input type=hidden name=u id=u value='http://deoxy.org/memelex.htm'>
+</td></form>
+
+
+<td align="right" valign="middle" nowrap>
+<table cellspacing="0" cellpadding="0" border=0><tr>
+<form action=http://deoxy.org/find method=get name=sitesearchform>
+<td nowrap align=right valign="middle">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name=q size=15 class="input" title="search deoxy.org">
+<input type="Submit" value="find" class="button" title="search deoxy.org"></TD>
+</form></tr></table>
+</td></tr></table>
+
+</td></tr><SCRIPT TYPE="text/javascript">
+document.trans.tl.selectedIndex=Math.floor(Math.random()*(document.trans.tl.length+1))
+</script><tr><td bgcolor="#111111" background="img/thin_horizontal_lines.gif" 
+style=white-space:nowrap;overflow:hidden;>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+<td style="background-image:url('gif/background2.jpg');background-position:40 0;" width=20>&nbsp;</td>
+<td style=background-image:url(img/thin_horizontal_lines.gif);>
+<div style=overflow:hidden;white-space:nowrap;>&nbsp;<small>[an error occurred while processing this directive]</small></div></td>
+
+<td width=20>&nbsp;</td>
+<form action=http://deoxy.org/cgi/jump.pl method=get target=_blank>
+<td align="right"><div style=overflow:hidden;display:none;>
+<font color="#909090"><a href="nu.htm"><font color="#ffffff" size="-1">New</font></a> : <font size="-1">
+<a href="nu.htm" ><font color=#ffffff size=-2>Site</font></a> : <a href="nu.htm" ><font color=#ffffff size=-2>Updates</font></a>
+
+</font></font></div></td>
+
+<td style="background-image:url('gif/background2.jpg');background-position:0 0;" width=20>&nbsp;</td>
+</form></tr></table>
+</td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="#000000" align="right" background="gif/background2.jpg">
+<table><tr><form action="http://deoxy.org/cgi/jump.pl"><td>
+	<select name="to" class="select" 
+	onChange="if (this.options[this.selectedIndex].value != 'none') location.href='http://deoxy.org/'+this.options[this.selectedIndex].value">
+        <option value='none'>Related to A Memetic Lexicon<option value='index/Consciousness'>Consciousness:<option value="2command.htm">&nbsp;&nbsp;2 Commandments for the Molecular Age<option value="h_3bigm.htm">&nbsp;&nbsp;3 BIG Mistakes<option value="l_memo.htm">&nbsp;&nbsp;A Memo Designed to Cheer Up the Human Race<option value="psyguide.htm">&nbsp;&nbsp;A Short Guide To Hallucinogenic Drugs For I...<option value="wiki/Acid_Genes">&nbsp;&nbsp;Acid Genes<option value="l_acid.htm">&nbsp;&nbsp;ACID: Not for every brain<option value="watts.htm">&nbsp;&nbsp;Alan Watts Lectures and Essays<option value="wiki/Alcohol">&nbsp;&nbsp;Alcohol<option value="wiki/Aloha">&nbsp;&nbsp;Aloha<option value="bmushrmd.htm">&nbsp;&nbsp;bemushroomed<option value="bom.htm">&nbsp;&nbsp;Beware of Monotheism<option value="bewilderness.htm">&nbsp;&nbsp;Bewilderness<option value="meme/Chapel_Perilous">&nbsp;&nbsp;Chapel Perilous<option value="cognitivechaos.htm">&nbsp;&nbsp;Cognitive Chaos<option value="wiki/CognitiveSynergy">&nbsp;&nbsp;CognitiveSynergy<option value="sos.htm">&nbsp;&nbsp;consciousness expanding agents<option value="media/Consciousness/The_Phenomenal_Self">&nbsp;&nbsp;Consciousness/The Phenomenal Self<option value="meme/Consciousness_101">&nbsp;&nbsp;Consciousness 101<option value="creative.htm">&nbsp;&nbsp;Creativity and What Blocks It<option value="cc-intro.htm">&nbsp;&nbsp;CyberCraft<option value="neurospace.htm">&nbsp;&nbsp;Cybernetics & Entheogenics: From Cyberspace...<option value="shamanway.htm">&nbsp;&nbsp;Discovering the Way of the Shaman<option value="meme/DNA">&nbsp;&nbsp;DNA<option value="meme/Drugs">&nbsp;&nbsp;Drugs<option value="egofalse.htm">&nbsp;&nbsp;Ego - The False Center<option value="annex/8yoga0.htm">&nbsp;&nbsp;Eight Lectures On Yoga<option value="wiki/Emotional_contagion">&nbsp;&nbsp;Emotional Contagion<option value="lsdeity.htm">&nbsp;&nbsp;Feel the Cosmos as a Translucent Ever-Livin...<option value="gc.htm">&nbsp;&nbsp;GENETIC COUNSELING<option value="gacwao.htm">&nbsp;&nbsp;God As Consciousness Without An Object<option value="gz.htm">&nbsp;&nbsp;Gracie and Zarkov<option value="wiki/Great_Perfection">&nbsp;&nbsp;Great Perfection<option value="wiki/Human_Biocomputer">&nbsp;&nbsp;Human Biocomputer<option value="hyper.htm">&nbsp;&nbsp;Hyperspace<option value="wiki/Ism/Altruism">&nbsp;&nbsp;Ism/Altruism<option value="meme/Kids_and_Psychedelics">&nbsp;&nbsp;Kids and Psychedelics<option value="media/McKenna">&nbsp;&nbsp;McKenna<option value="alephnull/models.htm">&nbsp;&nbsp;Models<option value="t_newmap.htm">&nbsp;&nbsp;New Maps of Hyperspace<option value="t_langvr.htm">&nbsp;&nbsp;Ordinary Language, Visible Language and Vir...<option value="pdfa/index.htm">&nbsp;&nbsp;Partnership for Drug Freedom in America<option value="p_daimon.htm">&nbsp;&nbsp;Personal Daimons<option value="alephnull/platocav.htm">&nbsp;&nbsp;Plato's metaphor of the cave<option value="h_lilly.htm">&nbsp;&nbsp;Programming and Metaprogramming in the Huma...<option value="meme/Pronoia">&nbsp;&nbsp;Pronoia<option value="h_thunch.htm">&nbsp;&nbsp;Quantum Resonance in the Synaptic Field<option value="media/RAW/Consciousness_Change_in_the_Eight_Circuit_Model">&nbsp;&nbsp;RAW/Consciousness Change in the Eight Circu...<option value="meme/Reality_Tunnel">&nbsp;&nbsp;Reality Tunnel<option value="failure.htm">&nbsp;&nbsp;Running on Emptiness: The Failure of Symbol...<option value="evasion/1.htm">&nbsp;&nbsp;Sanity<option value="soulbody.htm">&nbsp;&nbsp;Soul and Body<option value="8brains.htm">&nbsp;&nbsp;The 8 Circuit Model of Human Intelligence<option value="geoman.htm">&nbsp;&nbsp;The Akashic Record Player (Remix)<option value="annex/cwl.htm">&nbsp;&nbsp;The Clear White Light<option value="narbystew.htm">&nbsp;&nbsp;The Cosmic Serpent, DNA and the Origins of ...<option value="critmass.htm">&nbsp;&nbsp;The Critical Mass of Enlightenment<option value="dec_evo.htm">&nbsp;&nbsp;The Declaration of Evolution<option value="timefascination.htm">&nbsp;&nbsp;The Fascination of Time<option value="raw1.htm">&nbsp;&nbsp;The grid of Circuits I and II creates four ...<option value="evasion/index.htm">&nbsp;&nbsp;The Human Evasion<option value="shulgin.htm">&nbsp;&nbsp;The Illegal Search for Self Awareness<option value="w_nature.htm">&nbsp;&nbsp;The Nature Of Consciousness<option value="wiki/The_Noosphere_and_The_Gaian_Mind">&nbsp;&nbsp;The Noosphere and The Gaian Mind<option value="alephnull/jaynes.htm">&nbsp;&nbsp;The Origin of Consciousness in the Breakdow...<option value="h_unknwn.htm">&nbsp;&nbsp;The Otherworld as the Unknown<option value="psyexp.htm">&nbsp;&nbsp;The Psychedelic Experience<option value="pdfa/sacred-and-natural.htm">&nbsp;&nbsp;The Reunification of the Sacred and Natural<option value="s_reflex.htm">&nbsp;&nbsp;The Semmelweis Reflex<option value="pdfa/woc.htm">&nbsp;&nbsp;The War on Drugs is a War on Consciousness<option value="tcrime.htm">&nbsp;&nbsp;Thought Crime<option value="thunder.htm">&nbsp;&nbsp;Thunder: Perfect Mind<option value="timediscontent.htm">&nbsp;&nbsp;Time and its Discontents<option value="l_impgui.htm">&nbsp;&nbsp;Using LSD to Imprint the Tibetan-Buddhist E...<option value="LSDmyth.htm">&nbsp;&nbsp;We do not know how our visual system works<option value='index/Language'>Language:<option value="h_alove.htm">&nbsp;&nbsp;Alien Love - Speaking in Toungues<option value="wiki/Amnion_for_the_Human_in_Embryo">&nbsp;&nbsp;Amnion for the Human in Embryo<option value="icaro.htm">&nbsp;&nbsp;Ayahuasca Icaro<option value="gz_visib.htm">&nbsp;&nbsp;Gracie's Visible Language Contact Experience<option value="pkd_how2build.htm">&nbsp;&nbsp;How to Build a Universe That Doesn't Fall A...<option value="evasion/5.htm">&nbsp;&nbsp;How To Write Sane Books<option value="t_langvr.htm">&nbsp;&nbsp;Ordinary Language, Visible Language and Vir...<option value="meme/Perl">&nbsp;&nbsp;Perl<option value="h_leary.htm">&nbsp;&nbsp;Programmed Communication During Experiences...<option value="huxley1.htm">&nbsp;&nbsp;Propaganda in a Democratic Society<option value="failure.htm">&nbsp;&nbsp;Running on Emptiness: The Failure of Symbol...<option value="wiki/Sombunall">&nbsp;&nbsp;Sombunall<option value="emperors.htm">&nbsp;&nbsp;The Emperor's New Clothes<option value="alephnull/lethal.htm">&nbsp;&nbsp;The lethal text<option value="8_larvals.htm">&nbsp;&nbsp;The Post-Larval Must Be Very Cautious in Co...<option value="alephnull/babel.htm">&nbsp;&nbsp;The Tower of Babel story<option value="alephnull/index.htm">&nbsp;&nbsp;The Web site of aleph<option value="pkd_tcs.htm">&nbsp;&nbsp;Tractates Cryptica Scriptura<option value="mantrip.htm">&nbsp;&nbsp;Visible Language, Mantid<option value="alephnull/erasure.htm">&nbsp;&nbsp;Writing under erasure<option value="infantile.htm">&nbsp;&nbsp;Youth and Regression in an Infantile Society<option value='index/Media Literacy'>Media Literacy:<option value="l_smear.htm">&nbsp;&nbsp;"What's a little backbiting between friends?"<option value="h_t100p.htm">&nbsp;&nbsp;100% Reality Channel Switch<option value="prudes.htm">&nbsp;&nbsp;c e n s o r s h i p ?<option value="meme/Culture_war">&nbsp;&nbsp;Culture war<option value="meme/Drugs">&nbsp;&nbsp;Drugs<option value="glox">&nbsp;&nbsp;GLOX<option value="media/Huxley/The_Ultimate_Revolution">&nbsp;&nbsp;Huxley/The Ultimate Revolution<option value="wc/wc-ilaw.htm">&nbsp;&nbsp;International Law and War Crimes<option value="media/McKenna/Riding_Range_With_Marshall_McLuhan">&nbsp;&nbsp;McKenna/Riding Range With Marshall McLuhan<option value="media/McLuhan/GutenbergGalaxy">&nbsp;&nbsp;McLuhan/GutenbergGalaxy<option value="media/McLuhan/LawsOfMedia">&nbsp;&nbsp;McLuhan/LawsOfMedia<option value="negativland-tenets.htm">&nbsp;&nbsp;NEGATIVLAND'S TENETS OF FREE APPROPRIATION<option value="media/OpenDebates">&nbsp;&nbsp;OpenDebates<option value="media/Plastic_Fingers">&nbsp;&nbsp;Plastic Fingers<option value="wiki/Positive_LSD_Story">&nbsp;&nbsp;Positive LSD Story<option value="huxley1.htm">&nbsp;&nbsp;Propaganda in a Democratic Society<option value="meme/Reality_Tunnel">&nbsp;&nbsp;Reality Tunnel<option value="failure.htm">&nbsp;&nbsp;Running on Emptiness: The Failure of Symbol...<option value="ct/reality.htm">&nbsp;&nbsp;Seduced by the Image of Reality<option value="seize_it.htm">&nbsp;&nbsp;Seizing The Media<option value="aknight.htm">&nbsp;&nbsp;The Armored Knight of the 20th Century<option value="ct/dailylife.htm">&nbsp;&nbsp;The Contents of Your Daily Life<option value="ct/deadhand.htm">&nbsp;&nbsp;The Dead Hand of the Past<option value="l_sintv.htm">&nbsp;&nbsp;The Great Judeo-Christian Sin, Outlaw, Guil...<option value="law/consti.htm">&nbsp;&nbsp;United States Constitution<option value="wiki/Deoxy/Video">&nbsp;&nbsp;Video<option value="warnings.htm">&nbsp;&nbsp;Warning: reality, environment, psychology, ...<option value="dodorant.htm">&nbsp;&nbsp;Why Capitalists Want To Sell You Deodorant<option value="media/WikiLeaks">&nbsp;&nbsp;WikiLeaks<option value="l_word1.htm">&nbsp;&nbsp;You must know your mythic origins<option value='index/Neurogenetics'>Neurogenetics:<option value="8_int.htm">&nbsp;&nbsp;An interstellar neurogenetic teleology<option value="cc-intro.htm">&nbsp;&nbsp;CyberCraft<option value="shamanway.htm">&nbsp;&nbsp;Discovering the Way of the Shaman<option value="dnalert1.htm">&nbsp;&nbsp;DNA ALERT!<option value="dnamind.htm">&nbsp;&nbsp;DNA is minded and conscious<option value="gc.htm">&nbsp;&nbsp;GENETIC COUNSELING<option value="wiki/Human_Biocomputer">&nbsp;&nbsp;Human Biocomputer<option value="8_no.htm">&nbsp;&nbsp;neurogenetic ontology<option value="media/RAW/Consciousness_Change_in_the_Eight_Circuit_Model">&nbsp;&nbsp;RAW/Consciousness Change in the Eight Circu...<option value="media/RAW/Prometheus_Rising">&nbsp;&nbsp;RAW/Prometheus Rising<option value="cirtable.htm">&nbsp;&nbsp;Representations of the Human Energy Octave<option value="shamansci.htm">&nbsp;&nbsp;Shamans and scientists<option value="8basic.htm">&nbsp;&nbsp;The 8 Basic Scripts<option value="8brains.htm">&nbsp;&nbsp;The 8 Circuit Model of Human Intelligence<option value="8circuit.htm">&nbsp;&nbsp;The 8 Circuits of Consciousness<option value="narbystew.htm">&nbsp;&nbsp;The Cosmic Serpent, DNA and the Origins of ...<option value="gaia/g_mind.htm">&nbsp;&nbsp;the gaian mind cut up<option value="eoctave.htm">&nbsp;&nbsp;The Octave of Energy<option value="8_larvals.htm">&nbsp;&nbsp;The Post-Larval Must Be Very Cautious in Co...<option value="rushingw.htm">&nbsp;&nbsp;The Sound of Rushing Water<option value="wiki/The_Thinker_and_the_Prover">&nbsp;&nbsp;The Thinker and the Prover<option value="ups.htm">&nbsp;&nbsp;The Ups of Pleasure and Downs of Satisfaction<option value="l_word1.htm">&nbsp;&nbsp;You must know your mythic origins</select>&nbsp;<noscript><input type="Submit" value="go" class="button"></noscript>
+	<input type="hidden" name="from" value="/memelex.htm"></td></form></tr></table>
+</td></tr></table></div><p>
+
+
+
+<blockquote>
+<h1>A Memetic Lexicon</h1>
+
+<tt>Version 3.2<br>
+Glenn Grant, Memeticist<br></tt>
+<p><ul>
+"An idea is something you have;<br>
+an ideology is something that has you."<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#151;Morris Berman
+</ul>
+
+<h2>What if ideas were viruses?</h2>
+<img src="img/brain_eaters.jpg" border=0 align="right" vspace="12" hspace="12" width="200" height="302">
+Consider the T-phage virus. A T-phage cannot replicate itself; it
+reproduces by hijacking the DNA of a bacterium, forcing its host to make
+millions of copies of the phage. Similarly, an idea can parasitically
+infect your mind and alter your behavior, causing you to want to tell your
+friends about the idea, thus exposing them to the idea-virus. Any idea
+which does this is called a "meme" (pronounced `meem'). 
+<p>
+Unlike a virus, which is encoded in DNA molecules, a meme is nothing
+more than a pattern of information, one that happens to have evolved a form
+which induces people to repeat that pattern. Typical memes include
+individual slogans, ideas, catch-phrases, melodies, icons, inventions, and
+fashions. It may sound a bit sinister, this idea that people are hosts for
+mind-altering strings of symbols, but in fact this is what human culture is
+all about.
+<p>
+As a species, we have co-evolved with our memes. Imagine a group of
+early Homo Sapiens in the Late Pleistocene epoch. They've recently arrived
+with the latest high-tech hand axes and are trying to show their Homo
+Erectus neighbours how to make them. Those who can't get their heads around
+the new meme will be at a disadvantage and will be out-evolved by their
+smarter cousins. 
+<p>
+Meanwhile, the memes themselves are evolving, just as in the game of
+"Telephone" (where a message is whispered from person to person, being
+slightly mis-replicated each time). Selection favors the memes which are
+easiest to understand, to remember, and to communicate to others. Garbled
+versions of a useful meme would presumably be selected out.
+<p>
+So, in theory at least, the ability to understand and communicate
+complex memes is a survival trait, and natural selection should favor those
+who aren't too conservative to understand new memes. Or does it? In
+practice, some people are going to be all too ready to commit any new meme
+that comes along, even if it should turn out to be deadly nonsense, like:
+"Jump off a cliff and the gods will make you fly."
+<p>
+Such memes do evolve, generated by crazy people, or through
+mis-replication. Notice, though, that this meme might have a lot of appeal.
+The idea of magical flight is so tantalizing -- maybe, if I truly believed,
+I just might leap off the cliff and...
+<p>
+This is a vital point: people try to infect each other with those
+memes which they find most appealing, regardless of the memes' objective
+value or truth. Further, the carrier of the cliff-jumping meme might never
+actually take the plunge; they may spend the rest of their long lives
+infecting other people with the meme, inducing millions of gullible fools
+to leap to their deaths. Historically, this sort of thing is happening all
+the time. 
+<p>
+Whether memes can be considered true "life forms" or not is a topic of
+some debate, but this is irrelevant: they behave in a way similar to life
+forms, allowing us to combine the analytical techniques of epidemiology,
+evolutionary science, immunology, linguistics, and semiotics, into an
+effective system known as "memetics." Rather than debate the inherent
+"truth" or lack of "truth" of an idea, memetics is largely concerned with
+how that idea gets itself replicated.
+<p>
+Memetics is vital to the understanding of cults, ideologies, and
+marketing campaigns of all kinds, and it can help to provide immunity from
+dangerous information-contagions. You should be aware, for instance, that
+you just been exposed to the Meta-meme, the meme about memes...
+<p>
+The lexicon which follows is intended to provide a language for the
+analysis of memes, meme-complexes, and the social movements they spawn. The
+name of the person who first coined and defined each word appears in
+parentheses, although some definitions have been paraphrased and altered.
+<p>
+<h3>Sources:</h3>
+
+<tt>
+Richard Dawkins, <i>The Selfish Gene.</i><br>
+Keith Henson, "Memetics", <i>Whole Earth Review #57:</i> 50-55.<br>
+Douglas Hofstadter, <i>Metamagical Themas.</i><br>
+Howard Rheingold, "Untranslatable Words", <i>Whole Earth Review  #57:</i> 3-8.<br>
+</tt>
+<p>
+For a fictional treatment of these ideas, see my short story, 
+<a href="http://www.istop.com/~ggrant/writing/memdrift.html">&quot;Memetic Drift,&quot;</a> 
+in <i>Interzone #34</i> (March/April 1990).
+
+<hr>
+
+<a name="auto-toxic"></a>
+<DL><Dt><b>Auto-toxic</b><Dd >Dangerous to itself. Highly auto-toxic memes are usually 
+self-limiting because they promote the destruction of their hosts (such as 
+the Jim Jones meme; any military indoctrination meme-complex; any
+"martyrdom" meme). (GMG) (See <a href="memelex.htm#exo-toxic">exo-toxic</a>.)</b><Dd ><p>
+
+<a name="bait"></a>
+<Dt><b>bait</b><Dd >The part of a meme-complex that promises to benefit the host (usually 
+in return for replicating the complex). The bait usually justifies, but 
+does not explicitly urge, the replication of a meme-complex. (Donald Going, 
+quoted by Hofstadter.) Also called the reward co-meme. (In many religions, 
+"Salvation" is the bait, or promised reward; "Spread the Word" is the hook. 
+Other common bait co-memes are "Eternal Bliss", "Security", "Prosperity",
+"Freedom".) (See <a href="memelex.htm#hook">hook</a>; <a href="memelex.htm#threat">threat</a>; <a href="memelex.htm#infection_strategy">infection strategy</a>.)<p>
+
+<Dt><b>belief-space</b><Dd >Since a person can only be infected with and transmit a 
+finite number of memes, there is a limit to their belief space (Henson). 
+Memes evolve in competition for niches in the belief-space of individuals 
+and societies.<p>
+
+<Dt><b>censorship</b><Dd >Any attempt to hinder the spread of a meme by eliminating its 
+vectors. Hence, censorship is analogous to attempts to halt diseases by 
+spraying insecticides. Censorship can never fully kill off an offensive 
+meme, and may actually help to promote the meme's most virulent strain, 
+while killing off milder forms.<p>
+
+<Dt><b>co-meme</b><Dd >A meme which has symbiotically co-evolved with other memes, to 
+form a mutually-assisting meme-complex. Also called a symmeme. (GMG)<p>
+
+<a name="cult"></a>
+<Dt><b>cult</b><Dd >A sociotype of an <a href="memelex.htm#auto-toxic">auto-toxic</a> meme-complex, composed of <a href="memelex.htm#membot">membots</a> 
+and/or <a href="memelex.htm#memeoid">memeoids</a>. (GMG) Characteristics of cults include: self-isolation of 
+the infected group (or at least new recruits); brainwashing by repetitive 
+exposure (inducing dependent mental states); genetic functions discouraged 
+(through celibacy, sterilization, devalued family) in favor of replication 
+(proselytizing); and leader-worship ("personality cult"). (Henson.)<p>
+
+<Dt><b>dormant</b><Dd >Currently without human hosts. The ancient Egyptian hieroglyph 
+system and the Gnostic Gospels are examples of "dead" schemes which lay 
+dormant for millennia in hidden or untranslatable texts, waiting to 
+re-activate themselves by infecting modern archeologists. Some obsolete 
+memes never become entirely dormant, such as Phlogiston theory, which 
+simply mutated from a "belief" into a "quaint historical footnote."<p>
+
+<Dt><b>earworm</b><Dd >"A tune or melody which infects a population rapidly." 
+(Rheingold); a hit song. (Such as: "Don't Worry, Be Happy".) (f. German, <I>ohrwurm</I>=earworm.)<p>
+
+<a name="exo-toxic"></a>
+<Dt><b>exo-toxic</b><Dd >Dangerous to others. Highly exo-toxic memes promote the 
+destruction of persons other than their hosts, particularly those who are 
+carriers of rival memes. (Such as: Nazism, the Inquisition, Pol Pot.) (See 
+<a href="memelex.htm#meme-allergy">meme-allergy</a>.) (GMG)<p>
+
+<a name="hook"></a>
+<Dt><b>hook</b><Dd >The part of a meme-complex that urges replication. The hook is often 
+most effective when it is not an explicit statement, but a logical 
+consequence of the meme's content. (Hofstadter) (See <a href="memelex.htm#bait">bait</a>, <a href="memelex.htm#threat">threat</a>.)<p>
+
+<a name="host"></a>
+<Dt><b>host</b><Dd >A person who has been successfully infected by a meme. See <a href="memelex.htm#infection">infection</a>, 
+<a href="memelex.htm#membot">membot</a>, <a href="memelex.htm#memeoid">memeoid</a>.<p>
+
+<a name="ideosphere"></a>
+<Dt><b>ideosphere</b><Dd >The realm of memetic evolution, as the biosphere is the realm 
+of biological evolution. The entire memetic ecology. (Hofstadter.) The 
+health of an ideosphere can be measured by its memetic diversity.<p>
+
+<Dt><b>immuno-depressant</b><Dd >Anything that tends to reduce a person's memetic 
+immunity. Common immuno-depressants are: travel, disorientation, physical 
+and emotional exhaustion, insecurity, emotional shock, loss of home or 
+loved ones, future shock, culture shock, isolation stress, unfamiliar 
+social situations, certain drugs, loneliness, alienation, paranoia, 
+repeated exposure, respect for Authority, escapism, and hypnosis 
+(suspension of critical judgment). Recruiters for cults often target 
+airports and bus terminals because travelers are likely to be subject to a 
+number of these immuno-depressants. (GMG) (See <a href="memelex.htm#cult">cult</a>.)<p>
+
+<Dt><b>immuno-meme</b><Dd >See <a href="memelex.htm#vaccime">vaccime</a>. (GMG)<p>
+
+<a name="infection"></a>
+<Dt><b>infection</b><Dd >
+<ol><li>Successful encoding of a meme in the memory of a human being. 
+A memetic infection can be either active or inactive. It is inactive if the 
+host does not feel inclined to transmit the meme to other people. An active 
+infection causes the host to want to infect others. Fanatically active 
+hosts are often <a href="memelex.htm#membot">membots</a> or <a href="memelex.htm#memeoid">memeoids</a>. A person who is exposed to a meme but who does not remember it (consciously or otherwise) is not infected. (A 
+host can indeed be unconsciously infected, and even transmit a meme without 
+conscious awareness of the fact. Many societal norms are transmitted this 
+way.) (GMG)<p>
+
+<li>Some memeticists have used `infection' as a synonym for `belief' 
+(i.e. only believers are infected, non-believers are not). However, this 
+usage ignores the fact that people often transmit memes they do not 
+"believe in."  Songs, jokes, and fantasies are memes which do not rely on 
+"belief" as an infection strategy.</ol><p>
+
+<a name="infection_strategy"></a>
+<Dt><b>infection strategy</b><Dd >Any memetic strategy which encourages infection of a 
+host. Jokes encourage infection by being humorous, tunes by evoking various 
+emotions, slogans and catch-phrases by being terse and continuously 
+repeated. Common infection strategies are <a href="memelex.htm#vvv">"Villain vs. victim"</a>, "Fear of 
+Death", and "Sense of Community". In a meme-complex, the bait co-meme is 
+often central to the infection strategy. (See <a href="memelex.htm#replication_strategy">replication strategy</a>; 
+<a href="memelex.htm#mimicry">mimicry</a>.) (GMG)<p>
+
+<a name="membot"></a>
+<Dt><b>membot</b><Dd >A  person whose entire life has become subordinated to the 
+propagation of a meme, robotically and at any opportunity. (Such as many 
+Jehovah's Witnesses, Krishnas, and Scientologists.) Due to internal 
+competition, the most vocal and extreme membots tend to rise to top of 
+their sociotype's hierarchy. A self-destructive membot is a <a href="memelex.htm#memeoid">memeoid</a>. (GMG)<p>
+
+<a name="meme"></a>
+<Dt><b>meme</b><Dd >(pron. `meem') A  contagious information pattern that replicates by 
+parasitically infecting human minds and altering their behavior, causing 
+them to propagate the pattern. (Term coined by Dawkins, by analogy with 
+"gene".) Individual slogans, catch-phrases, melodies, icons, inventions, 
+and fashions are typical memes. An idea or information pattern is not a 
+meme until it causes someone to replicate it, to repeat it to someone else. 
+All transmitted knowledge is memetic. (Wheelis, quoted in Hofstadter.) (See 
+<a href="memelex.htm#meme-complex">meme-complex</a>).<p>
+
+<a name="meme-allergy"></a>
+<Dt><b>meme-allergy</b><Dd >A form of intolerance; a condition which causes a person to 
+react in an unusually extreme manner when exposed to a specific semiotic stimulus, or 
+`meme-allergen.' Exo-toxic meme-complexes typically confer dangerous meme-allergies 
+on their hosts. Often, the actual meme-allergens need not be present, but merely 
+perceived to be present, to trigger a reaction. Common meme-allergies include 
+homophobia, paranoid anti-Communism, and porno phobia. Common forms of meme-allergic 
+reaction are censorship, vandalism, belligerent verbal abuse, and physical violence. 
+(GMG)<p>
+
+<a name="meme-complex"></a>
+<Dt><b>meme-complex</b><Dd >A set of mutually-assisting memes which have co-evolved a 
+symbiotic relationship. Religious and political dogmas, social movements, 
+artistic styles, traditions and customs, chain letters, paradigms, 
+languages, etc. are meme-complexes. Also called an m-plex, or scheme 
+(Hofstadter). Types of co-memes commonly found in a scheme are called the: 
+<a href="memelex.htm#bait">bait</a>; <a href="memelex.htm#hook">hook</a>; <a href="memelex.htm#threat">threat</a>; and <a href="memelex.htm#vaccime">vaccime</a>. A successful scheme commonly has certain 
+attributes: wide scope (a paradigm that explains much); opportunity for the 
+carriers to participate and contribute; conviction of its self-evident 
+truth (carries Authority); offers order and a sense of place, helping to 
+stave off the dread of meaninglessness. (Wheelis, quoted by Hofstadter.)<p>
+
+<a name="memeoid"></a>
+<Dt><b>memeoid, or memoid</b><Dd >A person "whose behavior is so strongly influenced by a 
+[meme] that their own survival becomes inconsequential in their own minds." (Henson) 
+(Such as: Kamikazes, Shiite terrorists, Jim Jones followers, any military personnel). 
+<a href="memelex.htm#host">Hosts</a> and <a href="memelex.htm#membot">membots</a> are not necessarily memeoids. (See <a href="memelex.htm#auto-toxic">auto-toxic</a>; <a href="memelex.htm#exo-toxic">exo-toxic</a>.)<p>
+
+<Dt><b>meme pool</b><Dd >The full diversity of memes accessible to a culture or 
+individual. Learning languages and traveling are methods of expanding one's 
+meme pool.<p>
+
+<Dt><b>memetic</b><Dd >Related to memes.<p>
+
+<Dt><b>memetic drift</b><Dd >Accumulated mis-replications; (the rate of) memetic mutation 
+or evolution. Written texts tend to slow the memetic drift of dogmas (Henson).<p>
+
+<Dt><b>memetic engineer</b><Dd >One who consciously devises memes, through meme-splicing 
+and memetic synthesis, with the intent of altering the behavior of others. 
+Writers of manifestos and of commercials are typical memetic engineers. 
+(GMG)<p>
+
+<Dt><b>memeticist</b><Dd >1. One who studies memetics. 2. A memetic engineer. (GMG)<p>
+
+<Dt><b>memetics</b><Dd >The study of memes and their social effects.<p>
+
+<a name="memotype"></a>
+<Dt><b>memotype</b><Dd >1. The actual information-content of a meme, as distinct from its 
+sociotype. 2. A class of similar memes. (GMG)<p>
+
+<a name="meta-meme"></a>
+<Dt><b>meta-meme</b><Dd >Any meme about memes (such as: <a href="memelex.htm#tolerance">"tolerance"</a>, "metaphor").<p>
+
+<Dt><b>Meta-meme, the</b><Dd >The concept of memes, considered as a meme itself.<p>
+
+<Dt><b>Millennial meme, the</b><Dd >Any of several currently-epidemic memes which predict 
+catastrophic events for the year 2000, including the battle of Armageddon, 
+the Rapture, the thousand-year reign of Jesus, etc. The "Imminent New Age" 
+meme is simply a pan-denominational version of this. (Also called the 
+`Endmeme.')<p>
+
+<a name="mimicry"></a>
+<Dt><b>mimicry</b><Dd >An infection strategy in which a meme attempts to imitate the 
+semiotics of another successful meme. Such as: pseudo-science (Creationism, 
+UFOlogy); pseudo-rebelliousness (Heavy Metal); subversion by forgery 
+(Situationist detournement). (GMG)<p>
+
+<a name="replication_strategy"></a>
+<Dt><b>replication strategy</b><Dd >Any memetic strategy used by a <a href="memelex.htm#meme">meme</a> to encourage its 
+<a href="memelex.htm#host">host</a> to repeat the meme to other people. The <a href="memelex.htm#hook">hook</a> co-meme of a 
+<a href="memelex.htm#meme-complex">meme-complex</a>. (GMG)<p>
+
+<Dt><b>retromeme</b><Dd >A meme which attempts to splice itself into an existing 
+<a href="memelex.htm#meme-complex">meme-complex</a> (example: Marxist-Leninists trying to co-opt other sociotypes). (GMG)<p>
+
+<Dt><b>scheme</b><Dd >A <a href="memelex.htm#meme-complex">meme-complex</a>. (Hofstadter.)<p>
+
+<Dt><b>sociotype</b><Dd >1. The social expression of a <a href="memelex.htm#memotype">memotype</a>, as the body of an 
+organism is the physical expression (phenotype) of the gene (genotype). Hence, the Protestant Church is one sociotype of the Bible's memotype. 2. A class of similar social organisations. (GMG)<p>
+
+<a name="threat"></a>
+<Dt><b>threat</b><Dd >The part of a meme-complex that encourages adherence and 
+discourages mis-replication. ("Damnation to Hell" is the threat co-meme in 
+many religious schemes.) (See: <a href="memelex.htm#bait">bait</a>, <a href="memelex.htm#hook">hook</a>, <a href="memelex.htm#vaccime">vaccime</a>.) (Hofstadter)<p>
+
+<a name="tolerance"></a>
+<Dt><b>Tolerance</b><Dd >A meta-meme which confers resistance to a wide variety of memes 
+(and their sociotypes), without conferring <a href="memelex.htm#meme-allergy">meme-allergies</a>. In its purest 
+form, Tolerance allows its host to be repeatedly exposed to rival memes, 
+even intolerant rivals, without active infection or meme-allergic reaction. 
+Tolerance is a central co-meme in a wide variety of schemes, particularly 
+"liberalism", and "democracy". Without it, a scheme will often become 
+<a href="memelex.htm#exo-toxic">exo-toxic</a> and confer meme-allergies on its hosts. Since schemes compete for 
+finite belief-space, tolerance is not necessarily a virtue, but it has 
+co-evolved in the <a href="memelex.htm#ideosphere">ideosphere</a> in much the same way as co-operation has 
+evolved in biological ecosystems. (Henson.)<p>
+
+<a name="vaccime"></a>
+<Dt><b>vaccime</b><Dd >(pron. vak-seem) Any <a href="memelex.htm#meta-meme">meta-meme</a> which confers resistance or 
+immunity to one or more memes, allowing that person to be exposed without 
+acquiring an active <a href="memelex.htm#infection">infection</a>. Also called an `immuno-meme.' Common 
+immune-conferring memes are "Faith", "Loyalty", "Skepticism", and 
+"tolerance". (See: <a href="memelex.htm#meme-allergy">meme-allergy</a>.) (GMG.)<p>
+
+Every scheme includes a vaccime to protect against rival memes. For instance:
+<UL>
+<li><b>Conservatism:</b> automatically resist all new memes.
+<li><b>Orthodoxy:</b> automatically reject all new memes.
+<li><b>Science:</b> test new memes for theoretical consistency and (where applicable) empirical repeatability; continually re-assess old memes; accept schemes only conditionally, pending future re:-assessment.
+<li><b>Radicalism:</b> embrace one new scheme, reject all others.
+<li><b>Nihilism:</b> reject all schemes, new and old.
+<li><b>New Age:</b> accept all esthetically-appealing memes, new and old, 
+regardless of empirical (or even internal) consistency; reject others. 
+(Note that this one doesn't provide much protection.)
+<li><b>Japanese:</b> adapt (parts of) new schemes to the old ones.
+</ul><p>
+
+<Dt><b>vector</b><Dd >A medium, method, or vehicle for the transmission of memes. Almost 
+any communication medium can be a memetic vector. (GMG)<p>
+
+<a name="vvv"></a>
+<Dt><b>Villain vs. Victim</b><Dd >An infection strategy common to many <a href="memelex.htm#meme-complex">meme-complexes</a>, 
+placing the potential <a href="memelex.htm#host">host</a> in the role of Victim and playing on their 
+insecurity, as in: "the bourgeoisie is oppressing the proletariat" 
+(Hofstadter). Often dangerously toxic to host and society in general. Also 
+known as the "Us-and-Them" strategy.<p>
+
+</DL><p>
+<hr>
+<small>Share-Right (S), 1990, by Glenn Grant, Montreal. &lt;<a href="http://www.istop.com/~ggrant">www.istop.com/~ggrant/</a>&gt; 
+(You may reproduce this material, only if your recipients may also reproduce it, you do not change it, and you include this notice 
+[see: <a href="memelex.htm#threat">threat</a>].</small>
+
+</blockquote>
+</blockquote><br clear=all>
+
+<div id=_footer>
+<div id=tabl style=top:0px;width:100%;margin:0px;margin-bottom:0px;>
+<table width="100%" border="0" cellspacing="0" cellpadding="4" align="center">
+
+<script type="text/javascript">
+function resizeMC(mode) {
+ var t = document.getElementById('mc')
+ var h = t.offsetHeight
+ var d = 440
+ if (mode == 'inc') h = h + 50
+ if (mode == 'dec') h = h - 50
+ if (mode == 'set') h = d
+ t.style.height = h + 'px'
+ if (h < 390) { h = d }
+ setCookie('fh',h,mcCookieExpires,'/')
+}
+var fh = getCookie('fh')
+var mcCookieExpires = new Date()
+mcCookieExpires.setTime(mcCookieExpires.getTime() + 365 * 24 * 60 * 60 * 1000)
+mcCookieExpires.toGMTString()
+
+function gomc(what) {
+ var whereto = what.options[what.selectedIndex].value;
+ if (whereto)
+  parent.mc.location.href = whereto;
+}
+document.write('<form target="mc" name="xJump">');
+</script><noscript>
+<form action="http://deoxy.org/cgi/jump.pl" target="mc" name="xJump">
+</noscript>
+
+<tr bgcolor="#111111"><td>
+
+<table width=100% cellspacing="0" cellpadding="4" border="0">
+<tr bgcolor="#222222">
+
+<td background="img/thin_horizontal_lines.gif">
+
+<font color="#888888" size="-2"><a
+ href="index.html" title="deoxy.org" rel=nofollow><b><font color="#888888">DEOXY</font></b></a> &nbsp; <font size="-3">&gt;</font>
+
+&nbsp; <a
+ href="contact.html" target=mc title=contact rel=nofollow><font color=#aaaaaa>CONTACT</font></a>
+
+ &#183; <a
+ href="news/frame.htm" target="mc" title="view news here" rel=nofollow><font color="#aaaaaa">NEWS</font></a>
+
+ &#183; <a
+ href="http://deoxy.org/vid" target="mc" title="watch video here" rel=nofollow><font color="#aaaaaa">VIDEO</font></a> : <a 
+ href="http://deoxy.org/videx?pop=1" target="mc" title="list new video" rel=nofollow><font color="#aaaaaa">NEW</font></a>&mdash;<a
+ href="http://deoxy.org/videx?pop=1&seen=1" target="mc" title="recently watched video" rel=nofollow><font color="#aaaaaa">WATCHED</font></a>&mdash;<a
+ href="http://deoxy.org/videx?pop=1&rand=1" target="mc" title="random video list" rel=nofollow><font color="#aaaaaa">RANDOM</font></a>
+</font></td>
+
+<td align="center" background="img/thin_horizontal_lines.gif">
+<font color="#888888" size="-2"><INPUT
+ type="button" class="button" value="&lt;" id=mcback title="rewind frame"><INPUT
+ type="button" class="button" value="&gt;" onClick="parent.mc.history.forward()" title="frame forward">
+<select name="to" class="select" onChange="gomc(this)" onDblClick="gomc(this)">
+<option value="http://deoxy.org/time/d2k/acalc/index.htm">Astro</option>
+<option value=http://deoxy.org/chatr>Chatter</option>
+<option value="http://deoxy.org/find#code">Cloud</option>
+<option value=http://deoxy.org/chatcloud?s=1>&nbsp;|_Chat</option>
+<option value="http://deoxy.org/topicloud?target=_blank">&nbsp;|_Topics</option>
+<option value="http://deoxy.org/vidcloud?s=1&m=1&small=1&js=1">&nbsp;|_Video</option>
+<option value="http://deoxy.org/news/cloud?n=10&m=1&s=1&t=_blank">&nbsp;|_News</option>
+<option value="http://deoxy.org/news/cloud/today?n=5&m=1&s=1&t=_blank">&nbsp;\__Today</option>
+<option value="http://deoxy.org/colors">Colors</option>
+<option value="http://deoxy.org/contact" selected>Contact</option>
+<option value="http://deoxy.org/find?target=_blank">Find</option>
+<!-- option value="http://deoxy.org/chat/java.htm">IRC</option -->
+<option value="http://deoxy.org/map">Map</option>
+<option value="http://deoxy.org/searchbot">Search</option>
+<option value="http://deoxy.org/time/d2k/today3.htm">Today</option>
+<option value="http://deoxy.org/vid">Video</option>
+</select>
+
+</font></td></form>
+
+<td align="right" nowrap background="img/thin_horizontal_lines.gif" width=100>
+<font color="#888888" size="-1">
+<!-- a href="/axis_dd.htm" target=mc><font color="#aaaaaa" title=off rel=nofollow>x</font></a -->&nbsp;
+<a onclick=resizeMC('dec')><font color="#aaaaaa" title=shrink>&ndash;</font></a>&nbsp;
+<a onclick=resizeMC('inc')><font color="#aaaaaa" title=grow>+</font></a>&nbsp;
+<a onclick=resizeMC('set')><font color="#444444" title="reset height">o</font></a>&nbsp;
+<a
+ href="chatr.html" target=cbWin rel=nofollow
+ onclick="if (mc.location.href.match(/chatr/)) { mc.location.href='http://deoxy.org/axis_dd.htm' } chatterWindow(); return false;"
+ title="open chatter window"><font color="#aaaaaa">^</font></a>&nbsp;
+
+</font></td></tr>
+
+<tr><td colspan=3>
+
+<script type="text/javascript">
+document.write('<iframe src="http://deoxy.org/')document.write('img/d3/index.htm')document.write('" style="width:100%;height:')
+
+if (fh) {
+ document.write(fh)
+} else {
+ document.write('440')
+}
+document.write('px;padding:0px;margin:0px;" frameborder=0 border=0 id=mc name=mc>embed requires iframes</iframe>')
+
+document.getElementById('mcback').onclick = function () {
+ if (window.frames['mc'].location.hash !== '#mcstop') {
+  window.history.back()
+ }
+ return false
+}
+window.frames['mc'].onload = function () {
+ this.location.hash = 'mcstop'
+}
+</script>
+
+<noscript><iframe
+ src="axis_dd.htm"
+ style="width:100%;height:440px;padding:0px;margin:0px;"
+ frameborder=0 border=0 id=mc name=mc>
+embed requires iframes</iframe></noscript>
+
+</td></tr></table></td></tr></table></div>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+<tr bgcolor="#202020">
+<td width="33%" background="img/vortex0b.gif">&nbsp;
+&nbsp;<a
+ onclick=resizeMC('dec')><font color="#aaaaaa" title=shrink>&ndash;</font></a>&nbsp;&nbsp;<a
+ onclick=resizeMC('inc')><font color="#666666" title=grow>+</font></a>&nbsp;&nbsp;<a
+ onclick=resizeMC('set')><font color="#444444" title="reset height">o</font></a>
+</td>
+
+<td align="center">
+
+<table border="0" cellspacing="0" cellpadding="0" bgcolor="#000000" width=100%><tr>
+<td width="33%" bgcolor=#101010 background="gif/background2.jpg">&nbsp;</td>
+
+<td align=center>
+
+<a href='memelex.htm#top'>
+<img src="gif/arrow_u.gif" style="width: 15px; height: 15px; 
+border: 0; margin-right: 10px; margin-left: 10px;" alt="top"  /></a>
+
+</td>
+
+<td width="33%" bgcolor=#101010 background="gif/background2.jpg">&nbsp;
+
+</td></tr></table>
+
+</td>
+
+<td width='33%' align='right' valign='middle' background="img/vortex0b.gif"><!-- a 
+ href="http://deoxy.org/meme/Perl"><img
+ src="http://deoxy.org/img/perlpower.gif" 
+ width="80" height="15" border="0" vspace=0></a>&nbsp;--><a name=end
+ href="rss.html"><img
+ src="img/rss2.gif"
+ width="80" height="15" border="0" vspace=0></a>&nbsp;</td>
+</tr></table></div>
+<script type="text/javascript">
+
+
+if (self == top) {
+ var links = document.getElementsByTagName('a')
+ for (var i=0; i<links.length; i++) {
+  var t = links[i].getAttribute('target')
+  if (t == 'remotes') {
+   links[i].setAttribute('target','_top')
+  }
+ }
+}
+</script>
+
+</body>
+</html>

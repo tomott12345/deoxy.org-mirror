@@ -1,0 +1,205 @@
+body { 
+background-color : #404040;
+background-image: url(../../img/bubblechamber.jpg);
+margin: 0px; 
+padding: 0px; 
+font-family: sans-serif;
+color: #c0c0c0;
+}
+
+a:link    { color:#ffffff; }
+a:active  { color:#ffffff; }
+a:visited { color:#ffffff; }
+a:hover   { color:#c0c0c0; }
+
+DIV.wikiheader {
+  background-color : #404040;
+
+  background-image: url(../../img/bubblechamber.jpg);
+  background-repeat: repeat;
+  background-position: 0% 10%;
+
+  margin: 0px; 
+  padding: 0px;
+  padding-top: 24px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+DIV.wikifooter {
+  background-color : #404040;
+
+  background-image: url(../../img/bubblechamber.jpg);
+  background-repeat: repeat;
+  background-position: 0% 80%;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+DIV.wikitext {
+  background-color : #000000;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+DIV.edit {
+  background-color : #000000;
+  padding-top: 1px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+DIV.wikipreview {
+  background-color : #000000;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+DIV.wikipref {
+  background-color : #000000;
+  padding-top: 20px;
+  padding-bottom: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+DIV.wikirc {
+  background-color : #000000;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+HR.wikilinefooter {
+  height : 3px;
+}
+HR.wikilineheader {
+  height : 2px;
+  border : double;
+}
+HR.wikiline {
+  height : 2px;
+}
+HR.wikilinepref {
+  height : 5px;
+}
+A.wikipagelink {
+  color : #ffffff;
+}
+A.wikipageedit {
+}
+
+TABLE.wikidiffold {
+  color: #aa2222;
+  width: 100%;
+}
+
+TABLE.wikidiffnew {
+  color: #22aa22;
+  width: 100%;
+}
+
+.diff-header       { font-weight: bold; }  /* headers displaying paragraph indices */
+.diff-para-ident   { }                    /* unchanged complete paragraphs */
+.diff-span-ident   { }                    /* unchanged words in changed paragraphs */
+.diff-para-added   { background: #446644; }  /* added complete paragraphs */
+.diff-para-deleted { background: #664444; }    /* deleted complete paragraphs */
+
+.diff-span-changed { background: #666622;font-weight:bold; }                    /* changed paragraphs */
+.diff-span-added   { background: #338833;font-weight:bold; }  /* added words in changed paragraphs */
+.diff-span-deleted { background: #883333;font-weight:bold;color:black; }    /* deleted words in changed paragraphs */
+
+
+.diff-text {  
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 12px;  
+padding-left: 6px;
+padding-right: 6px;
+}
+
+
+.userdata {
+  font-size: 10px;
+  position: absolute;
+  right: 3px;
+  top: 2px;
+  display: inline;
+}
+
+.headline { padding-bottom: 10px; }
+
+.sf { font-size: 11px; }
+
+.subdex { 
+font-size:0.9em;
+}
+
+.temp { 
+overflow : auto;
+width: 240px;
+}
+
+DIV.codehead {
+  background-color : #404040;
+  margin: 0px; 
+  padding: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.graph { border: 1px; }
+.node  { background-color: #303030; }
+.edge  { color: red;  height: 5px; }
+.label {}
+.line  {}
+.rcnew {}
+.spell-miss  { background-color: yellow;  color: black; }
+.spell-guess { background-color: orange;  color: black; }
+.spell-none  { background-color: red; color: black; }
+
+DIV.code {
+  background-color: #000000;
+  color: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.goto {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 11px;
+ background-color: #555555;
+ color: #ffffff;
+ border: 1px solid #777777;
+}
+
+.input {
+ font-size: 13px;
+ background-color: #666666;
+ color: #ffffff;
+ border: 1px solid #777777;
+}
+
+.button {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ background-color: #555555;
+ color: #ffffff;
+ margin-right: 4px;
+ margin-left: 4px;
+ border: 1px solid #777777;
+}
+
+.select {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ background-color: #555555;
+ color: #ffffff;
+ margin-left: 4px;
+ border: 1px solid #777777;
+}
+a { text-decoration:none }

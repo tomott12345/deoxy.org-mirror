@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Folder>
+	<name>Human Pressure on the Brazilian Amazon Forests</name>
+	<open>1</open>
+	<description><![CDATA[The Human Pressure Analysis examines the extent of human activities that lead to forest degradation and land conversion in the  Brazilian Amazon. The analysis compiles a comprehensive set of existing datasets. While at a rough coarse scale (1:1,000,000), the analysis provides an indication of the dimensions of the human pressure allowing users to distill insights for land-use planning and monitoring.
+<p>
+Text and images from:
+http://www.globalforestwatch.org/english/interactive.maps/Brazil_Datasets.htm
+<p>
+Constructed and hosted by:
+http://deoxy.org/media/Amazon]]></description>
+	<LookAt>
+		<longitude>-59.07249487971234</longitude>
+		<latitude>-6.340049480082474</latitude>
+		<altitude>0</altitude>
+		<range>3795489.518846296</range>
+		<tilt>0</tilt>
+		<heading>-1.232464939067113e-14</heading>
+	</LookAt>
+	<GroundOverlay>
+		<name>Human Pressure in the Brazilian Amazon</name>
+		<visibility>0</visibility>
+		<description>The analysis integrates data for five indicators of human activities: deforestation, urban zones, agrarian reform settlements, forest fires, and mining.  At the time of the analysis no comprehensive information on roads and logging was available. Thus, the map of human pressure did not factor in these two important indicators. However, understanding the crucial role of these two factors, we did examine the relationship among human pressure, roads, and  logging using available information (Figure 1).</description>
+		<drawOrder>3</drawOrder>
+		<Icon>
+			<href>http://www.globalforestwatch.org/english/interactive.maps/Brazil_Images/Datasets_dscp_fig1.jpg</href>
+			<viewBoundScale>0.75</viewBoundScale>
+		</Icon>
+		<LatLonBox>
+			<north>6.506533981698635</north>
+			<south>-23.16674022536732</south>
+			<east>-41.3058284507421</east>
+			<west>-76.82786173107296</west>
+			<rotation>0.2562219001908932</rotation>
+		</LatLonBox>
+	</GroundOverlay>
+	<GroundOverlay>
+		<name>Human Settlement and Incipient Human Pressure</name>
+		<description><![CDATA[For the purpose of this study, human pressure is classified under two categories (Figure 2):
+<p>
+    * Areas under settlement - including areas classified as deforested; urban centers and lands allocated for agrarian reform settlements. In this areas there is a continuum of human presence.
+<p>
+    * Areas under incipient human pressure - including areas surrounding forest fires, areas licensed for mining and location of logging permits. In areas under incipient human pressure people may remain only temporarily, but in some other cases, people will likely settle in the future.
+<p>
+This differentiation not only permits analysis of areas settled or under pressure by adjacent settlements, but of areas that could be subjected to increasing pressure in the future.
+
+]]></description>
+		<Icon>
+			<href>http://www.globalforestwatch.org/english/interactive.maps/Brazil_Images/Datasets_dscp_fig2.jpg</href>
+			<viewBoundScale>0.75</viewBoundScale>
+		</Icon>
+		<LatLonBox>
+			<north>6.100611164497524</north>
+			<south>-18.78071648426947</south>
+			<east>-42.88174841569122</east>
+			<west>-75.2632472689825</west>
+		</LatLonBox>
+	</GroundOverlay>
+	<GroundOverlay>
+		<name>Study Area</name>
+		<visibility>0</visibility>
+		<description><![CDATA[The geographic area for this analysis is the Brazilian Amazon (Figure 3), which overlaps with two other geographic areas, the Amazon Basin and the Legal Amazon. The Amazon Basin extends over 6.8 million square km through Venezuela, Colombia, Ecuador, Peru, Bolivia, Brazil, French Guiana, Guyana and Suriname. Almost two thirds of the Basin (4.1 million square km) lie within Brazil's boundaries, this portion is known as the Brazilian Amazon. The Legal Amazon (black line) is a 5.1 million square km administrative unit that encompasses the Brazilan states of Acre, Amazonas, Roraima, Amapá, Pará, Rondônia, Mato Grosso, Tocantins and Maranhão. Portions of the states of Maranhão, Tocantins and Mato Grosso are outside of the Amazon Basin.
+<p>
+http://www.globalforestwatch.org/english/interactive.maps/Brazil_Datasets.htm#Study_area]]></description>
+		<LookAt>
+			<longitude>-63.14033951504514</longitude>
+			<latitude>-5.680916682296579</latitude>
+			<altitude>0</altitude>
+			<range>5266826.365500721</range>
+			<tilt>1.564992944122557e-05</tilt>
+			<heading>-1.192708005548819e-15</heading>
+		</LookAt>
+		<drawOrder>2</drawOrder>
+		<Icon>
+			<href>http://www.globalforestwatch.org/english/interactive.maps/Brazil_Images/Datasets_dscp_fig3.jpg</href>
+			<viewBoundScale>0.75</viewBoundScale>
+		</Icon>
+		<LatLonBox>
+			<north>11.74113250773221</north>
+			<south>-20.48377812555438</south>
+			<east>-42.48794147125263</east>
+			<west>-85.36357083371557</west>
+		</LatLonBox>
+	</GroundOverlay>
+	<GroundOverlay>
+		<name>Vegetation and Deforestation</name>
+		<visibility>0</visibility>
+		<description><![CDATA[To create a baseline for the study, the map of deforestation produced by INPE in 2003 was superimposed on the 1997 vegetation map produced by IBGE. The deforestation map shows deforestation as of 2001 and was produced using three color composition bands (red, infrared and mid infrared) from a Landsat sensor at scale of 1:250,000. Deforested areas greater than 6.25 ha were digitized directly from the computer screen using INPE's image processing software (SPRING). Accuracy of the process was estimated at 95%. On the other side, the vegetation map shows forested areas (i.e. dense, open and transition forests) and other non-forest native vegetation (i.e. scrublands and savannas) (Figure 4).
+<p>
+http://www.globalforestwatch.org/english/interactive.maps/Brazil_Datasets.htm#VegetaionAndDeforestation]]></description>
+		<LookAt>
+			<longitude>-59.07249487971234</longitude>
+			<latitude>-6.340049480082474</latitude>
+			<altitude>0</altitude>
+			<range>3795489.518846296</range>
+			<tilt>0</tilt>
+			<heading>-1.232464939067113e-14</heading>
+		</LookAt>
+		<drawOrder>1</drawOrder>
+		<Icon>
+			<href>http://www.globalforestwatch.org/english/interactive.maps/Brazil_Images/Datasets_dscp_fig4.jpg</href>
+			<viewBoundScale>0.75</viewBoundScale>
+		</Icon>
+		<LatLonBox>
+			<north>6.241799986018766</north>
+			<south>-19.31136178189111</south>
+			<east>-42.04278615251015</east>
+			<west>-76.07279231112959</west>
+		</LatLonBox>
+	</GroundOverlay>
+	<GroundOverlay>
+		<name>Urban Zones</name>
+		<visibility>0</visibility>
+		<description><![CDATA[Using the IBGE 1999 dataset of populated places, 20km-wide buffers were drawn around the location points of municipal seats to estimate the area under urban influence. The 20km threshold is an arbitrary threshold as a proxy to estimate human influence based on field observations in areas adjacent to urban centers where population is growing and land uses are expanding rapidly (Figure 5).
+<p>
+http://www.globalforestwatch.org/english/interactive.maps/Brazil_Datasets.htm#UrbanZone]]></description>
+		<LookAt>
+			<longitude>-59.07249487971234</longitude>
+			<latitude>-6.340049480082474</latitude>
+			<altitude>0</altitude>
+			<range>3795489.518846296</range>
+			<tilt>0</tilt>
+			<heading>-1.232464939067113e-14</heading>
+		</LookAt>
+		<drawOrder>2</drawOrder>
+		<Icon>
+			<href>http://www.globalforestwatch.org/english/interactive.maps/Brazil_Images/Datasets_dscp_fig5.jpg</href>
+			<viewBoundScale>0.75</viewBoundScale>
+		</Icon>
+		<LatLonBox>
+			<north>6.430022541205987</north>
+			<south>-19.89362606342687</south>
+			<east>-40.91711905085214</east>
+			<west>-75.97248938122682</west>
+		</LatLonBox>
+	</GroundOverlay>
+	<GroundOverlay>
+		<name>Agrarian Reform Settlements</name>
+		<visibility>0</visibility>
+		<description><![CDATA[The analysis incorporates a map produced by INCRA showing Agrarian Reform Settlements established until 2002. Since the late 1970s, landless and urban poor have pressured the government for lands. As of 2002, 528,571 families had been granted land holdings through approximately 1,600 projects of Agrarian Reform Settlement. Success of Agrarian Reform Settlements is mixed (e.g. Weiss 2002; Da Silva 2001). Many families are attracted by initial earnings from subsidies (e.g. food allowances, housing, and credit at interest rates below market) and timber sales. However, after the depletion of timber resources, income from cattle ranching and subsistence crops decreases, partly because land use for these activities tends to be extensive and the family plots are relatively small (50-100 ha). As a result, many families abandon or sell their lots and either seek new areas or migrate to urban centers. Much of the land left behind becomes consolidated in large-scale properties, which tend to be more efficient and profitable (Figure 6).
+<p>
+http://www.globalforestwatch.org/english/interactive.maps/Brazil_Datasets.htm#AgrarianSettlement]]></description>
+		<LookAt>
+			<longitude>-59.07250438650321</longitude>
+			<latitude>-6.340048641159892</latitude>
+			<altitude>0</altitude>
+			<range>3939643.354223248</range>
+			<tilt>0</tilt>
+			<heading>-58.28925009732371</heading>
+			<altitudeMode>relativeToGround</altitudeMode>
+		</LookAt>
+		<drawOrder>2</drawOrder>
+		<Icon>
+			<href>http://www.globalforestwatch.org/english/interactive.maps/Brazil_Images/Datasets_dscp_fig6.jpg</href>
+			<viewBoundScale>0.75</viewBoundScale>
+		</Icon>
+		<LatLonBox>
+			<north>6.433425098894626</north>
+			<south>-19.656335338555</south>
+			<east>-41.5441326255924</east>
+			<west>-76.24887237732493</west>
+			<rotation>0.006973462643142684</rotation>
+		</LatLonBox>
+	</GroundOverlay>
+	<GroundOverlay>
+		<name>Forest Fires</name>
+		<visibility>0</visibility>
+		<description><![CDATA[In the Brazilian Amazon, forest fires are often associated with the begining of human occupation including land clearing and harvesting of forest products. Using INPE's data, the analysis incorporates evidence of forest fires, as identified by satellite (hotpixels), as a proxy indicator of human pressure. INPE's dataset displays 1.1 square km "hot" pixels that are registered as the AVHRR sensor passes overhead and detects areas of heat that are at least 50 meters. Although hotpixels accurately detect incidence of fires, they can be up to ~3 km off because it is less precise to indicate a fire at the pixel border (Setzer and Malingreau 1996).
+<p>
+Hotpixels may indicate:
+<p>
+    * areas that were cleared and burned but not included in INPE's deforestation map because of their size (less than 6.25 ha);
+<p>
+    * burned areas, such as logged forests into which wildfires subsequently escaped from nearby pastures of shifting cultivation plots.
+<p>
+Available data on hotpixels between 1996 and 2002 was collected for this analysis. Hotpixels outside non-forested areas (as classified by INPE in 2001) were excluded, and hotpixels between 1996 and 1999 were designed as "old" while those from 2000 to 2002 were classified as "recent". A 10km buffer around each hotpixel was drawn as a coarse proxy to estimate human influence around fires. This threshold correspond to the 10km found to be the maximum distance a hunter would search for the most profitable prey from a given point of access within the forest (Peres and Terborgh 1995) (Figure 7).
+<p>
+http://www.globalforestwatch.org/english/interactive.maps/Brazil_Datasets.htm#ForestFire]]></description>
+		<LookAt>
+			<longitude>-59.07249487971234</longitude>
+			<latitude>-6.340049480082474</latitude>
+			<altitude>0</altitude>
+			<range>3795489.518846296</range>
+			<tilt>0</tilt>
+			<heading>-1.232464939067113e-14</heading>
+		</LookAt>
+		<drawOrder>3</drawOrder>
+		<Icon>
+			<href>http://www.globalforestwatch.org/english/interactive.maps/Brazil_Images/Datasets_dscp_fig7.jpg</href>
+			<viewBoundScale>0.75</viewBoundScale>
+		</Icon>
+		<LatLonBox>
+			<north>6.416667338289974</north>
+			<south>-19.01144194546847</south>
+			<east>-41.99797232893528</east>
+			<west>-75.69313495335805</west>
+			<rotation>0.1365875216803366</rotation>
+		</LatLonBox>
+	</GroundOverlay>
+	<GroundOverlay>
+		<name>Mineral Reserves and Areas Designated for Mineral Prospection</name>
+		<visibility>0</visibility>
+		<description><![CDATA[The analysis of Human Pressure incorporates a dataset produced by the DNPM in 2001, showing areas licensed for mineral prospection up to 1998 (Capobianco 2001). The dataset also includes mineral reserves established by the Brazilian Government to accomodate part-time miners (wildcat miners) in the western portion of the State of Pará. The areas licensed for mineral prospection are not necessarily active, but they may become so if minerals of interest are found (Figure 8).
+<p>
+http://www.globalforestwatch.org/english/interactive.maps/Brazil_Datasets.htm#ForestFire]]></description>
+		<LookAt>
+			<longitude>-59.07249487971234</longitude>
+			<latitude>-6.340049480082474</latitude>
+			<altitude>0</altitude>
+			<range>3795489.518846296</range>
+			<tilt>0</tilt>
+			<heading>-1.232464939067113e-14</heading>
+		</LookAt>
+		<drawOrder>4</drawOrder>
+		<Icon>
+			<href>http://www.globalforestwatch.org/english/interactive.maps/Brazil_Images/Datasets_dscp_fig8.jpg</href>
+			<viewBoundScale>0.75</viewBoundScale>
+		</Icon>
+		<LatLonBox>
+			<north>6.270050652406007</north>
+			<south>-19.50860900357644</south>
+			<east>-41.47322647291684</east>
+			<west>-75.70752979673919</west>
+			<rotation>0.1598374055737806</rotation>
+		</LatLonBox>
+	</GroundOverlay>
+	<GroundOverlay>
+		<name>Authorized Logging Operations</name>
+		<visibility>0</visibility>
+		<description><![CDATA[While timber harvesting has been an important catalyst for human settlement and deforestation, there is no comprehensive map of areas impacted by this land use in the Brazilian Amazon. Existing datasets are temporarily and spatially incomplete. To identify parts of the Brazilian Amazon that are potentially being logged, Greenpeace Brazil mapped the location of 580 forestry operations in which logging had been authorized as part of the management plans registered with IBAMA in 2000 (Figure 9).
+<p>
+http://www.globalforestwatch.org/english/interactive.maps/Brazil_Datasets.htm#LoggingOperations]]></description>
+		<LookAt>
+			<longitude>-59.07249487971234</longitude>
+			<latitude>-6.340049480082474</latitude>
+			<altitude>0</altitude>
+			<range>3795489.518846296</range>
+			<tilt>0</tilt>
+			<heading>-1.232464939067113e-14</heading>
+		</LookAt>
+		<drawOrder>4</drawOrder>
+		<Icon>
+			<href>http://www.globalforestwatch.org/english/interactive.maps/Brazil_Images/Datasets_dscp_fig9.jpg</href>
+			<viewBoundScale>0.75</viewBoundScale>
+		</Icon>
+		<LatLonBox>
+			<north>6.263466785526568</north>
+			<south>-19.54626879930432</south>
+			<east>-41.76122089833684</east>
+			<west>-75.9955218811284</west>
+			<rotation>0.1598374055737806</rotation>
+		</LatLonBox>
+	</GroundOverlay>
+</Folder>
+</kml>

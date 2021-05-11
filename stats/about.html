@@ -1,0 +1,80 @@
+<html>
+<head>
+<meta http-equiv=Pragma content=no-cache>
+<title>About the graphs</title>
+<base href="">
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+<META HTTP-EQUIV="EXPIRES" CONTENT="0">
+
+<LINK REL="stylesheet" HREF="../inc/css/deoxy.org.css" TYPE="text/css">
+</head>
+<body bgcolor=#111111 text=#888888 link=#eeeeee vlink=#eeeeee>
+<a name="top"></a>
+<table width="100%" cellspacing="0" cellpadding="3" border="0">
+<tr bgcolor="#111111"><td>
+
+<table width="100%" cellspacing="0" cellpadding="3" border="0">
+<tr bgcolor="#333333"><td nowrap><small>
+<b><a href="../index.html"><font 
+color=#ffffff>deoxy.org</font></a> / <a href="../stats.1.html"><font 
+color=#ffffff>stats</font></a> / <a href="about.html"><font 
+color=#ffffff>about</font></a></b>
+
+</td><form action="http://deoxy.org/cgi/jump.pl"><td align=center>
+<!--#include virtual="/inc/jumpbox.ssi" -->
+</td></form>
+
+<td align=right nowrap><small><small><a 
+href="eth.html"><font color=#ffffff>Network</a>&nbsp;:&nbsp;<a 
+href="tcp_80.html" title="web traffic graphs"><font color=#ffffff>Web</a> &mdash; <a 
+href="tcp_6667.html" title="IRC traffic graphs"><font color=#ffffff>IRC</a>&nbsp;<a 
+href="http://irc.deoxy.org" title="IRC Server Status"><font color=#ffffff><b>^</b></a> &mdash; <a 
+href="tcp_6697.html" title="secure IRC traffic graphs"><font color=#ffffff>IRCSSL</a> &mdash; <a 
+href="tcp_25.html" title="email traffic graphs"><font color=#ffffff>Mail</a> &mdash; <a 
+href="who.html" title="who's online graphs"><font color=#ffffff>Who</a>&nbsp;<a
+href="../online.html" title="Who's Online?"><font color=#ffffff><b>^</b></a>&nbsp;<a
+href="http://deoxy.org/maps" title="Map"><font color=#ffffff>Map</a>&nbsp;
+
+<tr bgcolor="#222222"><td colspan=3><span style="margin-left:10px; margin-right:10px;font-size:0.6em;color:#666666;">graphs regenerate every eleven minutes
+</span></td></tr>
+</table></table>
+
+<br>
+<table border=0 cellpadding=8 cellspacing=0 width=500 align=center><tr><td>
+<h1>About</h1>
+
+<p><b>stats</b> is based on <i><a
+ href="http://www.taedium.com/rrd-iptraf/" target="_blank"
+>Monitoring network traffic with iptraf and rrdtool</a></i>
+and consists of 1914 lines of <a
+ href="http://oss.oetiker.ch/rrdtool/doc/rrdcgi.en.html"
+>rrdcgi</a> and 613 lines of <a
+ href="../meme/Perl.html"
+>Perl</a> using the following modules:
+
+<ul>
+<li><a href="http://search.cpan.org/dist/perl/lib/File/Copy.pm#DESCRIPTION">File::Copy</a>
+<li><a href="http://search.cpan.org/dist/IO/lib/IO/File.pm#DESCRIPTION">IO::File</a>
+<li><a href="http://search.cpan.org/dist/Tie-File/lib/Tie/File.pm#DESCRIPTION">Tie::File</a>
+<li><a href="http://oss.oetiker.ch/rrdtool/prog/RRDs.en.html#IDESCRIPTION">RRDs</a>
+</ul>
+
+<p>The graphs depict traffic to various ports on our public network interface. 
+The <a href="who.html">Who's Online graph</a> merges visitor data from the 
+entire site. The sample rate for each timespan is:
+
+<p><br>
+<table cellpadding=8 cellspacing=0 border=1 width=100% bgcolor=#222222>
+<tr bgcolor=#333333><th nowrap>Graph Duration<th nowrap>Sample Rate
+
+<tr nowrap><td>1day<td>5 minutes
+<tr nowrap><td>1week<td>30 minutes
+<tr nowrap><td>1month<td>2 hours
+<tr nowrap><td>1year<td>1 day
+
+</table>
+
+</table>
+</body>
+</html>

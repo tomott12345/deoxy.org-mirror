@@ -1,0 +1,63 @@
+<html>
+<head><title></title>
+<script language="JavaScript">
+<!--
+     function MakeArray()
+             {
+             this.length = MakeArray.arguments.length
+             for (var i = 0; i < this.length; i++)
+             this[i+1] = MakeArray.arguments[i]
+             }
+
+     var siteopt = new MakeArray("choose.your.weapon",
+                                 "15-Point Party Platform w/audio",
+								 "15-Point Party Platform w/o audio",
+                                 "Help Spread the Word",
+								 "Contact the Revolution",
+                                 "Links to The Revolution",
+                                 "email dimitri@deoxy.org",
+								 "BACK TO THE TITLE PAGE");
+
+     var url = new MakeArray("",
+	                         "platforma.htm",
+                             "platform.htm",
+                             "props.htm",
+							 "contact.htm",
+                             "links.htm",
+                             "mailto:dimitri@deoxy.org",
+							 "splash.htm");
+
+     function jumpPage(form)
+     {
+             i = form.SelectMenu.selectedIndex;
+             if (i == 0) return;
+             parent.middle.location = url[i+1];
+     }
+/* This code is Copyright (c) 1996 Nick Heinle and Athenia Associates, 
+      * all rights reserved. In order to receive the right to license this 
+      * code for use on your site the original code must be copied from the
+      * Web site webreference.com/javascript/. License is granted to user to 
+      * reuse this code on their own Web site if and only if this entire copyright
+      * notice is included. Code written by Nick Heinle of webreference.com.
+      */
+ if (location.href == top.location.href) {
+   location.href = "index.htm"  }
+//-->
+</script>
+</head>
+<body bgcolor="#000000" background="static.jpg">
+<center>
+<script language="JavaScript">
+<!--
+document.writeln('<FORM><SELECT NAME="SelectMenu" onChange="jumpPage(this.form)">');
+         tot = siteopt.length;
+             for (var i = 1; i <= tot; i++)
+             document.write("<OPTION>" +siteopt[i]);
+         document.writeln('</SELECT>');
+         if (navigator.userAgent.indexOf("Mozilla/2") != -1)
+         document.writeln('<INPUT TYPE = BUTTON VALUE = "Jump!">');
+         document.writeln('</FORM>');
+//-->
+</script>
+</body>
+</html>

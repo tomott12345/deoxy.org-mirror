@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>deoxy.wiki : SearchBot</TITLE>
+<META NAME="KEYWORDS" CONTENT="Search, Bot" />
+<META NAME="robots" CONTENT="noindex,nofollow" />
+<BASE HREF="">
+<LINK REL="stylesheet" HREF="../inc/css/wiki_eco.css">
+<script language="JavaScript" type="text/javascript">
+ function onLoad(){
+// document.getElementsByName("search")[0].focus();
+ }
+ function go(what) {
+  var whereto = what.options[what.selectedIndex].value;
+  document.location.href = whereto;
+ }
+ function openVideo(id) {
+  if (id.match(/[&:;=<>#\/\?\!]/) || id.length > 23) alert('Bad video id')
+  var s = 'screenX=100,screenY=100,left=100,top=100,width=640,height=565,'
+  var x = 'resizable=1,status=0,menubar=0,toolbar=0,location=0,scrollbars=0'
+  window.open('http://deoxy.org/video/'+id,'',s+x)
+ }
+//--></script>
+<LINK REL="alternate" HREF="action=rss&amp;days=7"  TITLE="deoxy.wiki changes in the past 7 days"  TYPE="application/rss+xml">
+<LINK REL="alternate" HREF="action=rss&amp;days=30" TITLE="deoxy.wiki changes in the past 30 days" TYPE="application/rss+xml">
+<LINK REL="alternate" HREF="action=rss&amp;days=90" TITLE="deoxy.wiki changes in the past 90 days" TYPE="application/rss+xml">
+</HEAD>
+<BODY BGCOLOR="#404040" onLoad="onLoad()">
+<div id=wrapper>
+<div class="wikiheader"><div class="looklogo"><a name="top"></a><div class="userdata"><a href="http://deoxy.org/forum/login.pl" title="Login or create an account">Login</a> &#183; Today<a href="action=edit&amp;id=Day/2016-11-23.html" class="wikipageedit"  title="Edit the page Day/2016-11-23">?</a> &#183; ID#0</div><table width="98%" cellpadding="0" cellspacing="0" align="center"><tr><td class="headline"><h1>SearchBot</h1></td><td align='right'></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="98%" align="center"><tr><form method="GET" action="index.html" ENCTYPE="application/x-www-form-urlencoded"><td><script type=text/javascript>
+  var contents_head=new Array();
+  contents_head[1]="&nbsp;<a href="http://deoxy.org/\&quot;wiki/action=search\&quot;" >Search</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=wordindex\&quot;" >WordIndex</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=index\&quot;" >FullIndex</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=sizeindex\&quot;" >SizeIndex</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=orphans\&quot;" >Orphans</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=userlist\&quot;" >UserList</a>";
+  contents_head[2]="&nbsp;<a href="http://deoxy.org/\&quot;wiki/action=visitors\&quot;" >Visitors</a>&#151;<a href="http://deoxy.org/\&quot;wiki/Recent\&quot;" class=\"wikipagelink\" >Changes</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=rc&amp;all=1&amp;showedit=1\&quot;" >all</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=rc&amp;showedit=2\&quot;" >minor</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=rc&amp;showedit=0\&quot;" >major</a>";
+  contents_head[3]="&nbsp;Read-only&#151;<a href="http://deoxy.org/\&quot;wiki/action=random\&quot;" >Random</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=randomlist\&quot;" >Randomlist</a>";
+  contents_head[4]="<tt>h t t p : / / d e o x y . o r g</tt>";
+  contents_head[5]="&nbsp;";
+  contents_head[6]="&nbsp;<a href="http://deoxy.org/\&quot;wiki/action=help\&quot;" >Help</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=stats\&quot;" >Stats</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=version\&quot;" >Version</a>";
+  function show_head(n) {
+    if (!isDOMcompliant()) { return; }
+    document.getElementById("head").innerHTML=contents_head[n];
+  }
+  function isDOMcompliant() {
+    return document.getElementById && document.getElementsByTagName;
+  }</script><span class=gotobar><a href="index.html" onmouseover="javascript:show_head(6)" onfocus="javascript:show_head(6)">Home</a> &#183; 
+<a href="Recent.html" onmouseover="javascript:show_head(2)" onfocus="javascript:show_head(2)">Recent</a> &#183; <a href="action=index.html" onmouseover="javascript:show_head(1)" onfocus="javascript:show_head(1)">Index</a> &#183; <a href="action=random.html" onmouseover="javascript:show_head(3)" onfocus="javascript:show_head(3)">View</a> &#183; Talk<a href="http://deoxy.org/wiki/action=edit&amp;id=Talk" class="wikipageedit"  title="Edit the page Talk">?</a> &#183; <a href="../index.html" onmouseover="javascript:show_head(4)" onmouseout="javascript:show_head(5)">&delta;&epsilon;&omicron;&chi;&psi;</a> <!-- DEOXY<small><sup>.ORG</sup></small>-->
+<div id="head" class="sf">&nbsp;<noscript><a href="action=search.html" >Search</a>&#151;<a href="action=wordindex.html" >WordIndex</a>&#151;<a href="action=index.html" >FullIndex</a>&#151;<a href="action=sizeindex.html" >SizeIndex</a>&#151;<a href="action=orphans.html" >Orphans</a>&#151;<a href="action=userlist.html" >UserList</a>&nbsp;<a href="http://deoxy.org/wiki/action=visitors" >Visitors</a>&#151;<a href="Recent.html" class="wikipagelink" >Changes</a>&#151;<a href="action=rc&amp;all=1&amp;showedit=1.html" >all</a>&#151;<a href="action=rc&amp;showedit=2.html" >minor</a>&#151;<a href="action=rc&amp;showedit=0.html" >major</a><br>&nbsp;Read-only&#151;<a href="action=random.html" >Random</a>&#151;<a href="action=randomlist.html" >Randomlist</a><br>&nbsp;<a href="action=help.html" >Help</a>&#151;<a href="action=stats.html" >Stats</a>&#151;<a href="action=version.html" >Version</a><br></noscript></div></span>
+</td><td align="right" valign="bottom"><nobr><input type="text" name="search"  size="15" align="middle" title="" class="input" />&nbsp;<input type="submit" name="dosearch" value="Go" title="search this wiki" class="button" /></nobr></td></form></tr></table></div></div><div class=wikitext><b>View Raw</b>&#151;<a href="http://deoxy.org/wiki/action=browse&amp;id=SearchBot&amp;raw=2" >Plain</a>&#151;<a href="http://deoxy.org/wiki/action=browse&amp;id=SearchBot" >Cooked</a><p><textarea name="text"  rows="20" cols="65" wrap="virtual" style="width:100%" class="" readonly>A bot named '''search''' inhabits various channels on our [http://irc.deoxy.org IRC server] where it participates in conversation when triggered by use of certain words. To get help or experiment type '''/msg search hi''' to open a private message with the bot. There is also a [Deoxy:searchbot web interface to searchbot].
+
+*Search has the following automatic functions:
+**'''seen''' works by recording the last thing you say or do in a channel with the bot. 
+**URLs for videos from deoxy or [Deoxy:vid?help=1 either host site] triggers the return of its title.
+
+|| '''Updates'''&lt;br&gt;&lt;li&gt;Search will respond to [Deoxy:chat/unreal.htm#invite /invite] on assigned channels.&lt;li&gt;Fixed the calculator and language translation.&lt;li&gt;Translation now supports chinese, greek, japanese, korean and russian. ||
+
+Type '''/msg search help''' to list the functions:
+
+||'''Calc''' || &lt;tt&gt;calc expression&lt;/tt&gt; returns results from [http://google.com/help/features.html#calculator Google calculator].||
+||'''CDDB''' || &lt;tt&gt;cddb artist-or-album&lt;/tt&gt; returns a url to the [http://www.freedb.org/ freedb CD Database].||
+||'''Define''' || &lt;tt&gt;define word&lt;/tt&gt; returns a url for definition at [http://www.dict.org/bin/Dict dict.org].||
+||'''&lt;no&gt;Deoxy&lt;/no&gt;''' || &lt;tt&gt;deoxy keywords&lt;/tt&gt; to [http://www.google.com/search?q=site%3Adeoxy.org search deoxy.org with Google].||
+||'''&lt;no&gt;Find&lt;/no&gt;''' || &lt;tt&gt;find words&lt;/tt&gt; search deoxy using [Deoxy:find our internal engine].||
+||'''&lt;no&gt;Google&lt;/no&gt;''' || &lt;tt&gt;google words&lt;/tt&gt; returns a url for a [http://www.google.com Google search].||
+||'''Groups''' || &lt;tt&gt;groups words&lt;/tt&gt; returns a url for a [http://groups.google.com/grphp Google newsgroup search].||
+||'''IChing''' || &lt;tt&gt;iching&lt;/tt&gt; returns a [Deoxy:iching/random random I Ching hexagram].||
+||'''Images''' || &lt;tt&gt;images words&lt;/tt&gt; returns a url for a [http://www.google.com/imghp Google image search].||
+||'''IMDB''' || &lt;tt&gt;imdb film&lt;/tt&gt; returns a url for the [http://www.imdb.com/ Internet Movie Database].||
+||'''Invite''' || Use this IRC command to &lt;tt&gt;[Deoxy:chat/unreal.htm#invite /invite search]&lt;/tt&gt; back into an assigned channel. ||
+||'''ISBN''' || &lt;tt&gt;isbn number&lt;/tt&gt; returns a url for the book at [http://isbndb.com/ ISBNdb].||
+||'''Koan''' || &lt;tt&gt;koan&lt;/tt&gt; returns a [Deoxy:koan/random random Zen koan].||
+||'''Map''' || &lt;tt&gt;map seattle&lt;/tt&gt; returns a [http://maps.google.com/ Google maps] URL for that location.||
+||'''News''' || &lt;tt&gt;news words&lt;/tt&gt; returns a url for a [http://news.google.com/nwshp Google news search].||
+||'''Quake''' || &lt;tt&gt;quake&lt;/tt&gt; returns the most recent [http://deoxy.org/news/view/feed/quakes USGS Earthquake Hazard]. 15 minute update.||
+||'''Random''' || &lt;tt&gt;random&lt;/tt&gt; returns a [Deoxy:random random link] for deoxy.org.||
+||'''Sat''' || &lt;tt&gt;sat 350 5th avenue new york&lt;/tt&gt; returns [http://maps.google.com/?t=k Google satellite maps] URL for that location.||
+||'''Search''' || &lt;tt&gt;search keywords&lt;/tt&gt; returns [http://www.google.com/search?hl=en&amp;q=&amp;btnI=I%27m+Feeling+Lucky Google's lucky link].||
+||'''Seen''' || &lt;tt&gt;seen username&lt;/tt&gt; tells you when it last saw that username.||
+||'''Scholar''' || &lt;tt&gt;scholar words&lt;/tt&gt; returns a url for a [http://scholar.google.com/ Google scholar search]. ||
+||'''Spell''' || &lt;tt&gt;spell word&lt;/tt&gt; or follow the word to spell with (sp). [http://linux.math.tifr.res.in/manuals/man/spell.html Suggests possible words].||
+||'''USDebt''' || &lt;tt&gt;usdebt&lt;/tt&gt; returns the [http://deoxy.org/news/view/feed/usdebt current U.S. National Debt]. Updates twice a day.||
+||'''Video''' || &lt;tt&gt;video&lt;/tt&gt; returns a random [Deoxy:videx deoxy video], use &lt;tt&gt;video words&lt;/tt&gt; to search.&lt;br&gt;&lt;tt&gt;video DNA&lt;/tt&gt; returns [http://deoxy.org/videx?q=DNA results for DNA] ||
+||'''Watch''' || &lt;tt&gt;watch words&lt;/tt&gt; returns video search results in the [Deoxy:watch watch] interface. ||
+||'''&lt;no&gt;Wayback&lt;/no&gt;''' || &lt;tt&gt;wayback &lt;no&gt;http://some.url&lt;/no&gt;&lt;/tt&gt; returns a [http://www.archive.org/web/web.php Wayback Machine] query for the given url.||
+||'''Worldpop''' || &lt;tt&gt;worldpop&lt;/tt&gt; return the [http://deoxy.org/news/view/feed/worldpop current world population projection]. 10 minute update.||
+||'''X''' || &lt;dt&gt;&lt;tt&gt;x to/from language phrase&lt;/tt&gt;&lt;dd&gt;translate phrase to (or from) language via [http://babelfish.altavista.com/ Babelfish].&lt;p&gt;Languages: &lt;tt&gt;chinese dutch french german greek italian japanese korean portuguese russian spanish&lt;br&gt;(or the first two letters)&lt;/tt&gt;&lt;p&gt;Examples: &lt;tt&gt;&quot;x to spanish hello friend&quot; or &quot;x from sp hola amigo&quot;&lt;/tt&gt;&lt;br&gt;||
+
+&lt;small&gt;
+'''Clocks'''
+*'''localtime''' returns the current time and date in our server's timezone ([http://en.wikipedia.org/wiki/Pacific_Time_Zone PST]).
+*'''gmtime''' returns the current [http://en.wikipedia.org/wiki/Greenwich_Mean_Time Greenwich Meridian Time].
+*'''unixtime''' returns the number of seconds since the [http://en.wikipedia.org/wiki/Unixtime Unix epoch].
+&lt;/small&gt;
+
+----
+
+It's custom code so any good suggestions are likely to be implemented.,,
+[http://deoxy.org/chat/nickserv.htm Registered nicks] can send messages with:,,
+ [Deoxy:chat/memoserv.htm /memoserv] send dimitri your comments here
+
+----
+&lt;a name=&quot;code&quot;&gt;&lt;/a&gt;
+SearchBot consists of 1708 lines of Meme:Perl using the following 14 [Meme:Perl/CPAN CPAN] modules:
+
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;
+*[http://search.cpan.org/dist/File-Slurp/lib/File/Slurp.pm#DESCRIPTION File::Slurp]
+*[http://search.cpan.org/dist/HTML-Parser/lib/HTML/Entities.pm#DESCRIPTION HTML::Entities]
+*[http://search.cpan.org/~gaas/libwww-perl/lib/HTTP/Request/Common.pm#DESCRIPTION HTTP::Request::Common]
+*[http://search.cpan.org/~samv/Lingua-Translate/lib/Lingua/Translate.pm#DESCRIPTION Lingua::Translate]
+*[http://search.cpan.org/dist/libwww-perl/lib/LWP/UserAgent.pm#DESCRIPTION LWP::UserAgent]
+*[http://search.cpan.org/~jmuhlich/Net-IRC/ Net::IRC]
+*[http://search.cpan.org/~deti/Proc-Daemon/lib/Proc/Daemon.pod#DESCRIPTION Proc::Daemon]
+&lt;/td&gt;&lt;td&gt;
+*[http://search.cpan.org/dist/Storable/Storable.pm#DESCRIPTION Storable]
+*[http://search.cpan.org/dist/Time-Duration/Duration.pm#DESCRIPTION Time::Duration]
+*[http://search.cpan.org/dist/Unicode-String/String.pm#DESCRIPTION Unicode::String]
+*[http://search.cpan.org/dist/URI/URI/Escape.pm#DESCRIPTION URI::Escape]
+*[http://search.cpan.org/~mschwern/URI-Find/lib/URI/Find.pm#DESCRIPTION URI::Find]
+*[http://search.cpan.org/~mschwern/URI-Find/lib/URI/Find/Schemeless.pm URI::Find::Schemeless]
+*[http://search.cpan.org/~gaas/URI/URI/URL.pm URI::URL]
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+----
+
+*'''Related'''
+**[[NewsBot]]
+**[[ChatterBot]]
+</textarea></div><div class="wikifooter"><a name="end"></a><table border=0 cellpadding=0 cellspacing=0 width=98% align=center><tr valign=top><td><script type=text/javascript>
+  var contents_foot=new Array();
+  contents_foot[1]="&nbsp;<a href="http://deoxy.org/\&quot;wiki/action=search\&quot;" >Search</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=wordindex\&quot;" >WordIndex</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=index\&quot;" >FullIndex</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=sizeindex\&quot;" >SizeIndex</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=orphans\&quot;" >Orphans</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=userlist\&quot;" >UserList</a>";
+  contents_foot[2]="&nbsp;<a href="http://deoxy.org/\&quot;wiki/action=visitors\&quot;" >Visitors</a>&#151;<a href="http://deoxy.org/\&quot;wiki/Recent\&quot;" class=\"wikipagelink\" >Changes</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=rc&amp;all=1&amp;showedit=1\&quot;" >all</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=rc&amp;showedit=2\&quot;" >minor</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=rc&amp;showedit=0\&quot;" >major</a>";
+  contents_foot[3]="&nbsp;<a href="http://deoxy.org/\&quot;wiki/action=fathom&amp;id=SearchBot\&quot;" >Analysis</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=history&amp;id=SearchBot\&quot;" >History</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=browse&amp;id=SearchBot&amp;raw=1\&quot;" >Raw</a>&#151;<a href="http://deoxy.org/\&quot;wiki/SearchBot.print\&quot;" class=\"wikipagelink\" >Print</a>&#151;Read-only&#151;<a href="http://deoxy.org/\&quot;wiki/action=random\&quot;" >Random</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=randomlist\&quot;" >Randomlist</a>";
+  contents_foot[4]="<tt>h t t p : / / d e o x y . o r g</tt>";
+  contents_foot[5]="&nbsp;";
+  contents_foot[6]="&nbsp;<a href="http://deoxy.org/\&quot;wiki/action=help\&quot;" >Help</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=stats\&quot;" >Stats</a>&#151;<a href="http://deoxy.org/\&quot;wiki/action=version\&quot;" >Version</a>";
+  function show_foot(n) {
+    if (!isDOMcompliant()) { return; }
+    document.getElementById("foot").innerHTML=contents_foot[n];
+  }</script><span class=gotobar><a href="index.html" onmouseover="javascript:show_foot(6)" onfocus="javascript:show_foot(6)">Home</a> &#183; 
+<a href="Recent.html" onmouseover="javascript:show_foot(2)" onfocus="javascript:show_foot(2)">Recent</a> &#183; <a href="action=index.html" onmouseover="javascript:show_foot(1)" onfocus="javascript:show_foot(1)">Index</a> &#183; <a href="action=random.html" onmouseover="javascript:show_foot(3)" onfocus="javascript:show_foot(3)">View</a> &#183; Talk<a href="action=edit&amp;id=SearchBot_Talk.html" class="wikipageedit"  title="Edit the page SearchBot_Talk">?</a> &#183; <a href="../index.html" onmouseover="javascript:show_foot(4)" onmouseout="javascript:show_foot(5)">&delta;&epsilon;&omicron;&chi;&psi;</a> <!-- DEOXY<small><sup>.ORG</sup></small>-->
+<div id="foot" class="sf">&nbsp;<noscript><a href="action=search.html" >Search</a>&#151;<a href="action=wordindex.html" >WordIndex</a>&#151;<a href="action=index.html" >FullIndex</a>&#151;<a href="action=sizeindex.html" >SizeIndex</a>&#151;<a href="action=orphans.html" >Orphans</a>&#151;<a href="action=userlist.html" >UserList</a>&nbsp;<a href="http://deoxy.org/wiki/action=visitors" >Visitors</a>&#151;<a href="Recent.html" class="wikipagelink" >Changes</a>&#151;<a href="action=rc&amp;all=1&amp;showedit=1.html" >all</a>&#151;<a href="action=rc&amp;showedit=2.html" >minor</a>&#151;<a href="action=rc&amp;showedit=0.html" >major</a><br>&nbsp;<a href="action=fathom&amp;id=SearchBot.html" >Analysis</a>&#151;<a href="action=history&amp;id=SearchBot.html" >History</a>&#151;<a href="action=browse&amp;id=SearchBot&amp;raw=1.html" >Raw</a>&#151;<a href="SearchBot.print.html" class="wikipagelink" >Print</a>&#151;Read-only&#151;<a href="action=random.html" >Random</a>&#151;<a href="action=randomlist.html" >Randomlist</a><br>&nbsp;<a href="action=help.html" >Help</a>&#151;<a href="action=stats.html" >Stats</a>&#151;<a href="action=version.html" >Version</a><br></noscript></div></span>
+</td><form method="GET" action="index.html" ENCTYPE="application/x-www-form-urlencoded"><td align=right style="padding-right:10px;"><nobr><input type="text" name="search"  size="15" align="middle" title="" class="input" />&nbsp;<input type="submit" name="dosearch" value="Go" title="search this wiki" class="button" /></nobr></td></form></tr><tr><td colspan=2 align=right><table border=0 cellpadding=0 cellspacing=0><tr>
+  <form action=http://deoxy.org/cgi/jump.pl><td><select name="to"class="select" style=margin-top:12px;margin-right:10px; onChange="x=this.options[this.selectedIndex].value;location.href=x.match(/^http:/)?x:'http://deoxy.org/'+x;">
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="nu.htm">&nbsp;&nbsp;\_updates</option>
+<!-- option value="watts.htm">alanwatts</option -->
+<!-- option value="alephnull">aleph</option -->
+<option value="8brains.htm">circuits</option>
+<option value="8basic.htm">&nbsp;&nbsp;\_scripts</option>
+
+<!--#perl sub="sub {
+
+if ($ENV{CHATTER}) {
+ print qq~<option value=chat>chat</option>
+ <option value=forum/chat.pl?do=prev>&nbsp;&nbsp;\\_past</option>\n~;
+}
+
+}" -->
+
+<!-- option value="ct">crimethinc</option -->
+<option value="gacwao">defrag</option>
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="contact">&nbsp;&nbsp;|_contact</option>
+<option VALUE="http://m.deoxy.org">&nbsp;&nbsp;|_mobile</option>
+<!-- option value="wiki/Deoxy/Help">&nbsp;&nbsp;|_help</option -->
+<option value="meme/DNA">DNA</option>
+<option value="find">Find?</option>
+<!-- option value="forum">forum</option>
+<option value="newposts">&nbsp;&nbsp;|_newposts</option -->
+<!-- option value="hyper.htm">hyperspace</option -->
+<option value="iching">IChing</option>
+<option value="iching/random">&nbsp;&nbsp;\_random</option>
+<option value="imagine.mil">imagine.mil</option>
+<option value="inc.htm">incunabula</option>
+<!-- option value="http://irc.deoxy.org">IRC status</option -->
+<option value="koans">koans</option>
+<option value="koan/random">&nbsp;&nbsp;\_random</option>
+<!--#perl sub="sub {
+
+if ($ENV{CHATTER}) {
+ print qq~<option value=forum/login.pl>login</option>~;
+}
+
+}" -->
+<option value="media">media</option>
+<option value="media/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="meme">meme</option>
+<option value="meme/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="news">news</option>
+<option VALUE="news/cloud/today">&nbsp;&nbsp;|_today</option>
+<option VALUE="news/digestc">&nbsp;&nbsp;|_digest</option>
+<option VALUE="news/view">&nbsp;&nbsp;|_category</option>  
+<option VALUE="http://m.deoxy.org/news">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\_mobile</option>
+<option value="omega.htm">omega</option>
+<option value="pdfa">PDFA</option>
+<option value="index/People">People</option>
+<option value="leary.htm">&nbsp;&nbsp;|_Leary</option>
+<option value="lilly.htm">&nbsp;&nbsp;|_Lilly</option>
+<option value="mckenna.htm">&nbsp;&nbsp;|_McKenna</option>
+<option value="media/McLuhan">&nbsp;&nbsp;|_McLuhan</option>
+<option value="raw.htm">&nbsp;&nbsp;|_RAWilson</option>
+<option value="philo.htm">philosophos</option>
+<option value="cgi/randlink.pl?go">random</option>
+<option value="rss.htm">RSS</option>
+<!-- option value="time/sabbats.htm">sabbats</option>
+<option value="shaman.htm">shaman</option -->
+<option value="stats">stats</option>
+<option value="maps">&nbsp;&nbsp;\_map</option>
+<!-- option value="tcrime.htm">thoughtcrime</option -->
+<option value="topics">topics</a>
+<option value="nu.htm">&nbsp;&nbsp;\_cloud</option>
+<option value="nu.htm">updates</option>
+<option value="wiki/Deoxy/Video">video</option>
+<option value="videx">&nbsp;&nbsp;|_index</option>
+<option value="vidcloud">&nbsp;&nbsp;|_cloud</option>
+<option value="vidimg">&nbsp;&nbsp;|_images</option>
+<option VALUE="warnings.htm">warnings</option>
+<!-- option value="wiki">wiki</option>
+<option value="wiki/Recent">&nbsp;&nbsp;|_changes</option>
+<option value="wiki/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="online">who's online</option -->
+</select>
+
+<input type="hidden" name="from" value='/wiki/action=browse&id=SearchBot&raw=1'>
+<noscript><input type="Submit" value="go" class="button"></noscript>
+</td></form>
+  </tr></table><br></td></tr></table></div></div></div>
+</body>
+</html>

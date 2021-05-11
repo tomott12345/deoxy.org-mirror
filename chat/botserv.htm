@@ -1,0 +1,696 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>BotServ</title>
+<LINK REL="home"       HREF="../index.html">
+<LINK REL="search"     HREF="http://deoxy.org/find">
+<LINK REL="stylesheet" HREF="../inc/css/deoxy.org.css" TYPE="text/css">
+<LINK REL="alternate"  HREF="../cgi/nu.pl@rss=1" TITLE="recent changes at deoxy.org" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/news/cloud?rss=1" TITLE="deoxy news cloud" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/news/cloud/today?rss=1" TITLE="deoxy news cloud today" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="../news/feeds/moonphase.xml" TITLE="lunar phases" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/video/random/rss" TITLE="random video" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="../koans@rss=1" TITLE="random koan" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="../iching/random/rss" TITLE="random iching hexagram" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/cgi/randlink.pl?rss=1" TITLE="random link at deoxy.org" TYPE="application/rss+xml">
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch/find.xml"  title="deoxy find">
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch/news.xml"  title="deoxy news">
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch/newstoday.xml"  title="deoxy news today">
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch/videx.xml" title="deoxy video">
+<style type="text/css">input.wikiform { background-color:#111111; font-size:13px; color:#909090; border:0px; cursor:pointer; }</style>
+<meta name="MSSmartTagsPreventParsing" content="true">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="robots" content="all">
+
+<LINK REL="stylesheet" HREF="../inc/css/print.css" TYPE="text/css" MEDIA="print">
+<script type="text/javascript" src="../bin/chatterwindow.js"></script>
+<script type="text/javascript" src="../bin/cookies.js"></script>
+<script type="text/javascript">
+function openVideo(id) {
+ var s = 'screenX=100,screenY=100,left=100,top=100,width=640,height=565,'
+ var x = 'resizable=1,status=0,menubar=0,toolbar=0,location=0,scrollbars=0'
+ window.open('http://deoxy.org/video/'+id,'',s+x)}
+</script>
+
+</head>
+<body bgcolor="#000000" text="#c0c0c0" link="#ffffff" vlink="#ffffff" alink="#aaffaa">
+<a name="top"></a><div id=_header>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr bgcolor="#111111">
+<td nowrap rowspan=2 bgcolor="#000000" width="20" background='../gif/background2.jpg'>&nbsp;</td>
+<td nowrap rowspan=2 bgcolor="#000000" align=center style=width:90px;><a
+ href="../index.html"
+ title=deoxy.org
+ target=_top><!-- img
+ src="http://deoxy.org/gif/ooleft_left.gif" border=0 
+--><img src="../vi/R1quMSWC-m0.jpg" style=height:68px;width:100%;margin-left:1px; border=0></a></td>
+<form action='http://deoxy.org/cgi/jump.pl' method="post">
+<td nowrap align="right" background='../img/vortex0b.gif'>
+
+<table cellspacing="0" cellpadding="0" border=0 background='../gif/background2.jpg'><tr><td nowrap>
+<select name="to" class="select" onChange="x=this.options[this.selectedIndex].value;location.href=x.match(/^http:/)?x:'http://deoxy.org/'+x;">
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="nu.htm">&nbsp;&nbsp;\_updates</option>
+<!-- option value="watts.htm">alanwatts</option -->
+<!-- option value="alephnull">aleph</option -->
+<option value="8brains.htm">circuits</option>
+<option value="8basic.htm">&nbsp;&nbsp;\_scripts</option>
+
+
+
+<!-- option value="ct">crimethinc</option -->
+<option value="gacwao">defrag</option>
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="contact">&nbsp;&nbsp;|_contact</option>
+<option VALUE="http://m.deoxy.org">&nbsp;&nbsp;|_mobile</option>
+<!-- option value="wiki/Deoxy/Help">&nbsp;&nbsp;|_help</option -->
+<option value="meme/DNA">DNA</option>
+<option value="find">Find?</option>
+<!-- option value="forum">forum</option>
+<option value="newposts">&nbsp;&nbsp;|_newposts</option -->
+<!-- option value="hyper.htm">hyperspace</option -->
+<option value="iching">IChing</option>
+<option value="iching/random">&nbsp;&nbsp;\_random</option>
+<option value="imagine.mil">imagine.mil</option>
+<option value="inc.htm">incunabula</option>
+<!-- option value="http://irc.deoxy.org">IRC status</option -->
+<option value="koans">koans</option>
+<option value="koan/random">&nbsp;&nbsp;\_random</option>
+
+<option value="media">media</option>
+<option value="media/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="meme">meme</option>
+<option value="meme/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="news">news</option>
+<option VALUE="news/cloud/today">&nbsp;&nbsp;|_today</option>
+<option VALUE="news/digestc">&nbsp;&nbsp;|_digest</option>
+<option VALUE="news/view">&nbsp;&nbsp;|_category</option>  
+<option VALUE="http://m.deoxy.org/news">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\_mobile</option>
+<option value="omega.htm">omega</option>
+<option value="pdfa">PDFA</option>
+<option value="index/People">People</option>
+<option value="leary.htm">&nbsp;&nbsp;|_Leary</option>
+<option value="lilly.htm">&nbsp;&nbsp;|_Lilly</option>
+<option value="mckenna.htm">&nbsp;&nbsp;|_McKenna</option>
+<option value="media/McLuhan">&nbsp;&nbsp;|_McLuhan</option>
+<option value="raw.htm">&nbsp;&nbsp;|_RAWilson</option>
+<option value="philo.htm">philosophos</option>
+<option value="cgi/randlink.pl?go">random</option>
+<option value="rss.htm">RSS</option>
+<!-- option value="time/sabbats.htm">sabbats</option>
+<option value="shaman.htm">shaman</option -->
+<option value="stats">stats</option>
+<option value="maps">&nbsp;&nbsp;\_map</option>
+<!-- option value="tcrime.htm">thoughtcrime</option -->
+<option value="topics">topics</a>
+<option value="nu.htm">&nbsp;&nbsp;\_cloud</option>
+<option value="nu.htm">updates</option>
+<option value="wiki/Deoxy/Video">video</option>
+<option value="videx">&nbsp;&nbsp;|_index</option>
+<option value="vidcloud">&nbsp;&nbsp;|_cloud</option>
+<option value="vidimg">&nbsp;&nbsp;|_images</option>
+<option VALUE="warnings.htm">warnings</option>
+<!-- option value="wiki">wiki</option>
+<option value="wiki/Recent">&nbsp;&nbsp;|_changes</option>
+<option value="wiki/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="online">who's online</option -->
+</select>
+
+<input type="hidden" name="from" value='/chat/botserv.htm'>
+<noscript><input type="Submit" value="go" class="button"></noscript>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></form>
+
+<form action="http://translate.google.com/translate" method="post" target="_top" name="trans" id="trans"><td nowrap align="center">
+<input type="Submit" value="to" class="button" title="Google translation">
+<select name="tl" class="select" title="Google translation">
+<option value=af>Afrikaans</option>
+<option value=sq>Albanian</option>
+<option value="ar">Arabic</option>
+<option value=hy>Armenian</option>
+<option value=az>Azerbaijani</option>
+<option value=eu>Basque</option>
+<option value=be>Belarusian</option>
+<option value=bn>Bengali</option>
+<option value=bs>Bosnian</option>
+<option value="bg">Bulgarian</option>
+<option value=my>Burmese</option>
+<option value="ca">Catalan</option>
+<option value=ceb>Cebuano</option>
+<option value=ny>Chichewa</option>
+<option value="zh-CN">Chinese CN</option>
+<option value="zh-TW">Chinese TW</option>
+<option value="hr">Croatian</option>
+<option value="cs">Czech</option>
+<option value="da">Danish</option>
+<option value="nl">Dutch</option>
+<option value=eo>Esperanto</option>
+<option value="et">Estonian</option>
+<option value="tl">Filipino</option>
+<option value="fi">Finnish</option>
+<option value="fr">French</option>
+<option value="gl">Galacian</option>
+<option value=ka>Georgian</option>
+<option value="de">German</option>
+<option value="el">Greek</option>
+<option value=gu>Gujarati</option>
+<option value=ht>Haitian Creole</option>
+<option value=ha>Hausa</option>
+<option value="iw">Hebrew</option>
+<option value="hi">Hindi</option>
+<option value=hmn>Hmong</option>
+<option value="hu">Hungarian</option>
+<option value=is>Icelandic</option>
+<option value=ig>Igbo</option>
+<option value="id">Indonesian</option>
+<option value=ga>Irish</option>
+<option value="it">Italian</option>
+<option value="ja">Japanese</option>
+<option value=jw>Javanese</option>
+<option value=kn>Kannada</option>
+<option value=kk>Kazakh</option>
+<option value=km>Khmer</option>
+<option value="ko">Korean</option>
+<option value=lo>Lao</option>
+<option value=la>Latin</option>
+<option value="lv">Latvian</option>
+<option value="lt">Lithuanian</option>
+<option value=mk>Macedonian</option>
+<option value=mg>Malagasy</option>
+<option value=ms>Malay</option>
+<option value=ml>Malayalam</option>
+<option value="mt">Maltese</option>
+<option value=mi>Maori</option>
+<option value=mr>Marathi</option>
+<option value=mn>Mongolian</option>
+<option value=ne>Nepali</option>
+<option value="no">Norwegian</option>
+<option value=fa>Persian</option>
+<option value="pl">Polish</option>
+<option value="pt">Portuguese</option>
+<option value=pa>Punjabi</option>
+<option value="ro">Romanian</option>
+<option value="ru">Russian</option>
+<option value="sr">Serbian</option>
+<option value=st>Sesotho</option>
+<option value=si>Sinhala</option>
+<option value="sk">Slovak</option>
+<option value="sl">Slovenian</option>
+<option value=so>Somali</option>
+<option value="es" selected>Spanish</option>
+<option value=su>Sundanese</option>
+<option value=sw>Swahili</option>
+<option value="sv">Swedish</option>
+<option value=tg>Tajik</option>
+<option value=ta>Tamil</option>
+<option value=te>Telugu</option>
+<option value="th">Thai</option>
+<option value="tr">Turkish</option>
+<option value="uk">Ukrainian</option>
+<option value=ur>Urdu</option>
+<option value=uz>Uzbek</option>
+<option value="vi">Vietnamese</option>
+<option value=cy>Welsh</option>
+<option value=yi>Yiddish</option>
+<option value=yo>Yoruba</option>
+<option value=zu>Zulu</option></select>
+<input type=hidden name=sl value="en">
+<input type=hidden name=hl value="en">
+<input type=hidden name=ie value="UTF-8">
+<input type=hidden name=u id=u value='http://deoxy.org/chat/botserv.htm'>
+</td></form>
+
+
+<td align="right" valign="middle" nowrap>
+<table cellspacing="0" cellpadding="0" border=0><tr>
+<form action=http://deoxy.org/find method=get name=sitesearchform>
+<td nowrap align=right valign="middle">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name=q size=15 class="input" title="search deoxy.org">
+<input type="Submit" value="find" class="button" title="search deoxy.org"></TD>
+</form></tr></table>
+</td></tr></table>
+
+</td></tr><SCRIPT TYPE="text/javascript">
+document.trans.tl.selectedIndex=Math.floor(Math.random()*(document.trans.tl.length+1))
+</script><tr><td bgcolor="#111111" background="../img/thin_horizontal_lines.gif" 
+style=white-space:nowrap;overflow:hidden;>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+<td style="background-image:url('../gif/background2.jpg');background-position:40 0;" width=20>&nbsp;</td>
+<td style=background-image:url(../img/thin_horizontal_lines.gif);>
+<div style=overflow:hidden;white-space:nowrap;>&nbsp;<small>[an error occurred while processing this directive]</small></div></td>
+
+<td width=20>&nbsp;</td>
+<form action=http://deoxy.org/cgi/jump.pl method=get target=_blank>
+<td align="right"><div style=overflow:hidden;display:none;>
+<font color="#909090"><a href="../nu.htm"><font color="#ffffff" size="-1">New</font></a> : <font size="-1">
+<a href="../wiki/Deoxy/Video.html" ><font color=#ffffff size=-2>Video</font></a> : <a href="http://deoxy.org/video/ubuTR5vXISA" onclick="window.open('http://deoxy.org/video?v=ubuTR5vXISA','','screenX=50,screenY=50,left=50,top=50,width=640,height=565,resizable=1,status=0,menubar=0,toolbar=0,location=0,scrollbars=0'); return false;" ><font color=#ffffff size=-2>DMT - The Spirit Molecule 1/5</font></a>
+
+</font></font></div></td>
+
+<td style="background-image:url('../gif/background2.jpg');background-position:0 0;" width=20>&nbsp;</td>
+</form></tr></table>
+</td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="#000000" align="right" background="../gif/background2.jpg">
+
+</td></tr></table></div><p>
+
+
+<table width="100%"><tr>
+<td><h1>&nbsp;BotServ</h1></td>
+<td align="right" valign="top" style=font-size:100%;white-space:nowrap; nowrap><small>
+
+<b><a href="../chat.html">deoxy.org/chat</a></b> : 
+<a href="unreal.htm">IRC Commands</a> | 
+<a href="http://irc.deoxy.org">Server Status</a>&mdash;<a href="ircd.motd.html" title="First thing you see on IRC">MOTD</a><br>
+
+<a href="modserv.htm">Services</a> : 
+<a href="nickserv.htm">NickServ</a> |
+<a href="chanserv.htm">ChanServ</a> |
+<a href="memoserv.htm">MemoServ</a> |
+<a href="botserv.htm">BotServ</a><br>
+
+<a href="alias.htm">Aliases</a> | 
+<a href="privsec.htm">Privacy/Security</a> | 
+<a href="../meme/SearchBot.html">SearchBot</a> | 
+<a href="java.htm">Java Clients</a><br>
+
+</small></td>
+</tr></table>
+<ul><p>
+
+<pre>&nbsp;<b>BotServ</b> allows you to have a bot on your own channel.
+
+&nbsp;It has been created for users that can't host or
+&nbsp;configure a bot, or for use on networks that don't
+&nbsp;allow users' bot. Available commands are listed 
+&nbsp;below; to use them, type <b>/msg BotServ <u>command</u></b>.  For 
+&nbsp;more information on a specific command, type /msg 
+&nbsp;BotServ HELP <u>command</u>.
+&nbsp;
+&nbsp;BOTLIST            Lists available bots
+&nbsp;ASSIGN             Assigns a bot to a channel
+&nbsp;<a href="botserv.htm#SET">SET</a>                Configures bot options
+&nbsp;<a href="botserv.htm#KICK">KICK</a>               Configures kickers
+&nbsp;BADWORDS           Maintains bad words list
+&nbsp;
+&nbsp;Other commands: ACT INFO SAY UNASSIGN
+&nbsp;
+&nbsp;Bot will join a channel whenever there is at least
+&nbsp;<b>&lt;num&gt;</b> user(s) on it.
+&nbsp;
+</pre>
+          </li>
+          <li><b>BOTLIST</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  <b>BOTLIST</b>
+&nbsp;
+&nbsp;Lists all available bots on this network.
+&nbsp;
+</pre>
+          </li>
+          <li><b>ASSIGN</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  <b>ASSIGN <u>chan</u> <u>nick</u></b>
+&nbsp;
+&nbsp;Assigns a bot pointed out by nick to the channel chan. You
+&nbsp;can then configure the bot for the channel so it fits
+&nbsp;your needs.  
+&nbsp;
+</pre>
+          </li>
+          <li><b>UNASSIGN</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  <b>UNASSIGN <u>chan</u></b>
+&nbsp;
+&nbsp;Unassigns a bot from a channel. When you use this command,
+&nbsp;the bot won't join the channel anymore. However, bot
+&nbsp;configuration for the channel is kept, so you will always
+&nbsp;be able to reassign a bot later without have to reconfigure
+&nbsp;it entirely.
+&nbsp;
+</pre>
+          </li>
+          <li><b>INFO</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  <b>INFO {<u>chan</u> | <u>nick</u>}</b>
+&nbsp;
+&nbsp;Allows you to see BotServ information about a channel or a bot.
+&nbsp;If the parameter is a channel, then you'll get information
+&nbsp;such as enabled kickers. If the parameter is a nick,
+&nbsp;you'll get information about a bot, such as creation
+&nbsp;time or number of channels it is on.
+&nbsp;
+</pre>
+          </li>
+          <li><b><a name=SET>SET</a></b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  <b>SET <u>channel</u> <u>option</u> <u>parameters</u></b>
+&nbsp;
+&nbsp;Configures bot options.  <u>option</u> can be one of:
+&nbsp;
+&nbsp;    DONTKICKOPS      To protect ops against bot kicks
+&nbsp;    DONTKICKVOICES   To protect voices against bot kicks
+&nbsp;    GREET            Enable greet messages
+&nbsp;    FANTASY          Enable fantaisist commands
+&nbsp;    SYMBIOSIS        Allow the bot to act as a real bot
+&nbsp;
+&nbsp;Type <b>/msg BotServ HELP SET <u>option</u></b> for more information
+&nbsp;on a specific option.
+
+&nbsp;Note: access to this command is controlled by the
+&nbsp;level SET.
+&nbsp;
+</pre>
+          </li>
+          <li><b>SET DONTKICKOPS</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  SET <u>channel</u> DONTKICKOPS {<u>ON|OFF</u>}
+&nbsp;
+&nbsp;Enables or disables <b>ops protection</b> mode on a channel.
+&nbsp;When it is enabled, ops won't be kicked by the bot
+&nbsp;even if they don't match the NOKICK level.
+&nbsp;
+</pre>
+          </li>
+          <li><b>SET DONTKICKVOICES</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  SET <u>channel</u> DONTKICKVOICES {<u>ON|OFF</u>}
+&nbsp;
+&nbsp;Enables or disables <b>voices protection</b> mode on a channel.
+&nbsp;When it is enabled, voices won't be kicked by the bot
+&nbsp;even if they don't match the NOKICK level.
+&nbsp;
+</pre>
+          </li>
+          <li><b>SET FANTASY</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  SET <u>channel</u> FANTASY {<u>ON|OFF</u>}
+
+&nbsp;Enables or disables <b>fantasy</b> mode on a channel.
+&nbsp;When it is enabled, users will be able to use
+&nbsp;commands !op, !deop, !voice, !devoice,
+&nbsp;!kick, !kb, !unban, !seen on a channel (find how 
+&nbsp;to use them; try with or without nick for each, 
+&nbsp;and with a reason for some?).
+&nbsp;
+&nbsp;Note that users wanting to use fantaisist
+&nbsp;commands MUST have enough level for both
+&nbsp;the FANTASIA and another level depending
+&nbsp;of the command if required (for example, to use 
+&nbsp;!op, user must have enough access for the OPDEOP
+&nbsp;level).
+
+</pre>
+          </li>
+          <li><b>SET GREET</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  SET <u>channel</u> GREET {<u>ON|OFF</u>}
+&nbsp;
+&nbsp;Enables or disables <b>greet</b> mode on a channel.
+&nbsp;When it is enabled, the bot will display greet
+&nbsp;messages of users joining the channel, provided
+&nbsp;they have enough access to the channel.
+
+</pre>
+          </li>
+          <li><b>SET SYMBIOSIS</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  SET <u>channel</u> SYMBIOSIS {<u>ON|OFF</u>}
+&nbsp;
+&nbsp;Enables or disables <b>symbiosis</b> mode on a channel.
+&nbsp;When it is enabled, the bot will do everything
+&nbsp;normally done by BotServ on channels, such as MODEs,
+&nbsp;KICKs, and even the entry message.
+
+</pre>
+          </li>
+          <li><b><a name=KICK>KICK</a></b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  <b>KICK <u>channel</u> <u>option</u> <u>parameters</u></b>
+&nbsp;
+&nbsp;Configures bot kickers.  <u>option</u> can be one of:
+&nbsp;
+&nbsp;    BOLDS         Sets if the bot kicks bolds
+&nbsp;    BADWORDS      Sets if the bot kicks bad words
+&nbsp;    CAPS          Sets if the bot kicks caps
+&nbsp;    COLORS        Sets if the bot kicks colors
+&nbsp;    <a href="botserv.htm#FLOOD">FLOOD</a>         Sets if the bot kicks flooding users
+&nbsp;    REPEAT        Sets if the bot kicks users who repeat
+&nbsp;                       themselves
+&nbsp;    REVERSES      Sets if the bot kicks reverses
+&nbsp;    UNDERLINES    Sets if the bot kicks underlines
+&nbsp;
+&nbsp;Type <b>/msg BotServ HELP KICK <u>option</u></b> for more information
+&nbsp;on a specific option.
+&nbsp;
+&nbsp;Note: access to this command is controlled by the
+&nbsp;level SET.
+
+</pre>
+          </li>
+          <li><b>KICK BOLDS</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  <b>KICK <u>channel</u> BOLDS {<u>ON|OFF</u>} [<u>ttb</u>]</b>
+
+&nbsp;Sets the bolds kicker on or off. When enabled, this
+&nbsp;option tells the bot to kick users who use bolds.
+
+&nbsp;ttb is the number of times an user can be kicked
+&nbsp;before it get banned. Don't give ttb to disable
+&nbsp;the ban system once activated.
+
+</pre>
+          </li>
+          <li><b>KICK COLORS</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  <b>KICK <u>channel</u> COLORS {<u>ON|OFF</u>} [<u>ttb</u>]</b>
+
+&nbsp;Sets the colors kicker on or off. When enabled, this
+&nbsp;option tells the bot to kick users who use colors.
+
+&nbsp;ttb is the number of times an user can be kicked
+&nbsp;before it get banned. Don't give ttb to disable
+&nbsp;the ban system once activated.
+
+</pre>
+          </li>
+          <li><b>KICK REVERSES</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  <b>KICK <u>channel</u> REVERSES {<u>ON|OFF</u>} [<u>ttb</u>]</b>
+
+&nbsp;Sets the reverses kicker on or off. When enabled, this
+&nbsp;option tells the bot to kick users who use reverses.
+
+&nbsp;ttb is the number of times an user can be kicked
+&nbsp;before it get banned. Don't give ttb to disable
+&nbsp;the ban system once activated.
+
+</pre>
+          </li>
+          <li><b>KICK UNDERLINES</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  <b>KICK <u>channel</u> UNDERLINES {<u>ON|OFF</u>} [<u>ttb</u>]</b>
+
+&nbsp;Sets the underlines kicker on or off. When enabled, this
+&nbsp;option tells the bot to kick users who use underlines.
+
+&nbsp;ttb is the number of times an user can be kicked
+&nbsp;before it get banned. Don't give ttb to disable
+&nbsp;the ban system once activated.
+
+</pre>
+          </li>
+          <li><b>KICK CAPS</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  <b>KICK <u>channel</u> CAPS {<u>ON|OFF</u>} [<u>ttb</u> [<u>min</u> [<u>percent</u>]]]</b>
+
+&nbsp;Sets the caps kicker on or off. When enabled, this
+&nbsp;option tells the bot to kick users who are talking in
+&nbsp;CAPS.
+
+&nbsp;The bot kicks only if there are at least <b>min</b> caps
+&nbsp;and they constitute at least <b>percent</b>%% of the total 
+&nbsp;text line (if not given, it defaults to 10 characters
+&nbsp;and 25%%).
+
+&nbsp;ttb is the number of times an user can be kicked
+&nbsp;before it get banned. Don't give ttb to disable
+&nbsp;the ban system once activated.
+
+</pre>
+          </li>
+          <li><b><a name=FLOOD>KICK FLOOD</a></b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  <b>KICK <u>channel</u> FLOOD {<u>ON|OFF</u>} [<u>ttb</u> [<u>ln</u> [<u>secs</u>]]]</b>
+
+&nbsp;Sets the flood kicker on or off. When enabled, this
+&nbsp;option tells the bot to kick users who are flooding
+&nbsp;the channel using at least <b>ln</b> lines in <b>secs</b> seconds
+&nbsp;(if not given, it defaults to 6 lines in 10 seconds).
+&nbsp;
+&nbsp;ttb is the number of times an user can be kicked
+&nbsp;before it get banned. Don't give ttb to disable
+&nbsp;the ban system once activated.
+
+Also see <a href="unreal.htm#chmodef">Chmodef</a>
+</pre>
+          </li>
+          <li><b>KICK REPEAT</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  <b>KICK <u>#channel</u> REPEAT {<u>ON|OFF</u>} [<u>ttb</u> [<u>num</u>]]</b>
+
+&nbsp;Sets the repeat kicker on or off. When enabled, this
+&nbsp;option tells the bot to kick users who are repeating
+&nbsp;themselves <b>num</b> times (if num is not given, it
+&nbsp;defaults to 3).
+
+&nbsp;ttb is the number of times an user can be kicked
+&nbsp;before it get banned. Don't give ttb to disable
+&nbsp;the ban system once activated.
+
+</pre>
+          </li>
+          <li><b>KICK BADWORDS</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  <b>KICK <u>#channel</u> BADWORDS {<u>ON|OFF</u>} [<u>ttb</u>]</b>
+
+&nbsp;Sets the bad words kicker on or off. When enabled, this
+&nbsp;option tells the bot to kick users who say certain words
+&nbsp;on the channels.
+
+&nbsp;You can define bad words for your channel using the
+&nbsp;<b>BADWORDS</b> command. Type <b>/msg BotServ HELP BADWORDS</b> for
+&nbsp;more information.
+
+&nbsp;ttb is the number of times an user can be kicked
+&nbsp;before it get banned. Don't give ttb to disable
+&nbsp;the ban system once activated.
+&nbsp;
+</pre>
+          </li>
+          <li><b>BADWORDS</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  <b>BADWORDS <u>channel</u> ADD <u>word</u> [<u>SINGLE</u> | <u>START</u> | <u>END</u>]</b>
+&nbsp;        <b>BADWORDS <u>channel</u> DEL {<u>word</u> | <u>entry-num</u> | <u>list</u>}</b>
+&nbsp;        <b>BADWORDS <u>channel</u> LIST [<u>mask</u> | <u>list</u>]</b>
+&nbsp;        <b>BADWORDS <u>channel</u> CLEAR</b>
+&nbsp;
+&nbsp;Maintains the <b>bad words list</b> for a channel. The bad
+&nbsp;words list determines which words are to be kicked
+&nbsp;when the bad words kicker is enabled. For more information,
+&nbsp;type <b>/msg BotServ HELP KICK BADWORDS</b>.
+&nbsp;
+&nbsp;The <b>BADWORDS ADD</b> command adds the given word to the
+&nbsp;badword list. If SINGLE is specified, a kick will be
+&nbsp;done only if an user says the entire word. If START is 
+&nbsp;specified, a kick will be done if an user says a word
+&nbsp;that starts with <u>word</u>. If END is specified, a kick
+&nbsp;will be done if an user says a word that ends with
+&nbsp;<u>word</u>. If you don't specify anything, a kick will
+&nbsp;be issued every time <u>word</u> is said by an user.
+&nbsp;
+&nbsp;The <b>BADWORDS DEL</b> command removes the given word from the
+&nbsp;bad words list.  If a list of entry numbers is given, those
+&nbsp;entries are deleted.  (See the example for LIST below.)
+&nbsp;
+&nbsp;The <b>BADWORDS LIST</b> command displays the bad words list.  If
+&nbsp;a wildcard mask is given, only those entries matching the
+&nbsp;mask are displayed.  If a list of entry numbers is given,
+&nbsp;only those entries are shown; for example:
+
+&nbsp;   <b>BADWORDS #channel LIST 2-5,7-9</b>
+&nbsp;      Lists bad words entries numbered 2 through 5 and
+&nbsp;      7 through 9.
+&nbsp;      
+&nbsp;The <b>BADWORDS CLEAR</b> command clears all entries of the
+&nbsp;bad words list.
+
+</pre>
+          </li>
+          <li><b>SAY</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  <b>SAY <u>channel</u> <u>text</u></b>
+&nbsp;
+&nbsp;Makes the bot say the given text on the given channel.
+
+</pre>
+          </li>
+          <li><b>ACT</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  <b>ACT <u>channel</u> <u>text</u></b>
+&nbsp;
+&nbsp;Makes the bot do the equivalent of a "/me" command
+&nbsp;on the given channel using the given text.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN HELP</b><br />
+            <pre>&nbsp;
+&nbsp;The following command is available to Services admins:
+&nbsp;
+&nbsp;    BOT              Maintains network bot list
+
+</pre>
+          </li>
+          <li><b>SERVADMIN BOT</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  <b>BOT ADD <u>nick</u> <u>user</u> <u>host</u> <u>real</u></b>
+&nbsp;        <b>BOT CHANGE <u>oldnick</u> <u>newnick</u> [<u>user</u> [<u>host</u> [<u>real</u>]]]</b>
+&nbsp;        <b>BOT DEL <u>nick</u></b>
+&nbsp;        <b>BOT LIST</b>
+&nbsp;
+&nbsp;Allows Services admins to create, modify, and delete
+&nbsp;bots that users will be able to use on their own
+&nbsp;channels.
+&nbsp;
+&nbsp;<b>BOT ADD</b> adds a bot with the given nickname, username,
+&nbsp;hostname and realname. Since no integrity checks are done 
+&nbsp;for these settings, be really careful.
+
+&nbsp;<b>BOT CHANGE</b> allows to change nickname, username, hostname
+&nbsp;or realname of a bot without actually delete it (and all
+&nbsp;the data associated with it).
+
+&nbsp;<b>BOT DEL</b> removes the given bot from the bot list.  
+
+&nbsp;<b>BOT LIST</b> is an alias of <b>BOTLIST</b> and just lists all
+&nbsp;bots available on the network.
+&nbsp;
+&nbsp;<b>Note</b>: if you create a bot that has a nick that is
+&nbsp;registered, it will be dropped. Also, if an user is
+&nbsp;currently using the nick, it will be killed.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN SET</b><br />
+            <pre>&nbsp;
+&nbsp;These options are reserved to Services admins:
+&nbsp;
+&nbsp;    NOBOT            Prevent a bot from being assigned to 
+&nbsp;                        a channel
+&nbsp;    PRIVATE          Prevent a bot from being assigned by
+&nbsp;                        non IRC operators
+
+</pre>
+          </li>
+          <li><b>SERVADMIN SET NOBOT</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  <b>SET <u>channel</u> NOBOT {<u>ON|OFF</u>}</b>
+&nbsp;
+&nbsp;This option makes a channel be unassignable. If a bot 
+&nbsp;is already assigned to the channel, it is unassigned
+&nbsp;automatically when you enable the option.
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN SET PRIVATE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg BotServ  <b>SET <u>bot-nick</u> PRIVATE {<u>ON|OFF</u>}</b>
+
+&nbsp;This option prevents a bot from being assigned to a
+&nbsp;channel by users that aren't IRC operators.
+
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre></li></ul><div align="center">
+<td align="right" valign="top" style=font-size:100%;white-space:nowrap; nowrap><small>
+
+<b><a href="../chat.html">deoxy.org/chat</a></b> : 
+<a href="unreal.htm">IRC Commands</a> | 
+<a href="http://irc.deoxy.org">Server Status</a>&mdash;<a href="ircd.motd.html" title="First thing you see on IRC">MOTD</a><br>
+
+<a href="modserv.htm">Services</a> : 
+<a href="nickserv.htm">NickServ</a> |
+<a href="chanserv.htm">ChanServ</a> |
+<a href="memoserv.htm">MemoServ</a> |
+<a href="botserv.htm">BotServ</a><br>
+
+<a href="alias.htm">Aliases</a> | 
+<a href="privsec.htm">Privacy/Security</a> | 
+<a href="../meme/SearchBot.html">SearchBot</a> | 
+<a href="java.htm">Java Clients</a><br>
+
+</small></td>
+</div>
+</body>
+</html>

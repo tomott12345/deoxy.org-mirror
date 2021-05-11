@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<GroundOverlay>
+	<name>Selective logging disturbance in the Brazilian Amazon</name>
+	<description>Carnegie Institution News<br/>
+Thursday October 20, 2005<br/>
+http://www.carnegieinstitution.org/news_releases/news_0510_21.html
+<p><b>
+New satellite study doubles forest disturbance estimates in Brazil—impacts widespread
+</b></p><p>
+Stanford, CA. Results from a new large-scale, high-resolution satellite data analysis indicate that forest degradation in the Brazilian Amazon has been underestimated by half. The study, conducted by lead author, Dr. Greg Asner, of the Carnegie Institution’s Department of Global Ecology and colleagues, is published in the October 21, 2005, issue of Science, and has far-reaching ecological impacts for the region and beyond.
+</p><p>
+For a number of decades, people have been logging specific types of trees in the fragile rain forest by stealthily extracting them one-by-one, with the forest canopy covering their tracks. “We discovered that annually an area about the size of Connecticut is disturbed this way,” explained Asner. “Selective logging negatively impacts many plants and animals and increases erosion and fires. Additionally, up to 25% more carbon dioxide is released to the atmosphere each year, above that from deforestation, from the decomposition of what the loggers leave behind. Timber harvests are much more widespread than previously thought.”
+</p><p>
+Brazil’s Space Research Institute has used remote-sensing to accurately measure deforestation for over two decades. Surprisingly, though, little has been known about the extent of selective logging in the region because the satellite techniques could not penetrate the shielding upper layers of forest leaves. The Carnegie scientists developed the Carnegie Landsat Analysis System (CLAS) to penetrate this layer by analyzing satellite imagery with advanced computational methods and corroborating the results with selected on-ground field studies. “With the new Carnegie system, we can now see what’s happening from the top of the forest all the way to the soil; we have a whole new picture of the Amazon region and selective logging,” stated co-author Natalino Silva from the Brazilian Agricultural Research Corporation.
+</p><p>
+From 1999 through 2002, the scientists used remote sensing, with a spatial resolution of 98 ft. x 98 ft. over millions of square miles, and selected on-ground surveys over the five states that account for 90% of all deforestation in the Brazilian Amazon. The annual extent of selective logging was found to be between 4,685 square miles (12, 135 km2) and 7,973 square miles (20,651 km2). A few protected national reserves, parks, and indigenous lands were found to have been logged via illegal activities. As a result of the harvest, up to 80 million metric tons of carbon are released each year. “We expected to see large areas of logging, but the extent to which logging penetrates deep into the frontier is much more dramatic than we anticipated,” remarked co-author Michael Keller of the U.S. Forest Service.
+</p><p>
+Ecologist Daniel Nepstad of The Woods Hole Research Center added: “This excellent study puts to rest a long-standing debate about how extensive selective logging is in the Amazon. The results are of great concern, since logging punches big holes in the dense forest canopy, increasing the likelihood of devastating forest fire.”
+</p><p>
+The researchers are hopeful that their new techniques can be expanded to monitor logging in other tropical forest countries. Asner commented: “Our ultimate goal is to provide these satellite results to government officials in Brazil since much of the logging is illegal but difficult to enforce because it is usually clandestine. This will require support from the international community, but the payoffs could be enormous for all of the stakeholders affected by legal and illegal logging and other forest disturbances.”
+</p><p>
+The new satellite processing system was funded by the Carnegie Institution. Application of this new system to Brazil was supported by the National Aeronautics and Space Administration.
+</p><p>
+----
+</p><p>
+Contact Carnegie’s Dr. Gregory Asner, office 650-462-1047 x202; cell 650-380-2828; e-mail gasner@globalecology.stanford.edu
+</p><p>
+For a copy of the paper contact Science at scipak@aaas.org, or 202-326-6440
+</p><p>
+Images at http://www.carnegieinstitution.org/brazilianlogging/
+</p><p>
+----
+</p><p>
+Carnegie’s department of Global Ecology was founded in 2002 on the campus of Stanford University http://globalecology.stanford.edu/DGE/CIWDGE/CIWDGE.HTML Its staff conducts basic research on the interactions among Earth’s ecosystems, land, atmosphere, and oceans to understand how the interactions shape the behavior of the Earth system, including its response to future change. The Carnegie Institution (www.CarnegieInstitution.org) has been a pioneering force in basic scientific research since 1902. It is a private, nonprofit organization with six research departments throughout the U.S. Carnegie scientists are leaders in plant biology, developmental biology, astronomy, materials science, global ecology, and Earth and planetary science.
+</p>
+</description>
+	<Icon>
+		<href>http://deoxy.org/img/hiddenamazonlogging.jpg</href>
+		<viewBoundScale>0.75</viewBoundScale>
+	</Icon>
+	<LatLonBox>
+		<north>7.555717074136274</north>
+		<south>-18.82747929123214</south>
+		<east>-45.16998260573637</east>
+		<west>-70.32213030105578</west>
+		<rotation>-18.34851431839012</rotation>
+	</LatLonBox>
+</GroundOverlay>
+</kml>

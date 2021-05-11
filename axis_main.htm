@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title></title>
+
+<SCRIPT LANGUAGE="JavaScript"><!--
+
+if (document.images) {
+    imageoff = new Image();
+    imageoff.src  = 'gaia/eyefood/gaiasm.gif';
+    imageon = new Image();
+    imageon.src = 'gaia/eyefood/daisy.jpg';
+}
+  
+function change(image,ext) {
+    if (document.images)
+        document.images[image].src = eval(image + ext + ".src");
+}
+
+// --></script>
+
+</head>
+
+<body bgcolor="#000000">
+
+<div style="width: 100%; height: 100%; left: 0px; top: 0px; position: absolute; z-index: 0;">
+<img src="img/zoneplate.jpg" style="width: 100%; height: 100%;">
+</div>
+
+<div style="left: 73%; top: 32%; z-index: 1; position: absolute;">
+<a href="audio/greetz.ram" onMouseOver="change('image','on')" onMouseOut="change('image','off')">
+<img src="gaia/eyefood/gaiasm.gif" name="image" style="width: 50px; height: 51px; border: 0" alt=""  /></a>
+</div> 
+
+</body>
+</html>

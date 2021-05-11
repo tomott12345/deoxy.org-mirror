@@ -1,0 +1,41 @@
+<html>
+<head><title>x</title>
+<script language="javascript">
+ if (location.href == top.location.href) {
+   location.href = "index_gm.htm"  }
+function MakeArray()
+             {
+             this.length = MakeArray.arguments.length
+             for (var i = 0; i < this.length; i++)
+             this[i+1] = MakeArray.arguments[i]
+             }
+
+     var siteopt = new MakeArray("Audio transmissions from Terence",
+                                 "The Great News!",
+								 "Homo Sapiens: a perfect picture of pathology",
+                                 "Pushing the art pedal through the FLOOR");
+
+     var url = new MakeArray("",
+                             "audio/thegreatnews.ram",
+                             "audio/pppathology.ram",
+                             "audio/artpedal.ram");
+
+     function jumpPage(form)
+     {
+             i = form.SelectMenu.selectedIndex;
+             if (i == 0) return;
+             window.location.href = url[i+1];
+     }
+</script></head>
+<body bgcolor="#202020" text="#aaffaa" background="eyefood/amazont.jpg"><center>
+<script language="javascript">
+document.writeln('<FORM><SELECT NAME="SelectMenu" onChange="jumpPage(this.form)">');
+         tot = siteopt.length;
+             for (var i = 1; i <= tot; i++)
+             document.write("<OPTION>" +siteopt[i]);
+         document.writeln('</SELECT>');
+         if (navigator.userAgent.indexOf("Mozilla/2") != -1)
+         document.writeln('<INPUT TYPE = BUTTON VALUE = "Listen">');
+         document.writeln('</FORM>');</script><noscript>menu requires javascript</noscript></center>
+</body>
+</html>

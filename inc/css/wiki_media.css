@@ -1,0 +1,252 @@
+html, body, #wrapper {
+    min-height: 100%; /*Sets the min height to the
+    height of the viewport.*/
+    width: 100%;
+    height: 100%; /*Effectively, this is min height
+     for IE5+/Win, since IE wrongly expands
+     an element to enclose its content.
+     This mis-behavior screws up modern  
+     browsers*/
+    }
+ 
+html>body, html>body #wrapper {
+    height: auto; /*this undoes the IE hack, hiding it
+     from IE using the child selector*/
+    } 
+
+body { 
+/* background-image: url(/img/lookstars.gif); */
+background-color : #000000;
+margin: 0px; 
+padding: 0px; 
+font-family: sans-serif;
+color:#a0a0a0;
+}
+
+#wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    }
+
+a:link    { color:#ffffff; }
+a:active  { color:#ffffff; }
+a:visited { color:#ffffff; }
+a:hover   { color:#c0c0c0; }
+
+DIV.wikiheader {
+  background-image: url(../../img/zoneplate2.jpg);
+  background-repeat: repeat;
+  background-position: 0% 0%;
+  margin: 0px; 
+  padding: 0px;
+  padding-top: 24px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  max-width: 100%;
+  width: 100%;
+}
+
+DIV.wikifooter {
+  clear:both;
+  background-image: url(../../img/zoneplate2.jpg);
+  background-repeat: repeat;
+  background-position: 0% 80%;
+  background-color : #101010;
+  margin: 0px;
+  padding: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 10px;
+  position: absolute;
+  bottom: 0px;
+  max-width: 100%;
+  width: 100%;
+}
+
+DIV.footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  max-width: 100%;
+}
+
+
+DIV.wikitext {
+  background-color : #000000;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 170px;
+width: 95%;
+max-width: 95%;
+margin-right:auto;
+margin-left:auto;
+
+}
+DIV.edit {
+  background-color : #000000;
+  padding-top: 1px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 100px;
+}
+DIV.wikipreview {
+  background-color : #000000;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+DIV.wikipref {
+  background-color : #000000;
+  padding-top: 20px;
+  padding-bottom: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 100px;
+}
+
+DIV.wikirc {
+  background-color : #000000;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 150px;
+}
+
+HR.wikilinefooter {
+  height : 3px;
+}
+HR.wikilineheader {
+  height : 2px;
+}
+HR.wikiline {
+  height : 2px;
+}
+HR.wikilinepref {
+  height : 5px;
+}
+A.wikipagelink {
+  color : #ffffff;
+}
+A.wikipageedit {
+}
+
+TABLE.wikidiffold {
+  color : #aa2222;
+  width: 100%;
+}
+
+TABLE.wikidiffnew {
+  color : #22aa22;
+  width: 100%;
+}
+
+.diff-header       { font-weight: bold; }  /* headers displaying paragraph indices */
+.diff-para-ident   { }                    /* unchanged complete paragraphs */
+.diff-span-ident   { }                    /* unchanged words in changed paragraphs */
+.diff-para-added   { background: #446644; }  /* added complete paragraphs */
+.diff-para-deleted { background: #664444; }    /* deleted complete paragraphs */
+
+.diff-span-changed { background: #666622;font-weight:bold; }                    /* changed paragraphs */
+.diff-span-added   { background: #338833;font-weight:bold; }  /* added words in changed paragraphs */
+.diff-span-deleted { background: #883333;font-weight:bold;color:black; }    /* deleted words in changed paragraphs */
+
+
+.diff-text {  
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 12px;  
+padding-left: 6px;
+padding-right: 6px;
+}
+
+
+.userdata {
+  font-size: 10px;
+  position: absolute;
+  right: 3px;
+  top: 2px;
+  display: inline;
+}
+
+.headline { padding-bottom: 10px; }
+
+.sf { font-size: 11px; }
+
+.subdex { 
+font-size:0.9em;
+}
+
+.temp { 
+overflow : auto;
+width: 240px;
+}
+
+DIV.codehead {
+  background-color : #404040;
+  margin: 0px; 
+  padding: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.graph { border: 1px; }
+.node  { background-color: #303030; }
+.edge  { color: red;  height: 5px; }
+.label {}
+.line  {}
+.rcnew {}
+.spell-miss  { background-color: yellow;  color: black; }
+.spell-guess { background-color: orange;  color: black; }
+.spell-none  { background-color: red;  color: black; }
+
+DIV.code {
+  background-color: #000000;
+  color: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.goto {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 11px;
+ background-color: #555555;
+ color: #ffffff;
+ border: 1px solid #777777;
+}
+
+.input {
+ font-size: 13px;
+ background-color: #222222;
+ color: #ffffff;
+ border: 1px solid #666666;
+}
+
+.button {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ background-color: #222222;
+ color: #ffffff;
+ margin-right: 4px;
+ margin-left: 4px;
+ border: 1px solid #666666;
+}
+
+.select {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ background-color: #222222;
+ color: #ffffff;
+ margin-left: 4px;
+ border: 1px solid #666666;
+}
+a { text-decoration:none; }

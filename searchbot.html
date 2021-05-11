@@ -1,0 +1,170 @@
+<html>
+<head>
+<title>SearchBot</title>
+<script type=text/javascript><!--
+// AJAX interface to deoxy searchbot
+// Doc : http://deoxy.org/wiki/SearchBot
+// WWW : http://deoxy.org/searchbot
+// IRC : irc://deoxy.org/search
+
+var splash  = '<b>deoxy.search.bot</b><p><small>Web interface to our IRC bot.<br>The green items require no input.<br></small><br>';
+var oldval  = splash;
+
+function initjs() {
+  var element = document.getElementById('out');
+  element.innerHTML = splash;
+  document.forms['input'].elements['q'].focus();
+}
+
+function wind(url,wide,high) {
+  windo=window.open("http://deoxy.org/searchbot","wind","resizable,status,width="+wide+",height="+high);
+}
+
+function doInfo(hmm) {
+  var element = document.getElementById('out');
+  if (hmm == 'on') {
+    var qh = document.forms['input'].elements['qh'].value;
+    if (qh != '') {
+      oldval  = qh
+    }
+    element.innerHTML = splash;
+  }
+  if (hmm == 'off') {
+    element.innerHTML = oldval;
+  }
+ document.getElementById('tda').style.height='10px'
+ document.getElementById('tdb').style.height='10px'
+}
+
+function doQuery() {
+  var siteUrl = 'http://deoxy.org/searchbot';
+  var queryText = document.forms['input'].elements['q'].value;
+  var option    = document.forms['input'].elements['op'].options[document.forms['input'].elements['op'].selectedIndex].value;
+  var element = document.getElementById('out');
+  element.innerHTML = 'Loading...';
+
+  // from http://jibbering.com/2002/4/httprequest.html
+  var x=false;
+  /*@cc_on @*/
+  /*@if (@_jscript_version >= 5)
+  try { x = new ActiveXObject("Msxml2.XMLHTTP");
+  } catch (e) {
+  try { x = new ActiveXObject("Microsoft.XMLHTTP");
+  } catch (E) { x = false; }
+  }
+  @end @*/
+  if (!x && typeof XMLHttpRequest!='undefined') {
+    x = new XMLHttpRequest();
+    x.overrideMimeType("text/xml");
+  }
+  var timeoutId = window.setTimeout(
+    function(){
+      if (callInProgress(x)){
+        x.abort();
+        }
+      }
+    ,5000
+  );
+  if (x.readyState == 4 || x.readyState == 0) {
+    if (!callInProgress(x)) { //ajaxblog.com
+      var param = '?q=' + escape(option) +'+'+ escape(queryText);
+      siteUrl += param;
+      x.open("GET",siteUrl);
+      x.onreadystatechange = function() {
+      if (x.readyState == 4 && x.status == 200) {
+        var resp = x.responseText;
+        if (resp != option && !resp.match(/^nope: /)) {
+          document.forms['input'].elements['qh'].value = resp;
+          element.innerHTML = resp;
+        }
+        else{
+          var oops = option + ' requires input';
+
+          if (option == 'translate') {
+            oops += '<p><u><tt>to/from language text</tt></u> uses <a  href="http://babelfish.altavista.com/" target="_blank">Babelfish</a>.  Languages: chinese dutch french german greek italian japanese korean portuguese russian spanish (or the first two letters).   Example: <u><tt>to spanish hello friend</tt></u> or <u><tt>from sp hola amigo</tt></u><br>'
+          }
+          if (option == 'wayback') {
+            oops += ' of a URL'
+          }
+          if (option == 'calc') {
+            oops += ' for <a href=http://www.google.com/help/features.html#calculator target=_blank>Google Calculator</a>'
+          }
+          if (option == 'cddb') {
+            oops += ' for the CD DataBase'
+          }
+          if (option == 'define') {
+            oops += ' of an English word'
+          }
+          if (option == 'isbn') {
+            oops += ' of an ISBN number'
+          }
+          if (option == 'map') {
+            oops += ' for Google Maps'
+          }
+          if (option == 'sat') {
+            oops += ' for a satellite map from Google'
+          }
+          if (option == 'search') {
+            oops += ' for the lucky link from Google (1st result)'
+          }
+          if (option == 'spell') {
+            oops += ' of an English word to spell'
+          }
+          element.innerHTML = oops
+          document.forms['input'].elements['qh'].value = oops;
+ document.getElementById('tda').style.height='10px'
+ document.getElementById('tdb').style.height='10px'
+
+        }
+      }
+    }
+    x.send(null);
+  }
+ }
+}
+
+// from http://ajaxblog.com/archives/2005/06/01/async-requests-over-an-unreliable-network
+function callInProgress(x) {
+  switch (x.readyState) {
+    case 1, 2, 3:
+      return true;
+    break;
+    // Case 4 and 0
+    default:
+      return false;
+    break;
+  }
+}
+
+function entsub(event,theform) {
+  if (event && event.which == 13)
+    doQuery();
+  else
+    return true;
+}
+
+//--></script>
+<LINK REL=stylesheet HREF='inc/css/deoxy.org.css' TYPE="text/css">
+</head>
+
+<body onload="initjs(); focus();" 
+bgcolor="#555555" text="#bbbbbb" link="#ffffff" vlink="#ffffff">
+<table border=0 cellpadding=0 cellspacing=3 width=100%>
+<form name="input" id="input" onsubmit="return false;" action="searchbot.html">
+<tr bgcolor="#333333"><td rowspan=2 width=5%>
+<select name=op onchange="doQuery()" size="10" class=select><option value="audio" title="AlltheWeb audio search">audio<option value="calc" title="Google calculator">calc<option value="cddb" title="FreeDB CD Database">cddb<option value="define" title="Definition at dict.org">define<option value="deoxy" title="Google's lucky link for deoxy.org">deoxy<option value="google" title="Google search">google<option value="groups" title="Google group search">groups<option value="iching" style="color:#88ff88;" title="Random IChing hexagram">iching<option value="images" title="Google image search">images<option value="imdb" title="Internet Movie Database">imdb<option value="isbn" title="ISBNdb">isbn<option value="koan" style="color:#88ff88;" title="Random Zen koan">koan<option value="map" title="Google map">map<option value="news" title="Google news search">news<option value="quake" style="color:#88ff88;" title="Most recent earthquake > 2.5M">quake<option value="random" style="color:#88ff88;" title="Random link for deoxy.org">random<option value="sat" title="Google satellite map">sat<option value="search" title="Google's lucky link">search<option value="spell" title="Spellcheck">spell<option value="usdebt" style="color:#88ff88;" title="Current U.S. National Debt">usdebt<option value="video" style="color:#88ff88;" title="Random deoxy video">video<option value="wayback" title="Wayback Machine">wayback<option value="worldpop" style="color:#88ff88;" title="Current world population">worldpop<option value="translate" title="Babelfish translation">translate<option value="localtime" style="color:#88ff88;" title="Current time and date (PST)">localtime<option value="gmtime" style="color:#88ff88;" title="Current Greenwich Meridian Time">gmtime<option value="unixtime" style="color:#88ff88;" title="Number of seconds since the Unix epoch">unixtime</select></td><td valign=top height=10 bgcolor="#444444" nowrap style=height:10px; id=tda>
+<input type="text" name="q" size="32" maxlength="255" value="" class=input autocomplete="off" onkeypress="return entsub(event,this.form)"><input type=hidden name=qh>
+<input type=button value="Go" onclick="doQuery()" class=button>
+<input type=button value="Clear" onclick="document.forms['input'].elements['q'].value=''" class=button>
+</td>
+
+<td id=tdb align=right bgcolor="#3f3f3f" height=10 nowrap style=height:10px;><font size=-2><a
+ href="meme/SearchBot.html" title="Help?" target="_blank"
+ onmouseover="doInfo('on')"
+ onmouseout="doInfo('off')">&nbsp;SearchBot&nbsp;</a><a
+ href="javascript:wind('http://deoxy.org/searchbot','480','150')" title="Reload"><b>^</b></a></font></td></tr></form>
+
+<tr><td bgcolor="#444444" colspan=2>
+<p><noscript><ul><small>Please enable Javascript in your web browser.</noscript>
+<div id="out"  style="border:1px;overflow:auto;font-size:0.8em;margin-left:20px;"></div>
+</td></tr></table>

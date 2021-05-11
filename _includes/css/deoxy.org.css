@@ -1,0 +1,46 @@
+body { 
+ margin: 0px; 
+ padding: 0px; 
+ font-family: Arial, Helvetica, sans-serif;
+ }
+.input {
+ font-size: 12px;
+ background-color: #555555;
+ color: #dddddd;
+ border: 1px solid #777777;
+}
+.inputr {
+ font-size: 13px;
+ background-color: #555555;
+ color: #dddddd;
+ border: 1px solid #777777;
+ margin-right: 4px;
+ margin-left: 4px;
+}
+.button {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ background-color: #555555;
+ color: #dddddd;
+ margin-right: 4px;
+ margin-left: 4px;
+ border: 1px solid #777777;
+ cursor: pointer;
+}
+.select {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ background-color: #555555;
+ color: #dddddd;
+ border: 1px solid #777777;
+ cursor: pointer;
+}
+.iframe {
+ background-color: #ffffff;
+}
+
+img { border:0px; }
+input.wikiform { background-color: #111111; font-size: 13px; color: #909090; border: 0px; cursor: pointer; }
+a:link    { text-decoration:none; }
+a:active  { text-decoration:none; }
+a:visited { text-decoration:none; }

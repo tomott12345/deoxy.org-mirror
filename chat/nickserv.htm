@@ -1,0 +1,928 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>NickServ</title>
+<LINK REL="home"       HREF="../index.html">
+<LINK REL="search"     HREF="http://deoxy.org/find">
+<LINK REL="stylesheet" HREF="../inc/css/deoxy.org.css" TYPE="text/css">
+<LINK REL="alternate"  HREF="../cgi/nu.pl@rss=1" TITLE="recent changes at deoxy.org" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/news/cloud?rss=1" TITLE="deoxy news cloud" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/news/cloud/today?rss=1" TITLE="deoxy news cloud today" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="../news/feeds/moonphase.xml" TITLE="lunar phases" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/video/random/rss" TITLE="random video" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="../koans@rss=1" TITLE="random koan" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="../iching/random/rss" TITLE="random iching hexagram" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/cgi/randlink.pl?rss=1" TITLE="random link at deoxy.org" TYPE="application/rss+xml">
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch/find.xml"  title="deoxy find">
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch/news.xml"  title="deoxy news">
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch/newstoday.xml"  title="deoxy news today">
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch/videx.xml" title="deoxy video">
+<style type="text/css">input.wikiform { background-color:#111111; font-size:13px; color:#909090; border:0px; cursor:pointer; }</style>
+<meta name="MSSmartTagsPreventParsing" content="true">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="robots" content="all">
+
+<LINK REL="stylesheet" HREF="../inc/css/print.css" TYPE="text/css" MEDIA="print">
+<script type="text/javascript" src="../bin/chatterwindow.js"></script>
+<script type="text/javascript" src="../bin/cookies.js"></script>
+<script type="text/javascript">
+function openVideo(id) {
+ var s = 'screenX=100,screenY=100,left=100,top=100,width=640,height=565,'
+ var x = 'resizable=1,status=0,menubar=0,toolbar=0,location=0,scrollbars=0'
+ window.open('http://deoxy.org/video/'+id,'',s+x)}
+</script>
+
+<body bgcolor="#000000" text="#c0c0c0" link="#ffffff" vlink="#ffffff" alink="#aaffaa">
+<a name="top"></a><div id=_header>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr bgcolor="#111111">
+<td nowrap rowspan=2 bgcolor="#000000" width="20" background='../gif/background2.jpg'>&nbsp;</td>
+<td nowrap rowspan=2 bgcolor="#000000" align=center style=width:90px;><a
+ href="../index.html"
+ title=deoxy.org
+ target=_top><!-- img
+ src="http://deoxy.org/gif/ooleft_left.gif" border=0 
+--><img src="../vi/rmc1bvWkeAc.jpg" style=height:68px;width:100%;margin-left:1px; border=0></a></td>
+<form action='http://deoxy.org/cgi/jump.pl' method="post">
+<td nowrap align="right" background='../img/vortex0b.gif'>
+
+<table cellspacing="0" cellpadding="0" border=0 background='../gif/background2.jpg'><tr><td nowrap>
+<select name="to" class="select" onChange="x=this.options[this.selectedIndex].value;location.href=x.match(/^http:/)?x:'http://deoxy.org/'+x;">
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="nu.htm">&nbsp;&nbsp;\_updates</option>
+<!-- option value="watts.htm">alanwatts</option -->
+<!-- option value="alephnull">aleph</option -->
+<option value="8brains.htm">circuits</option>
+<option value="8basic.htm">&nbsp;&nbsp;\_scripts</option>
+
+
+
+<!-- option value="ct">crimethinc</option -->
+<option value="gacwao">defrag</option>
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="contact">&nbsp;&nbsp;|_contact</option>
+<option VALUE="http://m.deoxy.org">&nbsp;&nbsp;|_mobile</option>
+<!-- option value="wiki/Deoxy/Help">&nbsp;&nbsp;|_help</option -->
+<option value="meme/DNA">DNA</option>
+<option value="find">Find?</option>
+<!-- option value="forum">forum</option>
+<option value="newposts">&nbsp;&nbsp;|_newposts</option -->
+<!-- option value="hyper.htm">hyperspace</option -->
+<option value="iching">IChing</option>
+<option value="iching/random">&nbsp;&nbsp;\_random</option>
+<option value="imagine.mil">imagine.mil</option>
+<option value="inc.htm">incunabula</option>
+<!-- option value="http://irc.deoxy.org">IRC status</option -->
+<option value="koans">koans</option>
+<option value="koan/random">&nbsp;&nbsp;\_random</option>
+
+<option value="media">media</option>
+<option value="media/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="meme">meme</option>
+<option value="meme/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="news">news</option>
+<option VALUE="news/cloud/today">&nbsp;&nbsp;|_today</option>
+<option VALUE="news/digestc">&nbsp;&nbsp;|_digest</option>
+<option VALUE="news/view">&nbsp;&nbsp;|_category</option>  
+<option VALUE="http://m.deoxy.org/news">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\_mobile</option>
+<option value="omega.htm">omega</option>
+<option value="pdfa">PDFA</option>
+<option value="index/People">People</option>
+<option value="leary.htm">&nbsp;&nbsp;|_Leary</option>
+<option value="lilly.htm">&nbsp;&nbsp;|_Lilly</option>
+<option value="mckenna.htm">&nbsp;&nbsp;|_McKenna</option>
+<option value="media/McLuhan">&nbsp;&nbsp;|_McLuhan</option>
+<option value="raw.htm">&nbsp;&nbsp;|_RAWilson</option>
+<option value="philo.htm">philosophos</option>
+<option value="cgi/randlink.pl?go">random</option>
+<option value="rss.htm">RSS</option>
+<!-- option value="time/sabbats.htm">sabbats</option>
+<option value="shaman.htm">shaman</option -->
+<option value="stats">stats</option>
+<option value="maps">&nbsp;&nbsp;\_map</option>
+<!-- option value="tcrime.htm">thoughtcrime</option -->
+<option value="topics">topics</a>
+<option value="nu.htm">&nbsp;&nbsp;\_cloud</option>
+<option value="nu.htm">updates</option>
+<option value="wiki/Deoxy/Video">video</option>
+<option value="videx">&nbsp;&nbsp;|_index</option>
+<option value="vidcloud">&nbsp;&nbsp;|_cloud</option>
+<option value="vidimg">&nbsp;&nbsp;|_images</option>
+<option VALUE="warnings.htm">warnings</option>
+<!-- option value="wiki">wiki</option>
+<option value="wiki/Recent">&nbsp;&nbsp;|_changes</option>
+<option value="wiki/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="online">who's online</option -->
+</select>
+
+<input type="hidden" name="from" value='/chat/nickserv.htm'>
+<noscript><input type="Submit" value="go" class="button"></noscript>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></form>
+
+<form action="http://translate.google.com/translate" method="post" target="_top" name="trans" id="trans"><td nowrap align="center">
+<input type="Submit" value="to" class="button" title="Google translation">
+<select name="tl" class="select" title="Google translation">
+<option value=af>Afrikaans</option>
+<option value=sq>Albanian</option>
+<option value="ar">Arabic</option>
+<option value=hy>Armenian</option>
+<option value=az>Azerbaijani</option>
+<option value=eu>Basque</option>
+<option value=be>Belarusian</option>
+<option value=bn>Bengali</option>
+<option value=bs>Bosnian</option>
+<option value="bg">Bulgarian</option>
+<option value=my>Burmese</option>
+<option value="ca">Catalan</option>
+<option value=ceb>Cebuano</option>
+<option value=ny>Chichewa</option>
+<option value="zh-CN">Chinese CN</option>
+<option value="zh-TW">Chinese TW</option>
+<option value="hr">Croatian</option>
+<option value="cs">Czech</option>
+<option value="da">Danish</option>
+<option value="nl">Dutch</option>
+<option value=eo>Esperanto</option>
+<option value="et">Estonian</option>
+<option value="tl">Filipino</option>
+<option value="fi">Finnish</option>
+<option value="fr">French</option>
+<option value="gl">Galacian</option>
+<option value=ka>Georgian</option>
+<option value="de">German</option>
+<option value="el">Greek</option>
+<option value=gu>Gujarati</option>
+<option value=ht>Haitian Creole</option>
+<option value=ha>Hausa</option>
+<option value="iw">Hebrew</option>
+<option value="hi">Hindi</option>
+<option value=hmn>Hmong</option>
+<option value="hu">Hungarian</option>
+<option value=is>Icelandic</option>
+<option value=ig>Igbo</option>
+<option value="id">Indonesian</option>
+<option value=ga>Irish</option>
+<option value="it">Italian</option>
+<option value="ja">Japanese</option>
+<option value=jw>Javanese</option>
+<option value=kn>Kannada</option>
+<option value=kk>Kazakh</option>
+<option value=km>Khmer</option>
+<option value="ko">Korean</option>
+<option value=lo>Lao</option>
+<option value=la>Latin</option>
+<option value="lv">Latvian</option>
+<option value="lt">Lithuanian</option>
+<option value=mk>Macedonian</option>
+<option value=mg>Malagasy</option>
+<option value=ms>Malay</option>
+<option value=ml>Malayalam</option>
+<option value="mt">Maltese</option>
+<option value=mi>Maori</option>
+<option value=mr>Marathi</option>
+<option value=mn>Mongolian</option>
+<option value=ne>Nepali</option>
+<option value="no">Norwegian</option>
+<option value=fa>Persian</option>
+<option value="pl">Polish</option>
+<option value="pt">Portuguese</option>
+<option value=pa>Punjabi</option>
+<option value="ro">Romanian</option>
+<option value="ru">Russian</option>
+<option value="sr">Serbian</option>
+<option value=st>Sesotho</option>
+<option value=si>Sinhala</option>
+<option value="sk">Slovak</option>
+<option value="sl">Slovenian</option>
+<option value=so>Somali</option>
+<option value="es" selected>Spanish</option>
+<option value=su>Sundanese</option>
+<option value=sw>Swahili</option>
+<option value="sv">Swedish</option>
+<option value=tg>Tajik</option>
+<option value=ta>Tamil</option>
+<option value=te>Telugu</option>
+<option value="th">Thai</option>
+<option value="tr">Turkish</option>
+<option value="uk">Ukrainian</option>
+<option value=ur>Urdu</option>
+<option value=uz>Uzbek</option>
+<option value="vi">Vietnamese</option>
+<option value=cy>Welsh</option>
+<option value=yi>Yiddish</option>
+<option value=yo>Yoruba</option>
+<option value=zu>Zulu</option></select>
+<input type=hidden name=sl value="en">
+<input type=hidden name=hl value="en">
+<input type=hidden name=ie value="UTF-8">
+<input type=hidden name=u id=u value='http://deoxy.org/chat/nickserv.htm'>
+</td></form>
+
+
+<td align="right" valign="middle" nowrap>
+<table cellspacing="0" cellpadding="0" border=0><tr>
+<form action=http://deoxy.org/find method=get name=sitesearchform>
+<td nowrap align=right valign="middle">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name=q size=15 class="input" title="search deoxy.org">
+<input type="Submit" value="find" class="button" title="search deoxy.org"></TD>
+</form></tr></table>
+</td></tr></table>
+
+</td></tr><SCRIPT TYPE="text/javascript">
+document.trans.tl.selectedIndex=Math.floor(Math.random()*(document.trans.tl.length+1))
+</script><tr><td bgcolor="#111111" background="../img/thin_horizontal_lines.gif" 
+style=white-space:nowrap;overflow:hidden;>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+<td style="background-image:url('../gif/background2.jpg');background-position:40 0;" width=20>&nbsp;</td>
+<td style=background-image:url(../img/thin_horizontal_lines.gif);>
+<div style=overflow:hidden;white-space:nowrap;>&nbsp;<small>[an error occurred while processing this directive]</small></div></td>
+
+<td width=20>&nbsp;</td>
+<form action=http://deoxy.org/cgi/jump.pl method=get target=_blank>
+<td align="right"><div style=overflow:hidden;display:none;>
+<font color="#909090"><a href="../nu.htm"><font color="#ffffff" size="-1">New</font></a> : <font size="-1">
+<a href="../nu.htm" ><font color=#ffffff size=-2>Site</font></a> : <a href="../nu.htm" ><font color=#ffffff size=-2>Updates</font></a>
+
+</font></font></div></td>
+
+<td style="background-image:url('../gif/background2.jpg');background-position:0 0;" width=20>&nbsp;</td>
+</form></tr></table>
+</td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="#000000" align="right" background="../gif/background2.jpg">
+
+</td></tr></table></div><p>
+
+
+<table width="100%" border="0"><tr>
+<td><h1>&nbsp;NickServ</h1></td>
+<td align="right" valign="top" style=font-size:100%;white-space:nowrap; nowrap><small>
+
+<b><a href="../chat.html">deoxy.org/chat</a></b> : 
+<a href="unreal.htm">IRC Commands</a> | 
+<a href="http://irc.deoxy.org">Server Status</a>&mdash;<a href="ircd.motd.html" title="First thing you see on IRC">MOTD</a><br>
+
+<a href="modserv.htm">Services</a> : 
+<a href="nickserv.htm">NickServ</a> |
+<a href="chanserv.htm">ChanServ</a> |
+<a href="memoserv.htm">MemoServ</a> |
+<a href="botserv.htm">BotServ</a><br>
+
+<a href="alias.htm">Aliases</a> | 
+<a href="privsec.htm">Privacy/Security</a> | 
+<a href="../meme/SearchBot.html">SearchBot</a> | 
+<a href="java.htm">Java Clients</a><br>
+
+</small></td>
+</tr></table>
+<ul>
+
+<p align=right><small><i>
+For usermodes used with <a href="unreal.htm#mode">/MODE</a> see <a href="unreal.htm#umodes">Umodes</a>.&nbsp;
+</i></small></p>
+
+<pre>
+&nbsp;<b>NickServ</b> allows you to "register" a nickname and prevent others from using it.
+
+&nbsp;The following commands allow for registration and maintenance of nicknames; to 
+&nbsp;use them, type <b>/msg NickServ <u>command</u></b>. For more information on a specific 
+&nbsp;command, type <b>/msg NickServ HELP <u>command</u></b>.
+&nbsp;
+&nbsp;    REGISTER   Register a nickname
+&nbsp;    GROUP      Join a group
+&nbsp;    IDENTIFY   Identify yourself with your password
+&nbsp;    ACCESS     Modify the list of authorized addresses
+&nbsp;    SET        Set options, including kill protection
+&nbsp;    DROP       Cancel the registration of a nickname
+&nbsp;    RECOVER    Kill another user who has taken your nick
+&nbsp;    RELEASE    Regain custody of your nick after RECOVER
+&nbsp;    SENDPASS   Forgot your password? Try this
+&nbsp;
+&nbsp;Other commands: GHOST, ALIST, GLIST, INFO, LIST, LOGOUT, 
+&nbsp;                STATUS
+&nbsp;
+&nbsp;<b>NOTICE:</b> This service is intended to provide a way for
+&nbsp;IRC users to ensure their identity is not compromised.
+&nbsp;It is <b>NOT</b> intended to facilitate "stealing" of
+&nbsp;nicknames or other malicious actions.  Abuse of NickServ
+&nbsp;will result in, at minimum, loss of the abused
+&nbsp;nickname(s).
+&nbsp;
+</pre>
+          </li>
+          <li><b>REGISTER</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>REGISTER <u>password</u> <u>[email]</u></b>
+&nbsp;
+&nbsp;Registers your nickname in the NickServ database.  Once
+&nbsp;your nick is registered, you can use the <b>SET</b> and <b>ACCESS</b>
+&nbsp;commands to configure your nick's settings as you like
+&nbsp;them.  Make sure you remember the password you use when
+&nbsp;registering - you'll need it to make changes to your nick
+&nbsp;later.  (Note that <b>case matters!</b>  <u>EPONA</u>, <u>Epona</u>, and 
+&nbsp;<u>epona</u> are all different passwords!)
+&nbsp;
+&nbsp;Guidelines on choosing passwords:
+&nbsp;
+&nbsp;Passwords should not be easily guessable.  For example,
+&nbsp;using your real name as a password is a bad idea.  Using
+&nbsp;your nickname as a password is a much worse idea ;) and,
+&nbsp;in fact, NickServ will not allow it.  Also, short
+&nbsp;passwords are vulnerable to trial-and-error searches, so
+&nbsp;you should choose a password at least 5 characters long.
+&nbsp;Finally, the space character cannot be used in passwords.
+&nbsp;
+&nbsp;The parameter <u>email</u> is optional and will set the email
+&nbsp;for your nick immediately. However, it may be required
+&nbsp;on certain networks.
+&nbsp;Your privacy is respected; this e-mail won't be given to
+&nbsp;any third-party person.
+&nbsp;
+&nbsp;This command also creates a new group for your nickname,
+&nbsp;that will allow you to register other nicks later sharing
+&nbsp;the same configuration, the same set of memos and the
+&nbsp;same channel privileges. For more information on this
+&nbsp;feature, type <b>/msg NickServ HELP GROUP</b>.
+&nbsp;
+</pre>
+          </li>
+          <li><b>GROUP</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>GROUP <u>target</u> <u>password</u></b>
+&nbsp;
+&nbsp;This command makes your nickname join the <u>target</u> nickname's 
+&nbsp;group. <u>password</u> is the password of the target nickname.
+&nbsp;
+&nbsp;Joining a group will allow you to share your configuration,
+&nbsp;memos, and channel priviledges with all the nicknames in the
+&nbsp;group, and much more!
+&nbsp; 
+&nbsp;A group exists as long as it is useful. This means that even
+&nbsp;if a nick of the group is dropped, you won't lose the
+&nbsp;shared things described above, as long as there is at
+&nbsp;least one nick remaining in the group.
+&nbsp;
+&nbsp;You can use this command even if you have not registered
+&nbsp;your nick yet. If your nick is already registered, you'll
+&nbsp;need to identify yourself before using this command. Type
+&nbsp;<u>/msg NickServ HELP IDENTIFY</u> for more information. This
+&nbsp;last may be not possible on your IRC network.
+&nbsp;
+&nbsp;It is recommended to use this command with a non-registered
+&nbsp;nick because it will be registered automatically when 
+&nbsp;using this command. You may use it with a registered nick (to 
+&nbsp;change your group) only if your network administrators allowed 
+&nbsp;it.
+&nbsp;
+&nbsp;You can only be in one group at a time. Group merging is
+&nbsp;not possible.
+&nbsp;
+&nbsp;<u>Note</u>: all the nicknames of a group have the same password.
+
+</pre>
+          </li>
+          <li><b>IDENTIFY</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>IDENTIFY <u>password</u></b>
+&nbsp;
+&nbsp;Tells NickServ that you are really the owner of this
+&nbsp;nick.  Many commands require you to authenticate yourself
+&nbsp;with this command before you use them.  The password
+&nbsp;should be the same one you sent with the <b>REGISTER</b>
+&nbsp;command.
+&nbsp;
+</pre>
+          </li>
+          <li><b>LOGOUT</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>LOGOUT</b>
+&nbsp;
+&nbsp;This reverses the effect of the <b>IDENTIFY</b> command, i.e.
+&nbsp;make you not recognized as the real owner of the nick
+&nbsp;anymore. Note, however, that you won't be asked to reidentify
+&nbsp;yourself.
+
+</pre>
+          </li>
+          <li><b>DROP</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>DROP [<u>nickname</u>]</b>
+&nbsp;
+&nbsp;Drops your nickname from the NickServ database.  A nick
+&nbsp;that has been dropped is free for anyone to re-register.
+&nbsp;
+&nbsp;You may drop a nick within your group by passing it
+&nbsp;as the <b>nick</b> parameter.
+&nbsp;
+&nbsp;In order to use this command, you must first identify
+&nbsp;with your password (<b>/msg NickServ HELP IDENTIFY</b> for more
+&nbsp;information).
+
+</pre>
+          </li>
+          <li><b>ACCESS</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>ACCESS ADD <u>mask</u></b>
+&nbsp;        <b>ACCESS DEL <u>mask</u></b>
+&nbsp;        <b>ACCESS LIST</b>
+&nbsp;
+&nbsp;Modifies or displays the access list for your nick.  This
+&nbsp;is the list of addresses which will be automatically
+&nbsp;recognized by NickServ as allowed to use the nick.  If
+&nbsp;you want to use the nick from a different address, you
+&nbsp;need to send an <b>IDENTIFY</b> command to make NickServ
+&nbsp;recognize you.
+&nbsp;
+&nbsp;Examples:
+&nbsp;
+&nbsp;    <b>ACCESS ADD anyone@*.bepeg.com</b>
+&nbsp;        Allows access to user <b>anyone</b> from any machine in
+&nbsp;        the <b>bepeg.com</b> domain.
+&nbsp;
+&nbsp;    <b>ACCESS DEL anyone@*.bepeg.com</b>
+&nbsp;        Reverses the previous command.
+&nbsp;
+&nbsp;    <b>ACCESS LIST</b>
+&nbsp;        Displays the current access list.
+
+</pre>
+          </li>
+          <li><b>SET</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>SET <u>option</u> <u>parameters</u></b>
+&nbsp;
+&nbsp;Sets various nickname options.  <u>option</u> can be one of:
+&nbsp;
+&nbsp;    DISPLAY    Set the display of your group in Services
+&nbsp;    PASSWORD   Set your nickname password
+&nbsp;    LANGUAGE   Set the language Services will use when
+&nbsp;                   sending messages to you
+&nbsp;    URL        Associate a URL with your nickname
+&nbsp;    EMAIL      Associate an E-mail address with your nickname
+&nbsp;    ICQ        Associate an ICQ number with your nickname
+&nbsp;    GREET      Associate a greet message with your nickname
+&nbsp;    KILL       Turn protection on or off
+&nbsp;    SECURE     Turn nickname security on or off
+&nbsp;    PRIVATE    Prevent your nickname from appearing in a
+&nbsp;                   <b>/msg NickServ LIST</b>
+&nbsp;    HIDE       Hide certain pieces of nickname information
+&nbsp;    MSG        Change the communication method of Services
+&nbsp;
+&nbsp;In order to use this command, you must first identify
+&nbsp;with your password (<b>/msg NickServ HELP IDENTIFY</b> for more
+&nbsp;information).
+&nbsp;
+&nbsp;Type <b>/msg NickServ HELP SET <u>option</u></b> for more information
+&nbsp;on a specific option.
+
+</pre>
+          </li>
+          <li><b>SET DISPLAY</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>SET DISPLAY <u>new-display</u></b>
+&nbsp;
+&nbsp;Changes the display used to refer to your nickname group in 
+&nbsp;Services. The new display MUST be a nick of your group.
+
+</pre>
+          </li>
+          <li><b>SET PASSWORD</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>SET PASSWORD <u>new-password</u></b>
+&nbsp;
+&nbsp;Changes the password used to identify you as the nick's
+&nbsp;owner.
+
+</pre>
+          </li>
+          <li><b>SET LANGUAGE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>SET LANGUAGE <u>number</u></b>
+&nbsp;
+&nbsp;Changes the language Services uses when sending messages to
+&nbsp;you (for example, when responding to a command you send).
+&nbsp;<u>number</u> should be chosen from the following list of
+&nbsp;supported languages:
+&nbsp;
+
+</pre>
+          </li>
+          <li><b>SET URL</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>SET URL <u>url</u></b>
+&nbsp;
+&nbsp;Associates the given URL with your nickname.  This URL
+&nbsp;will be displayed whenever someone requests information
+&nbsp;on your nick with the <b>INFO</b> command.
+
+</pre>
+          </li>
+          <li><b>SET EMAIL</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>SET EMAIL <u>address</u></b>
+&nbsp;
+&nbsp;Associates the given E-mail address with your nickname.
+&nbsp;This address will be displayed whenever someone requests
+&nbsp;information on the channel with the <b>INFO</b> command.
+&nbsp;
+</pre>
+          </li>
+          <li><b>SET ICQ</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>SET ICQ <u>number</u></b>
+&nbsp;
+&nbsp;Associates the given ICQ number with your nickname.  This 
+&nbsp;number will be displayed whenever someone requests 
+&nbsp;information on your nick with the <b>INFO</b> command.
+&nbsp;
+</pre>
+          </li>
+          <li><b>SET GREET</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>SET GREET <u>message</u></b>
+&nbsp;
+&nbsp;Makes the given message the greet of your nickname, that
+&nbsp;will be displayed when joining a channel that has GREET
+&nbsp;option enabled, provided that you have the necessary 
+&nbsp;access on it.
+
+</pre>
+          </li>
+          <li><b>SET KILL</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>SET KILL {ON | QUICK | IMMED | OFF}</b>
+&nbsp;
+&nbsp;Turns the automatic protection option for your nick
+&nbsp;on or off.  With protection on, if another user
+&nbsp;tries to take your nick, they will be given one minute to
+&nbsp;change to another nick, after which NickServ will forcibly change
+&nbsp;their nick.
+&nbsp;
+&nbsp;If you select <b>QUICK</b>, the user will be given only 20 seconds
+&nbsp;to change nicks instead of the usual 60.  If you select
+&nbsp;<b>IMMED</b>, user's nick will be changed immediately <u>without</u> being
+&nbsp;warned first or given a chance to change their nick; please
+&nbsp;do not use this option unless necessary.  Also, your
+&nbsp;network's administrators may have disabled this option.
+
+</pre>
+          </li>
+          <li><b>SET SECURE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>SET SECURE {ON | OFF}</b>
+&nbsp;
+&nbsp;Turns NickServ's security features on or off for your
+&nbsp;nick.  With <b>SECURE</b> set, you must enter your password
+&nbsp;before you will be recognized as the owner of the nick,
+&nbsp;regardless of whether your address is on the access
+&nbsp;list.  However, if you are on the access list, NickServ
+&nbsp;will not auto-kill you regardless of the setting of the
+&nbsp;<b>KILL</b> option.
+
+</pre>
+          </li>
+          <li><b>SET PRIVATE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>SET PRIVATE {ON | OFF}</b>
+&nbsp;
+&nbsp;Turns NickServ's privacy option on or off for your nick.
+&nbsp;With <b>PRIVATE</b> set, your nickname will not appear in
+&nbsp;nickname lists generated with NickServ's <b>LIST</b> command.
+&nbsp;(However, anyone who knows your nickname can still get
+&nbsp;information on it using the <b>INFO</b> command.)
+
+</pre>
+          </li>
+          <li><b>SET HIDE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>SET HIDE {EMAIL | USERMASK | QUIT} {ON | OFF}</b>
+&nbsp;
+&nbsp;Allows you to prevent certain pieces of information from
+&nbsp;being displayed when someone does a NickServ <b>INFO</b> on your
+&nbsp;nick.  You can hide your E-mail address (<b>EMAIL</b>), last seen
+&nbsp;user@host mask (<b>USERMASK</b>), and last quit message (<b>QUIT</b>).
+&nbsp;The second parameter specifies whether the information should
+&nbsp;be displayed (<b>OFF</b>) or hidden (<b>ON</b>).
+&nbsp;
+</pre>
+          </li>
+          <li><b>SET MSG</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>SET MSG {ON | OFF}</b>
+&nbsp;
+&nbsp;Allows you to choose the way Services are communicating with 
+&nbsp;you. With <b>MSG</b> set, Services will use messages, else they'll 
+&nbsp;use notices.
+
+</pre>
+          </li>
+          <li><b>RECOVER</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>RECOVER <u>nickname</u> [<u>password</u>]</b>
+&nbsp;
+&nbsp;Allows you to recover your nickname if someone else has
+&nbsp;taken it; this does the same thing that NickServ does
+&nbsp;automatically if someone tries to use a kill-protected
+&nbsp;nick.
+&nbsp;
+&nbsp;When you give this command, NickServ will bring a fake
+&nbsp;user online with the same nickname as the user you're
+&nbsp;trying to recover your nick from.  This causes the IRC
+&nbsp;servers to disconnect the other user.  This fake user will
+&nbsp;will remain online for one minute to ensure that the other
+&nbsp;user does not immediately reconnect; after that minute, you
+&nbsp;can reclaim your nick.  Alternatively, use the <b>RELEASE</b>
+&nbsp;command (<b>/msg NickServ HELP RELEASE</b>) to get the nick
+&nbsp;back sooner.
+&nbsp;
+&nbsp;In order to use the <b>RECOVER</b> command for a nick, your
+&nbsp;current address as shown in /WHOIS must be on that nick's
+&nbsp;access list, you must be identified and in the group of
+&nbsp;that nick, or you must supply the correct password for
+&nbsp;the nickname.
+
+</pre>
+          </li>
+          <li><b>RELEASE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>RELEASE <u>nickname</u> [<u>password</u>]</b>
+&nbsp;
+&nbsp;Instructs NickServ to remove any hold on your nickname
+&nbsp;caused by automatic kill protection or use of the <b>RECOVER</b>
+&nbsp;command.  By default, such holds last for one minute;
+&nbsp;this command gets rid of them sooner.
+&nbsp;
+&nbsp;In order to use the <b>RELEASE</b> command for a nick, your
+&nbsp;current address as shown in /WHOIS must be on that nick's
+&nbsp;access list, you must be identified and in the group of
+&nbsp;that nick, or you must supply the correct password for
+&nbsp;the nickname.
+
+</pre>
+          </li>
+          <li><b>GHOST</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>GHOST <u>nickname</u> [<u>password</u>]</b>
+&nbsp;
+&nbsp;Terminates a "ghost" IRC session using your nick.  A
+&nbsp;"ghost" session is one which is not actually connected,
+&nbsp;but which the IRC server believes is still online for one
+&nbsp;reason or another.  Typically, this happens if your
+&nbsp;computer crashes or your Internet or modem connection
+&nbsp;goes down while you're on IRC.
+&nbsp;
+&nbsp;In order to use the <b>GHOST</b> command for a nick, your
+&nbsp;current address as shown in /WHOIS must be on that nick's
+&nbsp;access list, you must be identified and in the group of
+&nbsp;that nick, or you must supply the correct password for
+&nbsp;the nickname.
+
+</pre>
+          </li>
+          <li><b>INFO</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>INFO <u>nickname</u> [ALL]</b>
+&nbsp;
+&nbsp;Displays information about the given nickname, such as
+&nbsp;the nick's owner, last seen address and time, and nick
+&nbsp;options. If you are identified for the nick you're 
+&nbsp;getting information for and <b>ALL</b> is specified, you will
+&nbsp;be shown all the information; regardless of whether 
+&nbsp;it's hidden or not.
+
+</pre>
+          </li>
+          <li><b>LIST</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>LIST <u>pattern</u></b>
+&nbsp;
+&nbsp;Lists all registered nicknames which match the given
+&nbsp;pattern, in <u>nick!user@host</u> format.  Nicks with the
+&nbsp;<b>PRIVATE</b> option set will not be displayed.
+&nbsp;
+&nbsp;Examples:
+&nbsp;
+&nbsp;    <b>LIST *!joeuser@foo.com</b>
+&nbsp;        Lists all nicks owned by joeuser@foo.com.
+&nbsp;
+&nbsp;    <b>LIST *Bot*!*@*</b>
+&nbsp;        Lists all registered nicks with <b>Bot</b> in their
+&nbsp;        names (case insensitive).
+&nbsp;
+&nbsp;    <b>LIST *!*@*.bar.org</b>
+&nbsp;        Lists all nicks owned by users in the <b>bar.org</b>
+&nbsp;        domain.
+
+</pre>
+          </li>
+          <li><b>ALIST</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>ALIST [<u>level</u>]</b>
+&nbsp;
+&nbsp;Lists all channels you have access on. Optionally, you can specify
+&nbsp;a level in XOP or ACCESS format. The resulting list will only
+&nbsp;include channels where you have the given level of access.
+
+&nbsp;Examples:
+&nbsp;    <b>ALIST Founder</b>
+&nbsp;	    Lists all channels where you have Founder
+&nbsp;	    access.
+
+&nbsp;	<b>ALIST AOP</b>
+&nbsp;	    Lists all channels where you have AOP
+&nbsp;	    access or greater.
+
+&nbsp;	<b>ALIST 10</b>
+&nbsp;	    Lists all channels where you have level 10
+&nbsp;	    access or greater.
+
+&nbsp;Channels that have the <u>NOEXPIRE</u> option set will be
+&nbsp;prefixed by an exclamation mark.
+
+</pre>
+          </li>
+          <li><b>GLIST</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>GLIST</b>
+&nbsp;
+&nbsp;Lists all nicks in your group.
+
+</pre>
+          </li>
+          <li><b>STATUS</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>STATUS <u>nickname</u>...</b>
+&nbsp;
+&nbsp;Returns whether the user using the given nickname is
+&nbsp;recognized as the owner of the nickname.  The response has
+&nbsp;this format:
+&nbsp;
+&nbsp;    <u>nickname</u> <u>status-code</u>
+&nbsp;
+&nbsp;where <u>nickname</u> is the nickname sent with the command, and
+&nbsp;<u>status-code</u> is one of the following:
+&nbsp;
+&nbsp;    0 - no such user online <b>or</b> nickname not registered
+&nbsp;    1 - user not recognized as nickname's owner
+&nbsp;    2 - user recognized as owner via access list only
+&nbsp;    3 - user recognized as owner via password identification
+&nbsp;
+&nbsp;Up to sixteen nicknames may be sent with each command; the
+&nbsp;rest will be ignored.  No error message is generated if no
+&nbsp;nickname is given.
+&nbsp;
+</pre>
+          </li>
+          <li><b>SENDPASS</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>SENDPASS <u>nickname</u></b>
+&nbsp;
+&nbsp;Send the password of the given nickname to the e-mail address
+&nbsp;set in the nickname record. This command is really useful
+&nbsp;to deal with lost passwords.
+&nbsp;
+&nbsp;May be limited to <b>IRC operators</b> on certain networks.
+&nbsp;
+&nbsp;This command is unavailable when encryption is enabled.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN HELP</b><br />
+            <pre>&nbsp;
+&nbsp;The following commands are available to Services admins:
+&nbsp;
+&nbsp;    <b>GETPASS</b>    Retrieve the password for a nickname
+&nbsp;                   (only if encryption is disabled)
+&nbsp;    <b>GETEMAIL</b>   Matches and returns all users that
+&nbsp;                   registered using given email
+&nbsp;    <b>FORBID</b>     Prevent a nickname from being used
+&nbsp;
+&nbsp;Services admins can also drop any nickname without needing
+&nbsp;to identify for the nick, and may view the access list for
+&nbsp;any nickname (<b>/msg NickServ ACCESS LIST <u>nick</u></b>).
+
+</pre>
+          </li>
+          <li><b>SERVADMIN LOGOUT</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>LOGOUT [<u>nickname</u> [REVALIDATE]]</b>
+&nbsp;
+&nbsp;Without a parameter, reverses the effect of the <b>IDENTIFY</b> 
+&nbsp;command, i.e. make you not recognized as the real owner of the nick
+&nbsp;anymore. Note, however, that you won't be asked to reidentify
+&nbsp;yourself.
+&nbsp;
+&nbsp;With a parameter, does the same for the given nick. If you 
+&nbsp;specify REVALIDATE as well, Services will ask the given nick
+&nbsp;to re-identify. This use limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN DROP</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>DROP [<u>nickname</u>]</b>
+&nbsp;
+&nbsp;Without a parameter, drops your nickname from the
+&nbsp;NickServ database.
+&nbsp;
+&nbsp;With a parameter, drops the named nick from the database.
+&nbsp;You may drop any nick within your group without any 
+&nbsp;special privileges. Dropping any nick is limited to 
+&nbsp;<b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN SET</b><br />
+            <pre>&nbsp;
+&nbsp;Services admins can also set the option <b>NOEXPIRE</b>, with
+&nbsp;which nicknames can be prevented from expiring.
+&nbsp;Additionally, Services admins can set options for any
+&nbsp;nickname without entering a password, using the format
+&nbsp;<b>SET <u>nickname</u> <u>option</u> <u>parameters</u></b>.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN SET NOEXPIRE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>SET [<u>nickname</u>] NOEXPIRE {ON | OFF}</b>
+&nbsp;
+&nbsp;Sets whether the given nickname will expire.  Setting this
+&nbsp;to <b>ON</b> prevents the nickname from expiring.  If no
+&nbsp;nickname is given, sets the no-expire flag for your nick.
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN LIST</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>LIST <u>pattern</u> [FORBIDDEN] [NOEXPIRE]</b>
+&nbsp;
+&nbsp;Lists all registered nicknames which match the given
+&nbsp;pattern, in <u>nick!user@host</u> format.  Nicks with the <b>PRIVATE</b>
+&nbsp;option set will only be displayed to Services admins.  Nicks
+&nbsp;with the <b>NOEXPIRE</b> option set will have a <b>!</b> prepended to the
+&nbsp;nickname for Services admins.
+&nbsp;
+&nbsp;If the FORBIDDEN or NOEXPIRE options are given, only nicks
+&nbsp;which, respectively, are FORBIDden or have the NOEXPIRE flag
+&nbsp;set will be displayed.  If both options are given, both
+&nbsp;types of nicks will be displayed.  These options are limited
+&nbsp;to <u>Services admins</u>.
+&nbsp;
+&nbsp;Examples:
+&nbsp;
+&nbsp;    <b>LIST *!joeuser@foo.com</b>
+&nbsp;        Lists all registered nicks owned by joeuser@foo.com.
+&nbsp;
+&nbsp;    <b>LIST *Bot*!*@*</b>
+&nbsp;        Lists all registered nicks with <b>Bot</b> in their
+&nbsp;        names (case insensitive).
+&nbsp;
+&nbsp;    <b>LIST * NOEXPIRE</b>
+&nbsp;        Lists all registered nicks which have been set to
+&nbsp;        not expire.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN ALIST</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>ALIST [<u>nickname</u>] [<u>level</u>]</b>
+&nbsp;
+&nbsp;With no parameters, lists channels you have access on. With
+&nbsp;one parameter, lists channels that <b>nickname</b> has access 
+&nbsp;on. With two parameters lists channels that <b>nickname</b> has 
+&nbsp;<b>level</b> access or greater on.
+
+&nbsp;This use limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN GLIST</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>GLIST [<u>nickname</u>]</b>
+&nbsp;
+&nbsp;Without a parameter, lists all nicknames that are in
+&nbsp;your group.
+&nbsp;
+&nbsp;With a parameter, lists all nicknames that are in the
+&nbsp;group of the given nick.
+&nbsp;This use limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN GETPASS</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>GETPASS <u>nickname</u></b>
+&nbsp;
+&nbsp;Returns the password for the given nickname.  <b>Note</b> that
+&nbsp;whenever this command is used, a message including the
+&nbsp;person who issued the command and the nickname it was used
+&nbsp;on will be logged and sent out as a WALLOPS/GLOBOPS.
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+&nbsp;
+&nbsp;This command is unavailable when encryption is enabled.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN FORBID</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg NickServ  <b>FORBID <u>nickname</u> [<u>reason</u>]</b>
+&nbsp;
+&nbsp;Disallows a nickname from being registered or used by
+&nbsp;anyone.  May be cancelled by dropping the nick.
+&nbsp;
+&nbsp;On certain networks, reason is required.
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre></li></ul><div align="center">
+<td align="right" valign="top" style=font-size:100%;white-space:nowrap; nowrap><small>
+
+<b><a href="../chat.html">deoxy.org/chat</a></b> : 
+<a href="unreal.htm">IRC Commands</a> | 
+<a href="http://irc.deoxy.org">Server Status</a>&mdash;<a href="ircd.motd.html" title="First thing you see on IRC">MOTD</a><br>
+
+<a href="modserv.htm">Services</a> : 
+<a href="nickserv.htm">NickServ</a> |
+<a href="chanserv.htm">ChanServ</a> |
+<a href="memoserv.htm">MemoServ</a> |
+<a href="botserv.htm">BotServ</a><br>
+
+<a href="alias.htm">Aliases</a> | 
+<a href="privsec.htm">Privacy/Security</a> | 
+<a href="../meme/SearchBot.html">SearchBot</a> | 
+<a href="java.htm">Java Clients</a><br>
+
+</small></td>
+</div>
+</body>
+</html>

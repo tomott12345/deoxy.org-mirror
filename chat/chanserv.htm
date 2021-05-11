@@ -1,0 +1,1398 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>ChanServ</title>
+<LINK REL="home"       HREF="../index.html">
+<LINK REL="search"     HREF="http://deoxy.org/find">
+<LINK REL="stylesheet" HREF="../inc/css/deoxy.org.css" TYPE="text/css">
+<LINK REL="alternate"  HREF="../cgi/nu.pl@rss=1" TITLE="recent changes at deoxy.org" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/news/cloud?rss=1" TITLE="deoxy news cloud" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/news/cloud/today?rss=1" TITLE="deoxy news cloud today" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="../news/feeds/moonphase.xml" TITLE="lunar phases" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/video/random/rss" TITLE="random video" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="../koans@rss=1" TITLE="random koan" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="../iching/random/rss" TITLE="random iching hexagram" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/cgi/randlink.pl?rss=1" TITLE="random link at deoxy.org" TYPE="application/rss+xml">
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch/find.xml"  title="deoxy find">
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch/news.xml"  title="deoxy news">
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch/newstoday.xml"  title="deoxy news today">
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch/videx.xml" title="deoxy video">
+<style type="text/css">input.wikiform { background-color:#111111; font-size:13px; color:#909090; border:0px; cursor:pointer; }</style>
+<meta name="MSSmartTagsPreventParsing" content="true">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="robots" content="all">
+
+<LINK REL="stylesheet" HREF="../inc/css/print.css" TYPE="text/css" MEDIA="print">
+<script type="text/javascript" src="../bin/chatterwindow.js"></script>
+<script type="text/javascript" src="../bin/cookies.js"></script>
+<script type="text/javascript">
+function openVideo(id) {
+ var s = 'screenX=100,screenY=100,left=100,top=100,width=640,height=565,'
+ var x = 'resizable=1,status=0,menubar=0,toolbar=0,location=0,scrollbars=0'
+ window.open('http://deoxy.org/video/'+id,'',s+x)}
+</script>
+
+</head>
+<body bgcolor="#000000" text="#c0c0c0" link="#ffffff" vlink="#ffffff" alink="#aaffaa">
+<a name="top"></a><div id=_header>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr bgcolor="#111111">
+<td nowrap rowspan=2 bgcolor="#000000" width="20" background='../gif/background2.jpg'>&nbsp;</td>
+<td nowrap rowspan=2 bgcolor="#000000" align=center style=width:90px;><a
+ href="../index.html"
+ title=deoxy.org
+ target=_top><!-- img
+ src="http://deoxy.org/gif/ooleft_left.gif" border=0 
+--><img src="../vi/ft-dP2D7QM4.jpg" style=height:68px;width:100%;margin-left:1px; border=0></a></td>
+<form action='http://deoxy.org/cgi/jump.pl' method="post">
+<td nowrap align="right" background='../img/vortex0b.gif'>
+
+<table cellspacing="0" cellpadding="0" border=0 background='../gif/background2.jpg'><tr><td nowrap>
+<select name="to" class="select" onChange="x=this.options[this.selectedIndex].value;location.href=x.match(/^http:/)?x:'http://deoxy.org/'+x;">
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="nu.htm">&nbsp;&nbsp;\_updates</option>
+<!-- option value="watts.htm">alanwatts</option -->
+<!-- option value="alephnull">aleph</option -->
+<option value="8brains.htm">circuits</option>
+<option value="8basic.htm">&nbsp;&nbsp;\_scripts</option>
+
+
+
+<!-- option value="ct">crimethinc</option -->
+<option value="gacwao">defrag</option>
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="contact">&nbsp;&nbsp;|_contact</option>
+<option VALUE="http://m.deoxy.org">&nbsp;&nbsp;|_mobile</option>
+<!-- option value="wiki/Deoxy/Help">&nbsp;&nbsp;|_help</option -->
+<option value="meme/DNA">DNA</option>
+<option value="find">Find?</option>
+<!-- option value="forum">forum</option>
+<option value="newposts">&nbsp;&nbsp;|_newposts</option -->
+<!-- option value="hyper.htm">hyperspace</option -->
+<option value="iching">IChing</option>
+<option value="iching/random">&nbsp;&nbsp;\_random</option>
+<option value="imagine.mil">imagine.mil</option>
+<option value="inc.htm">incunabula</option>
+<!-- option value="http://irc.deoxy.org">IRC status</option -->
+<option value="koans">koans</option>
+<option value="koan/random">&nbsp;&nbsp;\_random</option>
+
+<option value="media">media</option>
+<option value="media/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="meme">meme</option>
+<option value="meme/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="news">news</option>
+<option VALUE="news/cloud/today">&nbsp;&nbsp;|_today</option>
+<option VALUE="news/digestc">&nbsp;&nbsp;|_digest</option>
+<option VALUE="news/view">&nbsp;&nbsp;|_category</option>  
+<option VALUE="http://m.deoxy.org/news">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\_mobile</option>
+<option value="omega.htm">omega</option>
+<option value="pdfa">PDFA</option>
+<option value="index/People">People</option>
+<option value="leary.htm">&nbsp;&nbsp;|_Leary</option>
+<option value="lilly.htm">&nbsp;&nbsp;|_Lilly</option>
+<option value="mckenna.htm">&nbsp;&nbsp;|_McKenna</option>
+<option value="media/McLuhan">&nbsp;&nbsp;|_McLuhan</option>
+<option value="raw.htm">&nbsp;&nbsp;|_RAWilson</option>
+<option value="philo.htm">philosophos</option>
+<option value="cgi/randlink.pl?go">random</option>
+<option value="rss.htm">RSS</option>
+<!-- option value="time/sabbats.htm">sabbats</option>
+<option value="shaman.htm">shaman</option -->
+<option value="stats">stats</option>
+<option value="maps">&nbsp;&nbsp;\_map</option>
+<!-- option value="tcrime.htm">thoughtcrime</option -->
+<option value="topics">topics</a>
+<option value="nu.htm">&nbsp;&nbsp;\_cloud</option>
+<option value="nu.htm">updates</option>
+<option value="wiki/Deoxy/Video">video</option>
+<option value="videx">&nbsp;&nbsp;|_index</option>
+<option value="vidcloud">&nbsp;&nbsp;|_cloud</option>
+<option value="vidimg">&nbsp;&nbsp;|_images</option>
+<option VALUE="warnings.htm">warnings</option>
+<!-- option value="wiki">wiki</option>
+<option value="wiki/Recent">&nbsp;&nbsp;|_changes</option>
+<option value="wiki/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="online">who's online</option -->
+</select>
+
+<input type="hidden" name="from" value='/chat/chanserv.htm'>
+<noscript><input type="Submit" value="go" class="button"></noscript>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></form>
+
+<form action="http://translate.google.com/translate" method="post" target="_top" name="trans" id="trans"><td nowrap align="center">
+<input type="Submit" value="to" class="button" title="Google translation">
+<select name="tl" class="select" title="Google translation">
+<option value=af>Afrikaans</option>
+<option value=sq>Albanian</option>
+<option value="ar">Arabic</option>
+<option value=hy>Armenian</option>
+<option value=az>Azerbaijani</option>
+<option value=eu>Basque</option>
+<option value=be>Belarusian</option>
+<option value=bn>Bengali</option>
+<option value=bs>Bosnian</option>
+<option value="bg">Bulgarian</option>
+<option value=my>Burmese</option>
+<option value="ca">Catalan</option>
+<option value=ceb>Cebuano</option>
+<option value=ny>Chichewa</option>
+<option value="zh-CN">Chinese CN</option>
+<option value="zh-TW">Chinese TW</option>
+<option value="hr">Croatian</option>
+<option value="cs">Czech</option>
+<option value="da">Danish</option>
+<option value="nl">Dutch</option>
+<option value=eo>Esperanto</option>
+<option value="et">Estonian</option>
+<option value="tl">Filipino</option>
+<option value="fi">Finnish</option>
+<option value="fr">French</option>
+<option value="gl">Galacian</option>
+<option value=ka>Georgian</option>
+<option value="de">German</option>
+<option value="el">Greek</option>
+<option value=gu>Gujarati</option>
+<option value=ht>Haitian Creole</option>
+<option value=ha>Hausa</option>
+<option value="iw">Hebrew</option>
+<option value="hi">Hindi</option>
+<option value=hmn>Hmong</option>
+<option value="hu">Hungarian</option>
+<option value=is>Icelandic</option>
+<option value=ig>Igbo</option>
+<option value="id">Indonesian</option>
+<option value=ga>Irish</option>
+<option value="it">Italian</option>
+<option value="ja">Japanese</option>
+<option value=jw>Javanese</option>
+<option value=kn>Kannada</option>
+<option value=kk>Kazakh</option>
+<option value=km>Khmer</option>
+<option value="ko">Korean</option>
+<option value=lo>Lao</option>
+<option value=la>Latin</option>
+<option value="lv">Latvian</option>
+<option value="lt">Lithuanian</option>
+<option value=mk>Macedonian</option>
+<option value=mg>Malagasy</option>
+<option value=ms>Malay</option>
+<option value=ml>Malayalam</option>
+<option value="mt">Maltese</option>
+<option value=mi>Maori</option>
+<option value=mr>Marathi</option>
+<option value=mn>Mongolian</option>
+<option value=ne>Nepali</option>
+<option value="no">Norwegian</option>
+<option value=fa>Persian</option>
+<option value="pl">Polish</option>
+<option value="pt">Portuguese</option>
+<option value=pa>Punjabi</option>
+<option value="ro">Romanian</option>
+<option value="ru">Russian</option>
+<option value="sr">Serbian</option>
+<option value=st>Sesotho</option>
+<option value=si>Sinhala</option>
+<option value="sk">Slovak</option>
+<option value="sl">Slovenian</option>
+<option value=so>Somali</option>
+<option value="es" selected>Spanish</option>
+<option value=su>Sundanese</option>
+<option value=sw>Swahili</option>
+<option value="sv">Swedish</option>
+<option value=tg>Tajik</option>
+<option value=ta>Tamil</option>
+<option value=te>Telugu</option>
+<option value="th">Thai</option>
+<option value="tr">Turkish</option>
+<option value="uk">Ukrainian</option>
+<option value=ur>Urdu</option>
+<option value=uz>Uzbek</option>
+<option value="vi">Vietnamese</option>
+<option value=cy>Welsh</option>
+<option value=yi>Yiddish</option>
+<option value=yo>Yoruba</option>
+<option value=zu>Zulu</option></select>
+<input type=hidden name=sl value="en">
+<input type=hidden name=hl value="en">
+<input type=hidden name=ie value="UTF-8">
+<input type=hidden name=u id=u value='http://deoxy.org/chat/chanserv.htm'>
+</td></form>
+
+
+<td align="right" valign="middle" nowrap>
+<table cellspacing="0" cellpadding="0" border=0><tr>
+<form action=http://deoxy.org/find method=get name=sitesearchform>
+<td nowrap align=right valign="middle">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name=q size=15 class="input" title="search deoxy.org">
+<input type="Submit" value="find" class="button" title="search deoxy.org"></TD>
+</form></tr></table>
+</td></tr></table>
+
+</td></tr><SCRIPT TYPE="text/javascript">
+document.trans.tl.selectedIndex=Math.floor(Math.random()*(document.trans.tl.length+1))
+</script><tr><td bgcolor="#111111" background="../img/thin_horizontal_lines.gif" 
+style=white-space:nowrap;overflow:hidden;>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+<td style="background-image:url('../gif/background2.jpg');background-position:40 0;" width=20>&nbsp;</td>
+<td style=background-image:url(../img/thin_horizontal_lines.gif);>
+<div style=overflow:hidden;white-space:nowrap;>&nbsp;<small>[an error occurred while processing this directive]</small></div></td>
+
+<td width=20>&nbsp;</td>
+<form action=http://deoxy.org/cgi/jump.pl method=get target=_blank>
+<td align="right"><div style=overflow:hidden;display:none;>
+<font color="#909090"><a href="../nu.htm"><font color="#ffffff" size="-1">New</font></a> : <font size="-1">
+<a href="../wiki/Deoxy/Video.html" ><font color=#ffffff size=-2>Video</font></a> : <a href="http://deoxy.org/video/ubuTR5vXISA" onclick="window.open('http://deoxy.org/video?v=ubuTR5vXISA','','screenX=50,screenY=50,left=50,top=50,width=640,height=565,resizable=1,status=0,menubar=0,toolbar=0,location=0,scrollbars=0'); return false;" ><font color=#ffffff size=-2>DMT - The Spirit Molecule 1/5</font></a>
+
+</font></font></div></td>
+
+<td style="background-image:url('../gif/background2.jpg');background-position:0 0;" width=20>&nbsp;</td>
+</form></tr></table>
+</td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="#000000" align="right" background="../gif/background2.jpg">
+
+</td></tr></table></div><p>
+
+
+<table width="100%"><tr>
+<td><h1>&nbsp;ChanServ</h1></td>
+<td align="right" valign="top" style=font-size:100%;white-space:nowrap; nowrap><small>
+
+<b><a href="../chat.html">deoxy.org/chat</a></b> : 
+<a href="unreal.htm">IRC Commands</a> | 
+<a href="http://irc.deoxy.org">Server Status</a>&mdash;<a href="ircd.motd.html" title="First thing you see on IRC">MOTD</a><br>
+
+<a href="modserv.htm">Services</a> : 
+<a href="nickserv.htm">NickServ</a> |
+<a href="chanserv.htm">ChanServ</a> |
+<a href="memoserv.htm">MemoServ</a> |
+<a href="botserv.htm">BotServ</a><br>
+
+<a href="alias.htm">Aliases</a> | 
+<a href="privsec.htm">Privacy/Security</a> | 
+<a href="../meme/SearchBot.html">SearchBot</a> | 
+<a href="java.htm">Java Clients</a><br>
+
+</small></td>
+</tr></table>
+<ul>
+
+<p align=right><small><i>
+For channel modes used with <a href="unreal.htm#mode">/MODE</a> see <a href="unreal.htm#chmodes">Chmodes</a>.&nbsp;
+</i></small></p>
+
+<pre>&nbsp;<b>ChanServ</b> allows you to register and control various aspects of channels.  
+
+&nbsp;ChanServ can often prevent malicious users from "taking over" channels by limiting 
+&nbsp;who is allowed channel operator priviliges.  Available commands are listed below; 
+&nbsp;to use them, type <b>/msg ChanServ <u>command</u></b>.  For more information on a
+&nbsp;specific command, type <b>/msg ChanServ HELP <u>command</u></b>.
+&nbsp;
+&nbsp;    REGISTER   Register a channel
+&nbsp;    IDENTIFY   Identify yourself with your password
+&nbsp;    SET        Set channel options and information
+&nbsp;    AOP        Modify the list of AOP users
+&nbsp;    SOP        Modify the list of SOP users
+&nbsp;    ACCESS     Modify the list of privileged users
+&nbsp;    LEVELS     Redefine the meanings of access levels
+&nbsp;    AKICK      Maintain the AutoKick list
+&nbsp;    DROP       Cancel the registration of a channel
+&nbsp;    SENDPASS   Help retrive lost passwords
+&nbsp;
+&nbsp;Other commands: BAN, CLEAR, DEOP, DEVOICE, GETKEY, INFO, 
+&nbsp;                INVITE, KICK, LIST, LOGOUT, OP, TOPIC, 
+&nbsp;                UNBAN, VOICE, VOP
+&nbsp;
+&nbsp;These commands are also available on this network:
+&nbsp;    DEHALFOP, DEOWNER, DEPROTECT, HALFOP, HOP, OWNER,
+&nbsp;    PROTECT
+
+</pre>
+          </li>
+          <li><b>EXPIRATION</b><br />
+            <pre>&nbsp;
+&nbsp;Note that any channel which is not used for &lt;num&gt; days
+&nbsp;(i.e. which no user on the channel's access list enters
+&nbsp;for that period of time) will be automatically dropped.
+
+</pre>
+          </li>
+          <li><b>REGISTER</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>REGISTER <u>channel</u> <u>password</u> <u>description</u></b>
+&nbsp;
+&nbsp;Registers a channel in the ChanServ database.  In order
+&nbsp;to use this command, you must first be a channel operator
+&nbsp;on the channel you're trying to register.  The password
+&nbsp;is used with the <b>IDENTIFY</b> command to allow others to
+&nbsp;make changes to the channel settings at a later time.
+&nbsp;The last parameter, which <b>must</b> be included, is a
+&nbsp;general description of the channel's purpose.
+&nbsp;
+&nbsp;When you register a channel, you are recorded as the
+&nbsp;"founder" of the channel.  The channel founder is allowed
+&nbsp;to change all of the channel settings for the channel;
+&nbsp;ChanServ will also automatically give the founder
+&nbsp;channel-operator privileges when s/he enters the channel.
+&nbsp;See the <b>ACCESS</b> command (<b>/msg ChanServ HELP ACCESS</b>) for
+&nbsp;information on giving a subset of these privileges to
+&nbsp;other channel users.
+&nbsp;
+&nbsp;NOTICE: In order to register a channel, you must have
+&nbsp;first registered your nickname.  If you haven't,
+&nbsp;<b>/msg ChanServ HELP</b> for information on how to do so.
+
+</pre>
+          </li>
+          <li><b>IDENTIFY</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>IDENTIFY <u>channel</u> <u>password</u></b>
+&nbsp;
+&nbsp;Authenticates you to ChanServ as the founder of the given
+&nbsp;channel.  Many commands require you to use this command
+&nbsp;before using them.  The password should be the same one
+&nbsp;you sent with the <b>REGISTER</b> command.
+&nbsp;
+</pre>
+          </li>
+
+          <li><b>LOGOUT</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>LOGOUT <u>channel</u> <u>nickname</u></b>
+&nbsp;
+&nbsp;This command will log the selected nickname out meaning they 
+&nbsp;would have to reidentify themselves to regain their access.
+&nbsp;
+&nbsp;If you are the founder of the channel, you can log out anybody,
+&nbsp;else you can only log out yourself.
+
+</pre>
+          </li>
+          <li><b>DROP</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>DROP <u>channel</u></b>
+&nbsp;
+&nbsp;Unregisters the named channel.  Can only be used by
+&nbsp;<b>channel founder</b>, who must use the <b>IDENTIFY</b> command first.
+
+</pre>
+          </li>
+          <li><b>SET</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> <u>option</u> <u>parameters</u></b>
+&nbsp;
+&nbsp;Allows the channel founder to set various channel options
+&nbsp;and other information.
+&nbsp;
+&nbsp;Available options:
+&nbsp;
+&nbsp;    FOUNDER       Set the founder of a channel
+&nbsp;    SUCCESSOR     Set the successor for a channel
+&nbsp;    PASSWORD      Set the founder password
+&nbsp;    DESC          Set the channel description
+&nbsp;    URL           Associate a URL with the channel
+&nbsp;    EMAIL         Associate an E-mail address with the channel
+&nbsp;    ENTRYMSG      Set a message to be sent to users when they
+&nbsp;                     enter the channel
+&nbsp;    BANTYPE       Set how Services make bans on the channel
+&nbsp;    MLOCK         Lock channel modes on or off
+&nbsp;    KEEPTOPIC     Retain topic when channel is not in use
+&nbsp;    OPNOTICE      Send a notice when OP/DEOP commands are used
+&nbsp;    PEACE         Regulate the use of critical commands
+&nbsp;    PRIVATE       Hide channel from LIST command
+&nbsp;    RESTRICTED    Restrict access to the channel
+&nbsp;    SECURE        Activate ChanServ security features
+&nbsp;    SECUREOPS     Stricter control of chanop status
+&nbsp;    SECUREFOUNDER Stricter control of channel founder status
+&nbsp;    SIGNKICK      Sign kicks that are done with KICK command
+&nbsp;    TOPICLOCK     Topic can only be changed with TOPIC
+&nbsp;    XOP           Toggle the user privilege system
+&nbsp;
+&nbsp;Type <b>/msg ChanServ HELP <u>option</u></b> for more information on a
+&nbsp;particular option.
+
+</pre>
+          </li>
+          <li><b>SET FOUNDER</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> FOUNDER <u>nick</u></b>
+&nbsp;
+&nbsp;Changes the founder of a channel.  The new nickname must
+&nbsp;be a registered one.
+
+</pre>
+          </li>
+          <li><b>SET SUCCESSOR</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> SUCCESSOR <u>nick</u></b>
+&nbsp;
+&nbsp;Changes the successor of a channel.  If the founder's
+&nbsp;nickname expires or is dropped while the channel is still
+&nbsp;registered, the successor will become the new founder of the
+&nbsp;channel.  However, if the successor already has too many
+&nbsp;channels registered (&lt;num&gt;), the channel will be dropped
+&nbsp;instead, just as if no successor had been set.  The new
+&nbsp;nickname must be a registered one.
+
+</pre>
+          </li>
+          <li><b>SET PASSWORD</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> PASSWORD <u>password</u></b>
+&nbsp;
+&nbsp;Sets the password used to identify as the founder of the
+&nbsp;channel.
+
+</pre>
+          </li>
+          <li><b>SET DESC</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> DESC <u>description</u></b>
+&nbsp;
+&nbsp;Sets the description for the channel, which shows up with
+&nbsp;the <b>LIST</b> and <b>INFO</b> commands.
+
+</pre>
+          </li>
+          <li><b>SET URL</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> URL [<u>url</u>]</b>
+&nbsp;
+&nbsp;Associates the given URL with the channel.  This URL will
+&nbsp;be displayed whenever someone requests information on the
+&nbsp;channel with the <b>INFO</b> command.  If no parameter is given,
+&nbsp;deletes any current URL for the channel.
+
+</pre>
+          </li>
+          <li><b>SET EMAIL</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> EMAIL [<u>address</u>]</b>
+&nbsp;
+&nbsp;Associates the given E-mail address with the channel.
+&nbsp;This address will be displayed whenever someone requests
+&nbsp;information on the channel with the <b>INFO</b> command.  If no
+&nbsp;parameter is given, deletes any current E-mail address for
+&nbsp;the channel.
+
+</pre>
+          </li>
+          <li><b>SET ENTRYMSG</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> ENTRYMSG [<u>message</u>]</b>
+&nbsp;
+&nbsp;Sets the message which will be sent via /notice to users
+&nbsp;when they enter the channel.  If no parameter is given,
+&nbsp;causes no message to be sent upon entering the channel.
+
+</pre>
+          </li>
+          <li><b>SET BANTYPE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> BANTYPE <u>bantype</u></b>
+&nbsp;
+&nbsp;Sets the ban type that will be used by services whenever
+&nbsp;they need to ban someone from your channel.
+&nbsp;
+&nbsp;bantype is a number between 0 and 3 that means:
+&nbsp;
+&nbsp;0: ban in the form *!user@host
+&nbsp;1: ban in the form *!*user@host
+&nbsp;2: ban in the form *!*@host
+&nbsp;3: ban in the form *!*user@*.domain
+
+</pre>
+          </li>
+          <li><b>SET KEEPTOPIC</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> KEEPTOPIC {ON | OFF}</b>
+&nbsp;
+&nbsp;Enables or disables the <b>topic retention</b> option for a
+&nbsp;channel.  When <b>topic retention</b> is set, the topic for the
+&nbsp;channel will be remembered by ChanServ even after the
+&nbsp;last user leaves the channel, and will be restored the
+&nbsp;next time the channel is created.
+
+</pre>
+          </li>
+          <li><b>SET TOPICLOCK</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> TOPICLOCK {ON | OFF}</b>
+&nbsp;
+&nbsp;Enables or disables the <b>topic lock</b> option for a channel.
+&nbsp;When <b>topic lock</b> is set, ChanServ will not allow the
+&nbsp;channel topic to be changed except via the <b>TOPIC</b>
+&nbsp;command.
+
+</pre>
+          </li>
+          <li><b>SET MLOCK</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> MLOCK <u>modes</u></b>
+&nbsp;
+&nbsp;Sets the mode-lock parameter for the channel. ChanServ
+&nbsp;allows you to define certain channel modes to be always
+&nbsp;on, off or free to be either on or off.
+&nbsp;
+&nbsp;The <u>modes</u> parameter is constructed exactly the same way 
+&nbsp;as a <b>/MODE</b> command; that is, modes followed by a + are 
+&nbsp;locked on, and modes followed by a - are locked off. Note,
+&nbsp;however, that unlike the <b>/MODE</b> command, each use of
+&nbsp;<b>SET MLOCK</b> will remove all modes previously locked before
+&nbsp;setting the new!
+&nbsp;
+&nbsp;<b>Warning:</b>  If you set a mode-locked key, as in the second
+&nbsp;example below, you should also set the <b>RESTRICTED</b> option for
+&nbsp;the channel (see <b>HELP SET RESTRICTED</b>), or anyone entering
+&nbsp;the channel when it is empty will be able to see the key!
+&nbsp;
+&nbsp;Examples:
+&nbsp;
+&nbsp;    <b>SET #channel MLOCK +nt-iklps</b>
+&nbsp;        Forces modes n and t on, and modes i, k, l, p, and
+&nbsp;        s off.  Mode m is left free to be either on or off.
+&nbsp;
+&nbsp;    <b>SET #channel MLOCK +knst-ilmp my-key</b>
+&nbsp;        Forces modes k, n, s, and t on, and modes i, l, m,
+&nbsp;        and p off.  Also forces the channel key to be
+&nbsp;        "my-key".
+&nbsp;
+&nbsp;    <b>SET #channel MLOCK +</b>
+&nbsp;        Removes the mode lock; all channel modes are free
+&nbsp;        to be either on or off.
+
+</pre>
+          </li>
+          <li><b>SET PEACE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> PEACE {ON | OFF}</b>
+&nbsp;
+&nbsp;Enables or disables the <b>peace</b> option for a channel.
+&nbsp;When <b>peace</b> is set, an user won't be able to kick,
+&nbsp;ban or remove a channel status of an user that has
+&nbsp;a level superior or equal to his via ChanServ commands.
+
+</pre>
+          </li>
+          <li><b>SET PRIVATE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> PRIVATE {ON | OFF}</b>
+&nbsp;
+&nbsp;Enables or disables the <b>private</b> option for a channel.
+&nbsp;When <b>private</b> is set, a <b>/msg ChanServ LIST</b> will not
+&nbsp;include the channel in any lists.
+
+</pre>
+          </li>
+          <li><b>SET RESTRICTED</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> RESTRICTED {ON | OFF}</b>
+&nbsp;
+&nbsp;Enables or disables the <b>restricted access</b> option for a
+&nbsp;channel.  When <b>restricted access</b> is set, users who would
+&nbsp;normally be disallowed from having channel operator
+&nbsp;privileges (users with negative access levels and, if
+&nbsp;<b>secure ops</b> is set, users not on the access list) will
+&nbsp;instead be kicked and banned from the channel.
+
+</pre>
+          </li>
+          <li><b>SET SECURE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> SECURE {ON | OFF}</b>
+&nbsp;
+&nbsp;Enables or disables ChanServ's security features for a
+&nbsp;channel.  When <b>SECURE</b> is set, only users who have
+&nbsp;registered their nicknames with ChanServ and IDENTIFY'd
+&nbsp;with their password will be given access to the channel
+&nbsp;as controlled by the access list.
+
+</pre>
+          </li>
+          <li><b>SET SECUREOPS</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> SECUREOPS {ON | OFF}</b>
+&nbsp;
+&nbsp;Enables or disables the <b>secure ops</b> option for a channel.
+&nbsp;When <b>secure ops</b> is set, users who are not on the userlist
+&nbsp;will not be allowed chanop status.
+&nbsp;
+</pre>
+          </li>
+          <li><b>SET SECUREFOUNDER</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> SECUREFOUNDER {ON | OFF}</b>
+&nbsp;
+&nbsp;Enables or disables the <b>secure founder</b> option for a channel.
+&nbsp;When <b>secure founder</b> is set, only the real founder will be
+&nbsp;able to drop the channel, change its password, its founder and its
+&nbsp;successor, and not those who are IDENTIFY'd with ChanServ.
+&nbsp;
+</pre>
+          </li>
+          <li><b>SET SIGNKICK</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> SIGNKICK {ON | LEVEL | OFF}</b>
+&nbsp;
+&nbsp;Enables or disables signed kicks for a
+&nbsp;channel.  When <b>SIGNKICK</b> is set, kicks issued with
+&nbsp;ChanServ KICK command will have the nick that used the
+&nbsp;command in their reason.
+&nbsp;
+&nbsp;If you use <b>LEVEL</b>, those who have a level that is superior 
+&nbsp;or equal to the SIGNKICK level on the channel won't have their 
+&nbsp;kicks signed. See <b>/msg ChanServ HELP LEVELS</b> for more information. 
+
+</pre>
+          </li>
+          <li><b>SET XOP</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> XOP {ON | OFF}</b>
+&nbsp;
+&nbsp;Enables or disables the xOP lists system for a channel.
+&nbsp;When <b>XOP</b> is set, you have to use the <b>AOP</b>/<b>SOP</b>/<b>VOP</b>
+&nbsp;commands in order to give channel privileges to
+&nbsp;users, else you have to use the <b>ACCESS</b> command.
+&nbsp;
+&nbsp;<b>Technical Note</b>: when you switch from access list to xOP 
+&nbsp;lists system, your level definitions and user levels will be
+&nbsp;changed, so you won't find the same values if you
+&nbsp;switch back to access system! 
+&nbsp;
+&nbsp;You should also check that your users are in the good xOP 
+&nbsp;list after the switch from access to xOP lists, because the 
+&nbsp;guess is not always perfect... in fact, it is not recommended 
+&nbsp;to use the xOP lists if you changed level definitions with 
+&nbsp;the <b>LEVELS</b> command.
+&nbsp;
+&nbsp;Switching from xOP lists system to access list system
+&nbsp;causes no problem though.
+
+</pre>
+          </li>
+          <li><b>SET OPNOTICE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> OPNOTICE {ON | OFF}</b>
+&nbsp;
+&nbsp;Enables or disables the <b>op-notice</b> option for a channel.
+&nbsp;When <b>op-notice</b> is set, ChanServ will send a notice to the
+&nbsp;channel whenever the <b>OP</b> or <b>DEOP</b> commands are used for a user
+&nbsp;in the channel.
+
+</pre>
+          </li>
+          <li><b>AOP</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>AOP <u>channel</u> ADD <u>nick</u></b>
+&nbsp;        <b>AOP <u>channel</u> DEL {<u>nick</u> | <u>entry-num</u> | <u>list</u>}</b>
+&nbsp;        <b>AOP <u>channel</u> LIST [<u>mask</u> | <u>list</u>]</b>
+&nbsp;        <b>AOP <u>channel</u> CLEAR</b>
+&nbsp;
+&nbsp;Maintains the <b>AOP</b> (AutoOP) <b>list</b> for a channel. The AOP 
+&nbsp;list gives users the right to be auto-opped on your channel,
+&nbsp;to unban or invite themselves if needed, to have their
+&nbsp;greet message showed on join, and so on.
+&nbsp;
+&nbsp;The <b>AOP ADD</b> command adds the given nickname to the
+&nbsp;AOP list.
+&nbsp;
+&nbsp;The <b>AOP DEL</b> command removes the given nick from the
+&nbsp;AOP list.  If a list of entry numbers is given, those
+&nbsp;entries are deleted.  (See the example for LIST below.)
+&nbsp;
+&nbsp;The <b>AOP LIST</b> command displays the AOP list.  If
+&nbsp;a wildcard mask is given, only those entries matching the
+&nbsp;mask are displayed.  If a list of entry numbers is given,
+&nbsp;only those entries are shown; for example:
+
+&nbsp;   <b>AOP #channel LIST 2-5,7-9</b>
+&nbsp;      Lists AOP entries numbered 2 through 5 and
+&nbsp;      7 through 9.
+&nbsp;      
+&nbsp;The <b>AOP CLEAR</b> command clears all entries of the
+&nbsp;AOP list.
+&nbsp;
+&nbsp;The <b>AOP ADD</b> and <b>AOP DEL</b> commands are limited to
+&nbsp;SOPs or above, while the <b>AOP CLEAR</b> command can only
+&nbsp;be used by the channel founder. However, any user on the
+&nbsp;AOP list may use the <b>AOP LIST</b> command.
+&nbsp;
+&nbsp;This command may have been disabled for your channel, and
+&nbsp;in that case you need to use the access list. See 
+&nbsp;<b>/msg ChanServ HELP ACCESS</b> for information about the access list,
+&nbsp;and <b>/msg ChanServ HELP SET XOP</b> to know how to toggle between 
+&nbsp;the access list and xOP list systems.
+
+</pre>
+          </li>
+          <li><b>HOP</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>HOP <u>channel</u> ADD <u>nick</u></b>
+&nbsp;        <b>HOP <u>channel</u> DEL {<u>nick</u> | <u>entry-num</u> | <u>list</u>}</b>
+&nbsp;        <b>HOP <u>channel</u> LIST [<u>mask</u> | <u>list</u>]</b>
+&nbsp;        <b>HOP <u>channel</u> CLEAR</b>
+&nbsp;
+&nbsp;Maintains the <b>HOP</b> (HalfOP) <b>list</b> for a channel. The HOP 
+&nbsp;list gives users the right to be auto-halfopped on your 
+&nbsp;channel.
+&nbsp;
+&nbsp;The <b>HOP ADD</b> command adds the given nickname to the
+&nbsp;HOP list.
+&nbsp;
+&nbsp;The <b>HOP DEL</b> command removes the given nick from the
+&nbsp;HOP list.  If a list of entry numbers is given, those
+&nbsp;entries are deleted.  (See the example for LIST below.)
+&nbsp;
+&nbsp;The <b>HOP LIST</b> command displays the HOP list.  If
+&nbsp;a wildcard mask is given, only those entries matching the
+&nbsp;mask are displayed.  If a list of entry numbers is given,
+&nbsp;only those entries are shown; for example:
+
+&nbsp;   <b>HOP #channel LIST 2-5,7-9</b>
+&nbsp;      Lists HOP entries numbered 2 through 5 and
+&nbsp;      7 through 9.
+&nbsp;      
+&nbsp;The <b>HOP CLEAR</b> command clears all entries of the
+&nbsp;HOP list.
+&nbsp;
+&nbsp;The <b>HOP ADD</b>, <b>HOP DEL</b> and <b>HOP LIST</b> commands are 
+&nbsp;limited to AOPs or above, while the <b>HOP CLEAR</b> command 
+&nbsp;can only be used by the channel founder.
+&nbsp;
+&nbsp;This command may have been disabled for your channel, and
+&nbsp;in that case you need to use the access list. See 
+&nbsp;<b>/msg ChanServ HELP ACCESS</b> for information about the access list,
+&nbsp;and <b>/msg ChanServ HELP SET XOP</b> to know how to toggle between 
+&nbsp;the access list and xOP list systems.
+
+</pre>
+          </li>
+          <li><b>SOP</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SOP <u>channel</u> ADD <u>nick</u></b>
+&nbsp;        <b>SOP <u>channel</u> DEL {<u>nick</u> | <u>entry-num</u> | <u>list</u>}</b>
+&nbsp;        <b>SOP <u>channel</u> LIST [<u>mask</u> | <u>list</u>]</b>
+&nbsp;        <b>SOP <u>channel</u> CLEAR</b>
+&nbsp;
+&nbsp;Maintains the <b>SOP</b> (SuperOP) <b>list</b> for a channel. The SOP 
+&nbsp;list gives users all rights given by the AOP list, and adds
+&nbsp;those needed to use the AutoKick and the BadWords lists, 
+&nbsp;to send and read channel memos, and so on.
+&nbsp;
+&nbsp;The <b>SOP ADD</b> command adds the given nickname to the
+&nbsp;SOP list.
+&nbsp;
+&nbsp;The <b>SOP DEL</b> command removes the given nick from the
+&nbsp;SOP list.  If a list of entry numbers is given, those
+&nbsp;entries are deleted.  (See the example for LIST below.)
+&nbsp;
+&nbsp;The <b>SOP LIST</b> command displays the SOP list.  If
+&nbsp;a wildcard mask is given, only those entries matching the
+&nbsp;mask are displayed.  If a list of entry numbers is given,
+&nbsp;only those entries are shown; for example:
+
+&nbsp;   <b>SOP #channel LIST 2-5,7-9</b>
+&nbsp;      Lists AOP entries numbered 2 through 5 and
+&nbsp;      7 through 9.
+&nbsp;      
+&nbsp;The <b>SOP CLEAR</b> command clears all entries of the
+&nbsp;SOP list.
+&nbsp;
+&nbsp;The <b>SOP ADD</b>, <b>SOP DEL</b> and <b>SOP CLEAR</b> commands are 
+&nbsp;limited to the channel founder. However, any user on the
+&nbsp;AOP list may use the <b>SOP LIST</b> command.
+&nbsp;
+&nbsp;This command may have been disabled for your channel, and
+&nbsp;in that case you need to use the access list. See 
+&nbsp;<b>/msg ChanServ HELP ACCESS</b> for information about the access list,
+&nbsp;and <b>/msg ChanServ HELP SET XOP</b> to know how to toggle between 
+&nbsp;the access list and xOP list systems.
+
+</pre>
+          </li>
+          <li><b>VOP</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>VOP <u>channel</u> ADD <u>nick</u></b>
+&nbsp;        <b>VOP <u>channel</u> DEL {<u>nick</u> | <u>entry-num</u> | <u>list</u>}</b>
+&nbsp;        <b>VOP <u>channel</u> LIST [<u>mask</u> | <u>list</u>]</b>
+&nbsp;        <b>VOP <u>channel</u> CLEAR</b>
+&nbsp;
+&nbsp;Maintains the <b>VOP</b> (VOicePeople) <b>list</b> for a channel.  
+&nbsp;The VOP list allows users to be auto-voiced and to voice 
+&nbsp;themselves if they aren't.
+&nbsp;
+&nbsp;The <b>VOP ADD</b> command adds the given nickname to the
+&nbsp;VOP list.
+&nbsp;
+&nbsp;The <b>VOP DEL</b> command removes the given nick from the
+&nbsp;VOP list.  If a list of entry numbers is given, those
+&nbsp;entries are deleted.  (See the example for LIST below.)
+&nbsp;
+&nbsp;The <b>VOP LIST</b> command displays the VOP list.  If
+&nbsp;a wildcard mask is given, only those entries matching the
+&nbsp;mask are displayed.  If a list of entry numbers is given,
+&nbsp;only those entries are shown; for example:
+
+&nbsp;   <b>VOP #channel LIST 2-5,7-9</b>
+&nbsp;      Lists VOP entries numbered 2 through 5 and
+&nbsp;      7 through 9.
+&nbsp;      
+&nbsp;The <b>VOP CLEAR</b> command clears all entries of the
+&nbsp;VOP list.
+&nbsp;
+&nbsp;The <b>VOP ADD</b>, <b>VOP DEL</b> and <b>VOP LIST</b> commands are 
+&nbsp;limited to AOPs or above, while the <b>VOP CLEAR</b> command 
+&nbsp;can only be used by the channel founder.
+&nbsp;
+&nbsp;This command may have been disabled for your channel, and
+&nbsp;in that case you need to use the access list. See 
+&nbsp;<b>/msg ChanServ HELP ACCESS</b> for information about the access list,
+&nbsp;and <b>/msg ChanServ HELP SET XOP</b> to know how to toggle between 
+&nbsp;the access list and xOP list systems.
+
+</pre>
+          </li>
+          <li><b>ACCESS</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>ACCESS <u>channel</u> ADD <u>nick</u> <u>level</u></b>
+&nbsp;        <b>ACCESS <u>channel</u> DEL {<u>nick</u> | <u>entry-num</u> | <u>list</u>}</b>
+&nbsp;        <b>ACCESS <u>channel</u> LIST [<u>mask</u> | <u>list</u>]</b>
+&nbsp;        <b>ACCESS <u>channel</u> CLEAR</b>
+&nbsp;
+&nbsp;Maintains the <b>access list</b> for a channel.  The access
+&nbsp;list specifies which users are allowed chanop status or
+&nbsp;access to ChanServ commands on the channel.  Different
+&nbsp;user levels allow for access to different subsets of
+&nbsp;privileges; <b>/msg ChanServ HELP ACCESS LEVELS</b> for more
+&nbsp;specific information.  Any nick not on the access list has
+&nbsp;a user level of 0.
+&nbsp;
+&nbsp;The <b>ACCESS ADD</b> command adds the given nickname to the
+&nbsp;access list with the given user level; if the nick is
+&nbsp;already present on the list, its access level is changed to
+&nbsp;the level specified in the command.  The <u>level</u> specified
+&nbsp;must be less than that of the user giving the command, and
+&nbsp;if the <u>nick</u> is already on the access list, the current
+&nbsp;access level of that nick must be less than the access level
+&nbsp;of the user giving the command.
+&nbsp;
+&nbsp;The <b>ACCESS DEL</b> command removes the given nick from the
+&nbsp;access list.  If a list of entry numbers is given, those
+&nbsp;entries are deleted.  (See the example for LIST below.)
+&nbsp;
+&nbsp;The <b>ACCESS LIST</b> command displays the access list.  If
+&nbsp;a wildcard mask is given, only those entries matching the
+&nbsp;mask are displayed.  If a list of entry numbers is given,
+&nbsp;only those entries are shown; for example:
+
+&nbsp;   <b>ACCESS #channel LIST 2-5,7-9</b>
+&nbsp;      Lists access entries numbered 2 through 5 and
+&nbsp;      7 through 9.
+&nbsp;      
+&nbsp;The <b>ACCESS CLEAR</b> command clears all entries of the
+&nbsp;access list.
+
+</pre>
+          </li>
+          <li><b>ACCESS LEVELS</b><br />
+            <pre>&nbsp;<b>User access levels</b>
+&nbsp;
+&nbsp;By default, the following access levels are defined:
+&nbsp;
+&nbsp;   <b>Founder</b>   Full access to ChanServ functions; automatic
+&nbsp;                     opping upon entering channel.  Note
+&nbsp;                     that only one person may have founder
+&nbsp;                     status (it cannot be given using the
+&nbsp;                     <b>ACCESS</b> command).
+&nbsp;   <b>     10</b>   Access to AKICK command; automatic opping.
+&nbsp;   <b>      5</b>   Automatic opping.
+&nbsp;   <b>      3</b>   Automatic voicing.
+&nbsp;   <b>      0</b>   No special privileges; can be opped by other
+&nbsp;                     ops (unless <b>secure-ops</b> is set).
+&nbsp;   <b>     &lt;0</b>   May not be opped.
+&nbsp;
+&nbsp;These levels may be changed, or new ones added, using the
+&nbsp;<b>LEVELS</b> command; type <b>/msg ChanServ HELP LEVELS</b> for
+&nbsp;information.
+
+</pre>
+          </li>
+          <li><b>AKICK</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>AKICK <u>channel</u> ADD <u>mask</u> [<u>reason</u>]</b>
+&nbsp;        <b>AKICK <u>channel</u> STICK <u>mask</u></b>
+&nbsp;        <b>AKICK <u>channel</u> UNSTICK <u>mask</u></b>
+&nbsp;        <b>AKICK <u>channel</u> DEL <u>mask</u></b>
+&nbsp;        <b>AKICK <u>channel</u> LIST [<u>mask</u>]</b>
+&nbsp;        <b>AKICK <u>channel</u> VIEW [<u>mask</u>]</b>
+&nbsp;        <b>AKICK <u>channel</u> ENFORCE</b>
+&nbsp;        <b>AKICK <u>channel</u> CLEAR</b>
+&nbsp;
+&nbsp;Maintains the <b>AutoKick list</b> for a channel.  If a user
+&nbsp;on the AutoKick list attempts to join the channel,
+&nbsp;ChanServ will ban that user from the channel, then kick
+&nbsp;the user.
+&nbsp;
+&nbsp;The <b>AKICK ADD</b> command adds the given nick or usermask
+&nbsp;to the AutoKick list.  If a <u>reason</u> is given with
+&nbsp;the command, that reason will be used when the user is
+&nbsp;kicked; if not, the default reason is "You have been
+&nbsp;banned from the channel".
+&nbsp;
+&nbsp;The <b>AKICK STICK</b> command permanently bans the given mask 
+&nbsp;on the channel. If someone tries to remove the ban, ChanServ
+&nbsp;will automatically set it again. You can't use it for
+&nbsp;registered nicks.
+&nbsp;
+&nbsp;The <b>AKICK UNSTICK</b> command cancels the effect of the
+&nbsp;<b>AKICK STICK</b> command, so you'll be able to unset the
+&nbsp;ban again on the channel.
+&nbsp;
+&nbsp;The <b>AKICK DEL</b> command removes the given nick or mask
+&nbsp;from the AutoKick list.  It does not, however, remove any
+&nbsp;bans placed by an AutoKick; those must be removed
+&nbsp;manually.
+&nbsp;
+&nbsp;The <b>AKICK LIST</b> command displays the AutoKick list, or
+&nbsp;optionally only those AutoKick entries which match the
+&nbsp;given mask.
+&nbsp;
+&nbsp;The <b>AKICK VIEW</b> command is a more verbose version of
+&nbsp;<b>AKICK LIST</b> command.
+&nbsp;
+&nbsp;The <b>AKICK ENFORCE</b> command causes ChanServ to enforce the
+&nbsp;current AKICK list by removing those users who match an
+&nbsp;AKICK mask.
+&nbsp;
+&nbsp;The <b>AKICK CLEAR</b> command clears all entries of the
+&nbsp;akick list.
+
+</pre>
+          </li>
+          <li><b>LEVELS</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>LEVELS <u>channel</u> SET <u>type</u> <u>level</u></b>
+&nbsp;        <b>LEVELS <u>channel</u> {DIS | DISABLE} <u>type</u></b>
+&nbsp;        <b>LEVELS <u>channel</u> LIST</b>
+&nbsp;        <b>LEVELS <u>channel</u> RESET</b>
+&nbsp;
+&nbsp;The <b>LEVELS</b> command allows fine control over the meaning of
+&nbsp;the numeric access levels used for channels.  With this
+&nbsp;command, you can define the access level required for most
+&nbsp;of ChanServ's functions.  (The <b>SET FOUNDER</b> and <b>SET PASSWORD</b>
+&nbsp;commands, as well as this command, are always restricted to
+&nbsp;the channel founder.)
+&nbsp;
+&nbsp;<b>LEVELS SET</b> allows the access level for a function or group of
+&nbsp;functions to be changed.  <b>LEVELS DISABLE</b> (or <b>DIS</b> for short)
+&nbsp;disables an automatic feature or disallows access to a
+&nbsp;function by anyone other than the channel founder.
+&nbsp;<b>LEVELS LIST</b> shows the current levels for each function or
+&nbsp;group of functions.  <b>LEVELS RESET</b> resets the levels to the
+&nbsp;default levels of a newly-created channel (see
+&nbsp;<b>HELP ACCESS LEVELS</b>).
+&nbsp;
+&nbsp;For a list of the features and functions whose levels can be
+&nbsp;set, see <b>HELP LEVELS DESC</b>.
+
+</pre>
+          </li>
+          <li><b>INFO</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>INFO <u>channel</u> [ALL]</b>
+&nbsp;
+&nbsp;Lists information about the named registered channel,
+&nbsp;including its founder, time of registration, last time
+&nbsp;used, description, and mode lock, if any. If <b>ALL</b> is 
+&nbsp;specified, the entry message and successor will also 
+&nbsp;be displayed.
+&nbsp;
+&nbsp;By default, the <b>ALL</b> option is limited to those with
+&nbsp;founder access on the channel.
+
+</pre>
+          </li>
+          <li><b>LIST</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>LIST <u>pattern</u></b>
+&nbsp;
+&nbsp;Lists all registered channels matching the given pattern.
+&nbsp;(Channels with the <b>PRIVATE</b> option set are not listed.)
+
+</pre>
+          </li>
+          <li><b>OP</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>OP [<u>#channel</u> [<u>nick</u>]]</b>
+&nbsp;
+&nbsp;Ops a selected nick on a channel. If nick is not given,
+&nbsp;it will op you. If channel and nick are not given,
+&nbsp;it will op you on all channels you're on, provided you
+&nbsp;have the rights to.
+&nbsp;
+&nbsp;By default, limited to AOPs or those with level 5 access 
+&nbsp;and above on the channel.
+
+</pre>
+          </li>
+          <li><b>DEOP</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>DEOP [<u>#channel</u> [<u>nick</u>]]</b>
+&nbsp;
+&nbsp;Deops a selected nick on a channel. If nick is not given,
+&nbsp;it will deop you. If channel and nick are not given,
+&nbsp;it will deop you on all channels you're on, provided you
+&nbsp;have the rights to.
+&nbsp;
+&nbsp;By default, limited to AOPs or those with level 5 access 
+&nbsp;and above on the channel.
+&nbsp;
+</pre>
+          </li>
+          <li><b>VOICE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>VOICE [<u>#channel</u> [<u>nick</u>]]</b>
+&nbsp;
+&nbsp;Voices a selected nick on a channel. If nick is not given,
+&nbsp;it will voice you. If channel and nick are not given,
+&nbsp;it will voice you on all channels you're on, provided you
+&nbsp;have the rights to.
+&nbsp;
+&nbsp;By default, limited to AOPs or those with level 5 access 
+&nbsp;and above on the channel, or to VOPs or those with level 3 
+&nbsp;and above for self voicing.
+
+</pre>
+          </li>
+          <li><b>DEVOICE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>DEVOICE [<u>#channel</u> [<u>nick</u>]]</b>
+&nbsp;
+&nbsp;Devoices a selected nick on a channel. If nick is not given,
+&nbsp;it will devoice you. If channel and nick are not given,
+&nbsp;it will devoice you on all channels you're on, provided you
+&nbsp;have the rights to.
+&nbsp;
+&nbsp;By default, limited to AOPs or those with level 5 access 
+&nbsp;and above on the channel, or to VOPs or those with level 3 
+&nbsp;and above for self devoicing.
+&nbsp;
+</pre>
+          </li>
+          <li><b>HALFOP</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>HALFOP [<u>#channel</u> [<u>nick</u>]]</b>
+&nbsp;
+&nbsp;Halfops a selected nick on a channel. If nick is not given,
+&nbsp;it will halfop you. If channel and nick are not given,
+&nbsp;it will halfop you on all channels you're on, provided you
+&nbsp;have the rights to.
+&nbsp;
+&nbsp;By default, limited to AOPs and those with level 5 access 
+&nbsp;and above on the channel, or to HOPs or those with level 4 
+&nbsp;and above for self halfopping.
+
+</pre>
+          </li>
+          <li><b>DEHALFOP</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>DEHALFOP [<u>#channel</u> [<u>nick</u>]]</b>
+&nbsp;
+&nbsp;Dehalfops a selected nick on a channel. If nick is not given,
+&nbsp;it will dehalfop you. If channel and nick are not given,
+&nbsp;it will dehalfop you on all channels you're on, provided you
+&nbsp;have the rights to.
+&nbsp;
+&nbsp;By default, limited to AOPs and those with level 5 access 
+&nbsp;and above on the channel, or to HOPs or those with level 4 
+&nbsp;and above for self dehalfopping.
+&nbsp;
+</pre>
+          </li>
+          <li><b>PROTECT</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>PROTECT [<u>#channel</u> [<u>nick</u>]]</b>
+&nbsp;
+&nbsp;Protects a selected nick on a channel. If nick is not given,
+&nbsp;it will protect you. If channel and nick are not given,
+&nbsp;it will protect you on all channels you're on, provided you
+&nbsp;have the rights to.
+&nbsp;
+&nbsp;By default, limited to the founder, or to SOPs or those with 
+&nbsp;level 10 and above on the channel for self protecting.
+
+</pre>
+          </li>
+          <li><b>DEPROTECT</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>DEPROTECT [<u>#channel</u> [<u>nick</u>]]</b>
+&nbsp;
+&nbsp;Deprotects a selected nick on a channel. If nick is not given,
+&nbsp;it will deprotect you. If channel and nick are not given,
+&nbsp;it will deprotect you on all channels you're on, provided you
+&nbsp;have the rights to.
+&nbsp;
+&nbsp;By default, limited to the founder, or to SOPs or those with 
+&nbsp;level 10 and above on the channel for self deprotecting.
+
+</pre>
+          </li>
+          <li><b>OWNER</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>OWNER [<u>#channel</u>]</b>
+&nbsp;
+&nbsp;Gives you owner status on <b>channel</b>. If channel is not 
+&nbsp;given, it will give you owner status on all channels you're 
+&nbsp;on, provided you have the rights to.
+&nbsp;
+&nbsp;Limited to those with founder access on the channel.
+
+</pre>
+          </li>
+          <li><b>DEOWNER</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>DEOWNER [<u>#channel</u>]</b>
+&nbsp;
+&nbsp;Removes your owner status on <b>channel</b>. If channel is 
+&nbsp;not given, it will remove your owner status on all channels 
+&nbsp;you're on, provided you have the rights to.
+&nbsp;
+&nbsp;Limited to those with founder access on the channel.
+
+</pre>
+          </li>
+          <li><b>INVITE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>INVITE <u>channel</u></b>
+&nbsp;
+&nbsp;Tells ChanServ to invite you into the given channel.  
+&nbsp;
+&nbsp;By default, limited to AOPs or those with level 5 and above
+&nbsp;on the channel.
+
+</pre>
+          </li>
+          <li><b>UNBAN</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>UNBAN <u>channel</u></b>
+&nbsp;
+&nbsp;Tells ChanServ to remove all bans preventing you from
+&nbsp;entering the given channel.  
+&nbsp;
+&nbsp;By default, limited to AOPs or those with level 5 and above
+&nbsp;on the channel.
+&nbsp;
+</pre>
+          </li>
+          <li><b>KICK</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>KICK [<u>#channel</u> [<u>nick</u> [<u>reason</u>]]]</b>
+&nbsp;
+&nbsp;Kicks a selected nick on a channel. If nick is not given,
+&nbsp;it will kick you. If channel and nick are not given,
+&nbsp;it will kick you on all channels you're on, provided you
+&nbsp;have the rights to.
+&nbsp;
+&nbsp;By default, limited to AOPs or those with level 5 access 
+&nbsp;and above on the channel.
+
+</pre>
+          </li>
+          <li><b>BAN</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>BAN [<u>#channel</u> [<u>nick</u> [<u>reason</u>]]]</b>
+&nbsp;
+&nbsp;Bans a selected nick on a channel. If nick is not given,
+&nbsp;it will ban you. If channel and nick are not given,
+&nbsp;it will ban you on all channels you're on, provided you
+&nbsp;have the rights to.
+&nbsp;
+&nbsp;By default, limited to AOPs or those with level 5 access 
+&nbsp;and above on the channel.
+
+</pre>
+          </li>
+          <li><b>TOPIC</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>TOPIC <u>channel</u> [<u>topic</u>]</b>
+&nbsp;
+&nbsp;Causes ChanServ to set the channel topic to the one
+&nbsp;specified. If <b>topic</b> is not given, then an empty topic
+&nbsp;is set. This command is most useful in conjunction
+&nbsp;with <b>SET TOPICLOCK</b>. See <b>/msg ChanServ HELP SET TOPICLOCK</b>
+&nbsp;for more information.
+&nbsp;
+&nbsp;By default, limited to those with founder access on the
+&nbsp;channel. 
+
+</pre>
+          </li>
+          <li><b>CLEAR</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>CLEAR <u>channel</u> <u>what</u></b>
+&nbsp;
+&nbsp;Tells ChanServ to clear certain settings on a channel.  <u>what</u>
+&nbsp;can be any of the following:
+&nbsp;
+&nbsp;     MODES    Resets all modes on the channel (i.e. clears
+&nbsp;                  modes i,k,l,m,n,p,s,t).
+&nbsp;     BANS     Clears all bans on the channel.
+&nbsp;     EXCEPTS  Clears all excepts on the channel.
+&nbsp;     OPS      Removes channel-operator status (mode +o) from
+&nbsp;                  all channel operators.
+&nbsp;     VOICES   Removes "voice" status (mode +v) from anyone
+&nbsp;                  with that mode set.
+&nbsp;     USERS    Removes (kicks) all users from the channel.
+&nbsp;
+&nbsp;By default, limited to those with founder access on the
+&nbsp;channel.
+&nbsp;
+</pre>
+          </li>
+          <li><b>GETKEY</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>GETKEY <u>channel</u></b>
+&nbsp;
+&nbsp;Returns the key of the given channel. This is a command
+&nbsp;mainly intended to be used by bots and/or scripts, so
+&nbsp;the output is in the following way:
+&nbsp;
+&nbsp;KEY &lt;channel&gt; &lt;key&gt;
+&nbsp;
+&nbsp;key is "NO KEY" if no key is set.
+&nbsp;
+</pre>
+          </li>
+          <li><b>SENDPASS</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SENDPASS <u>channel</u></b>
+&nbsp;
+&nbsp;Send the password of the given channel to the e-mail address
+&nbsp;set in the founder's nickname record. This command is really 
+&nbsp;useful to deal with lost passwords.
+&nbsp;
+&nbsp;May be limited to <b>IRC operators</b> on certain networks.
+&nbsp;
+&nbsp;This command is unavailable when encryption is enabled.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN HELP</b><br />
+            <pre>&nbsp;
+&nbsp;The following commands are available to Services admins:
+&nbsp;
+&nbsp;    GETPASS    Retrieve the founder password for a channel
+&nbsp;                   (only if encryption is disabled)
+&nbsp;    FORBID     Prevent a channel from being used
+&nbsp;    SUSPEND    Prevent a channel from being used preserving
+&nbsp;                   channel data and settings.
+&nbsp;    UNSUSPEND  Releases a suspended channel.
+&nbsp;    STATUS     Returns the current access level of a user
+&nbsp;                   on a channel
+&nbsp;
+&nbsp;Services admins can also drop any channel without needing
+&nbsp;to identify via password, and may view the access, AKICK,
+&nbsp;and level setting lists for any channel.
+&nbsp;
+</pre>
+          </li>
+          <li><b>SERVADMIN LOGOUT</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>LOGOUT <u>channel</u> [<u>nickname</u>]</b>
+&nbsp;
+&nbsp;This command will log the selected nickname out meaning they 
+&nbsp;would have to reidentify themselves to regain their access.
+&nbsp;
+&nbsp;If you are the founder of the channel, you can log out anybody,
+&nbsp;else you can only log out yourself.
+&nbsp;
+&nbsp;If you are a <b>Services admin</b>, you can log out 
+&nbsp;anybody of any channel without having to be the founder
+&nbsp;of the channel. Also, you can omit the nickname parameter;
+&nbsp;this will log out all identified users from the channel.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN DROP</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>DROP <u>channel</u></b>
+&nbsp;
+&nbsp;Unregisters the named channel.  Only <b>Services admins</b>
+&nbsp;can drop a channel for which they have not identified.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN SET</b><br />
+            <pre>&nbsp;
+&nbsp;Services admins can also set the option <b>NOEXPIRE</b>, with
+&nbsp;which channels can be prevented from expiring.
+&nbsp;Additionally, Services admins can set options for any
+&nbsp;channel without identifying by password for the channel.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN SET NOEXPIRE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SET <u>channel</u> NOEXPIRE {ON | OFF}</b>
+&nbsp;
+&nbsp;Sets whether the given channel will expire.  Setting this
+&nbsp;to ON prevents the channel from expiring.
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN INFO</b><br />
+            <pre>&nbsp;
+&nbsp;Services admins can use the <b>ALL</b> parameter with any channel.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN LIST</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>LIST <u>pattern</u> [FORBIDDEN] [SUSPENDED] [NOEXPIRE]</b>
+&nbsp;
+&nbsp;Lists all registered channels matching the given pattern.
+&nbsp;Channels with the <b>PRIVATE</b> option set will only be displayed
+&nbsp;to Services admins. Channels with the <b>NOEXPIRE</b> option set 
+&nbsp;will have a <b>!</b> prepended to the channel name for Services admins.
+&nbsp;
+&nbsp;If the FORBIDDEN, SUSPENDED or NOEXPIRE options are given, only 
+&nbsp;channels which, respectively, are FORBIDden, SUSPENDed or have 
+&nbsp;the NOEXPIRE flag set will be displayed.  If both options are 
+&nbsp;given, both types of channels will be displayed. These options are 
+&nbsp;limited to <u>Services admins</u>.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN GETPASS</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>GETPASS <u>channel</u></b>
+&nbsp;
+&nbsp;Returns the password for the given channel.  <b>Note</b> that
+&nbsp;whenever this command is used, a message including the
+&nbsp;person who issued the command and the channel it was used
+&nbsp;on will be logged and sent out as a WALLOPS/GLOBOPS.
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN FORBID</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>FORBID <u>channel</u> [<u>reason</u>]</b>
+&nbsp;
+&nbsp;Disallows anyone from registering or using the given
+&nbsp;channel.  May be cancelled by dropping the channel.
+&nbsp;
+&nbsp;Reason may be required on certain networks.
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN SUSPEND</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>SUSPEND <u>channel</u> [<u>reason</u>]</b>
+&nbsp;
+&nbsp;Disallows anyone from registering or using the given
+&nbsp;channel.  May be cancelled by using the UNSUSPEND
+&nbsp;command to preserve all previous channel data/settings.
+&nbsp;
+&nbsp;Reason may be required on certain networks.
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN UNSUSPEND</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>UNSUSPEND <u>channel</u></b>
+&nbsp;
+&nbsp;Releases a suspended channel. All data and settings
+&nbsp;are preserved from before the suspension.
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>SERVADMIN STATUS</b><br />
+                <pre>&nbsp;<i>Syntax:</i> /msg ChanServ  <b>STATUS <u>channel</u> <u>nickname</u></b>
+&nbsp;
+&nbsp;Returns the current access level of the given nick on the
+&nbsp;given channel.  The reply is of the form:
+&nbsp;
+&nbsp;    STATUS <u>channel</u> <u>nickname</u> <u>access-level</u>
+&nbsp;
+&nbsp;If an error occurs, the reply will be in the form:
+&nbsp;
+&nbsp;    STATUS ERROR <u>error-message</u>
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre></li></ul><div align="center">
+<td align="right" valign="top" style=font-size:100%;white-space:nowrap; nowrap><small>
+
+<b><a href="../chat.html">deoxy.org/chat</a></b> : 
+<a href="unreal.htm">IRC Commands</a> | 
+<a href="http://irc.deoxy.org">Server Status</a>&mdash;<a href="ircd.motd.html" title="First thing you see on IRC">MOTD</a><br>
+
+<a href="modserv.htm">Services</a> : 
+<a href="nickserv.htm">NickServ</a> |
+<a href="chanserv.htm">ChanServ</a> |
+<a href="memoserv.htm">MemoServ</a> |
+<a href="botserv.htm">BotServ</a><br>
+
+<a href="alias.htm">Aliases</a> | 
+<a href="privsec.htm">Privacy/Security</a> | 
+<a href="../meme/SearchBot.html">SearchBot</a> | 
+<a href="java.htm">Java Clients</a><br>
+
+</small></td>
+</div>
+</body>
+</html>

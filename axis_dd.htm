@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title></title>
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+<META HTTP-EQUIV="EXPIRES" CONTENT="0">
+<!-- META HTTP-EQUIV="REFRESH" CONTENT="5; URL=http://deoxy.org/chatr" -->
+<SCRIPT LANGUAGE="JavaScript"><!--
+
+if (document.images) {
+    var imageoff = new Image()
+    var imageon  = new Image()
+    imageoff.src  = 'dia/dia3anim.gif'
+    imageon.src   = 'dia/dia3anim.gif'
+//  imageon.src   = 'gaia/eyefood/gaiasm.gif'
+}
+  
+function change(image,ext) {
+    if (document.images)
+        document.images[image].src = eval(image + ext + ".src")
+}
+
+// --></script>
+
+</head>
+
+<body bgcolor="#000000">
+
+<div style="width: 100%; height: 100%; left: 0px; top: 0px; position: absolute; z-index: 0;">
+<img src="img/zoneplate.jpg" style="width: 100%; height: 100%;">
+</div>
+
+<div style="left:73%; top:30%; z-index: 1; position: absolute;">
+<a title=chatter href="chatr.html" onMouseOver="change('image','on')" onMouseOut="change('image','off')">
+<img src="dia/dia3anim.gif" name="image" style="width:58px; height:58px; border: 0" alt=""  /></a>
+</div> 
+
+</body>
+</html>

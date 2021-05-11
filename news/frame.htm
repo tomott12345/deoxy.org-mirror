@@ -1,0 +1,75 @@
+<html>
+<head>
+<LINK REL="stylesheet" HREF="../inc/css/deoxy.org.css" TYPE="text/css">
+<title>news</title>
+<script type="text/javascript">
+function gonews(what) {
+ var whereto = what.options[what.selectedIndex].value;
+ if (whereto.match(/axis_blacknews/) || whereto.match(/cloud/) || whereto.match(/bot.htm/)) {
+  news.location.href = whereto
+ }
+ else{
+  nu.location.href = whereto
+ }
+}
+</script>
+</head>
+<body bgcolor=#111111 text=#888888> 
+
+<table cellpadding=0 cellspacing=0 width=100% height=100%>
+<tr><td colspan=2 style=height:23px;>
+
+<table border=0 width=100% cellpadding=0 cellspacing=0>
+<tr>
+
+<script type="text/javascript">
+document.write('<form target="nu" name="newsJump">');
+</script>
+
+<noscript>
+<form action="http://deoxy.org/cgi/jump.pl" target="nu" name="newsJump">
+</noscript>
+
+<td width="33%">
+
+<noscript>
+<input type="hidden" name="from" value='/'>
+&nbsp;&nbsp;<input type="Submit" value="go" class="button">
+</noscript>
+
+<select name="to" class="select" onChange="gonews(this)" onDblClick="gonews(this)">
+<option value="http://deoxy.org/news/viewcat?target=news">categories</option>
+<option value="http://deoxy.org/news/latest.pl?target=_blank" selected>latest headlines</option>
+<option value="http://deoxy.org/news/newfeeds.pl?target=_blank">new newsfeeds</option>
+<option value="http://deoxy.org/news/viewer?html=1&target=_blank">all newsfeeds</option>
+<option value="http://deoxy.org/news/cloud?n=10&m=1&s=1&t=_blank">cloud</option>
+<option value="http://deoxy.org/news/cloud/today?n=5&m=1&s=1&t=_blank">&nbsp;\_today</option>
+<option value="http://deoxy.org/news/bot.htm?target=_blank">bot</option>
+</select>&nbsp;&nbsp;
+</td></form>
+<form target=news name=searchform action="http://deoxy.org/news/search"><td align="right" width="33%" nowrap>
+
+<input type="Submit" value="search" class="button"> 
+<input type="Text" name="q" size="16" class="input"> <small>
+<input type=checkbox name=rss value=1 id=rss class=input>
+<label for=rss>RSS</label></small>
+<input type=hidden name=small value=1>
+<input type=hidden name=target value=_blank>
+
+</td></form><form>
+
+<td align="right" width="33%"><INPUT
+ type="button" class="button" value="&lt;"
+ onClick="frames['news'].history.back()"><INPUT
+ type="button" class="button" value="&gt;"
+ onClick="frames['news'].history.forward()">
+</td></form></tr></table>
+
+<tr><td width=240>
+
+<iframe src="latest.pl@target=_blank.html" name=nu scrolling=auto frameborder=0 style=width:100%;height:100%;></iframe><td>
+<iframe src="http://deoxy.org/news/bot.htm" name=news scrolling=auto frameborder=0 style=width:100%;height:100%;>
+
+</table>
+</body>
+</html>

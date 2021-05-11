@@ -1,0 +1,23 @@
+DIV.footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  max-width: 100%;
+}
+
+DIV.wikifooter {
+  clear:both;
+  background-color : #000000;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 0px;
+  padding-bottom: 1px;
+  padding-left: 20px;
+  padding-right: 0px;
+  position: absolute;
+  bottom: 0px;
+  max-width: 100%;
+  width: 100%;
+}

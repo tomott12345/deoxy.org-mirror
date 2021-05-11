@@ -1,0 +1,990 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>OperServ</title>
+<LINK REL="home"       HREF="../index.html">
+<LINK REL="search"     HREF="http://deoxy.org/find">
+<LINK REL="stylesheet" HREF="../inc/css/deoxy.org.css" TYPE="text/css">
+<LINK REL="alternate"  HREF="../cgi/nu.pl@rss=1" TITLE="recent changes at deoxy.org" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/news/cloud?rss=1" TITLE="deoxy news cloud" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/news/cloud/today?rss=1" TITLE="deoxy news cloud today" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="../news/feeds/moonphase.xml" TITLE="lunar phases" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/video/random/rss" TITLE="random video" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="../koans@rss=1" TITLE="random koan" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="../iching/random/rss" TITLE="random iching hexagram" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/cgi/randlink.pl?rss=1" TITLE="random link at deoxy.org" TYPE="application/rss+xml">
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch/find.xml"  title="deoxy find">
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch/news.xml"  title="deoxy news">
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch/newstoday.xml"  title="deoxy news today">
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch/videx.xml" title="deoxy video">
+<style type="text/css">input.wikiform { background-color:#111111; font-size:13px; color:#909090; border:0px; cursor:pointer; }</style>
+<meta name="MSSmartTagsPreventParsing" content="true">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="robots" content="all">
+
+<LINK REL="stylesheet" HREF="../inc/css/print.css" TYPE="text/css" MEDIA="print">
+<script type="text/javascript" src="../bin/chatterwindow.js"></script>
+<script type="text/javascript" src="../bin/cookies.js"></script>
+<script type="text/javascript">
+function openVideo(id) {
+ var s = 'screenX=100,screenY=100,left=100,top=100,width=640,height=565,'
+ var x = 'resizable=1,status=0,menubar=0,toolbar=0,location=0,scrollbars=0'
+ window.open('http://deoxy.org/video/'+id,'',s+x)}
+</script>
+
+<body bgcolor="#000000" text="#c0c0c0" link="#ffffff" vlink="#ffffff" alink="#aaffaa">
+<a name="top"></a><div id=_header>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr bgcolor="#111111">
+<td nowrap rowspan=2 bgcolor="#000000" width="20" background='../gif/background2.jpg'>&nbsp;</td>
+<td nowrap rowspan=2 bgcolor="#000000" align=center style=width:90px;><a
+ href="../index.html"
+ title=deoxy.org
+ target=_top><!-- img
+ src="http://deoxy.org/gif/ooleft_left.gif" border=0 
+--><img src="../vi/rguTWaPMnZs.jpg" style=height:68px;width:100%;margin-left:1px; border=0></a></td>
+<form action='http://deoxy.org/cgi/jump.pl' method="post">
+<td nowrap align="right" background='../img/vortex0b.gif'>
+
+<table cellspacing="0" cellpadding="0" border=0 background='../gif/background2.jpg'><tr><td nowrap>
+<select name="to" class="select" onChange="x=this.options[this.selectedIndex].value;location.href=x.match(/^http:/)?x:'http://deoxy.org/'+x;">
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="nu.htm">&nbsp;&nbsp;\_updates</option>
+<!-- option value="watts.htm">alanwatts</option -->
+<!-- option value="alephnull">aleph</option -->
+<option value="8brains.htm">circuits</option>
+<option value="8basic.htm">&nbsp;&nbsp;\_scripts</option>
+
+
+
+<!-- option value="ct">crimethinc</option -->
+<option value="gacwao">defrag</option>
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="contact">&nbsp;&nbsp;|_contact</option>
+<option VALUE="http://m.deoxy.org">&nbsp;&nbsp;|_mobile</option>
+<!-- option value="wiki/Deoxy/Help">&nbsp;&nbsp;|_help</option -->
+<option value="meme/DNA">DNA</option>
+<option value="find">Find?</option>
+<!-- option value="forum">forum</option>
+<option value="newposts">&nbsp;&nbsp;|_newposts</option -->
+<!-- option value="hyper.htm">hyperspace</option -->
+<option value="iching">IChing</option>
+<option value="iching/random">&nbsp;&nbsp;\_random</option>
+<option value="imagine.mil">imagine.mil</option>
+<option value="inc.htm">incunabula</option>
+<!-- option value="http://irc.deoxy.org">IRC status</option -->
+<option value="koans">koans</option>
+<option value="koan/random">&nbsp;&nbsp;\_random</option>
+
+<option value="media">media</option>
+<option value="media/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="meme">meme</option>
+<option value="meme/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="news">news</option>
+<option VALUE="news/cloud/today">&nbsp;&nbsp;|_today</option>
+<option VALUE="news/digestc">&nbsp;&nbsp;|_digest</option>
+<option VALUE="news/view">&nbsp;&nbsp;|_category</option>  
+<option VALUE="http://m.deoxy.org/news">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\_mobile</option>
+<option value="omega.htm">omega</option>
+<option value="pdfa">PDFA</option>
+<option value="index/People">People</option>
+<option value="leary.htm">&nbsp;&nbsp;|_Leary</option>
+<option value="lilly.htm">&nbsp;&nbsp;|_Lilly</option>
+<option value="mckenna.htm">&nbsp;&nbsp;|_McKenna</option>
+<option value="media/McLuhan">&nbsp;&nbsp;|_McLuhan</option>
+<option value="raw.htm">&nbsp;&nbsp;|_RAWilson</option>
+<option value="philo.htm">philosophos</option>
+<option value="cgi/randlink.pl?go">random</option>
+<option value="rss.htm">RSS</option>
+<!-- option value="time/sabbats.htm">sabbats</option>
+<option value="shaman.htm">shaman</option -->
+<option value="stats">stats</option>
+<option value="maps">&nbsp;&nbsp;\_map</option>
+<!-- option value="tcrime.htm">thoughtcrime</option -->
+<option value="topics">topics</a>
+<option value="nu.htm">&nbsp;&nbsp;\_cloud</option>
+<option value="nu.htm">updates</option>
+<option value="wiki/Deoxy/Video">video</option>
+<option value="videx">&nbsp;&nbsp;|_index</option>
+<option value="vidcloud">&nbsp;&nbsp;|_cloud</option>
+<option value="vidimg">&nbsp;&nbsp;|_images</option>
+<option VALUE="warnings.htm">warnings</option>
+<!-- option value="wiki">wiki</option>
+<option value="wiki/Recent">&nbsp;&nbsp;|_changes</option>
+<option value="wiki/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="online">who's online</option -->
+</select>
+
+<input type="hidden" name="from" value='/chat/operserv.htm'>
+<noscript><input type="Submit" value="go" class="button"></noscript>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></form>
+
+<form action="http://translate.google.com/translate" method="post" target="_top" name="trans" id="trans"><td nowrap align="center">
+<input type="Submit" value="to" class="button" title="Google translation">
+<select name="tl" class="select" title="Google translation">
+<option value=af>Afrikaans</option>
+<option value=sq>Albanian</option>
+<option value="ar">Arabic</option>
+<option value=hy>Armenian</option>
+<option value=az>Azerbaijani</option>
+<option value=eu>Basque</option>
+<option value=be>Belarusian</option>
+<option value=bn>Bengali</option>
+<option value=bs>Bosnian</option>
+<option value="bg">Bulgarian</option>
+<option value=my>Burmese</option>
+<option value="ca">Catalan</option>
+<option value=ceb>Cebuano</option>
+<option value=ny>Chichewa</option>
+<option value="zh-CN">Chinese CN</option>
+<option value="zh-TW">Chinese TW</option>
+<option value="hr">Croatian</option>
+<option value="cs">Czech</option>
+<option value="da">Danish</option>
+<option value="nl">Dutch</option>
+<option value=eo>Esperanto</option>
+<option value="et">Estonian</option>
+<option value="tl">Filipino</option>
+<option value="fi">Finnish</option>
+<option value="fr">French</option>
+<option value="gl">Galacian</option>
+<option value=ka>Georgian</option>
+<option value="de">German</option>
+<option value="el">Greek</option>
+<option value=gu>Gujarati</option>
+<option value=ht>Haitian Creole</option>
+<option value=ha>Hausa</option>
+<option value="iw">Hebrew</option>
+<option value="hi">Hindi</option>
+<option value=hmn>Hmong</option>
+<option value="hu">Hungarian</option>
+<option value=is>Icelandic</option>
+<option value=ig>Igbo</option>
+<option value="id">Indonesian</option>
+<option value=ga>Irish</option>
+<option value="it">Italian</option>
+<option value="ja">Japanese</option>
+<option value=jw>Javanese</option>
+<option value=kn>Kannada</option>
+<option value=kk>Kazakh</option>
+<option value=km>Khmer</option>
+<option value="ko">Korean</option>
+<option value=lo>Lao</option>
+<option value=la>Latin</option>
+<option value="lv">Latvian</option>
+<option value="lt">Lithuanian</option>
+<option value=mk>Macedonian</option>
+<option value=mg>Malagasy</option>
+<option value=ms>Malay</option>
+<option value=ml>Malayalam</option>
+<option value="mt">Maltese</option>
+<option value=mi>Maori</option>
+<option value=mr>Marathi</option>
+<option value=mn>Mongolian</option>
+<option value=ne>Nepali</option>
+<option value="no">Norwegian</option>
+<option value=fa>Persian</option>
+<option value="pl">Polish</option>
+<option value="pt">Portuguese</option>
+<option value=pa>Punjabi</option>
+<option value="ro">Romanian</option>
+<option value="ru">Russian</option>
+<option value="sr">Serbian</option>
+<option value=st>Sesotho</option>
+<option value=si>Sinhala</option>
+<option value="sk">Slovak</option>
+<option value="sl">Slovenian</option>
+<option value=so>Somali</option>
+<option value="es" selected>Spanish</option>
+<option value=su>Sundanese</option>
+<option value=sw>Swahili</option>
+<option value="sv">Swedish</option>
+<option value=tg>Tajik</option>
+<option value=ta>Tamil</option>
+<option value=te>Telugu</option>
+<option value="th">Thai</option>
+<option value="tr">Turkish</option>
+<option value="uk">Ukrainian</option>
+<option value=ur>Urdu</option>
+<option value=uz>Uzbek</option>
+<option value="vi">Vietnamese</option>
+<option value=cy>Welsh</option>
+<option value=yi>Yiddish</option>
+<option value=yo>Yoruba</option>
+<option value=zu>Zulu</option></select>
+<input type=hidden name=sl value="en">
+<input type=hidden name=hl value="en">
+<input type=hidden name=ie value="UTF-8">
+<input type=hidden name=u id=u value='http://deoxy.org/chat/operserv.htm'>
+</td></form>
+
+
+<td align="right" valign="middle" nowrap>
+<table cellspacing="0" cellpadding="0" border=0><tr>
+<form action=http://deoxy.org/find method=get name=sitesearchform>
+<td nowrap align=right valign="middle">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name=q size=15 class="input" title="search deoxy.org">
+<input type="Submit" value="find" class="button" title="search deoxy.org"></TD>
+</form></tr></table>
+</td></tr></table>
+
+</td></tr><SCRIPT TYPE="text/javascript">
+document.trans.tl.selectedIndex=Math.floor(Math.random()*(document.trans.tl.length+1))
+</script><tr><td bgcolor="#111111" background="../img/thin_horizontal_lines.gif" 
+style=white-space:nowrap;overflow:hidden;>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+<td style="background-image:url('../gif/background2.jpg');background-position:40 0;" width=20>&nbsp;</td>
+<td style=background-image:url(../img/thin_horizontal_lines.gif);>
+<div style=overflow:hidden;white-space:nowrap;>&nbsp;<small>[an error occurred while processing this directive]</small></div></td>
+
+<td width=20>&nbsp;</td>
+<form action=http://deoxy.org/cgi/jump.pl method=get target=_blank>
+<td align="right"><div style=overflow:hidden;display:none;>
+<font color="#909090"><a href="../nu.htm"><font color="#ffffff" size="-1">New</font></a> : <font size="-1">
+<a href="../wiki/Deoxy/Video.html" ><font color=#ffffff size=-2>Video</font></a> : <a href="http://deoxy.org/video/ubuTR5vXISA" onclick="window.open('http://deoxy.org/video?v=ubuTR5vXISA','','screenX=50,screenY=50,left=50,top=50,width=640,height=565,resizable=1,status=0,menubar=0,toolbar=0,location=0,scrollbars=0'); return false;" ><font color=#ffffff size=-2>DMT - The Spirit Molecule 1/5</font></a>
+
+</font></font></div></td>
+
+<td style="background-image:url('../gif/background2.jpg');background-position:0 0;" width=20>&nbsp;</td>
+</form></tr></table>
+</td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="#000000" align="right" background="../gif/background2.jpg">
+
+</td></tr></table></div><p>
+
+
+<table width="100%"><tr>
+<td><h1>&nbsp;OperServ</h1></td>
+<td align="right" valign="top" style=font-size:100%;white-space:nowrap; nowrap><small>
+
+<b><a href="../chat.html">deoxy.org/chat</a></b> : 
+<a href="unreal.htm">IRC Commands</a> | 
+<a href="http://irc.deoxy.org">Server Status</a>&mdash;<a href="ircd.motd.html" title="First thing you see on IRC">MOTD</a><br>
+
+<a href="modserv.htm">Services</a> : 
+<a href="nickserv.htm">NickServ</a> |
+<a href="chanserv.htm">ChanServ</a> |
+<a href="memoserv.htm">MemoServ</a> |
+<a href="botserv.htm">BotServ</a><br>
+
+<a href="alias.htm">Aliases</a> | 
+<a href="privsec.htm">Privacy/Security</a> | 
+<a href="../meme/SearchBot.html">SearchBot</a> | 
+<a href="java.htm">Java Clients</a><br>
+
+</small></td>
+</tr></table>
+<ul><p>
+<pre>&nbsp;OperServ commands:
+&nbsp;    GLOBAL      Send a message to all users
+&nbsp;    STATS       Show status of Services and network
+&nbsp;    OPER LIST   List all Services operators
+&nbsp;    ADMIN LIST  List all Services admins
+&nbsp;    STAFF       Display Services staff and online status
+
+</pre>
+          </li>
+          <li><b>GLOBAL</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>GLOBAL <u>message</u></b>
+&nbsp;
+&nbsp;Allows IRCops to send messages to all users on the network.
+&nbsp;The message will be sent from the nick <b>OperServ</b>.
+
+</pre>
+          </li>
+          <li><b>STATS</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>STATS [AKILL | ALL | RESET]</b>
+&nbsp;
+&nbsp;Without any option, shows the current number of users and
+&nbsp;IRCops online (excluding Services), the highest number of
+&nbsp;users online since Services was started, and the length of
+&nbsp;time Services has been running.
+&nbsp;
+&nbsp;With the <b>AKILL</b> option, displays the current size of the
+&nbsp;AKILL list and the current default expiry time.
+&nbsp;
+&nbsp;The <b>ALL</b> option is available only to Services admins, and
+&nbsp;displays information on Services' memory usage.  Using this
+&nbsp;option can freeze Services for a short period of time on
+&nbsp;large networks, so don't overuse it!
+&nbsp;
+&nbsp;The <b>RESET</b> option currently resets the maximum user count
+&nbsp;to the number of users currently present on the network.
+&nbsp;
+&nbsp;<b>UPTIME</b> may be used as a synonym for <b>STATS</b>.
+
+</pre>
+          </li>
+          <li><b>OPER</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>OPER ADD <u>nick</u></b>
+&nbsp;        <b>OPER DEL {<u>nick</u> | <u>entry-num</u> | <u>list</u>}</b>
+&nbsp;        <b>OPER LIST [<u>mask</u> | <u>list</u>]</b>
+&nbsp;        <b>OPER CLEAR</b>
+&nbsp;
+&nbsp;Allows the Services admins to add or remove nicknames
+&nbsp;to or from the Services operator list.  A user whose nickname
+&nbsp;is on the Services operator list and who has identified to
+&nbsp;OperServ will be able to access Services operator commands.
+&nbsp;
+&nbsp;The <b>OPER ADD</b> command adds the given nickname to the
+&nbsp;Services operator list.
+&nbsp;
+&nbsp;The <b>OPER DEL</b> command removes the given nick from the
+&nbsp;Services operator list.  If a list of entry numbers is given, 
+&nbsp;those entries are deleted.  (See the example for LIST below.)
+&nbsp;
+&nbsp;The <b>OPER LIST</b> command displays the Services operator list.  
+&nbsp;If a wildcard mask is given, only those entries matching the
+&nbsp;mask are displayed.  If a list of entry numbers is given,
+&nbsp;only those entries are shown; for example:
+
+&nbsp;   <b>OPER LIST 2-5,7-9</b>
+&nbsp;      Lists Services operator entries numbered 2 through 
+&nbsp;      5 and 7 through 9.
+&nbsp;      
+&nbsp;The <b>OPER CLEAR</b> command clears all entries of the
+&nbsp;Services operator list.
+&nbsp;
+&nbsp;Any IRC operator may use the <b>OPER LIST</b> form of the command.
+&nbsp;All other use limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>ADMIN</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>ADMIN ADD <u>nick</u></b>
+&nbsp;        <b>ADMIN DEL {<u>nick</u> | <u>entry-num</u> | <u>list</u>}</b>
+&nbsp;        <b>ADMIN LIST [<u>mask</u> | <u>list</u>]</b>
+&nbsp;        <b>ADMIN CLEAR</b>
+&nbsp;
+&nbsp;Allows the Services root to add or remove nicknames
+&nbsp;to or from the Services admin list.  A user whose nickname
+&nbsp;is on the Services admin list and who has identified to
+&nbsp;OperServ will be able to access Services admin commands.
+&nbsp;
+&nbsp;The <b>ADMIN ADD</b> command adds the given nickname to the
+&nbsp;Services admin list.
+&nbsp;
+&nbsp;The <b>ADMIN DEL</b> command removes the given nick from the
+&nbsp;Services admin list.  If a list of entry numbers is given,
+&nbsp;those entries are deleted.  (See the example for LIST below.)
+&nbsp;
+&nbsp;The <b>ADMIN LIST</b> command displays the Services admin list.  
+&nbsp;If a wildcard mask is given, only those entries matching the
+&nbsp;mask are displayed.  If a list of entry numbers is given,
+&nbsp;only those entries are shown; for example:
+
+&nbsp;   <b>ADMIN LIST 2-5,7-9</b>
+&nbsp;      Lists Services admin entries numbered 2 through 
+&nbsp;      5 and 7 through 9.
+&nbsp;      
+&nbsp;The <b>ADMIN CLEAR</b> command clears all entries of the
+&nbsp;Services admin list.
+&nbsp;
+&nbsp;Any IRC operator may use the <b>ADMIN LIST</b> form of the command.
+&nbsp;All other use limited to <b>Services root</b>.
+
+</pre>
+          </li>
+          <li><b>IGNORE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>IGNORE {ADD|DEL|LIST|CLEAR} [<u>time</u>] [<u>nick</u>]</b>
+
+&nbsp;Allows Services Admins to make Services ignore a nick for a
+&nbsp;certain time or until the next restart. The default time
+&nbsp;format is seconds. You can specify it by using units. Valid
+&nbsp;units are: <u>s</u> for seconds, <u>m</u> for minutes, <u>h</u> for hours and
+&nbsp;<u>d</u> for days. Combinations of these units are not permitted. To 
+&nbsp;make Services permanently ignore the user type 0 as time.
+
+</pre>
+          </li>
+          <li><b>MODE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>MODE <u>channel</u> <u>modes</u></b>
+&nbsp;
+&nbsp;Allows Services operators to set channel modes for any
+&nbsp;channel.  Parameters are the same as for the standard /MODE
+&nbsp;command.
+&nbsp;
+&nbsp;Limited to <b>Services operators</b>.
+
+</pre>
+          </li>
+          <li><b>UMODE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>UMODE <u>user</u> <u>modes</u></b>
+&nbsp;
+&nbsp;Allows Services admins to set user modes for any user.
+&nbsp;Parameters are the same as for the standard /MODE
+&nbsp;command.
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>OLINE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>OLINE <u>user</u> <u>flags</u></b>
+&nbsp;
+&nbsp;Allows Services admins to give Operflags to any user.
+&nbsp;Flags have to be prefixed with a "+" or a "-". To
+&nbsp;remove all flags simply type a "-" instead of any flags.
+
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>CLEARMODES</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>CLEARMODES <u>channel</u> [ALL]</b>
+&nbsp;
+&nbsp;Clears all binary modes (i,k,l,m,n,p,s,t) and bans from a
+&nbsp;channel.  If <b>ALL</b> is given, also clears all ops and
+&nbsp;voices (+o and +v modes) from the channel.
+&nbsp;
+&nbsp;Limited to <b>Services operators</b>.
+
+</pre>
+          </li>
+          <li><b>KICK</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>KICK <u>channel</u> <u>user</u> <u>reason</u></b>
+&nbsp;
+&nbsp;Allows IRCops to kick a user from any channel.
+&nbsp;Parameters are the same as for the standard /KICK
+&nbsp;command.  The kick message will have the nickname of the
+&nbsp;IRCop sending the KICK command prepended; for example:
+&nbsp;
+&nbsp;*** SpamMan has been kicked off channel #my_channel by OperServ (Alcan (Flood))
+&nbsp;
+&nbsp;Limited to <b>Services operators</b>.
+
+</pre>
+          </li>
+          <li><b>AKILL</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>AKILL ADD [+<u>expiry</u>] <u>mask</u> <u>reason</u></b>
+&nbsp;        <b>AKILL DEL {<u>mask</u> | <u>entry-num</u> | <u>list</u>}</b>
+&nbsp;        <b>AKILL LIST [<u>mask</u> | <u>list</u>]</b>
+&nbsp;        <b>AKILL VIEW [<u>mask</u> | <u>list</u>]</b>
+&nbsp;        <b>AKILL CLEAR</b>
+&nbsp;
+&nbsp;Allows Services operators to manipulate the AKILL list.  If
+&nbsp;a user matching an AKILL mask attempts to connect, Services
+&nbsp;will issue a KILL for that user and, on supported server
+&nbsp;types, will instruct all servers to add a ban (K-line) for
+&nbsp;the mask which the user matched.
+&nbsp;
+&nbsp;<b>AKILL ADD</b> adds the given user@host/ip mask to the AKILL
+&nbsp;list for the given reason (which <b>must</b> be given).
+&nbsp;<u>expiry</u> is specified as an integer followed by one of <u>d</u> 
+&nbsp;(days), <u>h</u> (hours), or <u>m</u> (minutes).  Combinations (such as 
+&nbsp;<u>1h30m</u>) are not permitted.  If a unit specifier is not 
+&nbsp;included, the default is days (so <u>+30</u> by itself means 30 
+&nbsp;days).  To add an AKILL which does not expire, use <u>+0</u>.  If the
+&nbsp;usermask to be added starts with a <u>+</u>, an expiry time must
+&nbsp;be given, even if it is the same as the default.  The
+&nbsp;current AKILL default expiry time can be found with the
+&nbsp;<b>STATS AKILL</b> command.
+&nbsp;
+&nbsp;The <b>AKILL DEL</b> command removes the given mask from the
+&nbsp;AKILL list if it is present.  If a list of entry numbers is 
+&nbsp;given, those entries are deleted.  (See the example for LIST 
+&nbsp;below.)
+&nbsp;
+&nbsp;The <b>AKILL LIST</b> command displays the AKILL list.  
+&nbsp;If a wildcard mask is given, only those entries matching the
+&nbsp;mask are displayed.  If a list of entry numbers is given,
+&nbsp;only those entries are shown; for example:
+
+&nbsp;   <b>AKILL LIST 2-5,7-9</b>
+&nbsp;      Lists AKILL entries numbered 2 through 5 and 7 
+&nbsp;      through 9.
+&nbsp;      
+&nbsp;<b>AKILL VIEW</b> is a more verbose version of <b>AKILL LIST</b>, and 
+&nbsp;will show who added an AKILL, the date it was added, and when 
+&nbsp;it expires, as well as the user@host/ip mask and reason.
+&nbsp;
+&nbsp;<b>AKILL CLEAR</b> clears all entries of the AKILL list.
+&nbsp;
+&nbsp;Limited to <b>Services operators</b>.
+&nbsp;
+</pre>
+          </li>
+          <li><b>SGLINE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>SGLINE ADD [+<u>expiry</u>] <u>mask</u>:<u>reason</u></b>
+&nbsp;    	<b>SGLINE DEL {<u>mask</u> | <u>entry-num</u> | <u>list</u>}</b>
+&nbsp;        <b>SGLINE LIST [<u>mask</u> | <u>list</u>]</b>
+&nbsp;        <b>SGLINE VIEW [<u>mask</u> | <u>list</u>]</b>
+&nbsp;        <b>SGLINE CLEAR</b>
+&nbsp;
+&nbsp;Allows Services operators to manipulate the SGLINE list.  If
+&nbsp;a user with a realname matching an SGLINE mask attempts to 
+&nbsp;connect, Services will not allow it to pursue his IRC
+&nbsp;session.
+&nbsp;
+&nbsp;<b>SGLINE ADD</b> adds the given realname mask to the SGLINE
+&nbsp;list for the given reason (which <b>must</b> be given).
+&nbsp;<u>expiry</u> is specified as an integer followed by one of <u>d</u> 
+&nbsp;(days), <u>h</u> (hours), or <u>m</u> (minutes).  Combinations (such as 
+&nbsp;<u>1h30m</u>) are not permitted.  If a unit specifier is not 
+&nbsp;included, the default is days (so <u>+30</u> by itself means 30 
+&nbsp;days).  To add an SGLINE which does not expire, use <u>+0</u>.  If the
+&nbsp;realname mask to be added starts with a <u>+</u>, an expiry time must
+&nbsp;be given, even if it is the same as the default.  The
+&nbsp;current SGLINE default expiry time can be found with the
+&nbsp;<b>STATS AKILL</b> command.
+&nbsp;Note: because the realname mask may contain spaces, the
+&nbsp;separator between it and the reason is a colon.
+&nbsp;
+&nbsp;The <b>SGLINE DEL</b> command removes the given mask from the
+&nbsp;SGLINE list if it is present.  If a list of entry numbers is 
+&nbsp;given, those entries are deleted.  (See the example for LIST 
+&nbsp;below.)
+&nbsp;
+&nbsp;The <b>SGLINE LIST</b> command displays the SGLINE list.  
+&nbsp;If a wildcard mask is given, only those entries matching the
+&nbsp;mask are displayed.  If a list of entry numbers is given,
+&nbsp;only those entries are shown; for example:
+
+&nbsp;   <b>SGLINE LIST 2-5,7-9</b>
+&nbsp;      Lists SGLINE entries numbered 2 through 5 and 7 
+&nbsp;      through 9.
+&nbsp;      
+&nbsp;<b>SGLINE VIEW</b> is a more verbose version of <b>SGLINE LIST</b>, and 
+&nbsp;will show who added an SGLINE, the date it was added, and when 
+&nbsp;it expires, as well as the realname mask and reason.
+&nbsp;
+&nbsp;<b>SGLINE CLEAR</b> clears all entries of the SGLINE list.
+&nbsp;
+&nbsp;Limited to <b>Services operators</b>.
+
+</pre>
+          </li>
+          <li><b>SQLINE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>SQLINE ADD [+<u>expiry</u>] <u>mask</u>:<u>reason</u></b>
+&nbsp;    	<b>SQLINE DEL {<u>mask</u> | <u>entry-num</u> | <u>list</u>}</b>
+&nbsp;        <b>SQLINE LIST [<u>mask</u> | <u>list</u>]</b>
+&nbsp;        <b>SQLINE VIEW [<u>mask</u> | <u>list</u>]</b>
+&nbsp;        <b>SQLINE CLEAR</b>
+&nbsp;
+&nbsp;Allows Services operators to manipulate the SQLINE list.  If
+&nbsp;a user with a nick matching an SQLINE mask attempts to 
+&nbsp;connect, Services will not allow it to pursue his IRC
+&nbsp;session.
+
+&nbsp;If the first character of the mask is #, services will 
+&nbsp;prevent the use of matching channels (on IRCds that 
+&nbsp;support it).
+&nbsp;
+&nbsp;<b>SQLINE ADD</b> adds the given mask to the SQLINE
+&nbsp;list for the given reason (which <b>must</b> be given).
+&nbsp;<u>expiry</u> is specified as an integer followed by one of <u>d</u> 
+&nbsp;(days), <u>h</u> (hours), or <u>m</u> (minutes).  Combinations (such as 
+&nbsp;<u>1h30m</u>) are not permitted.  If a unit specifier is not 
+&nbsp;included, the default is days (so <u>+30</u> by itself means 30 
+&nbsp;days).  To add an SQLINE which does not expire, use <u>+0</u>.  
+&nbsp;If the mask to be added starts with a <u>+</u>, an expiry time 
+&nbsp;must be given, even if it is the same as the default. The
+&nbsp;current SQLINE default expiry time can be found with the
+&nbsp;<b>STATS AKILL</b> command.
+&nbsp;
+&nbsp;The <b>SQLINE DEL</b> command removes the given mask from the
+&nbsp;SQLINE list if it is present.  If a list of entry numbers is 
+&nbsp;given, those entries are deleted.  (See the example for LIST 
+&nbsp;below.)
+&nbsp;
+&nbsp;The <b>SQLINE LIST</b> command displays the SQLINE list.  
+&nbsp;If a wildcard mask is given, only those entries matching the
+&nbsp;mask are displayed.  If a list of entry numbers is given,
+&nbsp;only those entries are shown; for example:
+
+&nbsp;   <b>SQLINE LIST 2-5,7-9</b>
+&nbsp;      Lists SQLINE entries numbered 2 through 5 and 7 
+&nbsp;      through 9.
+&nbsp;      
+&nbsp;<b>SQLINE VIEW</b> is a more verbose version of <b>SQLINE LIST</b>, and 
+&nbsp;will show who added an SQLINE, the date it was added, and when 
+&nbsp;it expires, as well as the mask and reason.
+&nbsp;
+&nbsp;<b>SQLINE CLEAR</b> clears all entries of the SQLINE list.
+&nbsp;
+&nbsp;Limited to <b>Services operators</b>.
+
+</pre>
+          </li>
+          <li><b>SZLINE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>SZLINE ADD [+<u>expiry</u>] <u>mask</u> <u>reason</u></b>
+&nbsp;        <b>SZLINE DEL {<u>mask</u> | <u>entry-num</u> | <u>list</u>}</b>
+&nbsp;        <b>SZLINE LIST [<u>mask</u> | <u>list</u>]</b>
+&nbsp;        <b>SZLINE VIEW [<u>mask</u> | <u>list</u>]</b>
+&nbsp;        <b>SZLINE CLEAR</b>
+&nbsp;
+&nbsp;Allows Services operators to manipulate the SZLINE list.  If
+&nbsp;a user with an IP matching an SZLINE mask attempts to 
+&nbsp;connect, Services will not allow it to pursue his IRC
+&nbsp;session (and this, whether the IP has a PTR RR or not).
+&nbsp;
+&nbsp;<b>SZLINE ADD</b> adds the given IP mask to the SZLINE
+&nbsp;list for the given reason (which <b>must</b> be given).
+&nbsp;<u>expiry</u> is specified as an integer followed by one of <u>d</u> 
+&nbsp;(days), <u>h</u> (hours), or <u>m</u> (minutes).  Combinations (such as 
+&nbsp;<u>1h30m</u>) are not permitted.  If a unit specifier is not 
+&nbsp;included, the default is days (so <u>+30</u> by itself means 30 
+&nbsp;days).  To add an SZLINE which does not expire, use <u>+0</u>.  If the
+&nbsp;realname mask to be added starts with a <u>+</u>, an expiry time must
+&nbsp;be given, even if it is the same as the default.  The
+&nbsp;current SZLINE default expiry time can be found with the
+&nbsp;<b>STATS AKILL</b> command.
+&nbsp;
+&nbsp;The <b>SZLINE DEL</b> command removes the given mask from the
+&nbsp;SZLINE list if it is present.  If a list of entry numbers is 
+&nbsp;given, those entries are deleted.  (See the example for LIST 
+&nbsp;below.)
+&nbsp;
+&nbsp;The <b>SZLINE LIST</b> command displays the SZLINE list.  
+&nbsp;If a wildcard mask is given, only those entries matching the
+&nbsp;mask are displayed.  If a list of entry numbers is given,
+&nbsp;only those entries are shown; for example:
+
+&nbsp;   <b>SZLINE LIST 2-5,7-9</b>
+&nbsp;      Lists SZLINE entries numbered 2 through 5 and 7 
+&nbsp;      through 9.
+&nbsp;      
+&nbsp;<b>SZLINE VIEW</b> is a more verbose version of <b>SZLINE LIST</b>, and 
+&nbsp;will show who added an SZLINE, the date it was added, and when
+&nbsp;it expires, as well as the IP mask and reason.
+&nbsp;
+&nbsp;<b>SZLINE CLEAR</b> clears all entries of the SZLINE list.
+&nbsp;
+&nbsp;Limited to <b>Services operators</b>.
+
+</pre>
+          </li>
+          <li><b>SET</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>SET <u>option</u> <u>setting</u></b>
+
+&nbsp;Sets various global Services options.  Option names
+&nbsp;currently defined are:
+&nbsp;    <b>READONLY</b>   Set read-only or read-write mode
+&nbsp;    <b>LOGCHAN</b>    Report log messages to a channel
+&nbsp;    <b>DEBUG</b>      Activate or deactivate debug mode
+&nbsp;    <b>NOEXPIRE</b>   Activate or deactivate no expire mode
+&nbsp;    <b>SUPERADMIN</b> Activate or deactivate super-admin mode
+
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>SET READONLY</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>SET READONLY {ON | OFF}</b>
+&nbsp;
+&nbsp;Sets read-only mode on or off.  In read-only mode, normal
+&nbsp;users will not be allowed to modify any Services data,
+&nbsp;including channel and nickname access lists, etc.  IRCops
+&nbsp;with sufficient Services privileges will be able to modify
+&nbsp;Services' AKILL list and drop or forbid nicknames and
+&nbsp;channels, but any such changes will not be saved unless
+&nbsp;read-only mode is deactivated before Services is terminated
+&nbsp;or restarted.
+&nbsp;
+&nbsp;This option is equivalent to the command-line option
+&nbsp;<b>-readonly</b>.
+
+</pre>
+          </li>
+          <li><b>SET LOGCHAN</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>SET LOGCHAN {ON | OFF}</b>
+
+&nbsp;With this setting on, Services will send its logs to a specified
+&nbsp;channel as well as the log file. LogChannel must also be defined
+&nbsp;in the Services configuration file for this setting to be of any
+&nbsp;use.
+
+&nbsp;<b>Note:</b> This can have strong security implications if your log
+&nbsp;channel is not properly secured.
+
+</pre>
+          </li>
+          <li><b>SET DEBUG</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>SET DEBUG {ON | OFF | <u>num</u>}</b>
+&nbsp;
+&nbsp;Sets debug mode on or off.  In debug mode, all data sent to
+&nbsp;and from Services as well as a number of other debugging
+&nbsp;messages are written to the log file.  If <u>num</u> is
+&nbsp;given, debug mode is activated, with the debugging level set
+&nbsp;to <u>num</u>.
+
+&nbsp;This option is equivalent to the command-line option
+&nbsp;<b>-debug</b>.
+
+</pre>
+          </li>
+          <li><b>SET NOEXPIRE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>SET NOEXPIRE {ON | OFF}</b>
+
+&nbsp;Sets no expire mode on or off.  In no expire mode, nicks,
+&nbsp;channels, akills and exceptions won't expire until the
+&nbsp;option is unset.
+
+&nbsp;This option is equivalent to the command-line option
+&nbsp;<b>-noexpire</b>.
+
+</pre>
+          </li>
+          <li><b>SET SUPERADMIN</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>SET SUPERADMIN {ON | OFF}</b>
+
+&nbsp;Setting this will grant you extra privlages such as the
+&nbsp;ability to be "founder" on all channel's etc...
+
+&nbsp;This opion is <b>not</b> persistant, and should only be used when
+&nbsp;needed, and set back to OFF when no longer needed.
+
+
+</pre>
+          </li>
+          <li><b>NOOP</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>NOOP SET <u>server</u></b>
+&nbsp;        <b>NOOP REVOKE <u>server</u></b>
+
+&nbsp;<b>NOOP SET</b> remove all O:lines of the given
+&nbsp;<b>server</b> and kill all IRCops currently on it to
+&nbsp;prevent them from rehashing the server (because this
+&nbsp;would just cancel the effect).
+
+&nbsp;<b>NOOP REVOKE</b> makes all removed O:lines available again
+&nbsp;on the given <b>server</b>.
+
+&nbsp;<b>Note:</b> The <b>server</b> is not checked at all by the
+&nbsp;Services.
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>JUPE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>JUPE <u>server</u> [<u>reason</u>]</b>
+&nbsp;
+&nbsp;Tells Services to jupiter a server -- that is, to create
+&nbsp;a fake "server" connected to Services which prevents
+&nbsp;the real server of that name from connecting.  The jupe
+&nbsp;may be removed using a standard <b>SQUIT</b>.  If a reason is
+&nbsp;given, it is placed in the server information field;
+&nbsp;otherwise, the server information field will contain the
+&nbsp;text "Juped by &lt;nick&gt;", showing the nickname of the
+&nbsp;person who jupitered the server.
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>RAW</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>RAW <u>text</u></b>
+&nbsp;
+&nbsp;Sends a string of text directly to the server to which
+&nbsp;Services is connected.  This command has a very limited
+&nbsp;range of uses, and can wreak havoc on a network if used
+&nbsp;improperly.  <b>DO NOT USE THIS COMMAND</b> unless you are
+&nbsp;absolutely certain you know what you are doing!
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>UPDATE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>UPDATE</b>
+&nbsp;
+&nbsp;Causes Services to update all database files as soon as you
+&nbsp;send the command.
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+&nbsp;
+</pre>
+          </li>
+          <li><b>RELOAD</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>RELOAD</b>
+
+&nbsp;Causes Services to reload the configuration file. Note that
+&nbsp;some directives still need the restart of the Services to
+&nbsp;take effect (such as Services' nicknames, activation of the 
+&nbsp;session limitation, etc.)
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>QUIT</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>QUIT</b>
+&nbsp;
+&nbsp;Causes Services to do an immediate shutdown; databases are
+&nbsp;<b>not</b> saved.  This command should not be used unless
+&nbsp;damage to the in-memory copies of the databases is feared
+&nbsp;and they should not be saved.  For normal shutdowns, use the
+&nbsp;<b>SHUTDOWN</b> command.
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>SHUTDOWN</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>SHUTDOWN</b>
+&nbsp;
+&nbsp;Causes Services to save all databases and then shut down.
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>RESTART</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>RESTART</b>
+&nbsp;
+&nbsp;Causes Services to save all databases and then restart
+&nbsp;(i.e. exit and immediately re-run the executable).
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.	
+
+</pre>
+          </li>
+          <li><b>KILLCLONES</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>KILLCLONES <u>nick</u></b>
+&nbsp;
+&nbsp;Kills all users who have the same hostname as <u>nick</u>. A
+&nbsp;temporary AKILL, in the form <b>*@host</b>, is added to 
+&nbsp;prevent the offending clients from immediately 
+&nbsp;reconnecting. A wallops is also sent indicating who 
+&nbsp;used the command, which host was affected and how many
+&nbsp;users were killed. It's usefull for removing numerous 
+&nbsp;clones from the network.
+
+&nbsp;Limited to <b>Services operators</b>.
+&nbsp;
+</pre>
+          </li>
+          <li><b>CHANLIST</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>CHANLIST [{<u>pattern</u> | <u>nick</u>} [<u>SECRET</u>]]</b>
+&nbsp;
+&nbsp;Lists all channels currently in use on the IRC network, whether they
+&nbsp;are registered or not.
+
+&nbsp;If <b>pattern</b> is given, lists only channels that match it. If a nickname
+&nbsp;is given, lists only the channels the user using it is on. If SECRET is
+&nbsp;specified, lists only channels matching <b>pattern</b> that have the +s or
+&nbsp;+p mode.
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>USERLIST</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>USERLIST [{<u>pattern | channel</u>} [<u>INVISIBLE</u>]]</b>
+&nbsp;
+&nbsp;Lists all users currently online on the IRC network, whether their
+&nbsp;nick is registered or not.
+&nbsp;
+&nbsp;If <b>pattern</b> is given, lists only users that match it (it must be in
+&nbsp;the format nick!user@host). If <b>channel</b> is given, lists only users
+&nbsp;that are on the given channel. If INVISIBLE is specified, only users
+&nbsp;with the +i flag will be listed.
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>CACHE</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>CACHE DEL <u>hostname</u></b>
+&nbsp;        <b>CACHE LIST <u>pattern</u> [QUEUED | ALL]</b>
+&nbsp;
+&nbsp;The <b>CACHE DEL</b> command deletes the specified hostname from 
+&nbsp;the cache. <u>This is meant for debug purpose only</u>.
+
+&nbsp;The <b>CACHE LIST</b> command lists all found proxies that match the
+&nbsp;given pattern. If the <b>QUEUED</b> option is given, it will list
+&nbsp;the queued or in progress scans instead, and if the <b>ALL</b> option 
+&nbsp;is given, it will list all cached hostnames.
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>EXCEPTION</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>EXCEPTION ADD [<u>+expiry</u>] <u>mask</u> <u>limit</u> <u>reason</u></b>
+&nbsp;        <b>EXCEPTION DEL {<u>mask</u> | <u>list</u>}</b>
+&nbsp;        <b>EXCEPTION MOVE <u>num</u> <u>position</u></b>
+&nbsp;        <b>EXCEPTION LIST [<u>mask</u> | <u>list</u>]</b>
+&nbsp;        <b>EXCEPTION VIEW [<u>mask</u> | <u>list</u>]</b>
+&nbsp;
+&nbsp;Allows Services admins to manipulate the list of hosts that
+&nbsp;have specific session limits - allowing certain machines, 
+&nbsp;such as shell servers, to carry more than the default number
+&nbsp;of clients at a time. Once a host reaches it's session limit,
+&nbsp;all clients attempting to connect from that host will be
+&nbsp;killed. Before the user is killed, they are notified, via a
+&nbsp;/NOTICE from OperServ, of a source of help regarding session
+&nbsp;limiting. The content of this notice is a config setting.
+&nbsp;
+&nbsp;<b>EXCEPTION ADD</b> adds the given host mask to the exception list.
+&nbsp;Note that <b>nick!user@host</b> and <b>user@host</b> masks are invalid!
+&nbsp;Only real host masks, such as <b>box.host.dom</b> and <b>*.host.dom</b>,
+&nbsp;are allowed because sessions limiting does not take nick or
+&nbsp;user names into account. <u>limit</u> must be a number greater than
+&nbsp;or equal to zero. This determines how many sessions this host
+&nbsp;may carry at a time. A value of zero means the host has an
+&nbsp;unlimited session limit. See the <b>AKILL</b> help for details about
+&nbsp;the format of the optional <u>expiry</u> parameter.
+&nbsp;<b>EXCEPTION DEL</b> removes the given mask from the exception list.
+&nbsp;<b>EXCEPTION MOVE</b> moves exception <u>num</u> to <u>position</u>. The
+&nbsp;exceptions inbetween will be shifted up or down to fill the gap.
+&nbsp;<b>EXCEPTION LIST</b> and <b>EXCEPTION VIEW</b> show all current
+&nbsp;exceptions; if the optional mask is given, the list is limited
+&nbsp;to those exceptions matching the mask. The difference is that
+&nbsp;<b>EXCEPTION VIEW</b> is more verbose, displaying the name of the
+&nbsp;person who added the exception, it's session limit, reason, 
+&nbsp;host mask and the expiry date and time.
+&nbsp;
+&nbsp;Note that a connecting client will "use" the first exception
+&nbsp;their host matches. Large exception lists and widely matching
+&nbsp;exception masks are likely to degrade services' performance.
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+
+</pre>
+          </li>
+          <li><b>SESSION</b><br />
+            <pre>&nbsp;<i>Syntax:</i> /msg OperServ  <b>SESSION LIST <u>threshold</u></b>
+&nbsp;        <b>SESSION VIEW <u>host</u></b>
+&nbsp;
+&nbsp;Allows Services admins to view the session list.
+
+&nbsp;<b>SESSION LIST</b> lists hosts with atleast <u>threshold</u> sessions.
+&nbsp;The threshold must be a number greater than 1. This is to 
+&nbsp;prevent accidental listing of the large number of single 
+&nbsp;session hosts.
+&nbsp;<b>SESSION VIEW</b> displays detailed information about a specific
+&nbsp;host - including the current session count and session limit.
+&nbsp;The <u>host</u> value may not include wildcards.
+
+&nbsp;See the <b>EXCEPTION</b> help for more information about session
+&nbsp;limiting and how to set session limits specific to certain
+&nbsp;hosts and groups thereof.
+&nbsp;
+&nbsp;Limited to <b>Services admins</b>.
+</pre></li></ul><div align="center">
+<td align="right" valign="top" style=font-size:100%;white-space:nowrap; nowrap><small>
+
+<b><a href="../chat.html">deoxy.org/chat</a></b> : 
+<a href="unreal.htm">IRC Commands</a> | 
+<a href="http://irc.deoxy.org">Server Status</a>&mdash;<a href="ircd.motd.html" title="First thing you see on IRC">MOTD</a><br>
+
+<a href="modserv.htm">Services</a> : 
+<a href="nickserv.htm">NickServ</a> |
+<a href="chanserv.htm">ChanServ</a> |
+<a href="memoserv.htm">MemoServ</a> |
+<a href="botserv.htm">BotServ</a><br>
+
+<a href="alias.htm">Aliases</a> | 
+<a href="privsec.htm">Privacy/Security</a> | 
+<a href="../meme/SearchBot.html">SearchBot</a> | 
+<a href="java.htm">Java Clients</a><br>
+
+</small></td>
+</div>
+</body>
+</html>

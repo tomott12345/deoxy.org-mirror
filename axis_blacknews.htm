@@ -1,0 +1,306 @@
+<html>
+<head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link REL="StyleSheet" TYPE="text/css" HREF="inc/css/deoxy.org.css">
+<title>Deoxy Newsbot</title>
+
+<script type="text/javascript"><!--
+
+var qparams = new Array();
+qparams['interval'] = 30;
+var hardlimit = 1000;
+var stopclock = 0;
+var paused = 0;
+var lastfeed;
+var oldclock;
+
+qstring();
+
+function switchPause() {
+  if (paused == 1) {
+    return
+  }
+  else {
+    document.getElementById('pauselink').innerHTML = '&gt;'
+    document.getElementById('interval').innerHTML  = '&mdash;'
+    document.getElementById('interval').href       = '#'
+    qparams['age'] = 1
+    paused = 1
+    stopClock()
+  }
+}
+
+function getURL(){
+  return 'http://deoxy.org/news';
+}
+
+function ajaxRead(){
+//if (paused == 1) return;
+
+  var u = getURL() + '/bot.cgi';
+  var x = null;
+  qstring();
+
+  if (qparams['age']) {
+    u = u + '?age=' + qparams['age'];
+  }
+  else if (qparams['hh'] || qparams['mm']) {
+    var age = 0;
+    if (qparams['hh'].match(/^\d+$/)) {
+      age += ((qparams['hh'] * 60) * 60);
+    }
+    if (qparams['mm'].match(/^\d+$/)) {
+      age += (qparams['mm'] * 60);
+    }
+    if (age > 86400) age = 86400;
+    if (age > 0) u = u + '?age=' + age;
+    qparams['age'] = age;
+  }
+
+  /*@cc_on @*/
+  /*@if (@_jscript_version >= 5)
+  try { x = new ActiveXObject("Msxml2.XMLHTTP");
+  } catch (e) {
+  try { x = new ActiveXObject("Microsoft.XMLHTTP");
+  } catch (E) { x = false; }
+  }
+  @end @*/
+  if (!x && typeof XMLHttpRequest != 'undefined') {
+    x = new XMLHttpRequest();
+    x.overrideMimeType("application/xml");
+  }
+  if (x && !callInProgress(x)) { //ajaxblog.com
+    x.onreadystatechange = function(){
+      if (x.readyState == 4 && x.status == 200){
+        stopclock = 1;
+        processXML(x.responseXML);
+      }
+    }
+    x.open ('GET', u, true);
+    x.send (null);
+  }
+}
+
+// from http://ajaxblog.com/archives/2005/06/01/async-requests-over-an-unreliable-network
+function callInProgress(x) {
+  switch (x.readyState) {
+    case 1, 2, 3:
+      return true;
+    break;
+    // Case 4 and 0
+    default:
+      return false;
+    // break;
+  }
+}
+
+function processXML(obj){
+  if (!(obj)) return;
+
+  var dataArray = obj.getElementsByTagName('item');
+  var dataArrayLen = dataArray.length;
+  var insertData  = '<table style="width:100%; border:solid 1px #333; margin-top:0px" cellspacing="12">';
+  insertData += '<tr><td align=right><div style="position:fixed; right:18px; background:#222222; border:2px; border-color:#444444; border-style:solid; margin-top:0px; opacity:0.8;"><small>%%_TOTAL_HEAD_LINES_%%&#151;<a href="#top">top^</a><br>';
+//  if (!qparams['age']) insertData += '<a href=/news/bot.htm?age=1800>Pause</a>&mdash;';
+  insertData += '<a href=/news/bot.htm>Reload live feed</a>&nbsp;&nbsp;</div>';
+  insertData += '</td></tr></table>';
+  insertData += '<table style="width:100%;border: solid 1px #333" cellspacing="12" bgcolor=#111111>';
+  var broke = 0;
+
+  var now = new Date();
+  document.getElementById('time').innerHTML = getDate(now);
+  var div = document.getElementById('data');
+  qparams['count'] = 0;
+
+  for (var i=0; i<dataArrayLen; i++){
+    if (i == 0) {
+      if (lastfeed == dataArray[i].getAttribute('md5')) { 
+        broke = 1;
+        break;
+      }
+    }
+    insertData += 
+    '<tr><td><small>' +
+    dataArray[i].getAttribute('feed') +
+    ' <a href="/news/viewer?feed=' +
+    dataArray[i].getAttribute('feedcode') +
+    '&target=_blank" title="view this feed">&#183;&#187;</a><br>&nbsp;&nbsp;&nbsp;<a href="';
+    try { 
+     var du = decodeURI(dataArray[i].getAttribute('link'))
+     insertData += du
+    } catch(e) { 
+     insertData += dataArray[i].getAttribute('link')
+    }
+    insertData +=
+    '" target="_blank' +
+//    qparams['target'] +
+    '" title="' +
+    dataArray[i].getAttribute('link') +
+    '">' +
+    dataArray[i].getAttribute('title') +
+    '</a><br>' +
+    getDate(dataArray[i].getAttribute('date'),1) +
+    '<br></td></tr>';
+    
+    if (i == 0) {
+     lastfeed = dataArray[i].getAttribute('md5');
+    }
+    qparams['count'] = qparams['count'] + 1;
+  }
+  if (broke == 0) {
+    var ss = 's';
+    if (qparams['count'] == 1) ss = '';
+    if (qparams['count'] == hardlimit) qparams['count'] += ' (limit) ';
+    insertData += '</table>';
+    insertData = insertData.replace(/%%_TOTAL_HEAD_LINES_%%/,qparams['count']+' headline'+ss+' on this page');
+    div.innerHTML = insertData;
+ }
+  if (qparams['age']) {
+    return
+  }
+  else{
+    stopclock = 0
+    startClock()
+    setTimeout(function(){ ajaxRead()},qparams['interval']*1000)
+  }
+}
+
+function getHours(sec){
+  return ((sec / 60) / 60);
+}
+
+function getMonth(mm) {
+  var mon = new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
+  return mon[mm];
+}
+
+function getDate(date,mode) {
+  var DD = new Date(date);
+  var dd = DD.getDate();
+  var mm = DD.getMonth();
+  var yy = DD.getFullYear();
+  var h  = DD.getHours();
+  var m  = DD.getMinutes();
+  var s  = DD.getSeconds();
+  if (m < 10) m = '0'+m;
+  if (s < 10) s = '0'+s;
+
+  var ap = "AM";
+  if (h > 11) ap = "PM";
+  if (h > 12) h  = h - 12;
+  if (h == 0) h  = 12;
+
+  var hmm = '<br>';
+  var col = '<blink>:</blink>';
+  if (mode) hmm = '&nbsp;';
+  if (mode || qparams['age']) col = ':';
+
+  var day = getMonth(mm) + ' ' + dd + ', ' + yy;
+  var now = h  + col + m  + col + s  + ' ' + ap;
+  var line = day + hmm + now;
+  if (mode) line = now + hmm + day;
+
+  return '<small>' + line + '</small>';
+}
+
+function qstring() {
+  qparams['target'] = '';
+  qparams['count']  = 0;
+  qparams['age']    = '';
+  qparams['hh']     = '';
+  qparams['mm']     = '';
+
+  var query = window.location.search.substring(1);
+  var parms = query.split('&');
+  for (var i=0; i<parms.length; i++) {
+    var pos = parms[i].indexOf('=');
+    if (pos > 0) {
+      var key = parms[i].substring(0,pos);
+      var val = parms[i].substring(pos+1);
+      qparams[key] = val;
+    }
+  }
+}
+
+function show(what) {
+  var where = what.options[what.selectedIndex].value;
+  if (where > 1)
+  document.location.href = getURL() + '/bot.htm?age=' + where;
+}
+
+var Inter = qparams['interval'];
+function startClock() {
+  if (qparams['age']) return;
+  Inter = Inter - 1;
+  if (Inter == -1) {
+    Inter = qparams['interval'];
+//  document.getElementById('interval').innerHTML = nterval;
+  }
+  else {
+    document.getElementById('interval').innerHTML = Inter;
+    if (stopclock == 0) { timerID = setTimeout(function(){ startClock()}, 1000); }
+  }
+}
+
+function stopClock() {
+  oldclock = document.getElementById('interval').innerHTML
+  document.getElementById('interval').innerHTML = '&mdash'
+}
+
+//--></script>
+<LINK REL=stylesheet HREF='inc/css/deoxy.org.css' TYPE="text/css">
+</head>
+
+<body onload="ajaxRead(); focus();" bgcolor="#111111" text="#bbbbbb" link="#ffffff" vlink="#ffffff">
+<div style=width:100%;height:100%;overflow:auto;>
+<a name="top"></a><table cellpadding=3 cellspacing=0 border=0 width=100%><tr bgcolor=#222222><td>
+<div style="position:fixed;top:0px;left:0px;margin-bottom:50px;width:100%;">
+<table cellpadding=3 cellspacing=0 border=0 width=100% align=center bgcolor=#222222>
+<tr valign=top bgcolor=#333333><td nowrap>
+
+<small><b><a href="news.1.html" target="_top">deoxy &#183; news</a> &#187; <a href="wiki/NewsBot.html" target=_blank>bot</a></b><br>
+<i><a href="http://deoxy.org/news/bot.htm">Live Headline Feed</a></i><br></small></td>
+<td nowrap align=right><div id="time"></div>
+<noscript><p><b><a href="wiki/NewsBot.html">NewsBot</a> requires Javascript</b></noscript>
+</td></tr></table>
+<table width=100% cellpadding=3 cellspacing=0 border=0><tr>
+
+<form name=op><td bgcolor=#222222>
+<input type=hidden name=target value=_blank>
+&nbsp;&nbsp;&nbsp;<small>View the past <select name=age class=select onChange="show(this)">
+<option value=1> ? </option>
+<option value=900>0.25</option>
+<option value=1800>0.50</option>
+<option value=3600>1</option>
+<option value=7200>2</option>
+<option value=10800>3</option>
+<option value=21600>6</option>
+<option value=43200>12</option>
+<option value=64800>18</option>
+<option value=86400>24</option></select> hours.&nbsp;
+ 
+<script type="text/javascript"><!--//
+if (!(qparams['age'])) {
+  document.write('Next update in <span id=interval style=font-weight:bold>' + qparams['interval'] + '</span> seconds');
+}
+//--></script>
+</td></form></tr></table></div><p><br>
+<script type="text/javascript"><!--//
+qstring();
+if (qparams['age']) {
+  var hrs = getHours(qparams['age']);
+//hrs = hrs.replace(/(\.d{2})[^\.]+$/,'$1');
+  var s = 's';
+  if (hrs == 1) s = '';
+  document.write('<p><br><ul><small><b>Showing headlines from '+hrs+' hour'+s+' ago.</b>.</small></ul>');
+}
+window.addEventListener('scroll', function () {});
+//--></script>
+<div id=data><ul>Loading...</div>
+</table></div>
+</body>
+</html>

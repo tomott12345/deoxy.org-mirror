@@ -1,0 +1,26 @@
+<html>
+<head>
+<TITLE>Relativistic Space Voyage</TITLE>
+<LINK REL="stylesheet" HREF="../../inc/css/deoxy.org.css" TYPE="text/css">
+<script language="JavaScript" type="text/javascript" src="relative.js">
+<!-- Program written by S. Jay Tanner 
+//--></script></head>
+<body background="starfeeled.jpg" bgcolor="#000000" vlink="#0000FF" text="#f0f0f0" 
+onLoad="focus();" 
+style="margin:15px;">
+
+<H4>Relativistic Space Voyage at Constant Acceleration</H4>
+<form NAME="Math_Form" onSubmit="Compute(); return false;">
+<font size="-1">Enter <i>Distance to Destination</i> and <i>G Factor</i> Experienced by Traveler<p>
+Destination Distance (LY): &nbsp;
+<input TYPE="text" NAME="Distance" SIZE="8" VALUE="1" class=input>
+&nbsp;&nbsp;&nbsp;G Factor: &nbsp;
+<input TYPE="text" NAME="G_Factor" SIZE="8" VALUE="1" class=input><br></font>
+<br>
+<input TYPE="submit" VALUE="Compute" onClick="Compute();" class=button> &nbsp;
+<input TYPE="reset" VALUE="Reset" class=button>&nbsp;&nbsp;
+<input TYPE="button" VALUE="Info" onClick="Info();" class=button><br><br>
+<textarea NAME="Answer" ROWS="12" COLS="55" WRAP="OFF" class=input>  </textarea>
+</form>
+</body>
+</html>

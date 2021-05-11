@@ -1,0 +1,10 @@
+body      { background: #000000;
+            color: #c0c0c0 }
+a:link    { color: #ffffff }
+a:visited { color: #ffffff }
+a:active  { color: #ffffff }
+a:hover   { color: #000000; background-color: #ffffff }
+.main      { background: #202020 }
+.nav_back  { background: #404040 }
+.nav_outer { background: #606060 }
+.nav_inner { background: #808080 }

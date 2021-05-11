@@ -1,0 +1,312 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>deoxy.axis</title>
+
+<link rel="stylesheet" type="text/css" href="_includes/css/deoxy.org.css" />
+<link rel="stylesheet" type="text/css" href="_includes/css/axis.css" />
+<LINK REL="search"     HREF="oracle.htm"						TITLE="Search deoxy.org">
+<LINK REL="alternate"  HREF="cgi/nu.pl@rss=1&amp;num=10"			TITLE="Recent Changes at deoxy.org"			TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/forum/rssforum.pl"				TITLE="deoxyforum new threads"				TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/forum/rssforum.pl?reply=1&amp;age=1"	TITLE="deoxyforum new threads and replies"	TYPE="application/rss+xml">
+
+<SCRIPT LANGUAGE="JavaScript"><!--
+function Fill()
+{
+mainpath=parent.remo.location.href;
+
+var first   = mainpath.split("//");
+var without = first[1];
+var second  = without.split("/");
+var domain  = second[0];
+
+if ((domain == "deoxy.org") || (domain == "www.deoxy.org")){
+	document.urlForm.to.value = mainpath;
+	}
+}
+
+function gonews(what) {
+    var whereto = what.options[what.selectedIndex].value;
+	
+    if (whereto == "http://deoxy.org/axis_blacknews.htm") {
+        parent.news.location.href = whereto;
+		}
+		
+    else if (whereto == "http://deoxy.org/news/search") {
+        parent.remo.location.href = whereto;
+		}
+		
+    else{
+        parent.nu.location.href = whereto;
+		}
+}
+
+function sendhelp() {
+alert("Hidden\n* click the url field to show the url of the current page,\nonly works with pages on deoxy.\n\nQuirks\n* some sites, like wikipedia, break out of the main iframe.\n* sometimes news launches in a new window.\n")
+}  
+// --></SCRIPT>
+</head>
+
+<body bgcolor="#ffffff" text="#c0c0c0" link="#ffffff" vlink="#ffffff" background="gif/black.gif">
+
+
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" align="center" width="100%"><tr><td>
+
+<table cellpadding="3" cellspacing="0" bgcolor="#101010" width="100%" border=0><tr><td>
+<table cellpadding="3" cellspacing="0" bgcolor="#202020" width="100%" border=0><tr><td>
+<table cellpadding="3" cellspacing="0" bgcolor="#2a2a2a" width="100%" background="img/zoneplate.jpg"><tr><td width="33%">
+
+<table cellpadding="3" cellspacing="0" bgcolor="#101010"><tr><td>
+<table cellpadding="3" cellspacing="0" bgcolor="#000000"><tr><td nowrap valign="middle">
+<a href="axis.html"><font size="-2" color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif">
+&ETH;E&Oslash;XY &#183; AXIS</font></a>
+</td></tr></table>
+</td></tr></table>
+
+</td><td align="center" width="33%">
+
+<table cellpadding="3" cellspacing="0" bgcolor="#101010"><tr><td>
+<table cellpadding="3" cellspacing="0" bgcolor="#000000"><tr><td nowrap valign="middle">
+<a href="index.html" target="_top">
+<img src="img/emc.jpg" width=284 height=16 alt="The Deoxyribonucleic Hyperdimension" border=0></a>
+
+</td></tr></table>
+</td></tr></table>
+
+</td><td align="right" width="33%">
+
+<table cellpadding="3" cellspacing="0" bgcolor="#101010"><tr><td>
+<table cellpadding="3" cellspacing="0" bgcolor="#000000"><tr><td><a href="contact.htm" target="remo">
+<img src="gif/dimitri.jpg" style="width: 117px; height: 16px; border: 0" alt=""  /></a>
+</td></tr></table>
+</td></tr></table>
+
+</td>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<br>
+</td></tr>
+<tr><td align="center" nowrap>
+
+<table cellpadding="2" cellspacing="0" width="100%"><tr valign="bottom">
+<form action="http://deoxy.org/cgi/jump.pl" target="remo" name="urlForm"><td nowrap>
+
+&nbsp;&nbsp;<input type="Submit" value="URL" class="button">&nbsp;<input type="Text" name="to" size="23" class="input" value="http://"  onClick="Fill()">
+
+<INPUT type="button" class="button" value="&lt;" onClick="parent.remo.history.back()"><INPUT type="button" class="button" value="&gt;" onClick="parent.remo.history.forward()">
+<!-- INPUT type="button" class="button" value="?" onClick="sendhelp()" -->
+
+<input type="hidden" name="from" value='/'>&nbsp;&nbsp;
+
+</td></form>
+<form action="http://deoxy.org/forum/dosearch.pl" target="remo">
+<td align="center" nowrap>
+
+<input type=submit name="btnG" value="Search" class="button"> 
+
+<select name="google" class="select">
+<option value="dna">deoxy</option>
+<option value="www">www</option>
+<option value="new">news</option>
+<option value="img">images</option>
+<option value="cache">cache</option>
+</select>
+
+<input type="text" name="q" size="11" class="inputr"> 
+</TD></FORM>
+<form action="http://deoxy.org/cgi/jump.pl" target="remo" name="topJump">
+<td align="right" nowrap>
+
+&nbsp;&nbsp;
+<input type="hidden" name="from" value='/'>
+
+<select name="to" class="select" onChange="parent.remo.location.href=document.topJump.to.options[document.topJump.to.selectedIndex].value" onClick="document.urlForm.to.value = this.options[this.selectedIndex].value">
+<option value="http://deoxy.org/alephnull">aleph</option>
+<option value="http://deoxy.org/axis_main.htm">blank</option>
+<option value="http://deoxy.org/8brains.htm">circuits</option>
+<option value="http://deoxy.org/chat">chat</option>
+<option value="http://deoxy.org/ct">crimethinc</option>
+<option value="http://deoxy.org/cc-intro.htm">cybercraft</option>
+<option value="http://deoxy.org/meme/DNA" selected>DNA</option>
+<option value="http://deoxy.org/forum">forum</option>
+<option value="http://deoxy.org/iching">iching</option>
+<option value="http://deoxy.org/inc.htm">incunabula</option>
+<option value="http://deoxy.org/chat/stats.htm">IRC status</option>
+<option value="http://deoxy.org/leary.htm">leary</option>
+<option value="http://deoxy.org/lilly.htm">lilly</option>
+<option value="http://deoxy.org/mckenna.htm">mckenna</option>
+<option value="http://deoxy.org/oracle.htm">oracle</option>
+<option value="http://deoxy.org/pdfa/">PDFA</option>
+<option value="http://deoxy.org/cgi/randlink.pl?go">random</option>
+<option value="http://deoxy.org/pdfa/raw.htm">rawilson</option>
+<option value="http://deoxy.org/time/sabbats.htm">sabbats</option>
+<option value="http://deoxy.org/shaman.htm">shaman</option>
+<option value="http://deoxy.org/index?target=remo">topics</option>
+<option value="http://deoxy.org/nu.htm">updates</option>
+<option value="http://deoxy.org/vid">video</option>
+</select>
+
+<input type="Submit" value="go" class="button">&nbsp;&nbsp;
+
+</td></form></tr></table>
+
+</td></tr>
+<tr><td>
+
+<table cellpadding="3" cellspacing="0" bgcolor="#101010" width=100%><tr><td>
+<table cellpadding="3" cellspacing="0" bgcolor="#202020" width=100%><tr><td>
+<table cellpadding="5" cellspacing="0" bgcolor="#303030" width=100%><tr><td>
+
+<iframe src="axis_main.htm" width="100%" height="500" name="remo" frameborder="0" class="iframe">
+</iframe>
+
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+
+</td></tr>
+<tr><td>
+
+<br>
+<table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+<form action="http://deoxy.org/cgi/jump.pl" target="nu" name="nuJump">
+<td width="33%">
+
+<input type="hidden" name="from" value='/'>
+
+&nbsp;&nbsp;<input type="Submit" value="go" class="button">
+
+<select name="to" class="select" onChange="gonews(this)">
+<option value="http://deoxy.org/axis_blacknews.htm">deoxy.news</option>
+<option value="http://deoxy.org/news/latest.pl?target=remo">latest headlines</option>
+<option value="http://deoxy.org/news/newfeeds.pl?target=remo">new newsfeeds</option>
+<option value="http://deoxy.org/news/viewer?html=1&target=remo">all newsfeeds</option>
+<option value="http://deoxy.org/news/search">search newsfeeds</option>
+<option value="http://deoxy.org/forum/chatusers.pl">who's online?</option>
+</select>&nbsp;&nbsp;
+
+</td><td align="right" width="33%">
+<a href="axis.html#top" name="news">
+<img src="gif/arrow_u.gif" align="middle" style="width: 20px; height: 20px; border: 0" alt=""  /></a>
+</td>
+
+<td align="right" width="33%"><INPUT type="button" class="button" value="&lt;" onClick="parent.news.history.back()"><INPUT type="button" class="button" value="&gt;" onClick="parent.news.history.forward()">&nbsp;&nbsp;
+</td></form></tr></table>
+
+</td></tr>
+<tr><td>
+
+<table cellpadding="3" cellspacing="0" bgcolor="#101010" width="100%" border="0"><tr><td>
+<table cellpadding="3" cellspacing="0" bgcolor="#202020" width="100%"><tr><td>
+<table cellpadding="5" cellspacing="0" bgcolor="#303030" width="100%"><tr><td width=30%>
+
+<iframe src ="news/newfeeds.pl@target=remo.html" width="100%" height="300" scrolling="auto" name="nu" frameborder="0">
+</iframe>
+
+</td><td align="right">
+
+<iframe src="axis_blacknews.htm" width="100%" height="300" name="news" frameborder="0">
+</iframe>
+
+</td>
+</tr></table>
+</td></tr></table>
+</td></tr></table>
+
+</td></tr>
+<tr><td align="center">
+
+<br>
+<table cellpadding="2" cellspacing="0" width="100%" border=0>
+<tr valign="bottom"><form action="http://deoxy.org/cgi/jump.pl" target="chat" name="chatJump"><td width="33%">
+
+<input type="hidden" name="from" value='/'>
+&nbsp;&nbsp;<input type="Submit" value="go" class="button">
+
+<select name="to" class="select" onChange="parent.chat.location.href=document.chatJump.to.options[document.chatJump.to.selectedIndex].value">
+<option value="http://deoxy.org/forum/chat.pl?mode=axis">deoxy chatter</option>
+<option value="http://deoxy.org/forum/chat.pl?show=body">watch chatter</option>
+<option value="http://deoxy.org/chat/java.htm">deoxy irc</option>
+<option value="http://deoxy.org/time/d2k/today2.htm">D2K Today</option>
+
+<option value="http://deoxy.org/axis_goto.htm">custom url</option>
+<option value="http://deoxy.org/axis_chat.htm">blank</option>
+<option value="http://deoxy.org/axis_goto.htm">OFFSITE:</option>
+
+<option value="http://www.disinfo.com/site/chat/_chat.html">disinfo chat</option>
+
+</select>
+
+
+</td></form><td align="right" width="33%">
+<!-- a href="#top" name="chat">
+<img src="http://deoxy.org/gif/arrow_u.gif" align="middle" style="width: 20px; height: 20px; border: 0" alt=""  /></a -->
+</td>
+
+<form action="http://deoxy.org/cgi/jump.pl" target="sitenav" name="siteJump">
+<td align="right" width="33%">
+
+&nbsp;&nbsp;
+<input type="hidden" name="from" value='/'>
+
+<select name="to" class="select" onChange="parent.sitenav.location.href=document.siteJump.to.options[document.siteJump.to.selectedIndex].value">
+
+<option value="http://deoxy.org/cgi/nu.pl?html=1&target=remotes&num=20&trunc=22">recent site changes</option>
+<option value="http://deoxy.org/forum/rssforum.pl?html=1&reply=1&age=1&target=remotes">new forum posts</option>
+<option value="http://deoxy.org/forum/rssforum.pl?html=1&age=3&target=remotes" selected>new forum topics</option>
+<option value="http://deoxy.org/forum/chatusers.pl">who's online?</option>
+
+</select>
+
+<input type="Submit" value="go" class="button">&nbsp;&nbsp;
+
+</td></form></tr></table>
+
+</td></tr><tr><td>
+
+<table cellpadding="3" cellspacing="0" bgcolor="#101010" width=100%><tr><td>
+<table cellpadding="3" cellspacing="0" bgcolor="#202020" width=100%><tr><td>
+<table cellpadding="5" cellspacing="0" bgcolor="#303030" width=100%><tr><td>
+
+<iframe src="axis_chat.htm" width="100%" height="480" name="chat" frameborder="0">
+</iframe>
+
+</td><td valign="top" width=30%>
+
+<iframe src="cgi/nu.pl@html=1&amp;target=remotes&amp;num=20&amp;trunc=22.html" width="100%" height="480" name="sitenav" frameborder="0">
+</iframe>
+
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+
+</td></tr>
+
+<tr><td>
+<table cellpadding="2" cellspacing="0" width="100%" border=0>
+<tr><td align=right><a href="axis_main.htm" target="remotes">
+<img src="gif/arrow_d.gif" align="middle" style="width: 20px; height: 20px; border: 0;" hspace=70 alt="" />
+</a></td></tr>
+
+<tr><td>
+<table cellpadding="3" cellspacing="0" bgcolor="#101010" width=100%><tr><td>
+<table cellpadding="3" cellspacing="0" bgcolor="#202020" width=100%><tr><td>
+<table cellpadding="5" cellspacing="0" bgcolor="#303030" width=100%><tr><td>
+
+<iframe src="axis_main.htm" width="100%" height="500" name="remotes" frameborder="0" class="iframe">
+</iframe>
+
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr>
+
+</table>
+
+</body>
+</html>

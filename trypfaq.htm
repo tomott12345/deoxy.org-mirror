@@ -1,0 +1,1713 @@
+<html>
+<head><title>Tryptamine Carriers FAQ</title>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- http://deoxy.org/trypfaq.htm
+function vvoid(){}
+function Fill(){epath = window.location.href;document.forms[0].urltext.value = epath}
+function babelWindow(){
+babelWin=window.open("","babelWin","location,resizable,menubar,scrollbars,status,toolbar,width=640,height=480");babelWin.focus();}
+var NS4 = (document.layers);
+var IE4 = (document.all);
+var win = this;
+var n   = 0;
+function findInPage(str) {
+var txt, i, found;
+if (str == "")
+return false;
+if (NS4) {
+if (!win.find(str))
+while(win.find(str, false, true))
+n++;
+else
+n++;
+if (n == 0) alert(str + " was not found on this page.");
+}
+if (IE4) {
+txt = win.document.body.createTextRange();
+for (i = 0; i <= n && (found = txt.findText(str)) != false; i++) {
+txt.moveStart("character", 1);
+txt.moveEnd("textedit");
+}
+if (found) {
+txt.moveStart("character", -1);
+txt.findText(str);
+txt.select();
+txt.scrollIntoView();
+n++;
+}
+else {
+if (n > 0) {
+n = 0;
+findInPage(str);
+}
+else
+alert(str + " was not found on this page.");
+}
+}
+return false;
+}
+//--></SCRIPT>
+<!-- The Deoxyribonucleic Hyperdimension
+http://www.deoxy.org --><LINK REL="home"       HREF="index.html">
+<LINK REL="search"     HREF="http://deoxy.org/find">
+<LINK REL="stylesheet" HREF="inc/css/deoxy.org.css" TYPE="text/css">
+<LINK REL="alternate"  HREF="cgi/nu.pl@rss=1" TITLE="recent changes at deoxy.org" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/news/cloud?rss=1" TITLE="deoxy news cloud" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/news/cloud/today?rss=1" TITLE="deoxy news cloud today" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="news/feeds/moonphase.xml" TITLE="lunar phases" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/video/random/rss" TITLE="random video" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="koans@rss=1" TITLE="random koan" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="iching/random/rss" TITLE="random iching hexagram" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/cgi/randlink.pl?rss=1" TITLE="random link at deoxy.org" TYPE="application/rss+xml">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/find.xml"  title="deoxy find">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/news.xml"  title="deoxy news">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/newstoday.xml"  title="deoxy news today">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/videx.xml" title="deoxy video">
+<style type="text/css">input.wikiform { background-color:#111111; font-size:13px; color:#909090; border:0px; cursor:pointer; }</style>
+<meta name="MSSmartTagsPreventParsing" content="true">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="robots" content="all">
+
+<LINK REL="stylesheet" HREF="inc/css/print.css" TYPE="text/css" MEDIA="print">
+<script type="text/javascript" src="bin/chatterwindow.js"></script>
+<script type="text/javascript" src="bin/cookies.js"></script>
+<script type="text/javascript">
+function openVideo(id) {
+ var s = 'screenX=100,screenY=100,left=100,top=100,width=640,height=565,'
+ var x = 'resizable=1,status=0,menubar=0,toolbar=0,location=0,scrollbars=0'
+ window.open('http://deoxy.org/video/'+id,'',s+x)}
+</script>
+
+</head>
+<body bgcolor="#ffffff" text="#000000"><a name="top"></a><div id=_header>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr bgcolor="#111111">
+<td nowrap rowspan=2 bgcolor="#000000" width="20" background='gif/background2.jpg'>&nbsp;</td>
+<td nowrap rowspan=2 bgcolor="#000000" align=center style=width:90px;><a
+ href="index.html"
+ title=deoxy.org
+ target=_top><!-- img
+ src="http://deoxy.org/gif/ooleft_left.gif" border=0 
+--><img src="vi/2nv5GaiO2bU.jpg" style=height:68px;width:100%;margin-left:1px; border=0></a></td>
+<form action='http://deoxy.org/cgi/jump.pl' method="post">
+<td nowrap align="right" background='img/vortex0b.gif'>
+
+<table cellspacing="0" cellpadding="0" border=0 background='gif/background2.jpg'><tr><td nowrap>
+<select name="to" class="select" onChange="x=this.options[this.selectedIndex].value;location.href=x.match(/^http:/)?x:'http://deoxy.org/'+x;">
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="nu.htm">&nbsp;&nbsp;\_updates</option>
+<!-- option value="watts.htm">alanwatts</option -->
+<!-- option value="alephnull">aleph</option -->
+<option value="8brains.htm">circuits</option>
+<option value="8basic.htm">&nbsp;&nbsp;\_scripts</option>
+
+
+
+<!-- option value="ct">crimethinc</option -->
+<option value="gacwao">defrag</option>
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="contact">&nbsp;&nbsp;|_contact</option>
+<option VALUE="http://m.deoxy.org">&nbsp;&nbsp;|_mobile</option>
+<!-- option value="wiki/Deoxy/Help">&nbsp;&nbsp;|_help</option -->
+<option value="meme/DNA">DNA</option>
+<option value="find">Find?</option>
+<!-- option value="forum">forum</option>
+<option value="newposts">&nbsp;&nbsp;|_newposts</option -->
+<!-- option value="hyper.htm">hyperspace</option -->
+<option value="iching">IChing</option>
+<option value="iching/random">&nbsp;&nbsp;\_random</option>
+<option value="imagine.mil">imagine.mil</option>
+<option value="inc.htm">incunabula</option>
+<!-- option value="http://irc.deoxy.org">IRC status</option -->
+<option value="koans">koans</option>
+<option value="koan/random">&nbsp;&nbsp;\_random</option>
+
+<option value="media">media</option>
+<option value="media/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="meme">meme</option>
+<option value="meme/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="news">news</option>
+<option VALUE="news/cloud/today">&nbsp;&nbsp;|_today</option>
+<option VALUE="news/digestc">&nbsp;&nbsp;|_digest</option>
+<option VALUE="news/view">&nbsp;&nbsp;|_category</option>  
+<option VALUE="http://m.deoxy.org/news">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\_mobile</option>
+<option value="omega.htm">omega</option>
+<option value="pdfa">PDFA</option>
+<option value="index/People">People</option>
+<option value="leary.htm">&nbsp;&nbsp;|_Leary</option>
+<option value="lilly.htm">&nbsp;&nbsp;|_Lilly</option>
+<option value="mckenna.htm">&nbsp;&nbsp;|_McKenna</option>
+<option value="media/McLuhan">&nbsp;&nbsp;|_McLuhan</option>
+<option value="raw.htm">&nbsp;&nbsp;|_RAWilson</option>
+<option value="philo.htm">philosophos</option>
+<option value="cgi/randlink.pl?go">random</option>
+<option value="rss.htm">RSS</option>
+<!-- option value="time/sabbats.htm">sabbats</option>
+<option value="shaman.htm">shaman</option -->
+<option value="stats">stats</option>
+<option value="maps">&nbsp;&nbsp;\_map</option>
+<!-- option value="tcrime.htm">thoughtcrime</option -->
+<option value="topics">topics</a>
+<option value="nu.htm">&nbsp;&nbsp;\_cloud</option>
+<option value="nu.htm">updates</option>
+<option value="wiki/Deoxy/Video">video</option>
+<option value="videx">&nbsp;&nbsp;|_index</option>
+<option value="vidcloud">&nbsp;&nbsp;|_cloud</option>
+<option value="vidimg">&nbsp;&nbsp;|_images</option>
+<option VALUE="warnings.htm">warnings</option>
+<!-- option value="wiki">wiki</option>
+<option value="wiki/Recent">&nbsp;&nbsp;|_changes</option>
+<option value="wiki/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="online">who's online</option -->
+</select>
+
+<input type="hidden" name="from" value='/trypfaq.htm'>
+<noscript><input type="Submit" value="go" class="button"></noscript>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></form>
+
+<form action="http://translate.google.com/translate" method="post" target="_top" name="trans" id="trans"><td nowrap align="center">
+<input type="Submit" value="to" class="button" title="Google translation">
+<select name="tl" class="select" title="Google translation">
+<option value=af>Afrikaans</option>
+<option value=sq>Albanian</option>
+<option value="ar">Arabic</option>
+<option value=hy>Armenian</option>
+<option value=az>Azerbaijani</option>
+<option value=eu>Basque</option>
+<option value=be>Belarusian</option>
+<option value=bn>Bengali</option>
+<option value=bs>Bosnian</option>
+<option value="bg">Bulgarian</option>
+<option value=my>Burmese</option>
+<option value="ca">Catalan</option>
+<option value=ceb>Cebuano</option>
+<option value=ny>Chichewa</option>
+<option value="zh-CN">Chinese CN</option>
+<option value="zh-TW">Chinese TW</option>
+<option value="hr">Croatian</option>
+<option value="cs">Czech</option>
+<option value="da">Danish</option>
+<option value="nl">Dutch</option>
+<option value=eo>Esperanto</option>
+<option value="et">Estonian</option>
+<option value="tl">Filipino</option>
+<option value="fi">Finnish</option>
+<option value="fr">French</option>
+<option value="gl">Galacian</option>
+<option value=ka>Georgian</option>
+<option value="de">German</option>
+<option value="el">Greek</option>
+<option value=gu>Gujarati</option>
+<option value=ht>Haitian Creole</option>
+<option value=ha>Hausa</option>
+<option value="iw">Hebrew</option>
+<option value="hi">Hindi</option>
+<option value=hmn>Hmong</option>
+<option value="hu">Hungarian</option>
+<option value=is>Icelandic</option>
+<option value=ig>Igbo</option>
+<option value="id">Indonesian</option>
+<option value=ga>Irish</option>
+<option value="it">Italian</option>
+<option value="ja">Japanese</option>
+<option value=jw>Javanese</option>
+<option value=kn>Kannada</option>
+<option value=kk>Kazakh</option>
+<option value=km>Khmer</option>
+<option value="ko">Korean</option>
+<option value=lo>Lao</option>
+<option value=la>Latin</option>
+<option value="lv">Latvian</option>
+<option value="lt">Lithuanian</option>
+<option value=mk>Macedonian</option>
+<option value=mg>Malagasy</option>
+<option value=ms>Malay</option>
+<option value=ml>Malayalam</option>
+<option value="mt">Maltese</option>
+<option value=mi>Maori</option>
+<option value=mr>Marathi</option>
+<option value=mn>Mongolian</option>
+<option value=ne>Nepali</option>
+<option value="no">Norwegian</option>
+<option value=fa>Persian</option>
+<option value="pl">Polish</option>
+<option value="pt">Portuguese</option>
+<option value=pa>Punjabi</option>
+<option value="ro">Romanian</option>
+<option value="ru">Russian</option>
+<option value="sr">Serbian</option>
+<option value=st>Sesotho</option>
+<option value=si>Sinhala</option>
+<option value="sk">Slovak</option>
+<option value="sl">Slovenian</option>
+<option value=so>Somali</option>
+<option value="es" selected>Spanish</option>
+<option value=su>Sundanese</option>
+<option value=sw>Swahili</option>
+<option value="sv">Swedish</option>
+<option value=tg>Tajik</option>
+<option value=ta>Tamil</option>
+<option value=te>Telugu</option>
+<option value="th">Thai</option>
+<option value="tr">Turkish</option>
+<option value="uk">Ukrainian</option>
+<option value=ur>Urdu</option>
+<option value=uz>Uzbek</option>
+<option value="vi">Vietnamese</option>
+<option value=cy>Welsh</option>
+<option value=yi>Yiddish</option>
+<option value=yo>Yoruba</option>
+<option value=zu>Zulu</option></select>
+<input type=hidden name=sl value="en">
+<input type=hidden name=hl value="en">
+<input type=hidden name=ie value="UTF-8">
+<input type=hidden name=u id=u value='http://deoxy.org/trypfaq.htm'>
+</td></form>
+
+
+<td align="right" valign="middle" nowrap>
+<table cellspacing="0" cellpadding="0" border=0><tr>
+<form action=http://deoxy.org/find method=get name=sitesearchform>
+<td nowrap align=right valign="middle">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name=q size=15 class="input" title="search deoxy.org">
+<input type="Submit" value="find" class="button" title="search deoxy.org"></TD>
+</form></tr></table>
+</td></tr></table>
+
+</td></tr><SCRIPT TYPE="text/javascript">
+document.trans.tl.selectedIndex=Math.floor(Math.random()*(document.trans.tl.length+1))
+</script><tr><td bgcolor="#111111" background="img/thin_horizontal_lines.gif" 
+style=white-space:nowrap;overflow:hidden;>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+<td style="background-image:url('gif/background2.jpg');background-position:40 0;" width=20>&nbsp;</td>
+<td style=background-image:url(img/thin_horizontal_lines.gif);>
+<div style=overflow:hidden;white-space:nowrap;>&nbsp;<small>[an error occurred while processing this directive]</small></div></td>
+
+<td width=20>&nbsp;</td>
+<form action=http://deoxy.org/cgi/jump.pl method=get target=_blank>
+<td align="right"><div style=overflow:hidden;display:none;>
+<font color="#909090"><a href="nu.htm"><font color="#ffffff" size="-1">New</font></a> : <font size="-1">
+<a href="nu.htm" ><font color=#ffffff size=-2>Site</font></a> : <a href="nu.htm" ><font color=#ffffff size=-2>Updates</font></a>
+
+</font></font></div></td>
+
+<td style="background-image:url('gif/background2.jpg');background-position:0 0;" width=20>&nbsp;</td>
+</form></tr></table>
+</td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="#000000" align="right" background="gif/background2.jpg">
+<table><tr><form action="http://deoxy.org/cgi/jump.pl"><td>
+	<select name="to" class="select" 
+	onChange="if (this.options[this.selectedIndex].value != 'none') location.href='http://deoxy.org/'+this.options[this.selectedIndex].value">
+        <option value='none'>Related to Tryptamine Carriers FAQ<option value='index/Ayahuasca'>Ayahuasca:<option value="icaro.htm">&nbsp;&nbsp;Ayahuasca Icaro<option value="ayadef.htm">&nbsp;&nbsp;Ayahuasca: King of Brews<option value="yagecommon.htm">&nbsp;&nbsp;Common Themes in South American Indian Yage...<option value="vegeta.htm">&nbsp;&nbsp;Diet and other precautions<option value="shamanway.htm">&nbsp;&nbsp;Discovering the Way of the Shaman<option value="dmt">&nbsp;&nbsp;DMT<option value="media/DMT_The_Spirit_Molecule">&nbsp;&nbsp;DMT The Spirit Molecule<option value="melodies.htm">&nbsp;&nbsp;Magic Melodies<option value="media/McKenna/Ayahuasca_and_its_Recipes">&nbsp;&nbsp;McKenna/Ayahuasca and its Recipes<option value="neuroalchemy.htm">&nbsp;&nbsp;Neuro-Alchemy: Beta-Carbolines as Potentiat...<option value="t_langvr.htm">&nbsp;&nbsp;Ordinary Language, Visible Language and Vir...<option value="w_psyrel.htm">&nbsp;&nbsp;Psychedelics and Religious Experience<option value="3dethsng.htm">&nbsp;&nbsp;Shamanic Death Song<option value="shaman.htm">&nbsp;&nbsp;Shamanism<option value="ayalien.htm">&nbsp;&nbsp;The Ayahuasca-Alien Connection<option value="narbystew.htm">&nbsp;&nbsp;The Cosmic Serpent, DNA and the Origins of ...<option value="rushingw.htm">&nbsp;&nbsp;The Sound of Rushing Water<option value="t_thc.htm">&nbsp;&nbsp;Tryptamine Hallucinogens and Consciousness</select>&nbsp;<noscript><input type="Submit" value="go" class="button"></noscript>
+	<input type="hidden" name="from" value="/trypfaq.htm"></td></form></tr></table>
+</td></tr></table></div><p>
+
+
+<table border=0 cellspacing=0 width=95% cellpadding=6 align=center>
+<tr><td align=left background="gif/palmleaf.jpg"><a name="top"><nobr><h1>Tryptamine Carriers  FAQ</h1></nobr></a></td><td bgcolor="#000000" align=right><img src="gif/tmush.gif" width=56 height=37 border=0 alt=""></td></tr>
+<tr><td colspan=2>
+<font size="-1">by <a href="mailto:ppennane&#064;cc.helsinki&#046;fi"><em>Petrus Pennanen</em></a><br>
+with help from <a href="mailto:Hex&#064;f362&#046;n632&#046;23&#046;fido&#046;zeta&#046;org&#046;au"><em>Michael from Melbourne</em></a>.<br>
+Hypertexture and &copy;ontinuing illustration effort via <a href="trypfaq.htm">http://deoxy.org</a></font><br>
+
+<!--div align="center">
+<form action="http://babelfish.altavista.com/cgi-bin/translate?" method="POST" onSubmit="Fill();babelWindow()" target="babelWin">
+<input type="hidden" name="doit" value="done">
+<input type="hidden" name="language" value="en">
+<input type="hidden" name="urltext" onFocus="this.blur()">
+<font size="3">Translate from <select name="lp">
+<option value="en_fr">English to French</option>
+<option value="en_de">English to German</option>
+<option value="en_it" SELECTED>English to Italian</option>
+<option value="en_pt">English to Portuguese</option>
+<option value="en_es">English to Spanish</option></select>
+<input type="Submit" value="DeBabelize!"></font></form></div-->
+
+<blockquote><p><font size=-1>Thanks to many individuals for help in putting this together.<br>
+If you know sources of tryptamines that are not mentioned here please mail us.</font><br></blockquote>
+<p align=right><div align=right><form name=search onSubmit="return findInPage(this.string.value);"><font size="-1"><strong>Last deoxy update Jul 1999</strong></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="-1"><strong>Search this FAQ for</strong></font> <input name=string type=text size=20 onChange="n = 0;"></form></div>
+</td>
+</tr>
+</table>
+<p><!--strong>Last update Dec 1995</strong><br-->
+<br>
+<p><table align=center width="95%" cellpadding=2 cellspacing=0 border=0>
+<tr><td align=left rowspan=7><img src="gif/tryp.gif" alt="Molecular Schematic"></td></tr>
+<tr><td align=right><a href="trypfaq.htm#mao">MAO Inhibitors and Tryptamines</a></td></tr>
+<tr><td align=right><a href="trypfaq.htm#synth">Synthesis of DMT Derivatives</a></td></tr>
+<tr><td align=right><a href="trypfaq.htm#toads">Psychedelic Toads</a></td></tr>
+<tr><td align=right><a href="trypfaq.htm#fungi">The Fungi</a></td></tr>
+<tr><td align=right><a href="trypfaq.htm#plants">The Plants</a></td></tr>
+<tr><td align=right><a href="trypfaq.htm#ref">References</a></td></tr>
+</table>
+<blockquote>
+<p><strong><font size=+1>Orally and Parenterally Active Psychotropic Tryptamine Derivatives</font></strong><br>
+<font size="-1">Based on <a href="trypfaq.htm#43">McKenna & Towers 1984</a></font><br></blockquote>
+<p><table align=center border width=95% cellpadding=6 cellspacing=0 border=0>
+<caption align=bottom>Data compiled from <a href="trypfaq.htm#38">Kantor, et al. 1980</a>; 
+<a href="trypfaq.htm#64">Shulgin 1976</a>, 
+<a href="trypfaq.htm#65">1982</a>; Shulgin&Carter 1980</caption>
+<tr>
+<th>Name of Compound</th>
+<th>R1</th>
+<th>R2</th>
+<th>R3</th>
+<th>R4</th>
+<th>R5</th>
+<th>Dosage<br>(mg)</th>
+<th>Route<br>Oral/Par.</th>
+</tr>
+<tr>
+<td>tryptamine</td>
+<td>H</td>
+<td>H</td>
+<td>H</td>
+<td>H</td>
+<td>H</td>
+<td>100 *1</td>
+<td>par/oral?</td>
+</tr>
+<tr>
+<td><a href="dmt.htm">DMT (dimethyltryptamine)</a></td> 
+<td>CH3</td>
+<td>CH3</td>
+<td>H</td>
+<td>H</td>
+<td>H</td>
+<td>60</td>
+<td>par</td>
+</tr>
+<tr>
+<td><a href="dmtpharm.htm#detdpt">DET</a></td>                     
+<td>C2H5</td>   
+<td>C2H5</td>   
+<td>H</td>      
+<td>H</td>      
+<td>H</td>      
+<td>60</td>     
+<td>par/oral</td>
+</tr>
+<tr>
+<td><a href="dmtpharm.htm#detdpt">DPT</a></td>                     
+<td>n-prop</td> 
+<td>n-prop</td> 
+<td>H</td>      
+<td>H</td>      
+<td>H</td>      
+<td>60</td>     
+<td>par/oral</td>
+</tr>
+<tr>
+<td>DAT</td>                      
+<td>C3H5</td>   
+<td>C3H5</td>   
+<td>H</td>      
+<td>H</td>     
+<td>H</td>      
+<td>30</td>      
+<td>par/oral</td>
+</tr>
+<tr>
+<td>DIPT</td>                    
+<td>i-prop</td> 
+<td>i-prop</td> 
+<td>H</td>      
+<td>H</td>      
+<td>H</td>      
+<td>30</td>     
+<td>oral</td>
+</tr>
+<tr>
+<td>5-MeO-DIPT</td>              
+<td>i-prop</td>
+<td>i-prop</td>
+<td>H</td>    
+<td>H</td>     
+<td>OCH3</td>   
+<td>12</td>      
+<td>oral</td>
+</tr>
+<tr>
+<td>5-MeO-DMT</td>                
+<td>CH3</td>    
+<td>CH3</td>   
+<td>H</td>      
+<td>H</td>      
+<td>OCH3</td>   
+<td>6</td>       
+<td>par</td>
+</tr>
+<tr>
+<td>psilocin</td>                 
+<td>CH3</td>   
+<td>CH3</td>    
+<td>H</td>      
+<td>OH</td>     
+<td>H</td>      
+<td>12 *2</td>   
+<td>oral</td>
+</tr>
+<tr>
+<td>CZ-74</td>                    
+<td>C2H5</td>   
+<td>C2H5</td>   
+<td>H</td>      
+<td>OH</td>     
+<td>H</td>     
+<td>15 *2</td>   
+<td>oral</td>
+</tr>
+<tr>
+<td>serotonin</td>               
+<td>H</td>     
+<td>H</td>      
+<td>H</td>      
+<td>H</td>      
+<td>OH</td>     
+<td>100 *3</td> 
+<td>oral</td>
+</tr>
+<tr>
+<td>bufotenine</td>               
+<td>CH3</td>    
+<td>CH3</td>    
+<td>H</td>      
+<td>H</td>      
+<td>OH</td>     
+<td>16 *4</td>   
+<td>par</td>
+</tr>
+<tr>
+<td>IT-290</td>                   
+<td>H</td>      
+<td>H</td>      
+<td>CH3</td>    
+<td>H</td>      
+<td>H</td>     
+<td>30</td>      
+<td>oral</td>
+</tr>
+<tr>
+<td>4-hydroxy-alfa-methyl-tryptamine</td>              
+<td>H</td>      
+<td>H</td>     
+<td>CH3</td>    
+<td>OH</td>     
+<td>H</td>      
+<td>20 *3</td>   
+<td>oral</td>
+</tr>
+<tr>
+<td>MP-809</td>                   
+<td>H</td>      
+<td>H</td>      
+<td>CH3</td>    
+<td>H</td>      
+<td>CH3</td>    
+<td>60 *5</td>   
+<td>oral</td>
+</tr>
+<tr>
+<td>5-fluoro-alfa-methyl-tryptamine</td>               
+<td>H</td>      
+<td>H</td>      
+<td>CH3</td>    
+<td>H</td>      
+<td>F</td>      
+<td>25 *6</td>  
+<td>oral</td>
+</tr>
+<tr>
+<td>5-methoxy-alfa-methyl-tryptamine</td>               
+<td>H</td>      
+<td>H</td>     
+<td>CH3</td>    
+<td>H</td>      
+<td>OCH3</td>  
+<td>3</td>      
+<td>oral</td>
+</tr>
+<tr>
+<td>4-hydroxy-diisopropyl-tryptamine</td>               
+<td>i-prop</td> 
+<td>i-prop</td> 
+<td>H</td>      
+<td>OH</td>     
+<td>H</td>      
+<td>12 *6</td>   
+<td>oral</td>
+</tr>
+<tr>
+<td>4-hydroxy-N-isopropyl, N-methyl-tryptamine</td>     
+<td>i-prop</td> 
+<td>CH3</td>    
+<td>H</td>      
+<td>OH</td>     
+<td>H</td>      
+<td>6 *6</td>    
+<td>oral</td>
+</tr>
+<tr>
+<td>N-t-butyl-tryptamine</td>     
+<td>H</td>      
+<td>t-butylH</td>     
+<td>H</td>      
+<td>H</td>      
+<td>?</td> 
+<td>*7</td>    
+<td>par?</td>
+</tr>
+<tr>
+<td>3-(2-(2,5-dimethylpyrrolyl)<br>ethyl)-indole</td>                 
+<td>H</td>      
+<td>H</td>      
+<td>H</td>      
+<td>?</td>       
+<td>?</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>5-alfa-DMT</td>               
+<td>CH3</td>    
+<td>CH3</td>    
+<td>CH3</td>    
+<td>H</td>      
+<td>H</td>      
+<td>?</td>       
+<td>?</td>
+</tr>
+</table>
+<blockquote>
+<font size=-1>
+<ol>
+<li>Autonomic symptoms; little central activity.<br>
+<li>The phosphate esters are psilocybin and CEY-19, respectively;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;both are stoichiometrically equivalent to the 4-hydroxy isomers.<br>
+<li>Cardiovascular and autonomic symptoms; little central activity.<br>
+<li>A pressor amine rather than a hallucinogen in man.<br>
+<li>An antidepressant rather than a hallucinogen in man.<br>
+<li>Based on anonymous reports in the lay press.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;No clinical studies have been published.<br>
+<li>No oral activity with doses up to 20 mg, may be parenterally active.<br>
+</ol></font>
+
+<dl>
+<dt>Other potentially psychedelic tryptamines include:</dt>
+<dd>6-fluoro-alfa-methyltryptamine, 7-methyltryptamine, 5-methyltryptamine<br>
+5-fluorotryptamine, 6-fluorotryptamine and 5- and 6-fluorotryptophans.</dd>
+</dl>
+
+<p><a name="mao">&nbsp;</a>
+<table width=90% align=center border=0 cellpadding=0 cellspacing=0>
+<tr><td><form name=search onSubmit="return findInPage(this.string.value);"><font size="-1"><strong>Search this FAQ for</strong></font> <input name=string type=text size=20 onChange="n = 0;"></form></td>
+<td align=right valign=top><a href="trypfaq.htm#top"><font size="-1"><strong>table of contents</strong></font></a></td></tr></table>
+
+<h2>MAO Inhibitors and Tryptamines</h2>
+<img src="gif/dmt3.gif" width=189 height=123 hspace=12 vspace=12 border=0 align="left" alt="DMT">
+Monoamine oxidase (MAO) is the primary inactivation pathway of most
+tryptamines. Because of this, inhibitors of the MAO enzyme (MAOIs) can be
+used to potentiate the effects of tryptamines and to make DMT and 5-MeO-DMT
+orally active.
+<p><img align=right vspace=12 hspace=12 src="gif/caapi.gif" width=276 height=395 border=0 alt="Banisteriopsis caapi">
+MAO inhibitors fall into two classes: Irreversible and reversible MAOIs.
+In addition they can inhibit either or both of the two types of the MAO
+enzyme, MAO-A and MAO-B which are associated with serotonergic and
+dopaminergic neurons respectively. Irreversible MAOIs (e.g. the hydrazides 
+iproniazid and phenelzine) bind permanently to the enzyme and cause MAO 
+inhibition lasting 1-2 weeks after ingestion. They are used clinically to 
+treat depression. Reversible MAOIs, such as moclobemide, which is used as an 
+antidepressant, and the beta-carbolines harmine and harmaline, are effective 
+for much shorter time, maybe up to 24 hours. Recreational drug users around 
+the world are using mainly harmine and harmaline despite the lack of 
+scientific studies on their effects on humans.
+<p><table border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td>
+<img src="gif/harmaline.gif" width=152 height=106 hspace=12 vspace=12 border=0 alt="Harmaline"></td><td>
+<img src="gif/harmine.gif" width=152 height=90 hspace=12 vspace=12 border=0 alt="Harmine">
+</td></tr></table><p>
+Natives of Amazon have traditionally combined Banisteriopsis caapi vine,
+which contains harmine, harmaline and related beta-carbolines, with DMT-containing 
+plants to make an orally active brew called <a href="ayadef.htm">ayahuasca</a>. Other 
+plants containing harmine and/or harmaline can be substituted for B. caapi. The usual "North American ayahuasca" consists of <i>Peganum harmala</i> seeds and <a 
+href="trypfaq.htm#desmanthus">Desmanthus illinoensis</a> roots, and in Australian "acaciahuasca" leaves of Acacia complanata are combined with material from <a href="acacia.htm">DMT-containing acacias</a> (the effectivity of this mixture hasn't been confirmed). MAOIs have also been used to potentiate the effects of mushrooms containing psilocybin. <a href="mckenna.htm">Terence McKenna</a> has mentioned chocolate being a weak MAOI, which could be a reason for the popular habit of ingesting mushrooms with cocoa.
+
+<p><img align=left src="gif/harmala.jpg" width=200 height=294 border=0 vspace=12 hspace=12  alt="Peganum harmala">
+Peganum harmala (Syrian rue) seeds are the most concentrated natural source
+of harmine and harmaline&#151;about 3% of their weight consists of these
+alkaloids. Banisteriopsis caapi has been found to contain from 0.18% to 
+1.36% beta-carbolines, with the concentration of harmine being from 0.057%
+to 0.635% (<a href="trypfaq.htm#42">McKenna et al. 1984</a>). According to anecdotal reports one gram 
+of P. harmala seeds ingested inhibits MAO enough to make DMT orally active.
+<p>
+Harmine and harmaline are hallucinogenic on their own with doses
+starting from around 300 mg (<a href="trypfaq.htm#49">Naranjo 1967</a>), but often cause physical
+side-effects such as nausea and tremors in this dose range. They have little 
+emotional or "psychedelic" effects, but produce strong visual hallucinations. 
+Because of this the natives of Amazon often add larger amounts (75-100 cm of 
+stem per dose) of B. caapi to ayahuasca brew than is needed for MAO inhibition 
+(<a href="trypfaq.htm#41">Luna 1984</a>).
+<p>
+There are significant dangers in using MAO inhibitors. Most MAOIs potentiate 
+the cardiovascular effects of tyramine and other monoamines found in
+foods. Ingestion of aged cheese, beer, wine, pickled herring, chicken liver,
+yeast, large amounts of coffee, citrus fruits, canned figs, broad beans,
+chocolate or cream while MAO is inhibited can cause a hypertensive
+crisis including a dangerous rise in blood pressure. Effects of
+amphetamines, general anaesthetics, sedatives, anti-histamines, alcohol,
+potent analgesics and anticholinergic and antidepressant agents are
+prolonged and intensified. Overdosage of MAOIs by themselves is also
+possible with effects including hyperreflexia and convulsions.
+
+<p><a name="synth">&nbsp;</a>
+<table width=90% align=center border=0 cellpadding=0 cellspacing=0>
+<tr><td><form name=search onSubmit="return findInPage(this.string.value);"><font size="-1"><strong>Search this FAQ for</strong></font> <input name=string type=text size=20 onChange="n = 0;"></form></td>
+<td align=right valign=top><a href="trypfaq.htm#top"><font size="-1"><strong>table of contents</strong></font></a></td></tr></table>
+
+<h2>Synthesis of DMT Derivatives</h2>
+
+Tryptamine derivatives and beta-Carbolines have been detected as
+endogenous metabolites in mammals, including humans. Methyl transferases
+that catalyze the synthesis of tryptamines, including DMT, 5-MeO-DMT and
+bufotenine, are found in human lung, brain, cerebrospinal fluid, liver
+and heart (<a href="trypfaq.htm#42">McKenna & Towers 1984</a>). In the pineal gland MAO is the primary inactivation pathway of serotonin, a neurotransmitter synthesized from the amino acid tryptophan. If MAO is blocked by harmine, harmaline or other MAO inhibitors serotonin can be converted by the methyltransferase enzymes 
+HIOMT and INMT into psychedelic tryptamines (serotonin --(HIOMT)--> 
+5-MeO-trypt. --(2*INMT)--> 5-MeO-DMT).
+<p>
+<table align="center"><tr><td valign="middle">
+<img src="gif/serotonin.gif" width=213 height=120 hspace=12 border=0 alt="Serotonin"> <img src="gif/5meodmt.gif" width=218 height=133 hspace=12 border=0 alt="5-MeO-DMT">
+</td></tr></table>
+<p>
+So, ingesting l-tryptophan to increase serotonin levels, a candy bar to 
+increase the amount of tryptophan getting to your brain and natural
+plant material containing 25-50 mg harmine/harmaline to block MAO, all at the
+same time, might cause your pineal gland to synthesize substantial amounts of
+5-MeO-DMT (<a href="trypfaq.htm#48">Most 1986</a>). This is extremely dangerous for persons with existing amine imbalance or schizophrenia. For normal, healthy people possible consequences are <strong>bad. DON'T TRY THIS.</strong>
+<p>
+A potent inhibitor of INMT, which is a necessary enzyme for the synthesis
+of DMT and 5-MeO-DMT, is found in particularly high concentrations in the
+pineal gland. A bypassing or inhibition of the synthesis of this inhibitor
+might be responsible for trances and other psychedelic states achieved
+"without drugs" (<a href="trypfaq.htm#70">Strassman 1990</a>). See Strassman's article for more info and speculation about the pineal gland.
+
+<p><a name="toads">&nbsp;</a>
+<table width=90% align=center border=0 cellpadding=0 cellspacing=0>
+<tr><td><form name=search onSubmit="return findInPage(this.string.value);"><font size="-1"><strong>Search this FAQ for</strong></font> <input name=string type=text size=20 onChange="n = 0;"></form></td>
+<td align=right valign=top><a href="trypfaq.htm#top"><font size="-1"><strong>table of contents</strong></font></a></td></tr></table>
+
+<h2>Psychedelic Toads</h2>
+
+<table cellpadding=8 width=70% align=center cellspacing=0 cellpadding=12 border=1><tr><td><a href="audio/frogs.au"><img align=right src="gif/bufo.jpg" hspace=12 vspace=12 border=0 alt="bufo species"></a><b>WARNING</b> <font size="-1">These toads are <strong><em>POISONOUS.</em></strong> If you eat the venom you could <strong><em>DIE.</em></strong> Several subspecies of this type of toad are <em>merely poisonous.</em> Don't even think about doing this unless you can <em>absolutely</em> identify the species, and know <em>all</em> the consequences of smoking its venom.</font><br>
+<p>
+<font size="-1"><strong>NOTE</strong> The toad mentioned is this section, <em>Bufo alvarius,</em> is a rare and endangered species.<font size="-2">&#151;dimitri</font></font><br></td></tr></table>
+<p>
+<table align="left"><tr><td align="left">
+<img src="gif/bufotenine.gif" width=209 height=128 hspace=12 vspace=12 border=0 alt="Bufotenine"><br>
+<img src="gif/5meodmt.gif" width=218 height=133 hspace=12 vspace=12 border=0 alt="5-MeO-DMT"><br>
+</td></tr></table>
+
+Bufotenine and related 5-hydroxy-indolethylamines are common constituents
+of venoms of the genera Hyla, Leptodactylus, Rana and Bufo. Bufotenine
+is not psychedelic in reasonable doses (with larger doses there are
+dangerous physiological side effects), but the skin of one species, Bufo
+alvarius, contains 50-160 mg 5-MeO-DMT/g of skin (<a href="trypfaq.htm#15">Daly & Witkop 1971</a>).
+It's the only Bufo species known to contain a hallucinogenic tryptamine
+(<a href="trypfaq.htm#42">McKenna & Towers 1984</a>). <a href="trypfaq.htm#47">Most (1984)</a> gives instructions for collecting and drying the venom:<p><blockquote>
+Fresh venom can easily be collected without harm to the toad. Use a flat 
+glass plate or any other smooth, nonporous surface at least 12-inches
+square. Hold the toad in front of the plate, which is fixed in a vertical 
+position. In this manner, the venom can be collected on the glass plate, 
+free of dirt and liquid released when the toad is handled. 
+<p>When you are ready to begin, hold the toad firmly with one hand and, with
+the thumb and forefinger of your other hand, squeeze near the base of the 
+gland until the venom squirts out of the pores and onto the glass plate. Use
+this method to systematically collect the venom from each of the toad's 
+granular glands: those on the forearm, those on the tibia and femur of the 
+hind leg, and, of course, the <a href="http://web.archive.org/web/19981202110323/http://gnv.ifas.ufl.edu/~fairsweb/images/uw/u046f1.gif">
+parotids on the neck</a>. Each gland can be squeezed a second time for an additional yield of venom if you allow the toad a one-hour rest preiod. After this the glands are empty and require four to to six weeks for regeneration.
+<p>    The venom is viscous and milky-white in color when first squeezed from the 
+glands. It begins to dry within minutes and acquires the color and texture 
+of rubber cement. Scrape the venom from the glass plate, dry it thoroughly,
+and store it in an airtight container until you are ready to smoke it. </blockquote>
+<p>  
+<a href="trypfaq.htm#16">Davis and Weil (1992)</a> smoked the venom and described what happened:
+<blockquote>
+In comparison to the pure compounds the toad venom appears longer lasting 
+and, because one does not completely lose contact with reality, far more 
+pleasant, even sensual. Shortly after inhalation I experienced warm flushing
+sensations, a sense of wonder and well-being, strong auditory hallucinations,
+which included an insect-cicada sound that ran across my mind and seemed to 
+link my body to the earth. Though I was indoors, there was a sense of the 
+feel of the earth, the dry desert soil passing through my fingers, the stars
+at midday, the scent of cactus and sage, the feel of dry leaves through hands.
+Strong visual hallucinations in orblike brilliance, diamond patterns that
+undulated across my visual field. The experience was in every sense pleasant,
+with no disturbing physical symptoms, no nausea, perhaps a slight sense of 
+increased heart rate. Warm waves coursed up and down my body. The effects
+lasted only a few minutes but a pleasant afterglow continued for almost an
+hour. <font size="-1">(Wade Davis, personal observation, January 12, 1991)</font>
+<p>
+Profound alteration of consciousness within a few seconds of exhaling. I
+relax into a deep, peaceful interior awareness. There is nothing scary about
+the effects and no sense of toxicity. I try to describe my feelings but am
+unable to talk for the first five minutes and then only with some difficulty.
+This is a powerful psychoactive drug, one that I think would appeal to most
+people who like the effects of hallucinogens. For the next hour I feel slow
+and velvety, with a slight pressure in my head. No long-lasting effects to
+report. <font size="-1">(Andrew T. Weil, personal observation, January 12, 1991).</font>
+</blockquote>
+<font size="-1">Other animals contain DMT such as the gorgonian Paramuricea chamaeleon 
+(<a href="trypfaq.htm#13">Cimino & De Stefano, 1978</a>).</font><br>
+
+<p><a name="fungi">&nbsp;</a>
+<table width=90% align=center border=0 cellpadding=0 cellspacing=0>
+<tr><td><form name=search onSubmit="return findInPage(this.string.value);"><font size="-1"><strong>Search this FAQ for</strong></font> <input name=string type=text size=20 onChange="n = 0;"></form></td>
+<td align=right valign=top><a href="trypfaq.htm#top"><font size="-1"><strong>table of contents</strong></font></a></td></tr></table>
+
+<p>
+</blockquote>
+ 
+<table border=1 cellspacing=0 cellpadding=12 width=90% align=center>
+<tr><td align=left background="gif/palmleaf.jpg"><h2>F U N G I</h2><div align=right><a href="bmushrmd.htm"><strong>B E M U S H R  &Ouml; &Ouml; M E D</strong></a></div></td></tr>
+
+<tr><td>
+<ul>
+<li>Family: Bolbitiaceae
+<li>Genus: Agrocybe
+<li>Species: farinacea
+</ul>
+Contains psilocybin (<a href="trypfaq.htm#39">Koike et al. 1981</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Genus: Conocybe
+<li>Species: cyanopus, kuehneriana, siligineoides, <a href="http://www.hyperreal.org/drugs/psychedelics/mushrooms/teonanacatl/gif/bogcon.gif" target="remotes">smithii</a>
+</ul>
+C. cyanopus (<a href="trypfaq.htm#8">Benedict et al. 1962</a>) and C. smithii (<a href="trypfaq.htm#9">Benedict et al. 1967</a>) contain psilocybin and psilocin while C. kuehneriana contains psilocin only 
+(<a href="trypfaq.htm#50">Ohenoja et al. 1987</a>). C. siligineoides may also contain these alkaloids 
+(<a href="trypfaq.htm#62">Schultes & Hofmann 1979</a> p. 40).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Family: Coprinaceae
+<li>Genus:  Copelandia
+<li>Species: anomala,
+	 bispora,
+	 cambodginiensis,
+	 chlorocystis,
+	 cyanescens,
+	 tropicalis
+</ul>
+All species contain psilocin and psilocybin, for C. cyanescens (<a href="trypfaq.htm#62">Schultes & Hofmann 1979</a> p. 40) and for C. cambodginiensis as well as C. tropicalis 
+(<a href="trypfaq.htm#3">Arora, 1986</a>), and for C. anomala as well as C. bispora 
+(<a href="trypfaq.htm#45">Merlin & Allen, 1993</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Genus:  Panaeolina,
+<li>Species: castaneifolius,
+	 foenisecii
+</ul>
+P. <a href="http://www.hyperreal.org/drugs/psychedelics/mushrooms/teonanacatl/gif/foenisc.gif" target="remotes">foenisecii </a>contains psilocybin (<a href="trypfaq.htm#56">Robbers et al. 1969</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Genus:  Panaeolus
+<li>Species: africanus,
+	 antillarum,
+	 ater,
+	 campanulatus,
+         firmicola,
+	 microsporus,
+         olivacens,
+         retirugis,
+         separatus,
+         sphinctrinus,
+         subbalteatus
+</ul>
+Several Panaeolus species contain psilocybin.  For P. antillarum refer to 
+Allen et al. (1991), for P. ater refer to <a href="trypfaq.htm#10a">Bresinsky et al. (1990)</a>, for 
+P. papilionaceus (<a href="trypfaq.htm#26">Gurevich et al. 1992</a>), for P. retirugis (<a href="trypfaq.htm#19">Fiussello et al. 1971/72</a>), 
+for P. separatus ((<a href="trypfaq.htm#46">Miller Jr. 1972</a>), for P. sphinctrinus (<a href="trypfaq.htm#33">Hein & Wasson, 1958</a> p. 322) and for P. olivacens 
+(<a href="trypfaq.htm#50">Ohenoja et al. 1987</a>). 
+P. subbalteatus contains both psilocin and psilocybin (<a href="trypfaq.htm#50">Ohenoja et al. 1987</a>) 
+but was known to be hallucinogenic since 1959 (<a href="trypfaq.htm#68">Stein, 1959</a>). P. firmicola 
+is also described as hallucinogenic and probably contains the same alkaloids 
+(<a href="trypfaq.htm#61">Schultes, 1979</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Genus:	Psathyrella
+<li>Species: candollenana
+</ul>
+Contains psilocybin (<a href="trypfaq.htm#39">Koike et al. 1981</a>) and psilocin (<a href="trypfaq.htm#50">Ohenoja et al. 1987</a>).
+</td></tr>
+
+<tr><td>
+<ul>        
+<li>Family: Cortinariaceae
+<li>Genus:  Galerina 
+<li>Species: steglichii 
+</ul>
+Contains psilocybin and psilocin (<a href="trypfaq.htm#10">Besl, 1993</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Genus:  Gymnopilus
+<li>Species: aeruginosus,
+	 liquiritiae,
+	 luteus,
+	 purpuratus,
+         spectabilis,
+	 validipes,
+	 viridans         
+</ul>
+Many Gymnopilus contain psilocybin, for G. aeruginosus, G. luteus, 
+G. spectabilis, G. validipes and G.viridans refer to <a href="trypfaq.htm#32">Hatfield et al. (1978)</a>. 
+For G. liquiritiae (<a href="trypfaq.htm#39">Koike, 1981</a>) and for G. purpuratus (<a href="trypfaq.htm#20">Gartz 1991</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Genus:  Inocybe
+<li>Species: aeruginascens,
+	 calamistrata,
+         coelestium,
+         corydalna,
+         haemacta,
+         tricolor
+</ul>
+These contain psilocin and psilocybin, for P. aeruginascens refer to 
+<a href="trypfaq.htm#31">Haeselbarth et al. (1985)</a> and for the others <a href="trypfaq.htm#69">Stijve et al. (1985)</a>.
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Family: Lepiotaceae
+<li>Genus:  Lepiota
+<li>Species: humei Murrill also known as peele "Peele's Lepiota"
+</ul>
+This mushrooms was claimed by Peele of Florida Mycology Research Center 
+(PO Box 8104 Pensacola Florida 32505) to contain a legal tryptamine,
+which produces a trip with less physical symptoms and better ability of
+logical thinking than psilocin or psilocybin. Bioassay results didn't find
+psychoactivity (<a href="trypfaq.htm#2">Akers 1992</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Family: Pluteaceae
+<li>Genus:  Pluteus
+<li>Species: atricapillus,
+	 cyanopus,
+	 nigroviridis,
+         salicinus
+</ul> 
+P. atricapillus contains psilocybin (<a href="trypfaq.htm#50">Ohenoja et al. 1987</a>) while both 
+P. salicinus (<a href="trypfaq.htm#58">Saupe 1981</a>) and P. nigroviridis (<a href="trypfaq.htm#12">Christiansen et al. 1984</a>) 
+contain psilocin and psilocybin.
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Family: Polyporaceae
+<li>Genus:  Gerronema
+<li>Species: fibula,
+	 swartzii
+</ul>
+These contain psilocybin.
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Genus:  Hygrocybe
+<li>Species: psittacina
+</ul>
+
+This contains psilocybin.
+</td></tr>
+
+<tr><td>
+<a href="mushword.htm">
+<img align=left src="gif/psilly.jpg" hspace=8 vspace=8 alt="Psilocybe cubensis" border=0></a>
+<ul>
+<li>Family: Strophariaceae
+<li>Genus:  Psilocybe
+<li>Species: 75 Known hallucinogenic species +
+         antioquensis,
+         aucklandii,
+         beliconiae,
+         coprophila,
+         crobulus,
+         cubensis <font size=-1>(pictured)</font>,
+         guatapensis,
+         samuiensis,
+         subacutipilea,
+</ul>
+There are at least 75 mushroom species in this genera that contain psilocin 
+and psilocybin in <a href="trypfaq.htm#27">Guzman 1983</a>, and there are several more recently discovered 
+species such as P. aucklandii (<a href="trypfaq.htm#28">Guzman et al. 1993</a>), P. samuiensis 
+(<a href="trypfaq.htm#29">Guzman et al. 1991</a>) and P. antioquensis, P. beliconiae, P. guatapensis and 
+P. subacutipilea (<a href="trypfaq.htm#30">Guzman et al. 1994</a>). Also P. coprophila, while lacking 
+psilocin (making it a non-blueing psilocybe) is known to contain psilocybin 
+(<a href="trypfaq.htm#3">Arora, 1986</a>). P. crobulus is also known to be hallucinogenic (<a href="trypfaq.htm#52">Phillips, 1981</a>).
+
+<!-- dead links :( p>Images of Psilocybe cyanescens, cyanofibrillosa, azurescens, semilanceata, pelliculosa, silvatica can be seen at <a href="http://www.halcyon.com/mycomed/gallery1.html" target="remotes">
+A Gallery of Psilocybe Mushrooms</a>, <a href="http://www.hyperreal.org/drugs/psychedelics/mushrooms/teonanacatl/teonimgs.html" target="remotes">Hyperreal Teonanacatl</a -->
+
+</td></tr></table>
+
+<p><a name="plants">&nbsp;</a>
+<table width=90% align=center border=0 cellpadding=0 cellspacing=0>
+<tr><td><form name=search onSubmit="return findInPage(this.string.value);"><font size="-1"><strong>Search this FAQ for</strong></font> <input name=string type=text size=20 onChange="n = 0;"></form></td>
+<td align=right valign=top><a href="trypfaq.htm#top"><font size="-1"><strong>table of contents</strong></font></a></td></tr></table>
+<p>
+<table border=1 cellspacing=0 cellpadding=12 width=90% align=center>
+<tr>
+<td align=left background="gif/palmleaf.jpg"><h2>P L A N T S</h2>
+<div align=right><a href="t_ppp.htm"><strong>PLAN, PLANT, PLANET</strong></a></div></td></tr>
+
+<tr><td bgcolor="#ffffff">
+<a name="justica"><img align=left src="gif/justicia.jpg" width=263 height=221 alt="J.pectoralis"></a>
+
+<ul>
+<li>Family: Acanthaceae
+<li>Genus:  Justicia
+<li>Species: pectoralis (var. stenophylla)
+</ul>
+Waikas of Orinoco headwaters in Venezuela add dried and pulverized
+leaves of this herb to their Virola-snuff. Intensely aromatic smelling 
+leaves probably contain tryptamines (<a href="trypfaq.htm#60">Schultes 1977</a>). Plants are available 
+from from <a href="http://www.ilhawaii.net:80/~hoti/amazon.html">Hoti Products</a> or
+<a href="http://hyperreal.com/drugs/commercial/otj">..Of the jungle</a>.
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Family: Aizoaceae
+<li>Genus:  Delosperma
+</ul>
+Contains DMT and N-methyltryptamine (<a href="trypfaq.htm#55">Rivier & Pilet, 1971</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Family: Alariaceae 
+<li>Genus:  Ecklonia
+<li>Species: maxima
+</ul>
+<a href="trypfaq.htm#14">Crouch et al. (1992)</a> reported finding DMT in brown seaweed extract sold as
+Kelpak and intended to be used as a plant fertilizer. However, subsequent
+analysis by <a href="trypfaq.htm#20">J. Gartz</a> suggests none is present.
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Family: Apocynaceae
+<li>Genus:  Prestonia
+<li>Species: amazonica?
+</ul>
+May contain DMT but the specimen used may have been misidentified (<a href="trypfaq.htm#67">Smith 1977</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Family: Cactaceae
+<li>Genus:  Echinocereus
+<li>Species: salm-dyckianus,
+         triglochidiatus
+</ul>
+These cacti growing in Mexico are known to Tarahumare Indians as peyote or
+hikuli and used in their festivals. E. triglochidiatus contains a tryptamine
+derivative, possibly 5-MeO-DMT (<a href="trypfaq.htm#11">Bye 1979</a>). E. salm-dyckianus is also supposed 
+to contain tryptamines according to Horus Botanicals catalog 1992.
+</td></tr>
+
+<tr><td>
+<img align=left src="gif/terscheckii.jpg" width=100 height=182 border=0 alt="Trichocereus terscheckii" hspace=12>
+<ul>
+<li>Genus:  Trichocereus
+<li>Species: terscheckii "Cardon grande"
+</ul>
+DMT has been isolated from this species growing in North-Western
+Argentina (<a href="trypfaq.htm#62">Schultes & Hofmann 1979</a> p. 58).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Family: Caesalpininaceae
+<li>Genus:  Petalostylis
+<li>Species: cassiodies
+</ul>
+Leaves and stem contain 0.4-0.5% tryptamine, DMT and other alkaloids 
+(<a href="trypfaq.htm#35">Johns et al. 1966</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Family: Fabaceae
+<li>Genus:  Desmodium
+<li>Species: gangetium,
+         gyrans,
+         tiliaefolium,
+         triflorum,
+</ul>
+Leaves, root, stem and seeds contain DMT and 0.06% 5-MeO-DMT of wet weight 
+(<a href="trypfaq.htm#5">Banerjee & Ghosal 1969</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Genus:  Lespedeza
+<li>Species: bicolor
+</ul>
+Leaves and root contain DMT and 5-MeO-DMT (<a href="trypfaq.htm#67">Smith 1977</a>). Seeds of this hardy 
+perennial shrub are available from ..Of the jungle for $5.
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Genus:  Mucuna
+<li>Species: pruriens
+</ul>
+Leaves, stem and fruit of this jungle vine contains DMT and 5-MeO-DMT 
+(<a href="trypfaq.htm#23">Ghosal et al., 1971</a>). Seeds are available from ..Of the jungle for $5.
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Genus:  Phyllodium
+<li>Species: pulchellum
+</ul>
+Dried plant material produced 0.2% 5-MeO-DMT and small amounts of DMT 
+(<a href="trypfaq.htm#22">Ghosal & Mukherjee 1966</a>).
+</td></tr>
+
+<tr><td>
+<img align=left src="gif/peregrina.jpg" width=200 height=293 border=0 alt="Mimosaceae peregrina">
+<ul>
+<li><a name="ap">Family: Mimosaceae</a>
+<li>Genus:  Anadenanthera (Piptandenia)
+<li>Species: colubrina,
+         contorta,
+         excelsa,
+         macrocarpa,
+         peregrina
+</ul>
+Black beans from these trees are toasted, pulverized and mixed with ashes
+or calcined shells to make psychedelic snuff called yopo by Indians in 
+Orinoco basin in Colombia, Venezuela and possibly in southern part of 
+Brasilian Amazon. Yopo is blown into the nostrils through bamboo tubes
+or snuffed by birdbone tubes. The trees grow in open plain areas, and 
+leaves, bark and seeds contain DMT, 5-MeO-DMT and related compounds 
+(Schultes <a href="trypfaq.htm#59">1976</a>, <a href="trypfaq.htm#60">1977</a>; <a href="trypfaq.htm#51">Pachter et al. 1959</a>; Phytochem 11, 737).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Genus:  <a name="acacia" href="acacia.htm">Acacia</a>
+<li>Species: confusa [DMT,st],
+         jurema,
+         maidenni [DMT,b]
+         niopo,
+         nubica [DMT, l],
+         phlebophylla [DMT,l], 
+         polyacantha [DMT,l] subsp. campylacantha,
+         senegal [DMT,l], simplicifolia [DMT,b,l,st], 
+	 simplex,
+	 tortilis.
+<ul><li>
+The letters following the tryptamine (DMT in all of these cases) refer to
+where the tryptamine is found in the plant: "st" is stems, "b" is bark, and
+"l" is leaves.</ul>
+</ul>
+Dried A. confusa stems contain 0.04% N-methyltryptamine and 0.02% DMT 
+(<a href="trypfaq.htm#4">Arthur et al. 1967</a>). The dried leaves of A. phlebophylla contain 0.3% DMT
+(<a href="trypfaq.htm#57">Rovelli & Vaughan 1967</a>). The bark of A. maidenii contains 0.6% of 
+N-methyltryptamine and DMT in the proportions approx. 2:3 (<a href="trypfaq.htm#18">Fitzgerald & Sioumis 1965</a>). 
+A. simplex also contains DMT (<a href="trypfaq.htm#53">Poupat et al. 1976</a>).
+Several Sudanese species have DMT (<a href="trypfaq.htm#72">Wahba & Elkheir, 1975</a>). Seeds of several
+acacia species are available from ..Of the jungle.
+</td></tr>
+
+<tr><td>
+<ul>
+<li><a name="desmanthus">Genus:  Desmanthus</a>
+<li>Species: illinoensis "Illinois Bundleflower"
+</ul>
+<a href="trypfaq.htm#71">Thompson et al.</a> report that the root bark of this North American perennial
+shrub contains 0.34% DMT and 0.11% N-methyltryptamine. The bark accounts
+for about a half of the total weight of the roots. The plant should be
+resistant to cold and draught and easy to grow.
+</td></tr>
+
+<tr><td>
+<ul>
+<li><a name="mimosa">Genus:  Mimosa</a>
+<li>Species: scabrella,
+         tenuiflora (== hostilis) "tepescohuite",
+         verrucosa
+</ul>
+The roots of M. hostilis, which is not the common houseplant M. pudica 
+("sensitive plant"), contain 0.57% DMT and are used by Indians of Pernambuso 
+State in Brazil as part of their Yurema cult (<a href="trypfaq.htm#51">Pachter et al. 1959</a>, 
+<a href="trypfaq.htm#60">Schultes 1977</a>, (<a href="trypfaq.htm#44">Meckes-Lozoya et al. 1990</a>). M. scabrella contains DMT and 
+N-methyltryptamine (<a href="trypfaq.htm#17">De Moraes et al., 1990</a>). Bark of M. verrucosa also 
+contains DMT (<a href="trypfaq.htm#67">Smith 1977</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Genus:  Testulea
+<li>Species: gabonensis
+</ul>
+Contains DMT (<a href="trypfaq.htm#40">Leboeuf et al., 1977</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Family: Malpighiaceae
+<li>Genus:  Banisteriopsis
+<li>Species: muricata (=argentea),
+         rusbyana (see Diplopterys cabrerana)
+</ul>
+
+Both contain DMT (<a href="trypfaq.htm#67">Smith 1977</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Genus:  Diplopterys
+<li>Species: cabrerana 
+</ul>
+
+Natives of western Amazon add DMT- and N-methyltryptamine containing 
+leaves of the vine D. cabrerana to a drink made from Banisteriopsis caapi, 
+which contains beta-carbolines harmine and harmaline, to heighten and 
+lengthen the visions (<a href="trypfaq.htm#60">Schultes 1977</a>, <a href="trypfaq.htm#67">Smith 1977</a>). D. cabrerana is also known as Banisteriopsis rusbyana.
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Family: Myristicaceae
+<li>Genus:  Horsfieldia
+<li>Species: superba
+</ul>
+Contains 5-MeO-DMT as well as a beta-carboline (<a href="trypfaq.htm#36">Jossang et al. 1991</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Genus:  Iryanthera
+<li>Species: macrophylla
+</ul>        
+The bark contains 5-MeO-DMT (<a href="trypfaq.htm#34">Holmstedt et al. 1980</a>).
+</td></tr>
+
+<tr><td>
+<img src="gif/virola.gif" width=280 height=376 border=0 align="right" hspace=18 alt="Virola theiodora">
+
+<ul>
+<li><a name="virola">Genus:  Virola</a>
+<li>Species: calophylla,
+	 calophylloidea,
+ 	 rufula,
+	 sebifera,
+ 	 theiodora
+</ul>
+The bark resin of these trees is used to prepare hallucinogenic snuffs
+in northwestern Brazil by boiling, drying and pulverizing it. Sometimes
+leaves of a Justicia are added. The snuff acts rapidly and violently,
+"effects include excitement, numbness of the limbs, twitching of facial
+muscles, nausea, hallucinations, and finally a deep sleep; macroscopia is
+frequent and enters into Waika beliefs about the spirits resident in the
+drug." Snuffs made from V. theiodora bark contain up to 11% 5-MeO-DMT and 
+DMT. Also leaves, roots and flowers contain DMT.
+<p>
+Amazonian Colombia natives roll small pellets of boiled resin in a
+evaporated filtrate of bark ashes of Gustavia Poeppigiana and ingest
+them to bring on a rapid intoxication (<a href="trypfaq.htm#67">Smith 1977</a>, <a href="trypfaq.htm#60">Schultes 1977</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Family: Pandanaceae
+<li>Genus:  Pandanus "Screw pine"
+</ul>
+DMT has been isolated from Pandanus nuts growing in New Guinea (<a href="trypfaq.htm#6">Barrau 1958, 1962</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li><a name="arundo">Family: Poaceae</a>
+<li>Genus:  Arundo
+<li>Species: donax
+</ul>
+
+Leaves, flowers and rhizomes contain DMT, bufotenine and related compounds
+(<a href="trypfaq.htm#21">Ghosal et al. 1972</a>).
+</td></tr>
+
+<tr><td>
+<a name="phalaris"><img align=left src="gif/phal_tub.jpg" hspace=8 vspace=8 alt="Phalaris aquatica"></a>
+<img align=right src="gif/reedcanarygrass.jpg" width=300 height=201 border=0 alt="Phalaris arundinacea">
+<ul>
+<li>Genus:  Phalaris
+<li>Species: aquatica (tuberosa), arundinacea
+</ul>
+
+Leaves of P. arundinacea and leaves and seedlings of P. aquatica 
+contain DMT, 5-MeO-DMT and related compounds (<a href="trypfaq.htm#67">Smith 1977</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Genus:  Phragmites
+<li>Species: australis
+</ul>
+Rhizomes contain DMT  (<a href="trypfaq.htm#73">Wassel et al. 1985</a>).
+</td></tr>
+
+<tr><td>
+<a name="viridis"><img align=left src="gif/psychot.jpg" width=263 height=246 alt="P.viridis"></a>
+
+<ul>
+<li>Family: Rubiaceae
+<li>Genus:  Psychotria
+<li>Species: carthaginensis,
+	 viridis (psychotriaefolia)
+</ul>
+Psychotria leaves are added to a hallucinogenic drink prepared from
+Banisteriopsis caapi and B. rusbyana (which contain beta-carbolines) to
+strengthen and lengthen the effects in western Amazon. P. carthaginensis 
+and P. viridis both contain DMT (<a href="trypfaq.htm#54">Rivier, 1972</a>). 5 seeds of P. viridis
+cost $10 from ..Of the jungle.<br clear=all>
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Family: Rutaceae
+<li>Genus:  Dictyoloma
+<li>Species: incanescens
+</ul>
+Bark contains 0.04% 5-MeO-DMT (<a href="trypfaq.htm#51">Pachter et al. 1959</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Genus:  Limonia
+<li>Species: acidissima
+</ul>
+Contains DMT (<a href="trypfaq.htm#1">Abu Zarga, 1986</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Genus:  Melicope
+<li>Species: leptococca
+</ul>
+Contains 5-MeO-DMT as well as 5-MeO-DMT-Oxide and a beta-carboline 
+(<a href="trypfaq.htm#66">Skaltsounis et al. 1983</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Genus:  Vepris
+<li>Species: ampody
+</ul>
+The leaves and branches contains up to 0.2% DMT (<a href="trypfaq.htm#37">Kan-Fan 1970</a>).
+</td></tr>
+
+<tr><td>
+<ul>
+<li>Genus:  Zanthoxylum
+<li>Species: aborescens
+</ul>
+Contains DMT (<a href="trypfaq.htm#24">Grina et al., 1982</a>).
+</td></tr></table></td></tr></table>
+
+<blockquote>
+<p align=right><a href="trypfaq.htm#top" name="ref">table of contents</a></p>
+<h2>References</h2>
+<font size=-1>
+<a name="1">Abu Zarga, M.H. 1986.</a> Three new simple indole alkaloids from  Limonia 
+  acidissima. <i>Lloydia</i> 49(5), 901-904.
+<p><a name="2">Akers, B.P. 1992.</a> Peele's Lepiota: An identification and a clarification.
+  <i>Mycotaxon</i> 43(0), 461-469.
+<p><a name="3">Arora, D. 1986.</a> <i>Mushrooms Demystified: A Comprehensive Guide to the Fleshy 
+  Fungi.</i> Ten Speed Press, Berkley. 
+<p><a name="4">Arthur, H.R., Loo, S.N. & Lamberton, J.A. 1967.</a> Nb-methylated tryptamines 
+  and other constituents of Acacia confusa Merr. of Hong Kong. <i>Aust. J
+  Chem.</i> 20, 811.
+<p><a name="5">Banerjee, P.K. & Ghosal, S. 1969.</a> Simple indole bases of Desmodium gangeticum.
+  <i>Aust. J Chem.</i> 22, 275-277.
+<p><a name="6">Barrau, J. 1958.</a><br> Nouvelles observations au sujet des plantes hallucinogenes 
+  d'usage autochtone en Nouvelle-Guinee. <i>J Agric. Trop. Bot.</i> Appl. 5, 377-378.
+<p><a name="7">Barrau, J. 1962.</a><br> Observations et travaux recents sur les vegetaux 
+  hallucinogenes de la Nouvelle-Guinee. <i>J Agric. Trop. Bot.</i> Appl. 9, 245-249.
+<p><a name="8">Benedict, R.G., Brady, L.R., Smith, A.H. & Tyler, V.E. 1962.</a><br> Occurrence of 
+  psilocybin and psilocin in certain Conocybe and Psilocybe species. <i>Lloydia </i>
+  25, 156-159.
+<p><a name="9">Benedict, R.G., Tyler, V.E. & Watling, R. 1967.</a><br> Blueing in Conocybe, Psilocybe 
+  and a Stropharia Species and the Dectection of Psilocybin. <i>Lloydia</i> 30(2), 
+  150-157.
+<p><a name="10">Besl, H. 1993.</a><br> Galerina steglichii spec. nov., a hallucinogenic Galerina. 
+  <i>Zeitschrift fuer Mykologie</i> 59(2), 215-218.
+<p><a name="10a">Bresinsky, A. & Besl, H. 1990.</a><br> <i>A Colour Atlas of Poisonous Fungi.</i> Wolfe 
+  Publishing Ltd, London.
+<p><a name="11">Bye, R.A. 1979.</a><br> Hallucinogenic plants of the Tarahumara. <i>J. 
+  Ethnopharmacology</i> 1, 23-48.
+<p><a name="12">Christiansen, A.L., Rasmussen, K.E. & Hoeiland, K. 1984.</a><br> Detection of 
+  psilocybin and psilocin in Norwegian species of Pluteus and Conocybe. 
+  <i>Planta Med.</i> 50, 341-343.
+<p><a name="13">Cimino, G. & De Stefano, S. 1978.</a><br> Chemistry of Mediterranean Gorgonians.
+  Simple indole derivatives from Paramuricea chamaeleon. <i>Comptes Rendus 
+  Biochem. Physiol. Ser. C.</i> 61, 361-362.
+<p><a name="14">Crouch, I.J., Smith M.T., Van Staden J., Lewis, M.J. & Hoad, G.V. 1992.</a><br> 
+  Identification of auxins in a commercial seaweed concentrate. <i>J. Plant 
+  Physiology</i> 139(5), 590-594.
+<p><a name="15">Daly, J.W. & Witkop, B. 1971.</a><br>Chemistry and pharmacology of frog venoms.
+  In <i>Venomous animals and their venoms. Vol II.</i> New York: Academic Press.
+<p><a name="16">Davis, W. & Weil, A.T. 1992.</a><br> Identity of a New World Psychoactive Toad. 
+  <i>Ancient Mesoamerica</i> 3 (1992) 5, 51-59.
+<p><a name="17">De Moraes, E.H.F., Alvarenga, Z.M.A., Ferreira, Z.M.G.S. & Alisue, G.
+  1990.</a><br> <i>Quim. Nova</i> 13, 308.
+<p><a name="18">Fitzgerald, J.S. & Sioumis, A.A. 1965.</a><br> Alkaloids of Australian
+  Leguminosae V. <i>Aust. J Chem.</i> 18, 433.
+<p><a name="19">Fiussello, N. & Ceruti-Scarti, J. 1971/72.</a><br> Presenza di psilocibina edi 
+  5-idrossi-indolderivati in Panaeolus retirugis. <i>Atti Acc. Sci. Torino</i> 
+  106, 725-735.
+<p><a name="20">Gartz, J. 1991.</a><br> Influence of phosphate on fruiting and secondary metabolism 
+  of mycelia of Psilocybe cubensis, Psilocybe semilanceata and Gymnopilus
+  purpuratus. <i>Zeitschrift fuer Mykologie</i> 57(1), 149-154.
+<p><a name="21">Ghosal, S., Chaudhuri, R.K., Dutta, S.K. & Bhattacharya, S.K. 1972.</a><br> Occurrence 
+  of curaromimetic indoles in the flowers of Arundo donax. <i>Planta Med.</i> 21, 22.
+<p><a name="22">Ghosal, S. & Mukherjee, B. 1966.</a><br> Indole-3-alkylamine Bases of Desmodium 
+  pulchellum. <i>J. Org. Chem.</i> 31, 2284.
+<p><a name="23">Ghosal, S., Singh, S. & Bhattacharya, S.K. 1971.</a><br> Alkaloids of Mucuna pruriens,  
+  Chemistry and Pharmacology.  <i>Planta Med.</i> 19, 279
+<p><a name="24">Grina, J.A. et al. 1982.</a><br> Constituents of Zanthoxylum aborescens. Part 7. Old 
+  & new alkaloids from Zanthoxylum aborescens. <i>J. Organic Chemistry</i> 47, 
+  2648-2651. 
+<p><a name="25">Gurevich, L.S. 1993.</a><br> Indole derivatives in certain Panaeolus species from East 
+  Europe & Siberia. <i>Mycological Research</i> 97(2), 251-254.
+<p><a name="26">Gurevich, L.S. & Astapenko, V.V. 1992.</a><br> Chromatographic study of some indole
+  metabolites in Panaeolus basidiomycetes. <i>Mikologiya I Fitopathologiga </i>
+  26(3), 189-194.
+<p><a name="27">Guzman, G. 1983.</a><br> The Genus Psilocybe. <i>Beihefte Zur Nova Hedwingia</i> 74, 1-439.
+<p><a name="28">Guzman, G., Bandala, V.M. & Allen, J.W. 1993.</a><br> A New Bluing Psilocybe from 
+  Thailand. <i>Mycotaxon</i> 26, 155-160.
+<p><a name="29">Guzman, G., Bandala, V.M. & King, C. 1991.</a><br> A New Species of Psilocybe of Section 
+  Zapotecorum from New Zealand. <i>Mycological Research</i> 95, 507-508.
+<p><a name="30">Guzman, G., Saldarriaga, Y., Pineda, F., Garcia, G. & Velazquez, L.F. 1994.</a><br> 
+  New Species of Psilocybe from Colombia and Discussion on the known species. 
+  <i>Mycotaxon,</i> 225.
+<p><a name="31">Haeselbarth, G., Michaelis, H. & Salnikow, J. 1985.</a><br> Nachweis von Psilocybin in 
+  Inocybe aeruginescens. <i>Mykol. Mitt. bl.</i> 28(1), 59-62.
+<p><a name="32">Hatfield, G.M., Valdes, L.J. & Smith, A.H. 1978.</a><br> The occurrence of psilocybin 
+  in Gymnopilus species. <i>Lloydia</i> 41, 140-144.
+<p><a name="33">Hein, R. & Wasson, R.G. 1958.</a><br> <i>Les champignons hallucinogenes du Mexique.</i> 
+  Museum National d'Histoire Naturelle, Paris.
+<p><a name="34">Holmstedt, B., Lindgren, J.E., et al. 1980.</a><br> Indole alkaloids in Amazonian 
+  Myristicaceae: Field and laboratory research. <i>Bot. Mus. Leafl.,</i> Harvard 
+  Univ. 28, 215-234.
+<p><a name="35">Johns, S.R., Lamberton, J.A. & Sioumis, A.A. 1966.</a><br> Alkaloids of the 
+  Australian Leguminosae VI. <i>Aust. J. Chem.</i> 19, 893.
+<p><a name="36">Jossang, A., Jossang, C., Hadi, H.A., Sevenet, T. & Bodo, B. 1991.</a><br> 
+  Horsfiline, an oxindole alkaloid from Horsfieldia superba. <i>J. Organic 
+  Chem.</i> 56(23), 6527-6530.
+<p><a name="37">Kan Fan, C. et al. 1970.</a><br> Alcaloides de Vepris ampody (Rutacees). <i>Phytochem.</i> 
+  9, 1283-1291.
+<p><a name="38">Kantor, R.E., Dudlettes, S.D. & Shulgin, A.T. 1980.</a><br> 5-Methoxy-alfa-methyl-tryptamine (alfa,O-dimethylserotonin), a hallucinogenic homolog of serotonin. <i>Biological Psychiatry</i> Vol 15, 349-352.
+<p><a name="39">Koike, Y., Wada, K., Kusano, G., Nozoe, S., & Yokoyama, K. 1981.</a><br> Isolation 
+  of Psilocybin from Psilocybe argentipes and its Determination in Specimens 
+  of some Mushrooms. <i>Lloydia</i> 44(3), 362-365.
+<p><a name="40">Leboeuf, M. et al., 1977.</a><br> Alkaloids and triterpenes of Testulea gabonensis.
+  <i>Plant Medicine Phytotherapy</i> 11, 230.
+<p><a name="41">Luna, L.E. 1984.</a><br> The Healing Practices of a Peruvian Shaman. <i>J.
+  Ethnopharmacology</i> 11, 123-133. 
+<p><a name="42">McKenna, D.J., Towers, G.H.N., & Abbott, F. (1984).</a><br> Monoamine oxidase
+  inhibitors in South American hallucinogenic plants: Tryptamines and
+  Beta-carboline constituents of ayahuasca. <i>J. Ethnopharmacology</i> 10, 195-223.
+<p><a name="43">Mckenna, D.J. & Towers, G.H.N. 1984.</a><br> Biochemistry and Pharmacology of
+  Tryptamines and beta-Carbolines: A Minireview. <i>J. Psychoactive Drugs</i> 16(4).
+<p><a name="44">Meckes-Lozoya, M., Lozoya, X., Marles, R.J., Soucy-Breau, C., Sen, A. &
+  Arnason, J.T. 1990.</a><br> N,N-dimethyltryptamine alkaloid in Mimosa tenuiflora
+  bark (tepescohuite). <i>Arch. Invest. Med. Mex.</i> 21(2), 175-7.
+<p><a name="45">Merlin, M.D. & Allen, J.W. 1993.</a><br> Species identification and chemical analysis 
+  of psychoactive fungi in the Hawaiian islands. <i>Journal of Ethnopharmacology </i>
+  40(1), 21-40.
+<p><a name="46">Miller Jr., O.K. 1972.</a><br> <i>Mushrooms of North America.</i> Dutton & Co., Springfield.
+<p><a name="47">Most, Albert. 1984.</a><br> 
+<i><a href="http://web.archive.org/web/19961227125225/http://www.paranoia.com/~debaser/drugs/pamphlets/bufo.alvarius">
+Bufo Alvarius: the Psychedelic Toad of the Sonoran Desert</a>.</i> 
+Venom Press Box 2863 Denton TX 76202.
+<p><a name="48">Most, Albert. 1986.</a><br> 
+<i><a href="http://web.archive.org/web/19961227125446/http://www.paranoia.com/~debaser/drugs/pamphlets/eros.html">
+Eros and the Pineal: the layman's guide to cerebral solitaire</a>.</i> Venom Press, Denton, TX.
+<p><a name="49">Naranjo, C. 1969.</a><br> Psychotropic Properties of the Harmala Alkaloids. In: Efron
+  (Ed.) <i>The Ethnopharmacologic Search for Psychoactive Drugs.</i>
+<p><a name="50">Ohenoja, E., Jokiranta, J., Makinen, T., Kaikkonen, A. & Airaksinen, M.M. 
+  1987. The Occurrence of Psilocybin and Psilocin in Finnish Fungi. <i>Lloydia</i> 
+  50(4), 741-744.
+<p><a name="51">Pachter, I.J, Zacharias, D.E & Ribeir, O. 1959.</a><br> Indole Alkaloids of Acer
+  saccharinum (the Silever Maple), Dictyoloma incanescens, Piptadenia 
+  colubrina, and Mimosa hostilis. <i>J. Org. Chem.</i> 24, 1285-7.
+<p><a name="52">Phillips, R. 1981.</a><br> <i>Mushrooms and other fungi of Great Britain and Europe.</i> 
+  Pan Books, London.
+<p><a name="53">Poupat, C., Ahond, A. & Sevenet, T. 1976.</a><br> Alcaloides De Acaia simplicifolia.
+  <i>Phytochemistry</i> 15, 2019-2120.
+<p><a name="54">Rivier, L. & Lindgren, J-E. 1972.</a><br> "Ayahuasca," the South American 
+  Hallucinogenic Drink: an Ethnobotanical and Chemical Investigation. 
+  <i>Economic Botany</i> 26, 101-129.
+<p><a name="55">Rivier, L. & Pilet, P.E. 1971.</a><br> <i>Annee Biologique</i> 10, 129.
+<p><a name="56">Robbers, J.E., Tyler, V.E. & Ola'h, G.M. 1969.</a><br> Additional evidence supporting 
+  the occurrence of psilocybin in Panaeolus foenisecii. <i>Lloydia</i> 32, 399-400.
+<p><a name="57">Rovelli, B. & Vaughan, G.N. 1967.</a><br> Alkaloids of Acacia I. Dimethyltryptamine 
+  in Acacia phlebophylla. <i>Aust. J. Chem.</i> 20, 1299-1300.
+<p><a name="58">Saupe, S.G. 1981.</a><br> Occurence of Psilocybin/Psilocin in Pluteus salicinus 
+  (Pluteaceae). <i>Mycologia</i> 73, 781-784.
+<p><a name="59">Schultes, R.E. 1976.</a><br> Indole Alkaloids in Plant Hallucinogens. <i>J. of
+  Psychedelic Drugs</i> Vol 8(1), 7-25.
+<p><a name="60">Schultes, R.E. 1977.</a><br> The Botanical and Chemical Distribution of Hallucinogens.
+  <i>J. of Psychedelic Drugs</i> Vol 9(3), 247-263.
+<p><a name="61">Schultes, R.E. 1979.</a><br> Hallucinogenic Plants: Their Earliest Botanical 
+  Descriptions. <i>J. of Psychedelic Drugs</i> Vol 11(1-2), 13-24.
+<p><a name="62">Schultes, R.E. & Hofmann, A. 1979.</a><br> <i>Plants of the Gods.</i> McGraw-Hill.
+  Reprint available from Healing Arts Press, Rochester, VT.
+<p><a name="63">Schultes, R.E. & Hofmann, A. 1980.</a><br> <i>The Botany and Chemistry of Hallucinogens.</i> 
+  Springfield, Ill: Thomas.
+<p><a name="64">Shulgin, A.T. 1976.</a><br> Psychotomimetic agents. In: Gordon, M. (Ed.)
+  <i>Psychopharmacological Agents,</i> Vol IV. New York: Academic Press.
+<p><a name="65">Shulgin, A.T. 1982.</a><br> Chemistry of Psychotomimetics. In: Hoffmeister, F. &
+  Stille, G. (Eds.) <i>Handbook of Experimental Pharmacology,</i> Vol 55: 
+  Alcohol and Psychotomimetics, Psychotropic Effects of Central-Acting 
+  Drugs. New York: Springer-Verlag.
+<p><a name="66">Skaltsounis, A.L., Tillequin, F. & Koch, M. 1983.</a><br> Plantes des Nouvelle-
+  Caledonie LXXXIII: Alcaloides des tiges feuillees de Melicope leptococca.
+  <i>Lloydia</i> 46(5), 732.
+<p><a name="67">Smith, T.A. 1977.</a><br> Review: Tryptamine and Related Compounds in Plants.
+  <i>Phytochemistry</i> 16 171-175.
+<p><a name="68">Stein, S.I. 1959.</a><br> Clinical Observations on the Effects of Panaeolus 
+  venenosus Versus Psilocybe caerulescens Mushrooms. <i>Mycologica</i> 51, 49.
+<p><a name="69">Stijve, T., Klan, J. & Kugper, W. 1985.</a><br> Occurrence of psilocybin and 
+  baeocystin in the genus Inocybe. <i>Persoonia</i> 12, 469-472.
+<p><a name="70">Strassman, R.J. 1990.</a><br> The Pineal Gland: Current Evidence For Its Role In
+  Consciousness. In: Lyttle, T. (Ed.) <i>Psychedelic Monographs and Essays</i>
+  Vol 5.
+<p><a name="71">Thompson, A.C., Nicollier, G.F. & Pope, D.F 1987.</a><br> Indolealkylamines of 
+  Desmanthus illinoensis and Their Growth Inhibition Activity. <i>J. Agric.
+  Food Chem.</i> 35, 361-365.
+<p><a name="72">Wahba, S.K. & Elkheir, Y.M. 1975.</a><br> 
+Dimethyltyrptamine from the leaves of certain Acacia species of northern Sudan. Lloydia 38, 176-177.
+<p><a name="73">Wassel, G.M. et al. 1985.</a><br> Alkaloids from the rhizomes of Phragmites 
+  australis Cav.  <i>Scientia Pharmaceutica</i> 53, 169-170.
+<p>
+Petrus.Pennanen@helsinki.fi * Everything is perfect forever<br>
+Michael from Melbourne * Ditto</font>
+</blockquote>
+<p>
+<table width=90% border=0 cellspacing=0 cellpadding=3 align="center">
+<tr><td>
+<ul><font size="-1"><strong>RELATED SPACES</strong></font>
+<li><a href="dmt.htm"><font size="+2">DMT</font><br>
+<font size="-1">N,N-DIMETHYLTRYPTAMINE</font></a><br>
+<li><a href="hs_cehn.htm#add">H Y P E R S P A C E</a><br>
+<li><a href="mckenna.htm#req">Terence McKenna Land</a><br>
+<li><a href="shaman.htm#aya">Shamanism</a><br>
+<li><a href="gz.htm#fur">Gracie &amp; Zarkov</a></ul></td>
+<td bgcolor="#000000" align="center" width=160>
+<a href="index.html"><font size="-1" color="#f0e0C0"><img vspace=20 src="gif/tutu_s.jpg" width=80 height=91 border=0 alt="DEOXY.ORG"><br><strong>D E O X Y . O R G</strong></font></a>
+</td></tr>
+<tr background="gif/palmleaf.jpg"><td colspan=2 align="left"><strong>END OF FAQ</strong></td></tr>
+</table>
+<!-- defunct url><li>Psychotria viridis and Justicia pectoralis images from 
+<a href="http://www.ilhawaii.net:80/~hoti/">Hoti Products</a><li>Phalaris image from <a href="http://www.hyperreal.com/drugs/">Hyperreal</a></ul-->
+<script Language="JavaScript" type="text/javascript" src="bin/stats.js"></script>
+</blockquote>
+</blockquote><br clear=all>
+
+<div id=_footer>
+<div id=tabl style=top:0px;width:100%;margin:0px;margin-bottom:0px;>
+<table width="100%" border="0" cellspacing="0" cellpadding="4" align="center">
+
+<script type="text/javascript">
+function resizeMC(mode) {
+ var t = document.getElementById('mc')
+ var h = t.offsetHeight
+ var d = 440
+ if (mode == 'inc') h = h + 50
+ if (mode == 'dec') h = h - 50
+ if (mode == 'set') h = d
+ t.style.height = h + 'px'
+ if (h < 390) { h = d }
+ setCookie('fh',h,mcCookieExpires,'/')
+}
+var fh = getCookie('fh')
+var mcCookieExpires = new Date()
+mcCookieExpires.setTime(mcCookieExpires.getTime() + 365 * 24 * 60 * 60 * 1000)
+mcCookieExpires.toGMTString()
+
+function gomc(what) {
+ var whereto = what.options[what.selectedIndex].value;
+ if (whereto)
+  parent.mc.location.href = whereto;
+}
+document.write('<form target="mc" name="xJump">');
+</script><noscript>
+<form action="http://deoxy.org/cgi/jump.pl" target="mc" name="xJump">
+</noscript>
+
+<tr bgcolor="#111111"><td>
+
+<table width=100% cellspacing="0" cellpadding="4" border="0">
+<tr bgcolor="#222222">
+
+<td background="img/thin_horizontal_lines.gif">
+
+<font color="#888888" size="-2"><a
+ href="index.html" title="deoxy.org" rel=nofollow><b><font color="#888888">DEOXY</font></b></a> &nbsp; <font size="-3">&gt;</font>
+
+&nbsp; <a
+ href="contact.html" target=mc title=contact rel=nofollow><font color=#aaaaaa>CONTACT</font></a>
+
+ &#183; <a
+ href="news/frame.htm" target="mc" title="view news here" rel=nofollow><font color="#aaaaaa">NEWS</font></a>
+
+ &#183; <a
+ href="http://deoxy.org/vid" target="mc" title="watch video here" rel=nofollow><font color="#aaaaaa">VIDEO</font></a> : <a 
+ href="http://deoxy.org/videx?pop=1" target="mc" title="list new video" rel=nofollow><font color="#aaaaaa">NEW</font></a>&mdash;<a
+ href="http://deoxy.org/videx?pop=1&seen=1" target="mc" title="recently watched video" rel=nofollow><font color="#aaaaaa">WATCHED</font></a>&mdash;<a
+ href="http://deoxy.org/videx?pop=1&rand=1" target="mc" title="random video list" rel=nofollow><font color="#aaaaaa">RANDOM</font></a>
+</font></td>
+
+<td align="center" background="img/thin_horizontal_lines.gif">
+<font color="#888888" size="-2"><INPUT
+ type="button" class="button" value="&lt;" id=mcback title="rewind frame"><INPUT
+ type="button" class="button" value="&gt;" onClick="parent.mc.history.forward()" title="frame forward">
+<select name="to" class="select" onChange="gomc(this)" onDblClick="gomc(this)">
+<option value="http://deoxy.org/time/d2k/acalc/index.htm">Astro</option>
+<option value=http://deoxy.org/chatr>Chatter</option>
+<option value="http://deoxy.org/find#code">Cloud</option>
+<option value=http://deoxy.org/chatcloud?s=1>&nbsp;|_Chat</option>
+<option value="http://deoxy.org/topicloud?target=_blank">&nbsp;|_Topics</option>
+<option value="http://deoxy.org/vidcloud?s=1&m=1&small=1&js=1">&nbsp;|_Video</option>
+<option value="http://deoxy.org/news/cloud?n=10&m=1&s=1&t=_blank">&nbsp;|_News</option>
+<option value="http://deoxy.org/news/cloud/today?n=5&m=1&s=1&t=_blank">&nbsp;\__Today</option>
+<option value="http://deoxy.org/colors">Colors</option>
+<option value="http://deoxy.org/contact" selected>Contact</option>
+<option value="http://deoxy.org/find?target=_blank">Find</option>
+<!-- option value="http://deoxy.org/chat/java.htm">IRC</option -->
+<option value="http://deoxy.org/map">Map</option>
+<option value="http://deoxy.org/searchbot">Search</option>
+<option value="http://deoxy.org/time/d2k/today3.htm">Today</option>
+<option value="http://deoxy.org/vid">Video</option>
+</select>
+
+</font></td></form>
+
+<td align="right" nowrap background="img/thin_horizontal_lines.gif" width=100>
+<font color="#888888" size="-1">
+<!-- a href="/axis_dd.htm" target=mc><font color="#aaaaaa" title=off rel=nofollow>x</font></a -->&nbsp;
+<a onclick=resizeMC('dec')><font color="#aaaaaa" title=shrink>&ndash;</font></a>&nbsp;
+<a onclick=resizeMC('inc')><font color="#aaaaaa" title=grow>+</font></a>&nbsp;
+<a onclick=resizeMC('set')><font color="#444444" title="reset height">o</font></a>&nbsp;
+<a
+ href="chatr.html" target=cbWin rel=nofollow
+ onclick="if (mc.location.href.match(/chatr/)) { mc.location.href='http://deoxy.org/axis_dd.htm' } chatterWindow(); return false;"
+ title="open chatter window"><font color="#aaaaaa">^</font></a>&nbsp;
+
+</font></td></tr>
+
+<tr><td colspan=3>
+
+<script type="text/javascript">
+document.write('<iframe src="http://deoxy.org/')document.write('colors')document.write('" style="width:100%;height:')
+
+if (fh) {
+ document.write(fh)
+} else {
+ document.write('440')
+}
+document.write('px;padding:0px;margin:0px;" frameborder=0 border=0 id=mc name=mc>embed requires iframes</iframe>')
+
+document.getElementById('mcback').onclick = function () {
+ if (window.frames['mc'].location.hash !== '#mcstop') {
+  window.history.back()
+ }
+ return false
+}
+window.frames['mc'].onload = function () {
+ this.location.hash = 'mcstop'
+}
+</script>
+
+<noscript><iframe
+ src="axis_dd.htm"
+ style="width:100%;height:440px;padding:0px;margin:0px;"
+ frameborder=0 border=0 id=mc name=mc>
+embed requires iframes</iframe></noscript>
+
+</td></tr></table></td></tr></table></div>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+<tr bgcolor="#202020">
+<td width="33%" background="img/vortex0b.gif">&nbsp;
+&nbsp;<a
+ onclick=resizeMC('dec')><font color="#aaaaaa" title=shrink>&ndash;</font></a>&nbsp;&nbsp;<a
+ onclick=resizeMC('inc')><font color="#666666" title=grow>+</font></a>&nbsp;&nbsp;<a
+ onclick=resizeMC('set')><font color="#444444" title="reset height">o</font></a>
+</td>
+
+<td align="center">
+
+<table border="0" cellspacing="0" cellpadding="0" bgcolor="#000000" width=100%><tr>
+<td width="33%" bgcolor=#101010 background="gif/background2.jpg">&nbsp;</td>
+
+<td align=center>
+
+<a href='trypfaq.htm#top'>
+<img src="gif/arrow_u.gif" style="width: 15px; height: 15px; 
+border: 0; margin-right: 10px; margin-left: 10px;" alt="top"  /></a>
+
+</td>
+
+<td width="33%" bgcolor=#101010 background="gif/background2.jpg">&nbsp;
+
+</td></tr></table>
+
+</td>
+
+<td width='33%' align='right' valign='middle' background="img/vortex0b.gif"><!-- a 
+ href="http://deoxy.org/meme/Perl"><img
+ src="http://deoxy.org/img/perlpower.gif" 
+ width="80" height="15" border="0" vspace=0></a>&nbsp;--><a name=end
+ href="rss.html"><img
+ src="img/rss2.gif"
+ width="80" height="15" border="0" vspace=0></a>&nbsp;</td>
+</tr></table></div>
+<script type="text/javascript">
+
+
+if (self == top) {
+ var links = document.getElementsByTagName('a')
+ for (var i=0; i<links.length; i++) {
+  var t = links[i].getAttribute('target')
+  if (t == 'remotes') {
+   links[i].setAttribute('target','_top')
+  }
+ }
+}
+</script>
+</body>
+</html>
+

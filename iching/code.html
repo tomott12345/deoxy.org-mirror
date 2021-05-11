@@ -1,0 +1,33 @@
+<blockquote>This code demonstrates the exact method used to choose <a
+href="random.1.html" target=_blank>random hexagrams</a> at deoxy.org. It strives to emulate the 3 coin toss as simply as
+possible. This short <a href="../meme/Perl.html">Perl</a> program is available as a large shell app for Win32 (bloated to 673k because it includes Perl): <a 
+href="../iching_data/iching.exe">iching.exe</a><hr><p><pre>#!/usr/bin/perl
+# method for generating random i ching hexagrams at http://deoxy.org/iching
+
+# define the lines
+%lines = (    
+ 6 => '-- x --', # yin changing to yang
+ 7 => '-------', # yang
+ 8 => '--   --', # yin                       
+ 9 => '---o---', # yang changing to yin
+);                
+
+# define the coin                 
+@coin = qw(2 3);         
+
+# toss 3 coins 6 times 
+for (1..6) {
+  $a = @coin[rand @coin];
+  $b = @coin[rand @coin];
+  $c = @coin[rand @coin];
+
+  # add the results
+  $line  = $a + $b + $c;
+
+  # put result in a list, bottom line first
+  push @lines, $line;
+}
+
+# reverse the list so top line is first and print each line
+print "$lines{$_}\n" for reverse @lines;</pre><hr>
+<a href="../iching.1.html">Ok</a></body></html>

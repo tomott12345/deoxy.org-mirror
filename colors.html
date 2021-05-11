@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>She comes in colors...</title>
+<script type="text/javascript">
+// http://deoxy.org/colors
+
+var w = screen.availWidth
+var h = screen.availHeight
+var d = new Date()
+var n = d.getSeconds()
+if (n < 10) n = n * 10
+
+function load() {
+ var wmax = w - 300
+ var hmax = h - 300
+ var wr = Math.floor((Math.random()*wmax)+1)
+ var hr = Math.floor((Math.random()*hmax)+1)
+ var loc = window.location.href
+ var ref = document.referrer
+ var bit = GetQuery('s')
+ if (bit || (ref && (ref == loc))) {
+  resizeTo(300,300)
+  moveTo(wr,hr)
+ }
+ ccbg()
+ focus()
+ window.scrollTo(0,1)
+}
+
+function moreColor() {
+ window.open("http://deoxy.org/colors?s=s","",'resizable')
+}
+
+function GetQuery(param){
+ var p = escape(unescape(param))
+ var regex = new RegExp("[?&]" + p + "(?:=([^&]*))?","i")
+ var match = regex.exec(window.location.search)
+ var value = null
+ if (match != null) {
+  value = match[1]
+ }
+ return value
+}
+
+function deoxy() {
+ window.open('http://deoxy.org/','','width='+w/2+',height='+h+',toolbar,scrollbars,resizable,location,status')
+}
+
+// The section below is from http://www.javascripts.com
+// Scripts by Isaac Chau, all Rights reserved
+
+function toRadian( deg ) { 
+  return ( deg / 180.0 * Math.PI )
+}
+
+function toHex( dec ) {
+  var Hex = new Array( "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "E", "E", "F" )
+  var base  = 16
+  var total = ""
+  for ( var i = parseInt(dec, 10) ; i > 0 ; i = parseInt(i/base) )
+     eval( "total = Hex[" + ( i % base) + "]  + total + ''")
+
+  return ( dec > 15 ) ? total : ( "0" + total)
+}
+
+var step=1       
+var turn=0
+var id
+
+function ccbg(){
+ turn = ( turn + step ) % 3600
+ window.status = turn;
+ document.bgColor = ( toHex( (255 * Math.abs( Math.sin( toRadian((turn*1.1)) ) ) ) ) ) +
+                    ( toHex( (255 * Math.abs( Math.sin( toRadian((turn*1.9)) ) ) ) ) ) +
+                    ( toHex( (255 * Math.abs( Math.sin( toRadian((turn*1.5)) ) ) ) ) )
+
+ id = setTimeout("ccbg()",25)
+}
+// End Issac
+</script>
+</head>
+<body onload="load()" text="#000000" link="#000000" vlink="#000000"><div
+ style="width:100%;height:100%;overflow:hidden;cursor:pointer;z-index:5;"
+ title="get more color"
+ onclick="moreColor(); return false;"><span
+ style="position:absolute;bottom:0px;right:5px;opacity:0.3;z-index:10;"><a
+ href="index.html"
+ onclick="deoxy(); return false;"
+ target="_blank"
+ title="visit deoxy.org">&#8734;</a></span>
+<noscript>colors requires javascript</noscript>
+  </div>
+ </body>
+</html>

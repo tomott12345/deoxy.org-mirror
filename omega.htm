@@ -1,0 +1,910 @@
+<html>
+<head><title>Omega</title>
+<style>
+ .tbox { background-color:#000000; font-size:32px; color:#bbbbbb; border:0px; }
+</style>
+<script type="text/javascript" src="bin/flux.js"></script>
+<SCRIPT LANGUAGE="JavaScript"><!-- http://deoxy.org/omega.htm
+
+// POPULATION COUNTER written by Peter Russell, 1996.   pete@peterussell.com
+// You may copy and use this applet providing credit is given to the source.
+// deoxy.org 2007 Updated to eliminate a half billion overcount.
+
+//basedate = new Date("April 20, 1996 12:00:00")
+basedate = new Date("June 30, 2007 12:00:00")
+
+today = new Date()
+basemillisecs = basedate.getTime()
+millisecs = today.getTime()
+
+var TimeoutID = null
+var countRunning = false
+var string = "6604867922"
+
+//  var PopNow = 5900494594 + (millisecs - basemillisecs)*3.2/1000
+var PopNow = Number(string) + (millisecs - basemillisecs)*3.2/1000
+
+function stopCount() {
+ if (countRunning)
+  clearTimeout(timeoutID)
+  countRunning = false
+}
+
+function startCount() {
+ stopCount()
+ updatePop()
+}
+
+function updatePop() {
+ var pn = PopNow++
+ document.Counter.elements[0].value = Math.floor(pn)
+ timeoutID = setTimeout("updatePop()", 317)
+ countRunning = true
+}
+
+/* Javascript Countdown Timer (version 1.0) Copyright (C) 1997 Andrew Turi  All Rights Reserved. Permission given to use this script provided that this copyright notice remains in tact. [E-mail: andrew@2-cool.com] */
+var timerID;
+var timerRunning = false;
+var today = new Date();
+var count = new Date();
+var secPerDay = 0;
+var minPerDay = 0;
+var hourPerDay = 0;
+var secsLeft = 0;
+var secsRound = 0;
+var secsRemain = 0;
+var minLeft = 0;
+var minRound = 0;
+var dayRemain = 0;
+var minRemain = 0;
+var Expire = 0;
+var timeRemain = 0;
+var timeRemain2 = 0;
+var timeUp = "Timewave Zero in full effect"    // enter text to be displayed when countdown is finished
+var time = "0 days, 0 hours, 0 minutes, 0 seconds" //do not modify this text
+
+function stopclock () {
+ if (timerRunning)
+  clearTimeout(timerID)
+  timerRunning = false
+}
+
+function startclock () {
+ stopclock()
+ showtime()
+}
+
+function showtime () {
+ today = new Date()
+
+//unmark either of the two following lines
+//count = new Date("December 21, 2012");   // enter date to count down to (use the same format)
+count = new Date(document.clock.indate.value);   //let the user enter the date to count down to in the input box
+
+secsPerDay = 1000
+minPerDay = 60 * 1000
+hoursPerDay = 60 * 60 * 1000
+PerDay = 24 * 60 * 60 * 1000
+PerYear = 24 * 60 * 60 * 1000 * 365
+Expire = (count.getTime() - today.getTime())
+
+/*Seconds*/
+secsLeft = (count.getTime() - today.getTime()) / minPerDay
+secsRound = Math.round(secsLeft)
+secsRemain = secsLeft - secsRound
+secsRemain = (secsRemain < 0) ? secsRemain = 60 - ((secsRound - secsLeft) * 60) : secsRemain = (secsLeft - secsRound) * 60
+secsRemain = Math.round(secsRemain)
+
+/*Minutes*/
+minLeft = ((count.getTime() - today.getTime()) / hoursPerDay)
+minRound = Math.round(minLeft)
+minRemain = minLeft - minRound
+minRemain = (minRemain < 0) ? minRemain = 60 - ((minRound - minLeft)  * 60) : minRemain = ((minLeft - minRound) * 60)
+minRemain = Math.round(minRemain - 0.495)
+
+/*Hours*/
+hoursLeft = ((count.getTime() - today.getTime()) / PerDay)
+hoursRound = Math.round(hoursLeft)
+hoursRemain = hoursLeft - hoursRound
+hoursRemain = (hoursRemain < 0) ? hoursRemain = 24 - ((hoursRound - hoursLeft)  * 24) : hoursRemain = ((hoursLeft - hoursRound) * 24)
+hoursRemain = Math.round(hoursRemain - 0.5)
+
+/*Days*/
+daysLeft = ((count.getTime() - today.getTime()) / PerYear)
+daysRound = Math.round(daysLeft)
+daysRemain = daysLeft - daysRound
+daysRemain = (daysRemain < 0) ? daysRemain = 365 - ((daysRound - daysLeft)  * 365) : daysRemain = ((daysLeft - daysRound) * 365)
+daysRemain = Math.round(daysRemain - 0.5)
+daysLeft = ((count.getTime() - today.getTime()) / PerDay)
+daysLeft = (daysLeft)
+daysRound = Math.round(daysLeft)
+daysRemain2 = daysRound
+
+/*Years*/
+yearsLeft = ((count.getTime() - today.getTime()) / PerYear)
+yearsLeft = (yearsLeft)
+yearsRound = Math.round(yearsLeft)
+yearsRemain = yearsRound - 1
+
+/*Fixes*/
+if (yearsRemain == 1) yearsRemain = yearsRemain + " year, ";
+        else yearsRemain = yearsRemain + " years, "; 
+
+if (daysRemain == 1) daysRemain = daysRemain + " day, ";
+        else daysRemain = daysRemain + " days, "; 
+
+if (daysRemain2 == 1) daysRemain2 = daysRemain2 + " day, ";
+        else daysRemain2 = daysRemain2 + " days "; 
+
+if (hoursRemain == 1) hoursRemain = hoursRemain + " hour,  ";
+        else hoursRemain = hoursRemain + " hours,  ";
+
+if (minRemain == 1) minRemain = minRemain + " minute,  ";
+        else minRemain = minRemain + " minutes,  ";
+
+if (secsRemain == 1) secsRemain = secsRemain + " second";
+        else secsRemain = secsRemain + " seconds";
+
+/*Time*/
+timeRemain = yearsRemain + daysRemain + hoursRemain + minRemain + secsRemain;
+//shows the number of days, hours, secs, minutes until...
+timeRemain2 = daysRemain2 + hoursRemain + minRemain + secsRemain;
+//shows the number of years, days, hours, secs, minutes until...
+timeRemain3 = daysRemain2
+//shows the days until...
+
+window.status = "";
+document.clock.face.value = timeRemain;
+document.clock.face2.value = timeRemain2;
+document.clock.face3.value = timeRemain3;
+timerID = setTimeout("showtime()",1000);
+timerRunning = true;
+
+if (Expire <= 0){
+document.clock.face.value = time;  // choose either "time" or "timeUp"  (without quotes)
+stopclock()
+	}
+}
+// end
+//--></SCRIPT>
+<LINK REL="home"       HREF="index.html">
+<LINK REL="search"     HREF="http://deoxy.org/find">
+<LINK REL="stylesheet" HREF="inc/css/deoxy.org.css" TYPE="text/css">
+<LINK REL="alternate"  HREF="cgi/nu.pl@rss=1" TITLE="recent changes at deoxy.org" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/news/cloud?rss=1" TITLE="deoxy news cloud" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/news/cloud/today?rss=1" TITLE="deoxy news cloud today" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="news/feeds/moonphase.xml" TITLE="lunar phases" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/video/random/rss" TITLE="random video" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="koans@rss=1" TITLE="random koan" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="iching/random/rss" TITLE="random iching hexagram" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/cgi/randlink.pl?rss=1" TITLE="random link at deoxy.org" TYPE="application/rss+xml">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/find.xml"  title="deoxy find">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/news.xml"  title="deoxy news">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/newstoday.xml"  title="deoxy news today">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/videx.xml" title="deoxy video">
+<style type="text/css">input.wikiform { background-color:#111111; font-size:13px; color:#909090; border:0px; cursor:pointer; }</style>
+<meta name="MSSmartTagsPreventParsing" content="true">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="robots" content="all">
+
+<LINK REL="stylesheet" HREF="inc/css/print.css" TYPE="text/css" MEDIA="print">
+<script type="text/javascript" src="bin/chatterwindow.js"></script>
+<script type="text/javascript" src="bin/cookies.js"></script>
+<script type="text/javascript">
+function openVideo(id) {
+ var s = 'screenX=100,screenY=100,left=100,top=100,width=640,height=565,'
+ var x = 'resizable=1,status=0,menubar=0,toolbar=0,location=0,scrollbars=0'
+ window.open('http://deoxy.org/video/'+id,'',s+x)}
+</script>
+
+</head>
+<body bgcolor="#000000" text="#808880" link="#ffffff" vlink="#c0c0c0" onLoad="startclock(); startCount()">
+<a name="top"></a><div id=_header>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr bgcolor="#111111">
+<td nowrap rowspan=2 bgcolor="#000000" width="20" background='gif/background2.jpg'>&nbsp;</td>
+<td nowrap rowspan=2 bgcolor="#000000" align=center style=width:90px;><a
+ href="index.html"
+ title=deoxy.org
+ target=_top><!-- img
+ src="http://deoxy.org/gif/ooleft_left.gif" border=0 
+--><img src="vi/5-zMmUe_iAg.jpg" style=height:68px;width:100%;margin-left:1px; border=0></a></td>
+<form action='http://deoxy.org/cgi/jump.pl' method="post">
+<td nowrap align="right" background='img/vortex0b.gif'>
+
+<table cellspacing="0" cellpadding="0" border=0 background='gif/background2.jpg'><tr><td nowrap>
+<select name="to" class="select" onChange="x=this.options[this.selectedIndex].value;location.href=x.match(/^http:/)?x:'http://deoxy.org/'+x;">
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="nu.htm">&nbsp;&nbsp;\_updates</option>
+<!-- option value="watts.htm">alanwatts</option -->
+<!-- option value="alephnull">aleph</option -->
+<option value="8brains.htm">circuits</option>
+<option value="8basic.htm">&nbsp;&nbsp;\_scripts</option>
+
+
+
+<!-- option value="ct">crimethinc</option -->
+<option value="gacwao">defrag</option>
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="contact">&nbsp;&nbsp;|_contact</option>
+<option VALUE="http://m.deoxy.org">&nbsp;&nbsp;|_mobile</option>
+<!-- option value="wiki/Deoxy/Help">&nbsp;&nbsp;|_help</option -->
+<option value="meme/DNA">DNA</option>
+<option value="find">Find?</option>
+<!-- option value="forum">forum</option>
+<option value="newposts">&nbsp;&nbsp;|_newposts</option -->
+<!-- option value="hyper.htm">hyperspace</option -->
+<option value="iching">IChing</option>
+<option value="iching/random">&nbsp;&nbsp;\_random</option>
+<option value="imagine.mil">imagine.mil</option>
+<option value="inc.htm">incunabula</option>
+<!-- option value="http://irc.deoxy.org">IRC status</option -->
+<option value="koans">koans</option>
+<option value="koan/random">&nbsp;&nbsp;\_random</option>
+
+<option value="media">media</option>
+<option value="media/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="meme">meme</option>
+<option value="meme/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="news">news</option>
+<option VALUE="news/cloud/today">&nbsp;&nbsp;|_today</option>
+<option VALUE="news/digestc">&nbsp;&nbsp;|_digest</option>
+<option VALUE="news/view">&nbsp;&nbsp;|_category</option>  
+<option VALUE="http://m.deoxy.org/news">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\_mobile</option>
+<option value="omega.htm">omega</option>
+<option value="pdfa">PDFA</option>
+<option value="index/People">People</option>
+<option value="leary.htm">&nbsp;&nbsp;|_Leary</option>
+<option value="lilly.htm">&nbsp;&nbsp;|_Lilly</option>
+<option value="mckenna.htm">&nbsp;&nbsp;|_McKenna</option>
+<option value="media/McLuhan">&nbsp;&nbsp;|_McLuhan</option>
+<option value="raw.htm">&nbsp;&nbsp;|_RAWilson</option>
+<option value="philo.htm">philosophos</option>
+<option value="cgi/randlink.pl?go">random</option>
+<option value="rss.htm">RSS</option>
+<!-- option value="time/sabbats.htm">sabbats</option>
+<option value="shaman.htm">shaman</option -->
+<option value="stats">stats</option>
+<option value="maps">&nbsp;&nbsp;\_map</option>
+<!-- option value="tcrime.htm">thoughtcrime</option -->
+<option value="topics">topics</a>
+<option value="nu.htm">&nbsp;&nbsp;\_cloud</option>
+<option value="nu.htm">updates</option>
+<option value="wiki/Deoxy/Video">video</option>
+<option value="videx">&nbsp;&nbsp;|_index</option>
+<option value="vidcloud">&nbsp;&nbsp;|_cloud</option>
+<option value="vidimg">&nbsp;&nbsp;|_images</option>
+<option VALUE="warnings.htm">warnings</option>
+<!-- option value="wiki">wiki</option>
+<option value="wiki/Recent">&nbsp;&nbsp;|_changes</option>
+<option value="wiki/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="online">who's online</option -->
+</select>
+
+<input type="hidden" name="from" value='/omega.htm'>
+<noscript><input type="Submit" value="go" class="button"></noscript>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></form>
+
+<form action="http://translate.google.com/translate" method="post" target="_top" name="trans" id="trans"><td nowrap align="center">
+<input type="Submit" value="to" class="button" title="Google translation">
+<select name="tl" class="select" title="Google translation">
+<option value=af>Afrikaans</option>
+<option value=sq>Albanian</option>
+<option value="ar">Arabic</option>
+<option value=hy>Armenian</option>
+<option value=az>Azerbaijani</option>
+<option value=eu>Basque</option>
+<option value=be>Belarusian</option>
+<option value=bn>Bengali</option>
+<option value=bs>Bosnian</option>
+<option value="bg">Bulgarian</option>
+<option value=my>Burmese</option>
+<option value="ca">Catalan</option>
+<option value=ceb>Cebuano</option>
+<option value=ny>Chichewa</option>
+<option value="zh-CN">Chinese CN</option>
+<option value="zh-TW">Chinese TW</option>
+<option value="hr">Croatian</option>
+<option value="cs">Czech</option>
+<option value="da">Danish</option>
+<option value="nl">Dutch</option>
+<option value=eo>Esperanto</option>
+<option value="et">Estonian</option>
+<option value="tl">Filipino</option>
+<option value="fi">Finnish</option>
+<option value="fr">French</option>
+<option value="gl">Galacian</option>
+<option value=ka>Georgian</option>
+<option value="de">German</option>
+<option value="el">Greek</option>
+<option value=gu>Gujarati</option>
+<option value=ht>Haitian Creole</option>
+<option value=ha>Hausa</option>
+<option value="iw">Hebrew</option>
+<option value="hi">Hindi</option>
+<option value=hmn>Hmong</option>
+<option value="hu">Hungarian</option>
+<option value=is>Icelandic</option>
+<option value=ig>Igbo</option>
+<option value="id">Indonesian</option>
+<option value=ga>Irish</option>
+<option value="it">Italian</option>
+<option value="ja">Japanese</option>
+<option value=jw>Javanese</option>
+<option value=kn>Kannada</option>
+<option value=kk>Kazakh</option>
+<option value=km>Khmer</option>
+<option value="ko">Korean</option>
+<option value=lo>Lao</option>
+<option value=la>Latin</option>
+<option value="lv">Latvian</option>
+<option value="lt">Lithuanian</option>
+<option value=mk>Macedonian</option>
+<option value=mg>Malagasy</option>
+<option value=ms>Malay</option>
+<option value=ml>Malayalam</option>
+<option value="mt">Maltese</option>
+<option value=mi>Maori</option>
+<option value=mr>Marathi</option>
+<option value=mn>Mongolian</option>
+<option value=ne>Nepali</option>
+<option value="no">Norwegian</option>
+<option value=fa>Persian</option>
+<option value="pl">Polish</option>
+<option value="pt">Portuguese</option>
+<option value=pa>Punjabi</option>
+<option value="ro">Romanian</option>
+<option value="ru">Russian</option>
+<option value="sr">Serbian</option>
+<option value=st>Sesotho</option>
+<option value=si>Sinhala</option>
+<option value="sk">Slovak</option>
+<option value="sl">Slovenian</option>
+<option value=so>Somali</option>
+<option value="es" selected>Spanish</option>
+<option value=su>Sundanese</option>
+<option value=sw>Swahili</option>
+<option value="sv">Swedish</option>
+<option value=tg>Tajik</option>
+<option value=ta>Tamil</option>
+<option value=te>Telugu</option>
+<option value="th">Thai</option>
+<option value="tr">Turkish</option>
+<option value="uk">Ukrainian</option>
+<option value=ur>Urdu</option>
+<option value=uz>Uzbek</option>
+<option value="vi">Vietnamese</option>
+<option value=cy>Welsh</option>
+<option value=yi>Yiddish</option>
+<option value=yo>Yoruba</option>
+<option value=zu>Zulu</option></select>
+<input type=hidden name=sl value="en">
+<input type=hidden name=hl value="en">
+<input type=hidden name=ie value="UTF-8">
+<input type=hidden name=u id=u value='http://deoxy.org/omega.htm'>
+</td></form>
+
+
+<td align="right" valign="middle" nowrap>
+<table cellspacing="0" cellpadding="0" border=0><tr>
+<form action=http://deoxy.org/find method=get name=sitesearchform>
+<td nowrap align=right valign="middle">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name=q size=15 class="input" title="search deoxy.org">
+<input type="Submit" value="find" class="button" title="search deoxy.org"></TD>
+</form></tr></table>
+</td></tr></table>
+
+</td></tr><SCRIPT TYPE="text/javascript">
+document.trans.tl.selectedIndex=Math.floor(Math.random()*(document.trans.tl.length+1))
+</script><tr><td bgcolor="#111111" background="img/thin_horizontal_lines.gif" 
+style=white-space:nowrap;overflow:hidden;>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+<td style="background-image:url('gif/background2.jpg');background-position:40 0;" width=20>&nbsp;</td>
+<td style=background-image:url(img/thin_horizontal_lines.gif);>
+<div style=overflow:hidden;white-space:nowrap;>&nbsp;<small>[an error occurred while processing this directive]</small></div></td>
+
+<td width=20>&nbsp;</td>
+<form action=http://deoxy.org/cgi/jump.pl method=get target=_blank>
+<td align="right"><div style=overflow:hidden;display:none;>
+<font color="#909090"><a href="nu.htm"><font color="#ffffff" size="-1">New</font></a> : <font size="-1">
+<a href="nu.htm" ><font color=#ffffff size=-2>Site</font></a> : <a href="nu.htm" ><font color=#ffffff size=-2>Updates</font></a>
+
+</font></font></div></td>
+
+<td style="background-image:url('gif/background2.jpg');background-position:0 0;" width=20>&nbsp;</td>
+</form></tr></table>
+</td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="#000000" align="right" background="gif/background2.jpg">
+<!-- file = omega.htm -->
+</td></tr></table></div><p>
+
+
+
+<noscript><font size="-1">[population count and date countdown functions require javascript]</font></noscript>
+<blockquote>
+
+<table align=right><tr><td><a href="audio/people.ram">
+<img src="img/geopoliticus_small.jpg" hspace=10 width=323 height=287 vspace=3 border=0 alt="The End?"></a></td></tr>
+<tr><td align=center><a href="http://www.famouspainter.com/galleries/birth_of_the_new_man.htm" target=_blank>
+<font size=-2 color=#404040>Geopoliticus Child Watching the Birth of a New Man</font></a><br>
+</td></tr></table>
+
+
+<font size="+4"><a href="darkness.htm">OmegA</a></font><br>
+<small><b><i>Oh nothing, just the end of this world...</i></b></small>
+<p>
+<FORM Name="Counter">
+<big><tt><a href="http://deoxy.org/news/view/feed/uspopclocks">GLOBAL HUMAN POPULATION</a></tt></big><br>
+<INPUT Type="text" Name="textbox" Value="" Size=10 class=tbox><br>
+</form>
+
+<!--p><font size=-1>
+There's a slight delay while the real-time world population counter 
+loads, when it loads.</font><a href="http://coombs.anu.edu.au/ResFacilities/DemographyPage.html" target="remotes">
+<img src="http://sunsite.unc.edu/lunarbin/pop.gif" width=182 height=21 border=0 alt="world population clock"></a><br>
+-->
+
+<p>
+<b><a name="earth">"The bottom line for our species</a> is that because of <a href="audio/humanvirus.ram">population growth</a> and the fivefold economic expansion since 1950, the 
+environmental demands of our economic system now fill the available environmental space of the planet. This has brought us to a historic transitional point in the evolutionary 
+development of our species from living in a world of open frontiers to living in a full world&#151;in a mere historical instant. We now have the option of adjusting ourselves to this new 
+reality or destroying our ecological niche and suffering the consequences.</b><p>
+
+<p align=right><a href="earthman.htm">
+<img align=left src="gif/gaiasm.gif" width=50 height=50 vspace=20 border=0 hspace=20 alt="EARTHMANIFESTATION"></a>
+<font size="+2">Our problem results from acting like cowboys on a limitless frontier when in truth <a href="gaia.1.html">we inhabit a living spaceship</a> with a 
+finely balanced life-support 
+system."</font>&#151;<a href="korten_index.htm"><small>David C. Korton</small></a>
+</blockquote>
+
+<table border="0" cellpadding="12" cellspacing="0" align="center" width="90%">
+<tr><td><p align=justify><tt><font size=+1>"This is not a dress rehearsal for the apocalypse. This is not a pseudo-millenium. This is the real thing folks. This is not a test. This is 
+the last chance before things become <em><strong>so</strong></em> dissipated that there is no chance for cohesiveness."</font>&#151;<a href="omega.htm#magi"><em>Terence McKenna</em></a></tt>
+</p></td>
+
+<FORM NAME="clock">
+<td bgcolor=#101010>
+<table border="0" cellpadding="3" cellspacing="0"><tr><td bgcolor="#505050">
+<table border="0" cellpadding="3" cellspacing="0"><tr><td bgcolor="#909090">
+<font color="#404040" size="-1"><b>Timewave Zero Countdown</b></font>
+<table border="0" cellpadding="4" cellspacing="0">
+<tr><td colspan="2" bgcolor="#808080">
+<INPUT TYPE="hidden" SIZE="55" NAME="face2">
+<INPUT TYPE="text" SIZE="53" NAME="face"></td></tr>
+<tr><td align="center" bgcolor="#707070"><INPUT TYPE="text" SIZE="9" NAME="face3"></td>
+<td align="right" bgcolor="#606060"><INPUT TYPE="text" SIZE="20" NAME="indate" VALUE="December 21, 2012">
+<font size="-1">
+<INPUT TYPE="button" VALUE="Monitor" onClick="startclock()"></font></td></tr></table>
+</td></tr></table></td></tr></table>
+
+</td></FORM></tr>
+
+<tr><td colspan=2>&nbsp;</td></tr>
+
+<tr><td bgcolor="#202020" colspan=2>
+<font size=+1>
+Hopi elders speak of prior human epochs when man rose to great technological heights only to destroy himself. They believe it will happen again unless humans change. <a
+href="http://www.talkorigins.org/faqs/flood-myths.html" target="remotes">
+Variations on the theme of Noah's Flood</a> run through the legends of nearly all ancient peoples. Equally common as the deluge <a href="http://www.lhup.edu/~dsimanek/6flood.htm"
+target="remotes">myth</a> is this additional forewarning: The next global house-cleaning will be by fire.&#151;<font size=-1>John Hogue</font></font>
+
+<tr><td bgcolor="#101010" colspan=2>
+<font size="-1">Pre-Colombian Hopi Prophecies from <i>The Millennium Book of Prophecy</i> by John Hogue:</font>
+<p>
+<font size="+2">"Before the time of the great Purification, they will make metal roads 
+for iron horses and hang metal ropes in the air."</font>
+<P align="right">
+<i>"First they will bring back pieces of the Moon which will upset the 
+balance and unleash disastrous forces."</i>
+<P>
+<font size="+2">"Near the day of the Great Purification, there will be cobwebs spun 
+back and forth in the sky."</font>
+<P align="right">
+<font size="+1">"The Purification will begin shortly after humans build a great house 
+in the sky. By then there will be fires everywhere and greedy, selfish, 
+power-mad leaders, internal wars."</font>
+<p>
+<b>
+<li><a href="http://www.welcomehome.org/rainbow/prophecy/hopi1.html" target="remotes">Hopi Prophecy</a>
+<li><a href="http://web.archive.org/web/20010420130938/http://www.timesoft.com/content/hopi/menu_prophecies.asp" target="remotes">The Hopi Way: Cloud Dancing</a>
+<li><a href="http://web.archive.org/web/20011011050802/http://members.aol.com/adlerpost/hopi/evehem_e.htm" target="remotes">Message of the Hopi-Elder Dan Evehema</a>
+</b>
+</td></tr></table>
+
+<blockquote><p><br><font size=+1>We are at far more of a "turning point" than even the one Capra envisions; in possession of far more of a "web of reinforcement" than Baines could hope 
+for; the morphogenetic-field potential is far higher than Sheldrake predicts; the groundswell documented by Ferguson is about to become a tsunami, with a capability to take the planet off hold and 
+close the "vision gap" in a way that is perhaps more comprehensive than conceived by Barbara Marx Hubbard.</font>&#151;<font size=-1><strong><a href="http://www.neilfreer.com/" 
+target="remotes">Neil Freer</a></strong></font>
+
+<p align="right"><!-- a href="http://deoxy.org/forum/postlist.pl?Cat=&Board=omega" target="_top"><font 
+size="+1"><b>Omega Disscussion Forum</b></font></a -->
+
+<h3><a name="few">It ain't over 'til it's over.&#151;<small>Yogi Berra</small></h3>
+
+<a href="ct/index.html"><img src="img/ffolb.jpg" width=300 height=360 border=0 align=right hspace=12 vspace=12></a>
+
+<ul>
+<li><em>Selections</em> from <a href="geoman.htm"><big>The Akashic Record Player</big></a> by 
+<a href="http://www.paratheatrical.com" target="remotes">Antero Alli</a> wherein the Planetary Entity narrates Herstory about how She arranges meetings between uncertain humans at 
+certain sites to perform Earth Rites for future myths.
+
+<p>
+<li>In <a href="critmass.htm"><big>The Critical Mass of Enlightenment</big></a> examines how many enlightened people are needed to detonate mass liberation.
+
+<p>
+<li><a href="lastchan.htm"><big>The Book of Last Chances</big></a> collects quotes about the human condition and it's future.
+
+<p>
+<li><a href="meme/Social_Insects.html"><big>Social Insects</big></a> have been running successful urban civilizations for 100 million years.
+
+<p>
+<li><a href="futurman.htm"><big>The Future of Mankind</big></a> by Ven. Abbot Hsuan Hua
+
+<!-- p>
+<li><strong><a href="rat4694.htm">
+<font size=+2><tt>Quetzalcoatl</tt></font></a></strong --><br clear=all>
+</ul>
+
+<p align=center><br><font size=+3>
+<b><a href="poe.htm">THE POLITICS OF EXTINCTION</a></b></font>
+<br>
+<font size=+2>
+<a href="sciwarn.htm">WORLD SCIENTIST'S WARNING TO HUMANITY</a></font></p>
+
+<ul>
+<p><br><li><a name="imma"><font size=+2>Immanentization Technology</font></a>
+<p><ul>
+<li><font size=+1>Stars and placental amniotes! And ye inhabitants of the ten thousand worlds!</font> ...the ultimate Yoga which gives emancipation, which destroys the sense of 
+separateness which is the root of Desire, is to be made by the concentration of every element of one's being, and annihilating it by intimate combustion with the universe 
+itself.&#151;Aleister Crowley's 
+<a href="annex/8yoga0.htm">Eight Lectures On Yoga: <big>Yoga For Yahoos &amp; Yoga For Yellowbellies</big></a>
+<p>
+<li><a href="annex/cwl.htm"><big>The Clear White Light</big></a> : When man allows his external thinking and action to settle into uncreative static conditions, pressures build up, and  
+the undisciplined subconscious releases itself to anger, an emotion which renders a man blind to the existence of inner light in any degree.
+</ul></ul>
+
+<p><br clear=all>
+<p align=center>
+<a href="meme/TechnoSurrealism.html">
+<big><big><b>T E C H N O S U R R E A L I S M</b></big></big><br>
+<big><tt>March 20, 1998 &#151; Dec 21, 2012</tt></big></a></p><br>
+
+<table width=90% align=center cellpadding=12 cellspacing=12 border=0><tr>
+<td valign=middle>
+<a href="meme/RadicalEvolution.html"><img src="img/barbiehead.jpg" width=298 height=298 border=0 vspace=12 hspace=12 align=left></a>
+<big><big>You can see 4 technologies that I call the GRIN technologies: Genetics, Robotics, Information technology and Nanotechnology, and all of them are following a curve of 
+exponential change. You're seeing a curve that goes straight up...and you've never seen a curve of change like that in all of human history.</big></big>&#151;<a 
+href="meme/RadicalEvolution.html">RadicalEvolution</a>
+</td></tr></table>
+
+<p><a href="audio/flames.ra">
+<img align=right src="gif/omega.gif" width=200 height=200 hspace=8 border=0 alt="Get your kicks"></a><br>
+<ul>
+<li><font size=+2>Remotes</font>
+<ul>
+<li><a href="http://web.archive.org/web/20020810040029/http://sannyas.org/quotes/chakra01.htm" target="remotes">
+Seven Bodies, Seven Chakras</a> by <a href="http://deoxy.org/videx/osho">Osho</a>
+
+<li><a href="http://www.sacred-texts.com/oto/aba/aba1.htm" target="remotes">
+Meditation: The Way of Attainment of Genius or Godhead Considered 
+as a Development of the Human Brain</a> by Aleister Crowley
+
+<li><a href="http://www.well.com/user/jct/intro.html" target="remotes">
+Mind is a Myth</a>&#151;Disquieting conversations with the man called U.G.
+
+<li><a href="http://web.archive.org/web/19970216031533/http://www.spiritweb.org/Spirit/Veda/emerging-cosmos.html" target="remotes">
+Vedic Cosmology & The Emerging Cosmos</a>
+
+<li><a href="http://web.archive.org/web/19961227100036/http://www.envirolink.org/mkzdk/hermesprophecy.html" target="remotes">
+The Prophecy of Hermes Trismegistus</a>
+</ul>
+
+<p>
+<li><a href="http://web.archive.org/web/19981201083936/http://edie.cprost.sfu.ca/~idea/scenarios.html" target="remotes">
+What is Scenario Planning?</a>
+</ul>
+
+<p><br clear=all><a name=doom></a>
+
+<table align=center cellpadding=12 border=0 width=700>
+<tr><td bgcolor="#101010" align=center valign=top>
+<p align=justify>
+
+<font color="#FFaaaa"><b>The final march of doom has begun. The earth is prepared for the 
+ultimate devastation. The mighty engines of WAR are all aligned and brought together for the End. The scene is set. The Lord LUCIFER has sown the seeds 
+of WAR, and now weeps to see them take root and flourish in the fertile ground of man's destructive nature. The Lord JEHOVAH decrees the End and the 
+violence of the End. He prophesies the harvest of monumental slaughter. And I, the Lord SATAN, with My army of the damned, am come to reap that harvest, 
+and to feed My furnace with the souls of the fearful.</b></font>&#151;<small><a href="http://www.abrupt.org/LOGOS/sow/sow1.html" 
+target="remotes">SATAN</a></small></p></td></tr></table><br>
+
+<ul>
+<li>
+<a href="http://www.process.org" target="remotes"><font size="+1">THE PROCESS</font></a>&#151;Church of the Final Judgement</a>
+<ul>
+<li><a href="http://www.abrupt.org/LOGOS/sow/sow1.html" target="remotes">
+SATAN ON WAR</a>
+<li><a href="http://web.archive.org/web/19981201201857/www.process.org/OProcess/fleas/index.html" target="remotes">On Training Flea's...</a>
+</ul>
+<p>
+<li><a href="http://www.ccel.org/j/john_cross/dark_night/dark_night.html" target="remotes">
+Dark Night of the Soul</a> by St. John of the Cross
+<li><a href="http://earthops.org/second_coming.html" target="remotes">
+The Second Coming</a> by William Butler Yeats
+<li>Actual Photographs of <a href="http://www.subgenius.com/bigfist/fun/devivals/X-Day98/POST-X-DAY/X-DayPhotos/BATTLEtn/battle.html" target="remotes"><b>THE BATTLE OF ARMAGEDDON</b></a> 
+<li>What doom we do not deliberately perpetrate upon ourselves will be visited up on us by our selfish UNWILLINGNESS to do what we KNOW can be done to save us from imminent 
+disaster.&#151;<a href="http://www.vomitus.com/" target="remotes">Vomitus Maximus</a>
+</ul>
+<center>
+
+<p><br><big>The end of time is just another way of saying the beginning of immortality.</big><br><small>
+<a href=http://www.genesisp-orridge.com/>Genesis P-Orridge</a></small></center><br>
+
+<h3><a name="terence">Eschatological Magus</a> <a href="mckenna.htm" name="magi">Terence McKenna</a></h3>
+
+<ul>
+Change more radical by magnitudes than <em>anything</em> that has 
+gone before<br>looms <strong>immediately</strong> ahead.&#151;<font size=-1>Terence McKenna</font><br></center>
+
+<p>
+<li><strong>H Y P E R B O R E A</strong>
+<ul>
+<li><a href="http://www.levity.com/eschaton/finalillusion.html" target="remotes">
+Behold The Final Illusion!</a> 
+<li><a href="http://www.levity.com/eschaton/eschaton.html" target="remotes">
+The Eschaton: The Last Thing</a>
+<li><a href="http://www.levity.com/eschaton/novelty.html" target="remotes">
+Novelty & Concrescence</a> attempts to map the endtime with mathematical precision.
+<li><a href="http://www.levity.com/eschaton/evolvingideas.html" target="remotes">
+The Millennial Meme Nest</a>
+</ul>
+
+<li>Local
+<ul>
+<li><a href="t_sunami.htm">Spacetime Tsunami</a>
+<li><a href="t_ovrsol.htm">Oversoul As Saucer</a>
+<li><a href="t_re-evo.htm">Re-Evolution</a>
+<li><a href="t_adt.htm">The Archaic Revival</a>
+<li><a href="t_timebi.htm">The Great Timestream Bifurcation</a>.
+<li><a href="t_mushy.htm">A fungal perspective on eschatology</a>
+</ul>
+
+<p><li>Esalen Institute's 
+<a href="http://www.well.com/user/suscon/esalen/" target="remotes">
+Sustainability Consciousness Conference</a>.
+<ul><li><a href="http://www.well.com/user/suscon/esalen/dayone.html" target="remotes">
+DAY ONE: The End of the World?</a> transcript and RealAudio</ul>
+</ul>
+
+<blockquote><br>
+<p align=justify><big>Man has lived a long time the way he has lived [violently and
+unconsciously]. By the end of this century, a critical quantum leap is
+possible. Either man will die in a third world war or man will take a jump
+and will become a new man. Before that happens, a great Buddhafield is
+needed&#151;a field where we can create the future.</big>&#151;<small>Osho</small>
+</p></blockquote><br>
+
+<table width=90% align=center cellpadding=2><tr><td bgcolor=#101010>
+<table width=100% align=center cellpadding=8><tr><td bgcolor=#303030> 
+<big>
+When a seed<br>
+&#151;or an animal<br>
+&#151;or a man is ripe,<br>
+it must mature<br>
+to its next phase.<br>
+Or rot.</big>&#151;<small>Stewart Edward White</small><br>
+
+</td><form action="time/randomhex.htm"><td align=center bgcolor=#202020 nowrap>
+<tt>~:=||</tt> <input name="query" type=hidden value="">
+<input type=submit value="-HARMONIC-RESONANCE-DETECTOR-"> <tt>||=:~</tt>
+</td></form></tr></table></table><br>
+
+
+<h3>Places to go, people to see</h3>
+<ul>
+<li><a href="http://www.spacetelescope.org/bin/images.pl?embargo=0&viewtype=standard&searchtype=freesearch&lang=en&string=M17" target="remotes">Omega Nebula</a>
+<li><a href="http://web.archive.org/web/19981205015236/http://www.walrus.com/~gibralto/omega.html" target="remotes">The Omega Female!</a>
+
+<li><a href="http://alignment2012.com/" target="remotes">Alignment 2012</a> with John Major Jenkins
+<li><a href="http://www.earthportals.com/Portal_Messenger/arguelles.html" target="remotes">
+Planetary Pilgrims Jos&eacute; &amp; Lloydine Arg&uuml;elles</a>
+<li>Ander's <a href="http://www.aleph.se/Trans/Global/Omega" target="remotes">  
+Omega Point</a> and
+<a href="http://www.aleph.se/Trans/Global/Singularity" target="remotes">
+Singularity</a> pages.
+</ul>
+
+<p align=center><big>More than any time in history mankind faces a crossroads. One path leads to despair and utter hopelessness, the other to total extinction. Let us pray that we have 
+the wisdom to choose correctly.</big>&#151;<small>Woody Allen</small>
+
+<p align=center><a href="2013.html" target="_blank">
+<img src="gif/contact.gif" width=559 height=20 border=0 alt="WE CAN CONTACT YOU - WE ARE YOUR FUTURE MIND"></a>
+<p align=center><a href="http://web.archive.org/web/20020129110140/http://www.iuma.com/IUMA-2.0/ftp/volume5/Southern/www/fuct.html" target="remotes">
+<img src="gif/schwa.gif" border=0 width=45 height=47>
+<img src="gif/schwa.gif" border=0 alt="When All Else Fails" width=45 height=47>
+<img src="gif/schwa.gif" border=0 width=45 height=47></a><br><br>
+<a href="deoxy.htm" onmouseover='ooHoriz("1")' onmouseout='ooHoriz("0")'>
+<img src="gif/oo-horiz.gif" width=108 height=61 name="flux" alt="Have a magical millennium" border=0></a>
+<a href="contact.htm"><img src="gif/dimitri.jpg" width=117 height=21 border=0></a><br><a href="index.html"><font size="-1">E=&#177;mc&#178;=Th&#233; 
+&#208;&#235;&#242;x&#255;r&#237;&#223;&#248;&#241;&#181;&#231;l&#235;&#236;&#231; 
+H&#255;&#222;&#234;rd&#239;m&#232;&#241;s&#238;&#248;&#241;</font></a></center></blockquote>
+
+</blockquote><br clear=all>
+
+<div id=_footer>
+<div id=tabl style=top:0px;width:100%;margin:0px;margin-bottom:0px;>
+<table width="100%" border="0" cellspacing="0" cellpadding="4" align="center">
+
+<script type="text/javascript">
+function resizeMC(mode) {
+ var t = document.getElementById('mc')
+ var h = t.offsetHeight
+ var d = 440
+ if (mode == 'inc') h = h + 50
+ if (mode == 'dec') h = h - 50
+ if (mode == 'set') h = d
+ t.style.height = h + 'px'
+ if (h < 390) { h = d }
+ setCookie('fh',h,mcCookieExpires,'/')
+}
+var fh = getCookie('fh')
+var mcCookieExpires = new Date()
+mcCookieExpires.setTime(mcCookieExpires.getTime() + 365 * 24 * 60 * 60 * 1000)
+mcCookieExpires.toGMTString()
+
+function gomc(what) {
+ var whereto = what.options[what.selectedIndex].value;
+ if (whereto)
+  parent.mc.location.href = whereto;
+}
+document.write('<form target="mc" name="xJump">');
+</script><noscript>
+<form action="http://deoxy.org/cgi/jump.pl" target="mc" name="xJump">
+</noscript>
+
+<tr bgcolor="#111111"><td>
+
+<table width=100% cellspacing="0" cellpadding="4" border="0">
+<tr bgcolor="#222222">
+
+<td background="img/thin_horizontal_lines.gif">
+
+<font color="#888888" size="-2"><a
+ href="index.html" title="deoxy.org" rel=nofollow><b><font color="#888888">DEOXY</font></b></a> &nbsp; <font size="-3">&gt;</font>
+
+&nbsp; <a
+ href="contact.html" target=mc title=contact rel=nofollow><font color=#aaaaaa>CONTACT</font></a>
+
+ &#183; <a
+ href="news/frame.htm" target="mc" title="view news here" rel=nofollow><font color="#aaaaaa">NEWS</font></a>
+
+ &#183; <a
+ href="http://deoxy.org/vid" target="mc" title="watch video here" rel=nofollow><font color="#aaaaaa">VIDEO</font></a> : <a 
+ href="http://deoxy.org/videx?pop=1" target="mc" title="list new video" rel=nofollow><font color="#aaaaaa">NEW</font></a>&mdash;<a
+ href="http://deoxy.org/videx?pop=1&seen=1" target="mc" title="recently watched video" rel=nofollow><font color="#aaaaaa">WATCHED</font></a>&mdash;<a
+ href="http://deoxy.org/videx?pop=1&rand=1" target="mc" title="random video list" rel=nofollow><font color="#aaaaaa">RANDOM</font></a>
+</font></td>
+
+<td align="center" background="img/thin_horizontal_lines.gif">
+<font color="#888888" size="-2"><INPUT
+ type="button" class="button" value="&lt;" id=mcback title="rewind frame"><INPUT
+ type="button" class="button" value="&gt;" onClick="parent.mc.history.forward()" title="frame forward">
+<select name="to" class="select" onChange="gomc(this)" onDblClick="gomc(this)">
+<option value="http://deoxy.org/time/d2k/acalc/index.htm">Astro</option>
+<option value=http://deoxy.org/chatr>Chatter</option>
+<option value="http://deoxy.org/find#code">Cloud</option>
+<option value=http://deoxy.org/chatcloud?s=1>&nbsp;|_Chat</option>
+<option value="http://deoxy.org/topicloud?target=_blank">&nbsp;|_Topics</option>
+<option value="http://deoxy.org/vidcloud?s=1&m=1&small=1&js=1">&nbsp;|_Video</option>
+<option value="http://deoxy.org/news/cloud?n=10&m=1&s=1&t=_blank">&nbsp;|_News</option>
+<option value="http://deoxy.org/news/cloud/today?n=5&m=1&s=1&t=_blank">&nbsp;\__Today</option>
+<option value="http://deoxy.org/colors">Colors</option>
+<option value="http://deoxy.org/contact" selected>Contact</option>
+<option value="http://deoxy.org/find?target=_blank">Find</option>
+<!-- option value="http://deoxy.org/chat/java.htm">IRC</option -->
+<option value="http://deoxy.org/map">Map</option>
+<option value="http://deoxy.org/searchbot">Search</option>
+<option value="http://deoxy.org/time/d2k/today3.htm">Today</option>
+<option value="http://deoxy.org/vid">Video</option>
+</select>
+
+</font></td></form>
+
+<td align="right" nowrap background="img/thin_horizontal_lines.gif" width=100>
+<font color="#888888" size="-1">
+<!-- a href="/axis_dd.htm" target=mc><font color="#aaaaaa" title=off rel=nofollow>x</font></a -->&nbsp;
+<a onclick=resizeMC('dec')><font color="#aaaaaa" title=shrink>&ndash;</font></a>&nbsp;
+<a onclick=resizeMC('inc')><font color="#aaaaaa" title=grow>+</font></a>&nbsp;
+<a onclick=resizeMC('set')><font color="#444444" title="reset height">o</font></a>&nbsp;
+<a
+ href="chatr.html" target=cbWin rel=nofollow
+ onclick="if (mc.location.href.match(/chatr/)) { mc.location.href='http://deoxy.org/axis_dd.htm' } chatterWindow(); return false;"
+ title="open chatter window"><font color="#aaaaaa">^</font></a>&nbsp;
+
+</font></td></tr>
+
+<tr><td colspan=3>
+
+<script type="text/javascript">
+document.write('<iframe src="')document.write('news/cloud/today@n=5&amp;m=1&amp;s=1&amp;t=_blank')document.write('" style="width:100%;height:')
+
+if (fh) {
+ document.write(fh)
+} else {
+ document.write('440')
+}
+document.write('px;padding:0px;margin:0px;" frameborder=0 border=0 id=mc name=mc>embed requires iframes</iframe>')
+
+document.getElementById('mcback').onclick = function () {
+ if (window.frames['mc'].location.hash !== '#mcstop') {
+  window.history.back()
+ }
+ return false
+}
+window.frames['mc'].onload = function () {
+ this.location.hash = 'mcstop'
+}
+</script>
+
+<noscript><iframe
+ src="axis_dd.htm"
+ style="width:100%;height:440px;padding:0px;margin:0px;"
+ frameborder=0 border=0 id=mc name=mc>
+embed requires iframes</iframe></noscript>
+
+</td></tr></table></td></tr></table></div>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+<tr bgcolor="#202020">
+<td width="33%" background="img/vortex0b.gif">&nbsp;
+&nbsp;<a
+ onclick=resizeMC('dec')><font color="#aaaaaa" title=shrink>&ndash;</font></a>&nbsp;&nbsp;<a
+ onclick=resizeMC('inc')><font color="#666666" title=grow>+</font></a>&nbsp;&nbsp;<a
+ onclick=resizeMC('set')><font color="#444444" title="reset height">o</font></a>
+</td>
+
+<td align="center">
+
+<table border="0" cellspacing="0" cellpadding="0" bgcolor="#000000" width=100%><tr>
+<td width="33%" bgcolor=#101010 background="gif/background2.jpg">&nbsp;</td>
+
+<td align=center>
+
+<a href='omega.htm#top'>
+<img src="gif/arrow_u.gif" style="width: 15px; height: 15px; 
+border: 0; margin-right: 10px; margin-left: 10px;" alt="top"  /></a>
+
+</td>
+
+<td width="33%" bgcolor=#101010 background="gif/background2.jpg">&nbsp;
+
+</td></tr></table>
+
+</td>
+
+<td width='33%' align='right' valign='middle' background="img/vortex0b.gif"><!-- a 
+ href="http://deoxy.org/meme/Perl"><img
+ src="http://deoxy.org/img/perlpower.gif" 
+ width="80" height="15" border="0" vspace=0></a>&nbsp;--><a name=end
+ href="rss.html"><img
+ src="img/rss2.gif"
+ width="80" height="15" border="0" vspace=0></a>&nbsp;</td>
+</tr></table></div>
+<script type="text/javascript">
+
+
+if (self == top) {
+ var links = document.getElementsByTagName('a')
+ for (var i=0; i<links.length; i++) {
+  var t = links[i].getAttribute('target')
+  if (t == 'remotes') {
+   links[i].setAttribute('target','_top')
+  }
+ }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rss version="2.0">
+<channel>
+<title>Lunar Phases from deoxy.org</title>
+<link>http://deoxy.org/news/view/feed/moonphase</link>
+<description>Position of the Sun and Moon as seen from Earth calculated by Astro::MoonPhase. 
+See http://search.cpan.org/~brett/Astro-MoonPhase/</description>
+<language>en-us</language>
+<item>
+    <title>Sun Oct 30 17:39:53 2016 GMT New Moon</title>
+    <link>http://deoxy.org/news/view/feed/moonphase</link>
+    <guid isPermaLink="false">Sun Oct 30 17:39:53 2016 GMT New Moon</guid>
+    </item>
+<item>
+    <title>Mon Nov  7 19:52:48 2016 GMT First quarter</title>
+    <link>http://deoxy.org/news/view/feed/moonphase</link>
+    <guid isPermaLink="false">Mon Nov  7 19:52:48 2016 GMT First quarter</guid>
+    </item>
+<item>
+    <title>Mon Nov 14 13:53:38 2016 GMT Full moon</title>
+    <link>http://deoxy.org/news/view/feed/moonphase</link>
+    <guid isPermaLink="false">Mon Nov 14 13:53:38 2016 GMT Full moon</guid>
+    </item>
+<item>
+    <title>Mon Nov 21 08:34:58 2016 GMT Last quarter</title>
+    <link>http://deoxy.org/news/view/feed/moonphase</link>
+    <guid isPermaLink="false">Mon Nov 21 08:34:58 2016 GMT Last quarter</guid>
+    </item>
+<item>
+    <title>Tue Nov 29 12:19:35 2016 GMT New Moon</title>
+    <link>http://deoxy.org/news/view/feed/moonphase</link>
+    <guid isPermaLink="false">Tue Nov 29 12:19:35 2016 GMT New Moon</guid>
+    </item>
+</channel>
+</rss>

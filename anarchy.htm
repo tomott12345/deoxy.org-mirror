@@ -1,0 +1,980 @@
+<html>
+<head>
+<title>The Appeal of Anarchy</title>
+<META name="resource-type" content="document">
+<META name="description" content="The Appeal of Anarchy">
+<SCRIPT LANGUAGE="JavaScript"><!--
+// Current Lunar Phase by Michael J. Mathews joandmichael@mindspring.com - http://www.pieny.com
+// Approximate dates calculated with thanks to John Horton Conway
+
+function getMoonAge(year, month, day)
+{       
+        d = Math.floor(year/19)
+        r = year-(d*19) //r is the remainder of (year/19)
+
+        while (r>9)
+        {       
+                r = r-19
+        }
+
+        r = r*11
+
+        while (r>29)
+        {       
+                r = r-30
+        }
+
+        if (month<3)
+        {       
+                month = month+2
+        }
+
+        r = r+month+day
+
+        if (year<100)
+        {       
+                r = r-4
+        }
+        else
+        {
+                r = r-8.3
+        }
+
+        while(r>29)
+        {       
+                r = r-30
+        }
+
+        while(r<0)
+        {       
+                r = r+30
+        }
+
+        return r
+}
+                
+function getMoonPhase(moonAge)
+{       
+        if (moonAge<2) return "new"
+        if (moonAge<5) return "waxing cresent"
+        if (moonAge<11) return "first quarter"
+        if (moonAge<13) return "waxing gibbous"
+        if (moonAge<16) return "full"
+        if (moonAge<20) return "waning gibbous"
+        if (moonAge<24) return "last quarter"
+        if (moonAge<29) return "waning cresent"
+        if (moonAge<30) return "new"
+}
+
+function getMoonPhaseImg(moonAge)
+{       
+        if (moonAge<2) return "moonnew"
+        if (moonAge<5) return "waxingcresent"
+        if (moonAge<11) return "firstquarter"
+        if (moonAge<13) return "waxinggibbous"
+        if (moonAge<16) return "moonfull"
+        if (moonAge<20) return "waninggibbous"
+        if (moonAge<24) return "lastquarter"
+        if (moonAge<29) return "waningcresent"
+        if (moonAge<30) return "moonnew"
+}
+monthNames = new Array(13)
+monthNames[1]  = "Jan"
+monthNames[2]  = "Feb"
+monthNames[3]  = "Mar"
+monthNames[4]  = "Apr"
+monthNames[5]  = "May"
+monthNames[6]  = "Jun"
+monthNames[7]  = "Jul"
+monthNames[8]  = "Aug"
+monthNames[9]  = "Sep"
+monthNames[10] = "Oct"
+monthNames[11] = "Nov"
+monthNames[12] = "Dec"
+                 
+dayNames = new Array(8)
+dayNames[1]  = "Sunday"
+dayNames[2]  = "Monday"
+dayNames[3]  = "Tuesday"
+dayNames[4]  = "Wednesday"
+dayNames[5]  = "Thursday"
+dayNames[6]  = "Friday"
+dayNames[7]  = "Saturday"
+                 
+function getLongDate(dateObj)
+{       
+        theDay = dayNames[dateObj.getDay()+1]
+        theMonth = monthNames[dateObj.getMonth()+1]
+        theDate = dateObj.getDate()
+        theYear = 1900+dateObj.getYear()
+        return ""+theDay+", "+theMonth+" "+theDate+", "+theYear
+}
+                
+function getNextFull(moonAge)
+{       
+        currMilSecs = (new Date()).getTime()
+        daysToGo = 15 - moonAge
+        while(daysToGo<2)
+        {       
+                daysToGo = daysToGo+29
+        }
+        milSecsToGo = daysToGo*24*60*60*1000
+        nextMoonTime = currMilSecs+milSecsToGo
+        nextMoonDate = new Date(nextMoonTime)
+        return nextMoonDate
+}
+                
+function getNextNew(moonAge)
+{       
+        currMilSecs = (new Date()).getTime()
+        daysToGo = 29 - moonAge
+        while(daysToGo<2)
+        {       
+                daysToGo = daysToGo+29
+        }
+        milSecsToGo = daysToGo*24*60*60*1000
+        nextMoonTime = currMilSecs+milSecsToGo
+        nextMoonDate = new Date(nextMoonTime)
+        return nextMoonDate
+}
+// -->
+</SCRIPT>
+<LINK REL="home"       HREF="index.html">
+<LINK REL="search"     HREF="http://deoxy.org/find">
+<LINK REL="stylesheet" HREF="inc/css/deoxy.org.css" TYPE="text/css">
+<LINK REL="alternate"  HREF="cgi/nu.pl@rss=1" TITLE="recent changes at deoxy.org" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/news/cloud?rss=1" TITLE="deoxy news cloud" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/news/cloud/today?rss=1" TITLE="deoxy news cloud today" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="news/feeds/moonphase.xml" TITLE="lunar phases" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/video/random/rss" TITLE="random video" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="koans@rss=1" TITLE="random koan" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="iching/random/rss" TITLE="random iching hexagram" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/cgi/randlink.pl?rss=1" TITLE="random link at deoxy.org" TYPE="application/rss+xml">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/find.xml"  title="deoxy find">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/news.xml"  title="deoxy news">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/newstoday.xml"  title="deoxy news today">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/videx.xml" title="deoxy video">
+<style type="text/css">input.wikiform { background-color:#111111; font-size:13px; color:#909090; border:0px; cursor:pointer; }</style>
+<meta name="MSSmartTagsPreventParsing" content="true">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="robots" content="all">
+
+<LINK REL="stylesheet" HREF="inc/css/print.css" TYPE="text/css" MEDIA="print">
+<script type="text/javascript" src="bin/chatterwindow.js"></script>
+<script type="text/javascript" src="bin/cookies.js"></script>
+<script type="text/javascript">
+function openVideo(id) {
+ var s = 'screenX=100,screenY=100,left=100,top=100,width=640,height=565,'
+ var x = 'resizable=1,status=0,menubar=0,toolbar=0,location=0,scrollbars=0'
+ window.open('http://deoxy.org/video/'+id,'',s+x)}
+</script>
+
+
+</head>
+<body
+ bgcolor = #00001a
+ link    = #0066cc
+ vlink   = #0066cc
+ background = "gaia/eyefood/starfeeled.jpg">
+<a name="top"></a><div id=_header>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr bgcolor="#111111">
+<td nowrap rowspan=2 bgcolor="#000000" width="20" background='gif/background2.jpg'>&nbsp;</td>
+<td nowrap rowspan=2 bgcolor="#000000" align=center style=width:90px;><a
+ href="index.html"
+ title=deoxy.org
+ target=_top><!-- img
+ src="http://deoxy.org/gif/ooleft_left.gif" border=0 
+--><img src="vi/dZMAZvsSgVY.jpg" style=height:68px;width:100%;margin-left:1px; border=0></a></td>
+<form action='http://deoxy.org/cgi/jump.pl' method="post">
+<td nowrap align="right" background='img/vortex0b.gif'>
+
+<table cellspacing="0" cellpadding="0" border=0 background='gif/background2.jpg'><tr><td nowrap>
+<select name="to" class="select" onChange="x=this.options[this.selectedIndex].value;location.href=x.match(/^http:/)?x:'http://deoxy.org/'+x;">
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="nu.htm">&nbsp;&nbsp;\_updates</option>
+<!-- option value="watts.htm">alanwatts</option -->
+<!-- option value="alephnull">aleph</option -->
+<option value="8brains.htm">circuits</option>
+<option value="8basic.htm">&nbsp;&nbsp;\_scripts</option>
+
+
+
+<!-- option value="ct">crimethinc</option -->
+<option value="gacwao">defrag</option>
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="contact">&nbsp;&nbsp;|_contact</option>
+<option VALUE="http://m.deoxy.org">&nbsp;&nbsp;|_mobile</option>
+<!-- option value="wiki/Deoxy/Help">&nbsp;&nbsp;|_help</option -->
+<option value="meme/DNA">DNA</option>
+<option value="find">Find?</option>
+<!-- option value="forum">forum</option>
+<option value="newposts">&nbsp;&nbsp;|_newposts</option -->
+<!-- option value="hyper.htm">hyperspace</option -->
+<option value="iching">IChing</option>
+<option value="iching/random">&nbsp;&nbsp;\_random</option>
+<option value="imagine.mil">imagine.mil</option>
+<option value="inc.htm">incunabula</option>
+<!-- option value="http://irc.deoxy.org">IRC status</option -->
+<option value="koans">koans</option>
+<option value="koan/random">&nbsp;&nbsp;\_random</option>
+
+<option value="media">media</option>
+<option value="media/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="meme">meme</option>
+<option value="meme/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="news">news</option>
+<option VALUE="news/cloud/today">&nbsp;&nbsp;|_today</option>
+<option VALUE="news/digestc">&nbsp;&nbsp;|_digest</option>
+<option VALUE="news/view">&nbsp;&nbsp;|_category</option>  
+<option VALUE="http://m.deoxy.org/news">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\_mobile</option>
+<option value="omega.htm">omega</option>
+<option value="pdfa">PDFA</option>
+<option value="index/People">People</option>
+<option value="leary.htm">&nbsp;&nbsp;|_Leary</option>
+<option value="lilly.htm">&nbsp;&nbsp;|_Lilly</option>
+<option value="mckenna.htm">&nbsp;&nbsp;|_McKenna</option>
+<option value="media/McLuhan">&nbsp;&nbsp;|_McLuhan</option>
+<option value="raw.htm">&nbsp;&nbsp;|_RAWilson</option>
+<option value="philo.htm">philosophos</option>
+<option value="cgi/randlink.pl?go">random</option>
+<option value="rss.htm">RSS</option>
+<!-- option value="time/sabbats.htm">sabbats</option>
+<option value="shaman.htm">shaman</option -->
+<option value="stats">stats</option>
+<option value="maps">&nbsp;&nbsp;\_map</option>
+<!-- option value="tcrime.htm">thoughtcrime</option -->
+<option value="topics">topics</a>
+<option value="nu.htm">&nbsp;&nbsp;\_cloud</option>
+<option value="nu.htm">updates</option>
+<option value="wiki/Deoxy/Video">video</option>
+<option value="videx">&nbsp;&nbsp;|_index</option>
+<option value="vidcloud">&nbsp;&nbsp;|_cloud</option>
+<option value="vidimg">&nbsp;&nbsp;|_images</option>
+<option VALUE="warnings.htm">warnings</option>
+<!-- option value="wiki">wiki</option>
+<option value="wiki/Recent">&nbsp;&nbsp;|_changes</option>
+<option value="wiki/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="online">who's online</option -->
+</select>
+
+<input type="hidden" name="from" value='/anarchy.htm'>
+<noscript><input type="Submit" value="go" class="button"></noscript>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></form>
+
+<form action="http://translate.google.com/translate" method="post" target="_top" name="trans" id="trans"><td nowrap align="center">
+<input type="Submit" value="to" class="button" title="Google translation">
+<select name="tl" class="select" title="Google translation">
+<option value=af>Afrikaans</option>
+<option value=sq>Albanian</option>
+<option value="ar">Arabic</option>
+<option value=hy>Armenian</option>
+<option value=az>Azerbaijani</option>
+<option value=eu>Basque</option>
+<option value=be>Belarusian</option>
+<option value=bn>Bengali</option>
+<option value=bs>Bosnian</option>
+<option value="bg">Bulgarian</option>
+<option value=my>Burmese</option>
+<option value="ca">Catalan</option>
+<option value=ceb>Cebuano</option>
+<option value=ny>Chichewa</option>
+<option value="zh-CN">Chinese CN</option>
+<option value="zh-TW">Chinese TW</option>
+<option value="hr">Croatian</option>
+<option value="cs">Czech</option>
+<option value="da">Danish</option>
+<option value="nl">Dutch</option>
+<option value=eo>Esperanto</option>
+<option value="et">Estonian</option>
+<option value="tl">Filipino</option>
+<option value="fi">Finnish</option>
+<option value="fr">French</option>
+<option value="gl">Galacian</option>
+<option value=ka>Georgian</option>
+<option value="de">German</option>
+<option value="el">Greek</option>
+<option value=gu>Gujarati</option>
+<option value=ht>Haitian Creole</option>
+<option value=ha>Hausa</option>
+<option value="iw">Hebrew</option>
+<option value="hi">Hindi</option>
+<option value=hmn>Hmong</option>
+<option value="hu">Hungarian</option>
+<option value=is>Icelandic</option>
+<option value=ig>Igbo</option>
+<option value="id">Indonesian</option>
+<option value=ga>Irish</option>
+<option value="it">Italian</option>
+<option value="ja">Japanese</option>
+<option value=jw>Javanese</option>
+<option value=kn>Kannada</option>
+<option value=kk>Kazakh</option>
+<option value=km>Khmer</option>
+<option value="ko">Korean</option>
+<option value=lo>Lao</option>
+<option value=la>Latin</option>
+<option value="lv">Latvian</option>
+<option value="lt">Lithuanian</option>
+<option value=mk>Macedonian</option>
+<option value=mg>Malagasy</option>
+<option value=ms>Malay</option>
+<option value=ml>Malayalam</option>
+<option value="mt">Maltese</option>
+<option value=mi>Maori</option>
+<option value=mr>Marathi</option>
+<option value=mn>Mongolian</option>
+<option value=ne>Nepali</option>
+<option value="no">Norwegian</option>
+<option value=fa>Persian</option>
+<option value="pl">Polish</option>
+<option value="pt">Portuguese</option>
+<option value=pa>Punjabi</option>
+<option value="ro">Romanian</option>
+<option value="ru">Russian</option>
+<option value="sr">Serbian</option>
+<option value=st>Sesotho</option>
+<option value=si>Sinhala</option>
+<option value="sk">Slovak</option>
+<option value="sl">Slovenian</option>
+<option value=so>Somali</option>
+<option value="es" selected>Spanish</option>
+<option value=su>Sundanese</option>
+<option value=sw>Swahili</option>
+<option value="sv">Swedish</option>
+<option value=tg>Tajik</option>
+<option value=ta>Tamil</option>
+<option value=te>Telugu</option>
+<option value="th">Thai</option>
+<option value="tr">Turkish</option>
+<option value="uk">Ukrainian</option>
+<option value=ur>Urdu</option>
+<option value=uz>Uzbek</option>
+<option value="vi">Vietnamese</option>
+<option value=cy>Welsh</option>
+<option value=yi>Yiddish</option>
+<option value=yo>Yoruba</option>
+<option value=zu>Zulu</option></select>
+<input type=hidden name=sl value="en">
+<input type=hidden name=hl value="en">
+<input type=hidden name=ie value="UTF-8">
+<input type=hidden name=u id=u value='http://deoxy.org/anarchy.htm'>
+</td></form>
+
+
+<td align="right" valign="middle" nowrap>
+<table cellspacing="0" cellpadding="0" border=0><tr>
+<form action=http://deoxy.org/find method=get name=sitesearchform>
+<td nowrap align=right valign="middle">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name=q size=15 class="input" title="search deoxy.org">
+<input type="Submit" value="find" class="button" title="search deoxy.org"></TD>
+</form></tr></table>
+</td></tr></table>
+
+</td></tr><SCRIPT TYPE="text/javascript">
+document.trans.tl.selectedIndex=Math.floor(Math.random()*(document.trans.tl.length+1))
+</script><tr><td bgcolor="#111111" background="img/thin_horizontal_lines.gif" 
+style=white-space:nowrap;overflow:hidden;>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+<td style="background-image:url('gif/background2.jpg');background-position:40 0;" width=20>&nbsp;</td>
+<td style=background-image:url(img/thin_horizontal_lines.gif);>
+<div style=overflow:hidden;white-space:nowrap;>&nbsp;<small>[an error occurred while processing this directive]</small></div></td>
+
+<td width=20>&nbsp;</td>
+<form action=http://deoxy.org/cgi/jump.pl method=get target=_blank>
+<td align="right"><div style=overflow:hidden;display:none;>
+<font color="#909090"><a href="nu.htm"><font color="#ffffff" size="-1">New</font></a> : <font size="-1">
+<a href="media/Recent.html" ><font color=#ffffff size=-2>Media</font></a> : <a href="media/Organic_Electronic_Music,_Photic_and_Auditory_Driving,_Shamanism_and_the_Brain.html" ><font color=#ffffff size=-2>Organic Electronic Music, Photic and Auditory Driving, Shamanism and the Brain</font></a>
+
+</font></font></div></td>
+
+<td style="background-image:url('gif/background2.jpg');background-position:0 0;" width=20>&nbsp;</td>
+</form></tr></table>
+</td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="#000000" align="right" background="gif/background2.jpg">
+<table><tr><form action="http://deoxy.org/cgi/jump.pl"><td>
+	<select name="to" class="select" 
+	onChange="if (this.options[this.selectedIndex].value != 'none') location.href='http://deoxy.org/'+this.options[this.selectedIndex].value">
+        <option value='none'>Related to The Appeal of Anarchy<option value='index/Anarchy'>Anarchy:<option value="wiki/Anarchism_by_Peter_Kropotkin">&nbsp;&nbsp;Anarchism by Kropotkin<option value="wiki/Anarchy/Anarchist_Therapy">&nbsp;&nbsp;Anarchist Therapy<option value="media/Anarchy">&nbsp;&nbsp;Anarchy<option value="ct/anarchy.htm">&nbsp;&nbsp;Anarchy. Once you've tried it...<option value="bewilderness.htm">&nbsp;&nbsp;Bewilderness<option value="media/HakimBey/Spiritual_Anarchism">&nbsp;&nbsp;HakimBey/Spiritual Anarchism<option value="wiki/Ism/Anarchism">&nbsp;&nbsp;Ism/Anarchism<option value="hakim/ontologicalanarchy.htm">&nbsp;&nbsp;Ontological Anarchy in a Nutshell<option value="meme/Post-Anarchism_Anarchy">&nbsp;&nbsp;Post-Anarchism Anarchy<option value="noreason.htm">&nbsp;&nbsp;There Are No Reasons - Journey Into Savagery<option value="cea.htm">&nbsp;&nbsp;Toward a Cultural Ecology of Anarchy<option value='index/Declarations'>Declarations:<option value="2command.htm">&nbsp;&nbsp;2 Commandments for the Molecular Age<option value="ct/8things.htm">&nbsp;&nbsp;8 Things You Can Do To Get Active<option value="pdfa/drugtruce.htm">&nbsp;&nbsp;A Call for Drug War Truce with Peace Negoti...<option value="korten_agenda.htm">&nbsp;&nbsp;A Citizen Agenda to Tame Corporate Power<option value="mushword.htm">&nbsp;&nbsp;A Mushroom That Speaks<option value="aa.htm">&nbsp;&nbsp;Against Amnesia<option value="aip.htm">&nbsp;&nbsp;Against intellectual property<option value="aaw.htm">&nbsp;&nbsp;Aphorisms Against Work<option value="comstock.htm">&nbsp;&nbsp;Comstock Brothers renounce citizenship<option value="meme/DECLARATION_OF_NUTOPIA">&nbsp;&nbsp;DECLARATION OF NUTOPIA<option value="wiki/Ism/Egalitarianism">&nbsp;&nbsp;Ism/Egalitarianism<option value="wiki/Ism/Moorish_Orthodox_Catechism">&nbsp;&nbsp;Ism/Moorish Orthodox Catechism<option value="negativland-tenets.htm">&nbsp;&nbsp;NEGATIVLAND'S TENETS OF FREE APPROPRIATION<option value="law/cecede.htm">&nbsp;&nbsp;Ordanances of Secession of the 13 Confedera...<option value="pr.htm">&nbsp;&nbsp;Perceptual Revolution<option value="poru.htm">&nbsp;&nbsp;PRINCIPLES OF RESPONSIBLE USE<option value="npp.htm">&nbsp;&nbsp;Program of the National Socialist German Wo...<option value="wiki/ReUnitedNations">&nbsp;&nbsp;ReUnitedNations<option value="revolt.htm">&nbsp;&nbsp;Revolt Against Work<option value="syllabus.htm">&nbsp;&nbsp;Rome's Syllabus of Condemned Opinions<option value="seize_it.htm">&nbsp;&nbsp;Seizing The Media<option value="tenthese.htm">&nbsp;&nbsp;Ten Theses Toward the End of the Flesh-Spir...<option value="dec_evo.htm">&nbsp;&nbsp;The Declaration of Evolution<option value="dec_ind.htm">&nbsp;&nbsp;The Declaration of Independence<option value="shulgin.htm">&nbsp;&nbsp;The Illegal Search for Self Awareness<option value="l_tld.htm">&nbsp;&nbsp;The Leary Defense<option value="rst.htm">&nbsp;&nbsp;The Revolutionary Pleasure Of Thinking For ...<option value="pdfa/woc.htm">&nbsp;&nbsp;The War on Drugs is a War on Consciousness<option value="pdfa/hostile.htm">&nbsp;&nbsp;Uncompromising Hostility<option value="meme/UNIVERSAL_DECLARATION_OF_THE_RIGHTS_OF_MOTHER_EARTH">&nbsp;&nbsp;UNIVERSAL DECLARATION OF THE RIGHTS OF MOTH...<option value="sciwarn.htm">&nbsp;&nbsp;World Scientists' Warning to Humanity<option value="zerowork.htm">&nbsp;&nbsp;Zero-Hour Day, Zero-Day Workweek<option value='index/Nature'>Nature:<option value="ct/8things.htm">&nbsp;&nbsp;8 Things You Can Do To Get Active<option value="mushword.htm">&nbsp;&nbsp;A Mushroom That Speaks<option value="media/Amazon">&nbsp;&nbsp;Amazon<option value="bewilderness.htm">&nbsp;&nbsp;Bewilderness<option value="media/Climate_Denial">&nbsp;&nbsp;Climate Denial<option value="dnalert1.htm">&nbsp;&nbsp;DNA ALERT!<option value="dnamind.htm">&nbsp;&nbsp;DNA is minded and conscious<option value="earthman.htm">&nbsp;&nbsp;earthmanifestation<option value="media/Ecology/From_Naked_Ape_To_Superspecies">&nbsp;&nbsp;Ecology/From Naked Ape To Superspecies<option value="media/Ecology/The_Noisy_Ape">&nbsp;&nbsp;Ecology/The Noisy Ape<option value="media/EcoShock">&nbsp;&nbsp;EcoShock<option value="lsdeity.htm">&nbsp;&nbsp;Feel the Cosmos as a Translucent Ever-Livin...<option value="gaia/forests.htm">&nbsp;&nbsp;Forests As Sanctuaries<option value="gaia/goddess.htm">&nbsp;&nbsp;Great Mother of the Gods<option value="media/Ingenious_Ways_To_Avoid_Believing_Climate_Change">&nbsp;&nbsp;Ingenious Ways To Avoid Believing Climate C...<option value="media/Inspiring_Action">&nbsp;&nbsp;Inspiring Action<option value="time/sabbats/intro2sab.htm">&nbsp;&nbsp;Introduction To The Sabbats<option value="media/Jeremy_Narby/Intelligence_of_Nature">&nbsp;&nbsp;Jeremy Narby/Intelligence of Nature<option value="media/McKenna/Global_Perspectives_and_Psychedelic_Poetics">&nbsp;&nbsp;McKenna/Global Perspectives and Psychedelic...<option value="media/McKenna/History_Ends_In_Green">&nbsp;&nbsp;McKenna/History Ends In Green<option value="media/McKenna/Nature_is_the_Center_of_the_Mandala">&nbsp;&nbsp;McKenna/Nature is the Center of the Mandala<option value="media/McKenna/Search_for_the_Original_Tree_of_Knowledge">&nbsp;&nbsp;McKenna/Search for the Original Tree of Kno...<option value="media/McKenna/Understanding_and_the_Imagination_in_the_Light_of_Nature">&nbsp;&nbsp;McKenna/Understanding and the Imagination i...<option value="meme/MegathrustTsunami">&nbsp;&nbsp;MegathrustTsunami<option value="media/Mountaintop_Removal">&nbsp;&nbsp;Mountaintop Removal<option value="sunmusic.htm">&nbsp;&nbsp;Music of the Sun<option value="audio/mcluhan_natureisover.m3u">&nbsp;&nbsp;Nature is Over<option value="media/Physics">&nbsp;&nbsp;Physics<option value="t_ppp.htm">&nbsp;&nbsp;Plan Plant Planet<option value="iching/random">&nbsp;&nbsp;Random I Ching Hexagram<option value="wiki/Runaway_Climate_Change">&nbsp;&nbsp;Runaway Climate Change<option value="time/sabbats/index.htm">&nbsp;&nbsp;Sabbats<option value="shamansci.htm">&nbsp;&nbsp;Shamans and scientists<option value="meme/Social_Insects">&nbsp;&nbsp;Social Insects<option value="meme/SpiritualRobots">&nbsp;&nbsp;SpiritualRobots<option value="superspace.htm">&nbsp;&nbsp;Superspace<option value="gaia/3tsloth.htm">&nbsp;&nbsp;Symbiotic Sloths<option value="geoman.htm">&nbsp;&nbsp;The Akashic Record Player (Remix)<option value="dec_evo.htm">&nbsp;&nbsp;The Declaration of Evolution<option value="gaia/g_mind.htm">&nbsp;&nbsp;the gaian mind cut up<option value="alephnull/gilgames.htm">&nbsp;&nbsp;The Gilgamesh legend<option value="h_senses.htm">&nbsp;&nbsp;The infinite complexity of our immediate en...<option value="lawsofmagic.htm">&nbsp;&nbsp;The Laws of Magic<option value="magetree.htm">&nbsp;&nbsp;The Magick of Trees<option value="poe.htm">&nbsp;&nbsp;The Politics of Extinction<option value="gmind.htm">&nbsp;&nbsp;The Psychedelic Gaian Mind<option value="pdfa/sacred-and-natural.htm">&nbsp;&nbsp;The Reunification of the Sacred and Natural<option value="annex/celest_s.htm">&nbsp;&nbsp;The Sun<option value="wiki/Tobacco">&nbsp;&nbsp;Tobacco<option value="meme/TsunamiSurfing">&nbsp;&nbsp;TsunamiSurfing<option value="meme/UNIVERSAL_DECLARATION_OF_THE_RIGHTS_OF_MOTHER_EARTH">&nbsp;&nbsp;UNIVERSAL DECLARATION OF THE RIGHTS OF MOTH...<option value="media/Watts/Philosophy_of_Nature">&nbsp;&nbsp;Watts/Philosophy of Nature<option value="meme/WildChildren">&nbsp;&nbsp;WildChildren<option value="sciwarn.htm">&nbsp;&nbsp;World Scientists' Warning to Humanity</select>&nbsp;<noscript><input type="Submit" value="go" class="button"></noscript>
+	<input type="hidden" name="from" value="/anarchy.htm"></td></form></tr></table>
+</td></tr></table></div><p>
+
+
+
+<table border="0" align="center" cellpadding="0" cellspacing="0">
+<tr><td background="gif/niyo3_anarchy.jpg" width=124>&nbsp;</td><td align="center">
+<table border="0" cellpadding="12" cellspacing="0" vspace=20 hspace=20 width=450>
+<tr><td bgcolor="#f0f0f0" align="center"><a href="audio/anarchy.m3u"><img src="gif/anarchy.jpg" width=424 height=391 border=0 alt="anarchy"></a></td></tr>
+<tr><td bgcolor="#000000"><font color="#FFFFFF">
+<a href="gaiafromluna.html">
+<img src="time/d2k/luna/phases.gif" width=100 height=100 border=0 hspace="12" align="right" alt="luna"></a>
+<blockquote>The moon, like a flower<br>
+In heaven’s high bower,<br>
+With silent delight<br>
+Sits and smiles on the night.<br>&nbsp;&nbsp;&nbsp;
+<font size="-1">&mdash;William Blake, <a href="http://www.poetryloverspage.com/poets/blake/night.html" target="remotes"><i><font color="#FFFFFF"><b>Night</b></font></i></a></font></blockquote>
+</font>
+<p>
+<!--SCRIPT LANGUAGE="JavaScript">
+
+theDate = new Date()
+theYear = theDate.getYear()
+
+theMonth = theDate.getMonth()+1
+theDay = theDate.getDate()
+theMoonAge = getMoonAge(theYear, theMonth, theDay)
+theMoonPhase = getMoonPhase(theMoonAge)
+document.write("<table cellspacing=0 align=center cellpadding=4 border=0><tr><td align=center bgcolor=#606060><table cellspacing=0 cellpadding=8 border=0><tr bgcolor=black><td align=center><font size=-2 color=white>phase is "+theMoonPhase+"</font><BR>")
+theMoonPhase = getMoonPhaseImg(theMoonAge)
+document.write("<img src='gif/luna/"+ escape(theMoonPhase)+".gif' ALIGN='left' HSPACE='20'></td>")
+document.write("<td><font color=white size=-1>Current lunar month is <b>"+theMoonAge)
+
+if (theMoonAge==1){document.write(" </b>day old today<p>")}
+else{document.write(" </b>days old today<br>")}
+document.write("<nobr>Next <B>new</B> moon: ")
+document.write(""+getLongDate(getNextNew(theMoonAge))+"</nobr><br>")
+document.write("<nobr>Next <B>full</B> moon:<r>")
+document.write(""+getLongDate(getNextFull(theMoonAge))+"</nobr><br>")
+document.write("</font></td></tr></table></td></tr></table>")
+
+// Current Date
+var months=new Array(13);
+months[1]="January";
+months[2]="February";
+months[3]="March";
+months[4]="April";
+months[5]="May";
+months[6]="June";
+months[7]="July";
+months[8]="August";
+months[9]="September";
+months[10]="October";
+months[11]="November";
+months[12]="December";
+var time=new Date();
+var lmonth=months[time.getMonth() + 1];
+var date=time.getDate();
+var year=time.getYear();
+// Y2K Fix by Isaac Powell
+// http://onyx.idbsu.edu/~ipowell
+if ((navigator.appName == "Microsoft Internet Explorer") && (year < 2000))		
+year="19" + year;
+if (navigator.appName == "Netscape")
+year=1900 + year;
+document.write("<center><font size=-2>Today is " + lmonth + " ");
+document.write(date + ", " + year + "</font></center>");
+</SCRIPT-->
+</td></tr>
+<tr><td bgcolor="#dadada"><br><blockquote>
+<b><font size="+1">Amidst ecstatic visions Anarchy appears. She says:</font></b>
+</td></tr><tr><td bgcolor="#c9c9c9">
+<p>
+<b>Whenever you need anything,</b> once a month at the full moon, assemble in the wilderness&mdash;in <a href="gaia/index_forests.htm">the forest</a>, on the heath, by the seashore&mdash;for the state of nature is a community of freedoms. Recognize the imminence of total liberation, and as a sign of your freedom be naked in your rites.<p>
+</td></tr><tr><td bgcolor="#dadada">
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>Dance and sing,</b> laugh and play, feast on the fruits of the earth, the delights of my body, make music and love&mdash;for all acts of pleasure are my rituals. And I am that which you find in the fulfulment of desire. 
+</td></tr><tr><td bgcolor="#dadada">
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>Abolish all authority,</b> root out coercion. Share all things in common and decide through consensus. Shake off the character armor which binds and constrains. <a href="bewilderness.htm">Let the wilderness energies possess you</a>.
+</td></tr><tr><td bgcolor="#dadada">
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>Cast the magic circle,</b> enter the trance of ecstasy, revel in the sorcery which dispels all power. But commit no sacrifices. Repudiate harmfulness, exploitation and slaughter. Rather venerate all creatures and respect them as different but equal to you.
+</td></tr><tr><td bgcolor="#dadada">
+<p align="center">
+<font size="+1">Total transformation thus becomes possible.</font>
+</td></tr><tr><td bgcolor="#dadada">
+<p align="center">
+<font size="+2">This rite shall continue to be celebrated until <a href="cea.htm">Anarchy becomes universal</a>.</font>
+<p><br>
+
+<script language="JavaScript">
+<!--
+//  INVJD  --  Find year, month, day, corresponding to given JD#
+//  and store results in array.
+
+function jyear(td) {
+with(Math){
+    var z, f, a, alpha, b, c, d, e, mm;
+
+    td += 0.5;
+    z = floor(td);
+    f = td - z;
+
+    if (z < 2299161.0) {a = z; }
+else {
+        alpha = floor((z - 1867216.25) / 36524.25);
+        a = z + 1 + alpha - floor(alpha / 4);
+     }
+
+    b = a + 1524;
+    c = floor((b - 122.1) / 365.25);
+    d = floor(365.25 * c);
+    e = floor((b - d) / 30.6001);
+    mm = floor((e < 14) ? (e - 1) : (e - 13));
+
+    return new Array(
+                     floor((mm > 2) ? (c - 4716) : (c - 4715)),
+                     mm,
+                     floor(b - d - floor(30.6001 * e) + f)
+                    );
+}
+}
+
+/*  JF2HMS  --  Convert Julian date fraction into hour, minutes, and seconds,
+              returned as a three-element array.  */
+
+function jhms(j) {
+with(Math){
+    var ij;
+
+    j += 0.5;                 /* Astronomical to civil */
+    ij = (j - floor(j)) * 86400.0;
+    return new Array(
+                     floor(ij / 3600),
+                     floor((ij / 60) % 60),
+                     floor(ij % 60));
+}
+}
+
+/*  DTR  --  Degrees to radians.  */
+
+function dtr(d)
+{
+with(Math){
+    return (d * PI) / 180.0;
+}
+}
+
+/*  FIXANGLE  --  Range reduce angle in degrees.  */
+
+function fixangle(a)
+{
+with(Math){
+        return a - 360.0 * (floor((a) / 360.0));
+}
+}
+
+/*  PAD  --  Pad a string to a given length with a given fill character.  */
+
+function pad(str, howlong, padwith) {
+    var s = str.toString();
+
+    while (s.length < howlong) {
+        s = padwith + s;
+    }
+    return s;
+}
+
+/*  EDATE  --  Edit date and time to application specific format.  */
+
+var Months = new Array( "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+                      );
+
+function edate(j) {
+    var date, time;
+
+    j += (30.0 / 86400);     // Round to nearest minute
+    date = jyear(j);
+    time = jhms(j);
+
+    return Months[date[1] - 1] + " " + pad(date[2], 2, " ") + " " +  
+           pad(time[0], 2, " ") + ":" + pad(time[1], 2, "0");
+}
+
+/*  TRUEPHASE  --  Given a K value used to determine the mean phase of
+                   the new moon, and a phase selector (0.0, 0.25, 0.5,
+                   0.75), obtain the true, corrected phase time.  */
+
+function dsin(x) {
+with (Math){
+    return sin(dtr(x));
+}
+}
+
+function dcos(x) {
+with(Math){
+    return Math.cos(dtr(x));
+}
+}
+
+function truephase(k, phase)
+{
+with(Math){
+
+    var t, t2, t3, pt, m, mprime, f,
+        SynMonth = 29.53058868;     /* Synodic month (mean time from new to next new Moon) */
+
+    k += phase;                     /* Add phase to new moon time */
+     t = k / 1236.85;               /* Time in Julian centuries since 1900 January 0.5 */
+    t2 = t * t;                     /* Square for frequent use */
+    t3 = t2 * t;                    /* Cube for frequent use */
+    pt = 2415020.75933              /* Mean time of phase */
+         + SynMonth * k
+         + 0.0001178 * t2
+         - 0.000000155 * t3
+         + 0.00033 * dsin(166.56 + 132.87 * t - 0.009173 * t2);
+
+    m = 359.2242                    /* Sun's mean anomaly */
+        + 29.10535608 * k
+        - 0.0000333 * t2
+        - 0.00000347 * t3;
+    mprime = 306.0253               /* Moon's mean anomaly */
+        + 385.81691806 * k
+        + 0.0107306 * t2
+        + 0.00001236 * t3;
+    f = 21.2964                     /* Moon's argument of latitude */
+        + 390.67050646 * k
+        - 0.0016528 * t2
+        - 0.00000239 * t3;
+    if ((phase < 0.01) || (Math.abs(phase - 0.5) < 0.01)) {
+
+       /* Corrections for New and Full Moon */
+
+       pt +=     (0.1734 - 0.000393 * t) * dsin(m)
+                + 0.0021 * dsin(2 * m)
+                - 0.4068 * dsin(mprime)
+                + 0.0161 * dsin(2 * mprime)
+                - 0.0004 * dsin(3 * mprime)
+                + 0.0104 * dsin(2 * f)
+                - 0.0051 * dsin(m + mprime)
+                - 0.0074 * dsin(m - mprime)
+                + 0.0004 * dsin(2 * f + m)
+                - 0.0004 * dsin(2 * f - m)
+                - 0.0006 * dsin(2 * f + mprime)
+                + 0.0010 * dsin(2 * f - mprime)
+                + 0.0005 * dsin(m + 2 * mprime);
+    } else if ((abs(phase - 0.25) < 0.01 || (abs(phase - 0.75) < 0.01))) {
+       pt +=     (0.1721 - 0.0004 * t) * dsin(m)
+                + 0.0021 * dsin(2 * m)
+                - 0.6280 * dsin(mprime)
+                + 0.0089 * dsin(2 * mprime)
+                - 0.0004 * dsin(3 * mprime)
+                + 0.0079 * dsin(2 * f)
+                - 0.0119 * dsin(m + mprime)
+                - 0.0047 * dsin(m - mprime)
+                + 0.0003 * dsin(2 * f + m)
+                - 0.0004 * dsin(2 * f - m)
+                - 0.0006 * dsin(2 * f + mprime)
+                + 0.0021 * dsin(2 * f - mprime)
+                + 0.0003 * dsin(m + 2 * mprime)
+                + 0.0004 * dsin(m - 2 * mprime)
+                - 0.0003 * dsin(2 * m + mprime);
+       if (phase < 0.5)
+          /* First quarter correction */
+          pt += 0.0028 - 0.0004 * dcos(m) + 0.0003 * dcos(mprime);
+       else
+          /* Last quarter correction */
+          pt += -0.0028 + 0.0004 * dcos(m) - 0.0003 * dcos(mprime);
+    }
+    return pt;
+}
+}
+
+//  GEN  --  Update the tables when an action button is pressed
+
+function gen() {
+with(Math){
+    var v, sk, kr, l, perigee, s, Itemlen = 36,
+        dat, evt, m = 0, epad, pchar, phnear,
+        pmin = Number.MAX_VALUE, pminx = 0,
+        pmax = Number.MIN_VALUE, pmaxx = 0,
+        yrange, centile, TOLERANCE = 0.01, k1, mtime, minx, phaset,
+        Pitemlen = 25;
+
+    window.status = "Calculating..";
+    
+    year = document.calc.year.value;
+ 
+    sk = floor((year - 1999.97) * 13.2555);
+    dat = new Array();
+    evt = new Array();
+    phaset = new Array();
+
+    yrange = pmax - pmin;
+
+//  Tabulate new and full moons surrounding the year
+
+    k1 = floor((year - 1900) * 12.3685) - 4;
+    minx = 0;
+    for (l = 0; true; l++) {
+        mtime = truephase(k1, (l & 1) * 0.5);
+        date = jyear(mtime);
+        if (date[0] >= year) {
+            minx++;
+        }
+        phaset[minx] = mtime * ((l & 1) == 0 ? -1 : 1);
+        if (date[0] > year) {
+            minx++;
+            break;
+        }
+        k1 += l & 1;
+    }
+
+//  Generate Moon phase table
+
+    v = "           New                      Full\n";
+    s = "";
+    for (l = 0; l < minx; l++) {
+        mp = phaset[l];
+        if (mp < 0) {
+            mp = - mp;
+        } else {
+            if (s.length == 0) {
+                s = pad(s, Pitemlen, " ");
+            }
+        }
+        s += "   " + jyear(mp)[0] + " " + edate(mp);
+        if (s.length < Pitemlen) { 
+            while (s.length < Pitemlen) {
+                s += " ";
+            }
+        } else {
+            v += s + "\n";
+            s = "";
+        }
+    }
+    if (s.length > 0) {
+        v += s + "\n";
+    }
+    document.calc.phases.value = v;
+
+    window.status = "Done.";
+}
+}
+// -->
+</script>
+<form name="calc">
+<table BORDER="0" CELLSPACING="0" CELLPADDING="2" WIDTH="437">
+<th colspan="2" bgcolor="#a0a0a0"><strong><font size="-1">Compute New and Full Moons For Any Given year</font></strong></th>
+    <tr ALIGN="LEFT" valign=top>
+      <td WIDTH="100%" bgcolor="#c0c0c0"><b><font color="#000000" size="-1">Year</font>&nbsp;</b><input
+ type="text" size="5" maxlength="6" name="year">&nbsp;<input
+ type="button" value="Compute" onclick="gen();"> </td><td align="right" bgcolor="#c0c0c0" nowrap><font size="-1"><input
+ type="button" value="Previous Year" onclick="document.calc.year.value--; gen();">&nbsp;<input
+ type="button" value="Next Year" onclick="document.calc.year.value++; gen();"></font></td>
+    </tr>
+    <tr ALIGN="center">
+      <td colspan=2 WIDTH="100%" bgcolor="#808080"><textarea name="phases" cols="50" rows="16" wrap="OFF"></textarea></td>
+    </tr>
+  </table></form>
+<p align="center"><script language="JavaScript">
+<!--
+
+document.calc.year.value = 1900 + (new Date()).getYear();
+gen();
+
+// -->
+</script></td></tr>
+<tr><td bgcolor="#e0e0e0" align="center">
+<table border="0" cellpadding="6" cellspacing="0" vspace=6 hspace=6>
+<tr><td bgcolor="#f0f0f0"><img src="gif/anarchy.jpg" width=424 height=391 border=0 alt="chaos never died"></td></tr></table>
+</td></tr><tr><td bgcolor="#dadada">
+<font size="-1">
+<b>Credits</b><p>
+From <i>Anarchy &amp; Ecstasy: Visions of Halcyon Days</i> by John Moore, Aporia Press. 
+This text has been adapted from renderings of "The Charge of the Goddess" by Starhark 
+and Charles G Leland.  (For further information, see Margot Adler, <i>Drawing Down the 
+Moon: Witches, Druids, Goddess Worshippers, and Other Pagans in America Today,</i> 
+Revised and Expanded Edition (Boston: Beacon Press, 1986), 56-9.)<br>
+<p>
+<!-- Current Lunar Phase with next new and full moons <a href="http://www.geocities.com/SiliconValley/7116/jv_moon2.html" target="remotes">Javascript by Michael J. Mathews</a>. -->
+Annual Lunar Phase Calculator <a href="http://www.fourmilab.ch/earthview/pacalc.html" target="remotes">Javascript by John Walker</a><br>
+<p><b>Audio Samples</b><ul>
+<li><a href="http://www.lyricsdownload.com/splashdown-a-charming-spell-lyrics.html" target="remotes"><i>A Charming Spell</i></a> 
+by <a href="http://cvb.drawbridge.com/splashdown/" target="remotes">Splashdown</a><br>
+<li><i>Wild Summer Heat Passage Through Bush Walk</i> by <a href="http://www.inlakesh.com" target="remotes">Inlakesh</a><br>
+<li><i>Chaos</i> by <a href="http://deoxy.org/find/hakim">Hakim Bey</a> and Bill Laswell<br></font></ul></ul>
+<p>
+<table align="center" border="1" width=100% cellpadding="1" cellspacing="0"><tr><td bgcolor="#606060">
+<table width=100% border="0" cellpadding="1" cellspacing="0"><tr><td bgcolor="#505050">
+<a href="contact.htm"><img src="gif/dimitri.jpg" width=117 height=21 vspace=8 hspace=8 border=0 alt="hypertexture by dimitri"></a></td>
+<td align="right"><a href="philo.thm.html"><font size="3" color="#c0c0c0">Philosophos</font></a><br>
+<a href="deoxy.htm"><font size="-2" color="#c0c0c0">E=&#177;mc&#178;=Th&#233; 
+&#208;&#235;&#242;x&#255;r&#237;&#223;&#248;&#241;&#181;&#231;l&#235;&#236;&#231; 
+H&#255;&#222;&#234;rd&#239;m&#232;&#241;s&#238;&#248;&#241;</font></a><br></td></tr></table></td></tr></table>
+
+</td></tr></table>
+</td><td width=124 background="gif/niyo3_anarchy.jpg">&nbsp;</td></tr></table>
+</td></tr></table>
+
+</blockquote><br clear=all>
+
+<div id=_footer>
+<div id=tabl style=top:0px;width:100%;margin:0px;margin-bottom:0px;>
+<table width="100%" border="0" cellspacing="0" cellpadding="4" align="center">
+
+<script type="text/javascript">
+function resizeMC(mode) {
+ var t = document.getElementById('mc')
+ var h = t.offsetHeight
+ var d = 440
+ if (mode == 'inc') h = h + 50
+ if (mode == 'dec') h = h - 50
+ if (mode == 'set') h = d
+ t.style.height = h + 'px'
+ if (h < 390) { h = d }
+ setCookie('fh',h,mcCookieExpires,'/')
+}
+var fh = getCookie('fh')
+var mcCookieExpires = new Date()
+mcCookieExpires.setTime(mcCookieExpires.getTime() + 365 * 24 * 60 * 60 * 1000)
+mcCookieExpires.toGMTString()
+
+function gomc(what) {
+ var whereto = what.options[what.selectedIndex].value;
+ if (whereto)
+  parent.mc.location.href = whereto;
+}
+document.write('<form target="mc" name="xJump">');
+</script><noscript>
+<form action="http://deoxy.org/cgi/jump.pl" target="mc" name="xJump">
+</noscript>
+
+<tr bgcolor="#111111"><td>
+
+<table width=100% cellspacing="0" cellpadding="4" border="0">
+<tr bgcolor="#222222">
+
+<td background="img/thin_horizontal_lines.gif">
+
+<font color="#888888" size="-2"><a
+ href="index.html" title="deoxy.org" rel=nofollow><b><font color="#888888">DEOXY</font></b></a> &nbsp; <font size="-3">&gt;</font>
+
+&nbsp; <a
+ href="contact.html" target=mc title=contact rel=nofollow><font color=#aaaaaa>CONTACT</font></a>
+
+ &#183; <a
+ href="news/frame.htm" target="mc" title="view news here" rel=nofollow><font color="#aaaaaa">NEWS</font></a>
+
+ &#183; <a
+ href="http://deoxy.org/vid" target="mc" title="watch video here" rel=nofollow><font color="#aaaaaa">VIDEO</font></a> : <a 
+ href="http://deoxy.org/videx?pop=1" target="mc" title="list new video" rel=nofollow><font color="#aaaaaa">NEW</font></a>&mdash;<a
+ href="http://deoxy.org/videx?pop=1&seen=1" target="mc" title="recently watched video" rel=nofollow><font color="#aaaaaa">WATCHED</font></a>&mdash;<a
+ href="http://deoxy.org/videx?pop=1&rand=1" target="mc" title="random video list" rel=nofollow><font color="#aaaaaa">RANDOM</font></a>
+</font></td>
+
+<td align="center" background="img/thin_horizontal_lines.gif">
+<font color="#888888" size="-2"><INPUT
+ type="button" class="button" value="&lt;" id=mcback title="rewind frame"><INPUT
+ type="button" class="button" value="&gt;" onClick="parent.mc.history.forward()" title="frame forward">
+<select name="to" class="select" onChange="gomc(this)" onDblClick="gomc(this)">
+<option value="http://deoxy.org/time/d2k/acalc/index.htm">Astro</option>
+<option value=http://deoxy.org/chatr>Chatter</option>
+<option value="http://deoxy.org/find#code">Cloud</option>
+<option value=http://deoxy.org/chatcloud?s=1>&nbsp;|_Chat</option>
+<option value="http://deoxy.org/topicloud?target=_blank">&nbsp;|_Topics</option>
+<option value="http://deoxy.org/vidcloud?s=1&m=1&small=1&js=1">&nbsp;|_Video</option>
+<option value="http://deoxy.org/news/cloud?n=10&m=1&s=1&t=_blank">&nbsp;|_News</option>
+<option value="http://deoxy.org/news/cloud/today?n=5&m=1&s=1&t=_blank">&nbsp;\__Today</option>
+<option value="http://deoxy.org/colors">Colors</option>
+<option value="http://deoxy.org/contact" selected>Contact</option>
+<option value="http://deoxy.org/find?target=_blank">Find</option>
+<!-- option value="http://deoxy.org/chat/java.htm">IRC</option -->
+<option value="http://deoxy.org/map">Map</option>
+<option value="http://deoxy.org/searchbot">Search</option>
+<option value="http://deoxy.org/time/d2k/today3.htm">Today</option>
+<option value="http://deoxy.org/vid">Video</option>
+</select>
+
+</font></td></form>
+
+<td align="right" nowrap background="img/thin_horizontal_lines.gif" width=100>
+<font color="#888888" size="-1">
+<!-- a href="/axis_dd.htm" target=mc><font color="#aaaaaa" title=off rel=nofollow>x</font></a -->&nbsp;
+<a onclick=resizeMC('dec')><font color="#aaaaaa" title=shrink>&ndash;</font></a>&nbsp;
+<a onclick=resizeMC('inc')><font color="#aaaaaa" title=grow>+</font></a>&nbsp;
+<a onclick=resizeMC('set')><font color="#444444" title="reset height">o</font></a>&nbsp;
+<a
+ href="chatr.html" target=cbWin rel=nofollow
+ onclick="if (mc.location.href.match(/chatr/)) { mc.location.href='http://deoxy.org/axis_dd.htm' } chatterWindow(); return false;"
+ title="open chatter window"><font color="#aaaaaa">^</font></a>&nbsp;
+
+</font></td></tr>
+
+<tr><td colspan=3>
+
+<script type="text/javascript">
+document.write('<iframe src="http://deoxy.org/')document.write('colors')document.write('" style="width:100%;height:')
+
+if (fh) {
+ document.write(fh)
+} else {
+ document.write('440')
+}
+document.write('px;padding:0px;margin:0px;" frameborder=0 border=0 id=mc name=mc>embed requires iframes</iframe>')
+
+document.getElementById('mcback').onclick = function () {
+ if (window.frames['mc'].location.hash !== '#mcstop') {
+  window.history.back()
+ }
+ return false
+}
+window.frames['mc'].onload = function () {
+ this.location.hash = 'mcstop'
+}
+</script>
+
+<noscript><iframe
+ src="axis_dd.htm"
+ style="width:100%;height:440px;padding:0px;margin:0px;"
+ frameborder=0 border=0 id=mc name=mc>
+embed requires iframes</iframe></noscript>
+
+</td></tr></table></td></tr></table></div>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+<tr bgcolor="#202020">
+<td width="33%" background="img/vortex0b.gif">&nbsp;
+&nbsp;<a
+ onclick=resizeMC('dec')><font color="#aaaaaa" title=shrink>&ndash;</font></a>&nbsp;&nbsp;<a
+ onclick=resizeMC('inc')><font color="#666666" title=grow>+</font></a>&nbsp;&nbsp;<a
+ onclick=resizeMC('set')><font color="#444444" title="reset height">o</font></a>
+</td>
+
+<td align="center">
+
+<table border="0" cellspacing="0" cellpadding="0" bgcolor="#000000" width=100%><tr>
+<td width="33%" bgcolor=#101010 background="gif/background2.jpg">&nbsp;</td>
+
+<td align=center>
+
+<a href='anarchy.htm#top'>
+<img src="gif/arrow_u.gif" style="width: 15px; height: 15px; 
+border: 0; margin-right: 10px; margin-left: 10px;" alt="top"  /></a>
+
+</td>
+
+<td width="33%" bgcolor=#101010 background="gif/background2.jpg">&nbsp;
+
+</td></tr></table>
+
+</td>
+
+<td width='33%' align='right' valign='middle' background="img/vortex0b.gif"><!-- a 
+ href="http://deoxy.org/meme/Perl"><img
+ src="http://deoxy.org/img/perlpower.gif" 
+ width="80" height="15" border="0" vspace=0></a>&nbsp;--><a name=end
+ href="rss.html"><img
+ src="img/rss2.gif"
+ width="80" height="15" border="0" vspace=0></a>&nbsp;</td>
+</tr></table></div>
+<script type="text/javascript">
+
+
+if (self == top) {
+ var links = document.getElementsByTagName('a')
+ for (var i=0; i<links.length; i++) {
+  var t = links[i].getAttribute('target')
+  if (t == 'remotes') {
+   links[i].setAttribute('target','_top')
+  }
+ }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,709 @@
+<html>
+<head><title>Interzine interviews TWZ programmer Peter Meyer</title>
+<LINK REL="home"       HREF="index.html">
+<LINK REL="search"     HREF="http://deoxy.org/find">
+<LINK REL="stylesheet" HREF="inc/css/deoxy.org.css" TYPE="text/css">
+<LINK REL="alternate"  HREF="cgi/nu.pl@rss=1" TITLE="recent changes at deoxy.org" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/news/cloud?rss=1" TITLE="deoxy news cloud" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/news/cloud/today?rss=1" TITLE="deoxy news cloud today" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="news/feeds/moonphase.xml" TITLE="lunar phases" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/video/random/rss" TITLE="random video" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="koans@rss=1" TITLE="random koan" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="iching/random/rss" TITLE="random iching hexagram" TYPE="application/rss+xml">
+<LINK REL="alternate"  HREF="http://deoxy.org/cgi/randlink.pl?rss=1" TITLE="random link at deoxy.org" TYPE="application/rss+xml">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/find.xml"  title="deoxy find">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/news.xml"  title="deoxy news">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/newstoday.xml"  title="deoxy news today">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch/videx.xml" title="deoxy video">
+<style type="text/css">input.wikiform { background-color:#111111; font-size:13px; color:#909090; border:0px; cursor:pointer; }</style>
+<meta name="MSSmartTagsPreventParsing" content="true">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="robots" content="all">
+
+<LINK REL="stylesheet" HREF="inc/css/print.css" TYPE="text/css" MEDIA="print">
+<script type="text/javascript" src="bin/chatterwindow.js"></script>
+<script type="text/javascript" src="bin/cookies.js"></script>
+<script type="text/javascript">
+function openVideo(id) {
+ var s = 'screenX=100,screenY=100,left=100,top=100,width=640,height=565,'
+ var x = 'resizable=1,status=0,menubar=0,toolbar=0,location=0,scrollbars=0'
+ window.open('http://deoxy.org/video/'+id,'',s+x)}
+</script>
+
+</head>
+<body bgcolor="#ffffff"><a name="top"></a><div id=_header>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr bgcolor="#111111">
+<td nowrap rowspan=2 bgcolor="#000000" width="20" background='gif/background2.jpg'>&nbsp;</td>
+<td nowrap rowspan=2 bgcolor="#000000" align=center style=width:90px;><a
+ href="index.html"
+ title=deoxy.org
+ target=_top><!-- img
+ src="http://deoxy.org/gif/ooleft_left.gif" border=0 
+--><img src="vi/MVXEiYyZKcY.jpg" style=height:68px;width:100%;margin-left:1px; border=0></a></td>
+<form action='http://deoxy.org/cgi/jump.pl' method="post">
+<td nowrap align="right" background='img/vortex0b.gif'>
+
+<table cellspacing="0" cellpadding="0" border=0 background='gif/background2.jpg'><tr><td nowrap>
+<select name="to" class="select" onChange="x=this.options[this.selectedIndex].value;location.href=x.match(/^http:/)?x:'http://deoxy.org/'+x;">
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="nu.htm">&nbsp;&nbsp;\_updates</option>
+<!-- option value="watts.htm">alanwatts</option -->
+<!-- option value="alephnull">aleph</option -->
+<option value="8brains.htm">circuits</option>
+<option value="8basic.htm">&nbsp;&nbsp;\_scripts</option>
+
+
+
+<!-- option value="ct">crimethinc</option -->
+<option value="gacwao">defrag</option>
+<option VALUE="http://deoxy.org">deoxy.org</option>
+<option value="contact">&nbsp;&nbsp;|_contact</option>
+<option VALUE="http://m.deoxy.org">&nbsp;&nbsp;|_mobile</option>
+<!-- option value="wiki/Deoxy/Help">&nbsp;&nbsp;|_help</option -->
+<option value="meme/DNA">DNA</option>
+<option value="find">Find?</option>
+<!-- option value="forum">forum</option>
+<option value="newposts">&nbsp;&nbsp;|_newposts</option -->
+<!-- option value="hyper.htm">hyperspace</option -->
+<option value="iching">IChing</option>
+<option value="iching/random">&nbsp;&nbsp;\_random</option>
+<option value="imagine.mil">imagine.mil</option>
+<option value="inc.htm">incunabula</option>
+<!-- option value="http://irc.deoxy.org">IRC status</option -->
+<option value="koans">koans</option>
+<option value="koan/random">&nbsp;&nbsp;\_random</option>
+
+<option value="media">media</option>
+<option value="media/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="meme">meme</option>
+<option value="meme/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="news">news</option>
+<option VALUE="news/cloud/today">&nbsp;&nbsp;|_today</option>
+<option VALUE="news/digestc">&nbsp;&nbsp;|_digest</option>
+<option VALUE="news/view">&nbsp;&nbsp;|_category</option>  
+<option VALUE="http://m.deoxy.org/news">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\_mobile</option>
+<option value="omega.htm">omega</option>
+<option value="pdfa">PDFA</option>
+<option value="index/People">People</option>
+<option value="leary.htm">&nbsp;&nbsp;|_Leary</option>
+<option value="lilly.htm">&nbsp;&nbsp;|_Lilly</option>
+<option value="mckenna.htm">&nbsp;&nbsp;|_McKenna</option>
+<option value="media/McLuhan">&nbsp;&nbsp;|_McLuhan</option>
+<option value="raw.htm">&nbsp;&nbsp;|_RAWilson</option>
+<option value="philo.htm">philosophos</option>
+<option value="cgi/randlink.pl?go">random</option>
+<option value="rss.htm">RSS</option>
+<!-- option value="time/sabbats.htm">sabbats</option>
+<option value="shaman.htm">shaman</option -->
+<option value="stats">stats</option>
+<option value="maps">&nbsp;&nbsp;\_map</option>
+<!-- option value="tcrime.htm">thoughtcrime</option -->
+<option value="topics">topics</a>
+<option value="nu.htm">&nbsp;&nbsp;\_cloud</option>
+<option value="nu.htm">updates</option>
+<option value="wiki/Deoxy/Video">video</option>
+<option value="videx">&nbsp;&nbsp;|_index</option>
+<option value="vidcloud">&nbsp;&nbsp;|_cloud</option>
+<option value="vidimg">&nbsp;&nbsp;|_images</option>
+<option VALUE="warnings.htm">warnings</option>
+<!-- option value="wiki">wiki</option>
+<option value="wiki/Recent">&nbsp;&nbsp;|_changes</option>
+<option value="wiki/action=index">&nbsp;&nbsp;\_index</option>
+<option VALUE="online">who's online</option -->
+</select>
+
+<input type="hidden" name="from" value='/t_peterm.htm'>
+<noscript><input type="Submit" value="go" class="button"></noscript>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></form>
+
+<form action="http://translate.google.com/translate" method="post" target="_top" name="trans" id="trans"><td nowrap align="center">
+<input type="Submit" value="to" class="button" title="Google translation">
+<select name="tl" class="select" title="Google translation">
+<option value=af>Afrikaans</option>
+<option value=sq>Albanian</option>
+<option value="ar">Arabic</option>
+<option value=hy>Armenian</option>
+<option value=az>Azerbaijani</option>
+<option value=eu>Basque</option>
+<option value=be>Belarusian</option>
+<option value=bn>Bengali</option>
+<option value=bs>Bosnian</option>
+<option value="bg">Bulgarian</option>
+<option value=my>Burmese</option>
+<option value="ca">Catalan</option>
+<option value=ceb>Cebuano</option>
+<option value=ny>Chichewa</option>
+<option value="zh-CN">Chinese CN</option>
+<option value="zh-TW">Chinese TW</option>
+<option value="hr">Croatian</option>
+<option value="cs">Czech</option>
+<option value="da">Danish</option>
+<option value="nl">Dutch</option>
+<option value=eo>Esperanto</option>
+<option value="et">Estonian</option>
+<option value="tl">Filipino</option>
+<option value="fi">Finnish</option>
+<option value="fr">French</option>
+<option value="gl">Galacian</option>
+<option value=ka>Georgian</option>
+<option value="de">German</option>
+<option value="el">Greek</option>
+<option value=gu>Gujarati</option>
+<option value=ht>Haitian Creole</option>
+<option value=ha>Hausa</option>
+<option value="iw">Hebrew</option>
+<option value="hi">Hindi</option>
+<option value=hmn>Hmong</option>
+<option value="hu">Hungarian</option>
+<option value=is>Icelandic</option>
+<option value=ig>Igbo</option>
+<option value="id">Indonesian</option>
+<option value=ga>Irish</option>
+<option value="it">Italian</option>
+<option value="ja">Japanese</option>
+<option value=jw>Javanese</option>
+<option value=kn>Kannada</option>
+<option value=kk>Kazakh</option>
+<option value=km>Khmer</option>
+<option value="ko">Korean</option>
+<option value=lo>Lao</option>
+<option value=la>Latin</option>
+<option value="lv">Latvian</option>
+<option value="lt">Lithuanian</option>
+<option value=mk>Macedonian</option>
+<option value=mg>Malagasy</option>
+<option value=ms>Malay</option>
+<option value=ml>Malayalam</option>
+<option value="mt">Maltese</option>
+<option value=mi>Maori</option>
+<option value=mr>Marathi</option>
+<option value=mn>Mongolian</option>
+<option value=ne>Nepali</option>
+<option value="no">Norwegian</option>
+<option value=fa>Persian</option>
+<option value="pl">Polish</option>
+<option value="pt">Portuguese</option>
+<option value=pa>Punjabi</option>
+<option value="ro">Romanian</option>
+<option value="ru">Russian</option>
+<option value="sr">Serbian</option>
+<option value=st>Sesotho</option>
+<option value=si>Sinhala</option>
+<option value="sk">Slovak</option>
+<option value="sl">Slovenian</option>
+<option value=so>Somali</option>
+<option value="es" selected>Spanish</option>
+<option value=su>Sundanese</option>
+<option value=sw>Swahili</option>
+<option value="sv">Swedish</option>
+<option value=tg>Tajik</option>
+<option value=ta>Tamil</option>
+<option value=te>Telugu</option>
+<option value="th">Thai</option>
+<option value="tr">Turkish</option>
+<option value="uk">Ukrainian</option>
+<option value=ur>Urdu</option>
+<option value=uz>Uzbek</option>
+<option value="vi">Vietnamese</option>
+<option value=cy>Welsh</option>
+<option value=yi>Yiddish</option>
+<option value=yo>Yoruba</option>
+<option value=zu>Zulu</option></select>
+<input type=hidden name=sl value="en">
+<input type=hidden name=hl value="en">
+<input type=hidden name=ie value="UTF-8">
+<input type=hidden name=u id=u value='http://deoxy.org/t_peterm.htm'>
+</td></form>
+
+
+<td align="right" valign="middle" nowrap>
+<table cellspacing="0" cellpadding="0" border=0><tr>
+<form action=http://deoxy.org/find method=get name=sitesearchform>
+<td nowrap align=right valign="middle">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name=q size=15 class="input" title="search deoxy.org">
+<input type="Submit" value="find" class="button" title="search deoxy.org"></TD>
+</form></tr></table>
+</td></tr></table>
+
+</td></tr><SCRIPT TYPE="text/javascript">
+document.trans.tl.selectedIndex=Math.floor(Math.random()*(document.trans.tl.length+1))
+</script><tr><td bgcolor="#111111" background="img/thin_horizontal_lines.gif" 
+style=white-space:nowrap;overflow:hidden;>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+<td style="background-image:url('gif/background2.jpg');background-position:40 0;" width=20>&nbsp;</td>
+<td style=background-image:url(img/thin_horizontal_lines.gif);>
+<div style=overflow:hidden;white-space:nowrap;>&nbsp;<small>[an error occurred while processing this directive]</small></div></td>
+
+<td width=20>&nbsp;</td>
+<form action=http://deoxy.org/cgi/jump.pl method=get target=_blank>
+<td align="right"><div style=overflow:hidden;display:none;>
+<font color="#909090"><a href="nu.htm"><font color="#ffffff" size="-1">New</font></a> : <font size="-1">
+<a href="nu.htm" ><font color=#ffffff size=-2>Site</font></a> : <a href="nu.htm" ><font color=#ffffff size=-2>Updates</font></a>
+
+</font></font></div></td>
+
+<td style="background-image:url('gif/background2.jpg');background-position:0 0;" width=20>&nbsp;</td>
+</form></tr></table>
+</td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="#000000" align="right" background="gif/background2.jpg">
+<!-- file = t_peterm.htm -->
+</td></tr></table></div><p>
+
+
+<p align=center><font size=+4>INTERZINE</font><br>
+<font size="-1"><em>Not copyright - May be freely copied and reproduced</em></font><br>
+<p align=center><font size="+2">Issue #2 : <a href="http://serendipity.magnet.ch/" target="remotes">Peter Meyer</a></font></p>
+<blockquote>Peter Meyer is best known as the developer of the MS-DOS software
+Timewave Zero, which demonstrates
+<a href="mckenna.htm">Terence McKenna's</a> fractal model of time and 
+history. In the 'About the Authors' section of the software documentation,
+we learn:<p>
+<blockquote>
+   Peter Meyer received the first double honors Bachelor of Arts degree
+   awarded by Monash University, Melbourne, majoring both in Philosophy
+   and in Pure Mathematics. His mathematical research has been published
+   in <em>Discrete Mathematics.</em> He has travelled extensively, and spent
+   several years studying Tibetan Buddhism in India and Nepal. Peter is
+   an experienced software developer and has worked internationally as a
+   computer consultant. His interests include history, travel, cryptology,
+   geopolitics, anthropology, religion and psychedelic research. In 
+   addition to <em>Timewave Zero</em> he has written and published three C
+   function libraries, a Maya calendar program and a data encryption
+   software package. His DMT research has been published in 
+<em>Psychedelic Monographs and Essays</em> 
+ and in the <em>Yearbook of Ethnomedicine and Consciousness research</em>.
+ His exploration of little-known areas of
+   consciousness has confirmed for him both the reality of other
+   dimensions of existence and of the Eckhartian/Buddhist undifferentiated
+   unity underlying all phenomena. He hopes to be present at the end of 
+   history in 2012, 5125 years after its beginning.
+</blockquote>
+
+Some questions and answers:
+<p>
+Q1.  When you got your double honors degree in Philosophy and Pure
+Mathematics at Monash University, what did you foresee yourself doing
+in life?
+<p>
+A1.  When I finished my five-year course of studies at Monash
+University I was still somewhat naive and idealistic. During those
+years I seemed to have access to some intuitive source of metaphysical
+knowledge which apparently I have now lost - or perhaps it is more
+accurate to say that I am now less inclined to accept what I imagine
+to be the case as actually being the case (without confirming
+evidence).	As a university student I felt (probably like many
+university students, at least in the 60s) that there were realms of
+knowledge waiting to be explored, and deep truths waiting to be
+discovered.  This was why I studied Philosophy and Mathematics (having
+switched over from earlier undergraduate studies in natural science),
+searching for deep truths.
+<p> 
+When I graduated I had no clear idea of what I was going to do in
+life, beyond the general aim of continuing this search for deep
+truths.  I gave little thought to a career, or to the question of
+earning a living.  I had seriously considered doing graduate work in
+AI with John McCarthy at Stanford University, but my interest in
+psychology (especially that of Jung and of Piaget) won out.  I had
+inherited some property following my mother's death in 1970, and upon
+graduating I sold this and left Australia to travel to Europe via
+Asia, which I did.
+<p> 
+Q2.  What was the nature of the research you have had published in
+'Discrete Mathematics'?
+<p> 
+This was a paper entitled 'On the Structure of Orthomodular Posets',
+in the 1974 volume.  It was my final-year undergraduate thesis in
+mathematics, which I wrote in 1970.  It is exceedingly abstract.  In
+it I prove a number of theorems about the construction of orthomodular
+posets of various kinds from sets of sets satisfying certain mathematical
+conditions.  As far as I know no mathematician ever extended this line
+of research any further.  It was a path I went down that none cared to
+follow.
+<p> 
+Q3.  What motivated you to study Tibetan Buddhism?	Where in India and
+Nepal did you go to, and who did you study with?
+<p> 
+A3.  As a first-year university student at the age of 18 I inclined to
+atheism and agnosticism, but I then read Christmas Humphreys' book
+'Buddhism', and immediately felt that this was a philosophy/religion
+that made sense to me.	However, I still cannot quite accept what
+to some is the first principle of Buddhism, that this life is an
+unmitigated realm of suffering.  I prefer to see all sentient life as
+an expression of a divine creativity, a viewpoint somewhat more akin
+to the Hindu view of the world as divine play (illusion though it
+ultimately may be).
+<p> 
+I was, like many people, first attracted to Tibetan Buddhism when
+I discovered Tibetan art, especially the thanka paintings of the
+tantric deities.  This was around the time, in 1967, when I began
+doing acid, which really opened me up to metaphysical and religious
+dimensions.  In the late 1960s I (with many others) read the works of
+Lama Anagarika Govinda and of John Blofeld, and I came to believe that
+the deepest truths were surely to be found in Tibetan Buddhism.
+<p> 
+I had some first-hand contact with the Tibetan tradition during my
+first visit to India in 1971.  I continued on to Europe to study
+Jungian psychology, then returned to Australia in 1972 to do some
+graduate work in Kantian philosophy.  I returned to Europe in 1974,
+where I met H. H. Sakya Trizin, the head of the Sakyapa Order of
+Tibetan Buddhism.  I expressed to him my wish to study Tibetan
+Buddhism more deeply, and he suggested I return to North India (Dehra
+Dun) to study with him, which I did.  I spent most of 1975-1979
+studying with, and in the service of, this lama (who spoke good
+English).  I also received teachings from another lama, H. H. Chogye
+Trichen Rimpoche, head of the Tsharpa branch of the Sakyapa tradition,
+and abbot of the Tibetan monastery at Lumbini in Nepal.
+<p> 
+Q4.  As a software developer and computer consultant, have you always
+been freelance, or did you ever work for large corporations?  I am
+also curious about the nature of the 'three C function libraries' and
+the data encryption software package.
+<p> 
+A4.  I learned to program in FORTRAN IV in 1965, while working for a
+year with the Post Office in Melbourne.  I did no programming during
+the 70s.  In the early 80s I was a freelance software developer in
+California, and developed software for the Apple // which was
+published.	Since then I have sometimes been employed at small or
+medium-sized corporations and sometimes have been a freelance
+consultant or developer.  In the mid-80s I got into MS-DOS software
+development and during the last five years I have programmed mainly in C.
+<p> 
+In late 1989 I found myself in California, having just returned from
+18 months in Europe, and was broke.  The idea of getting a job and
+being a wage-slave for the rest of my life did not appeal to me.
+Instead I resolved to develop and publish software for a living.  I
+managed to eke out a a bare existence while developing software on
+others' PCs, and during 1989-92 I created four C function libraries
+(these are tools useful to C programmers) and three application
+programs: a Maya calendrical conversion program, Timewave Zero
+(illustrating Terence McKenna's theory of time and history) and some
+data encryption software.  The last incorporates an encryption method
+which I developed during 1990-92.
+<p> 
+Q5.  What are 'Psychedelic Monographs and Essays' and the 'Yearbook of
+Ethnomedicine and Consciousness Research'?  Who puts them out?  What
+is their audience?	Their content?
+<p>
+A5.  'Psychedelic Monographs and Essays' (published by Thomas Lyttle,
+first issued in 1985) evolved from the 'Psychozoic Press' (published
+by Elvin D. Smith, first issued in 1982).  Both were/are collections
+of essays and informative material dealing with all aspects of
+psychedelics and psychoactive plants and fungi, with occasional
+articles about psychedelic researchers and their work.	The latest
+volume of Psychedelic Monographs and Essays is #6, and has articles
+classified under the headings of Spirituality, Psychotherapy,
+Literature, Parapsychology and Pharmacology.  It is available from
+PM&E Publishing, P.O. Box 4465, Boynton Beach, FL 33424, for $20.00
+postpaid within the U.S., $27.00 outside the U.S.
+<p> 
+The 'Yearbook of Ethnomedicine and Consciousness Research' is similar.
+It is edited by the German anthropologist Dr. Christian Raetsch and
+contains some articles in English and some in German.  The first
+volume was published in late 1992.	It is available from the publisher,
+Amand Aglaster, VWB, Postfach 11 03 68, 1000 Berlin 61, Germany.
+<p> 
+Q6.  How did you get into psychedelic research?  DMT research?
+<p> 
+A6.  My initial awareness of the existence of psychedelics came from
+reading Aldous Huxley's 'Doors of Perception' in 1966.  I knew
+immediately that this was a field of research I wished to explore.	My
+opportunity came a few months later when an artist friend in Melbourne
+informed me that some LSD had shown up.  It was probably synthesized
+locally, and was quite impure, but blew me away.  Life has never been
+the same since.
+<p> 
+I know of nothing more interesting and worthy of study than the
+multitude of conscious states available through the use of psychedelics.
+Had psychedelic research not been made illegal (this is itself a crime
+against humanity) I would presumably have pursued my biochemical/-
+psychological/philosophical studies under the auspices of academia.
+Instead I abandoned the academic world for the study of Tibetan
+Buddhism in India and later got into software development in the U.S.
+and in Europe.	But I have never ceased to do psychedelics occasionally,
+and sometimes frequently, garnering such information and understanding
+as I can under the circumstances.
+<p> 
+A couple of years after I began doing acid I discovered the delights
+of marijuana and hashish, which subject I researched enthusiastically
+in Asia beginning in 1971 (when the hash shops in Kathmandu were still
+open and legal, before they were closed down at the insistence of the
+U.S. Government).  Morning glory seeds in 1974.  In 1978 I discovered
+psilocybin mushrooms at Palenque in Mexico.  In 1983 MDMA in Berkeley.
+In 1987 DMT in Hawaii.	In 1988 Ketamine in Switzerland.  In 1990
+5-MeO-DMT in Berkeley.
+<p>
+My interest in DMT arose from hearing Terence McKenna speak of it in
+some of his taped talks (especially his <em><a href="t_thc.htm">
+Tryptamine Hallucinogens and Consciousness</a></em>).  My first experience 
+with it was pretty strange; on my second I thought I was dying.  My 
+initial encounter on DMT with the alien entities did not come until two 
+years later. As Terence has said, and which I can confirm, the DMT 
+experience is the weirdest thing you can experience this side of the 
+grave.  The rational mind retreats in utter disbelief when confronted 
+with it.  Thus I resolved to research the topic, which I did during 
+1990-91 in Berkeley, where I had access to the Biosciences Library at 
+U.C. Berkeley.  I gathered reports from those few people I knew who had 
+smoked it, and the article which resulted appeared simultaneously in each 
+of the journals mentioned above.
+<p>
+The blurb for Timewave Zero:
+<p>
+This software illustrates Terence McKenna's theory of time,
+history and the end of history as first described in the book
+'The Invisible Landscape' by him and his brother Dennis, and more
+recently in his 'The Archaic Revival' (HarperSanFrancisco, 1992)
+The theory of Timewave Zero was revealed to Terence by an alien
+intelligence following a bizarre, quasi-psychedelic experiment
+conducted in the Amazon jungle in Colombia in 1971.  Inspired by
+this influence Terence was instructed in certain transformations
+of numbers derived from the King Wen sequence of I Ching hexagrams.
+This led eventually to a rigorous mathematical description of
+what Terence calls the timewave, which correlates time and
+history with the ebb and flow of novelty, which is intrinsic to
+the structure of time and hence of the temporal universe.  A
+peculiarity of this correlation is that at a certain point a
+singularity is reached which is the end of history - or at least
+is a transition to a supra-historical order in which our ordinary
+conceptions of our world will be radically transformed.  The
+best current estimate for the date of this point is December 21,
+2012 CE, the winter solstice of that year and also the end of the
+current era in the Maya calendar.
+<p> 
+The primary function of the software is to display any portion of
+the timewave (up to seven billion years) as a graph of the
+timewave related to the Western calendar (either Gregorian or
+Julian).  You can display the wave for the entire 4.5-billion-year
+history of the Earth, note the peculiarities of the wave at such
+points as the time of the extinction of the dinosaurs (65 million
+years ago) and inspect parts of the wave as small as 92 minutes.
+The software provides several ways of manipulating the wave display,
+including the ability to zoom in on a target date or to step back
+to get the larger picture.
+<p>
+A remarkable quality of the timewave is that it is a fractal.
+Once a part of the wave is displayed the software allows you to
+expand any smaller part (down to 92 minutes).  This usually
+reveals a complexity of structure which persists however much the
+wave is magnified, a property typical of fractals.  The idea that
+time has a fractal structure (in contrast to the Newtonian
+conception of time as pure, unstructured duration) is a major
+departure from the common view of the nature of time and physical
+reality.  That time is a fractal may be the reason why fractals
+occur in Nature.
+<p> 
+The documentation describes the origin, construction and
+philosophical significance of the timewave, the use of the
+software, the mathematical definition of the timewave (with
+proofs of some related mathematical theorems) and certain curious
+numerical properties.
+<p>
+An interesting part of the theory is the assertion of historical
+periods 'in resonance' with each other.  Resonantly we have (in
+1993) emerged from the fall of the Roman empire and are well into
+the transitional period known historically as the Dark Ages.  The
+software permits graphical display of different regions of the
+timewave that are in resonance with each other.  This allows the
+period 1945 - 2012 to be interpreted as a resonance of the period
+2293 BC - 2012 CE.  New in this version is the ability to graph
+trigrammatic resonances in addition to the major resonances, and
+to construct a sequential set of eleven trigrammatic resonances.
+There is a new appendix concerning some recent mathematical results.
+<p>
+The Timewave Zero software at last permits a scientific examination
+of Terence's long-standing claim to have discovered the root cause
+of the ups and downs of historical vicissitude. If his theory is
+confirmed then we can look forward to a rough, but very interesting,
+ride in the twenty years leading up to the climactic end-point of
+history in 2012.  During this time the events of the period from
+745 CE are expected to recur (albeit in modern form).
+<p>
+Timewave Zero software is available as
+<a href="http://www.bluewaterp.com/~bcrissey/mckenna.html#103">
+Time Explorer for DOS</a> or
+<a href="http://www.bluewaterp.com/~bcrissey/mckenna.html#101">
+Time Surfer for Mac</a>
+<p align=center><a href="http://serendipity.magnet.ch/" target="remotes">Visit Peter Meyer's Serendipity</a></p>
+</blockquote><p align=right>
+<a href="mckenna.htm#int"><font size="+1">Terence McKenna Land</font></a><br>
+<a href="index.html">The Deoxyribonucleic Hyperdimension</a>
+</blockquote><br clear=all>
+
+<div id=_footer>
+<div id=tabl style=top:0px;width:100%;margin:0px;margin-bottom:0px;>
+<table width="100%" border="0" cellspacing="0" cellpadding="4" align="center">
+
+<script type="text/javascript">
+function resizeMC(mode) {
+ var t = document.getElementById('mc')
+ var h = t.offsetHeight
+ var d = 440
+ if (mode == 'inc') h = h + 50
+ if (mode == 'dec') h = h - 50
+ if (mode == 'set') h = d
+ t.style.height = h + 'px'
+ if (h < 390) { h = d }
+ setCookie('fh',h,mcCookieExpires,'/')
+}
+var fh = getCookie('fh')
+var mcCookieExpires = new Date()
+mcCookieExpires.setTime(mcCookieExpires.getTime() + 365 * 24 * 60 * 60 * 1000)
+mcCookieExpires.toGMTString()
+
+function gomc(what) {
+ var whereto = what.options[what.selectedIndex].value;
+ if (whereto)
+  parent.mc.location.href = whereto;
+}
+document.write('<form target="mc" name="xJump">');
+</script><noscript>
+<form action="http://deoxy.org/cgi/jump.pl" target="mc" name="xJump">
+</noscript>
+
+<tr bgcolor="#111111"><td>
+
+<table width=100% cellspacing="0" cellpadding="4" border="0">
+<tr bgcolor="#222222">
+
+<td background="img/thin_horizontal_lines.gif">
+
+<font color="#888888" size="-2"><a
+ href="index.html" title="deoxy.org" rel=nofollow><b><font color="#888888">DEOXY</font></b></a> &nbsp; <font size="-3">&gt;</font>
+
+&nbsp; <a
+ href="contact.html" target=mc title=contact rel=nofollow><font color=#aaaaaa>CONTACT</font></a>
+
+ &#183; <a
+ href="news/frame.htm" target="mc" title="view news here" rel=nofollow><font color="#aaaaaa">NEWS</font></a>
+
+ &#183; <a
+ href="http://deoxy.org/vid" target="mc" title="watch video here" rel=nofollow><font color="#aaaaaa">VIDEO</font></a> : <a 
+ href="http://deoxy.org/videx?pop=1" target="mc" title="list new video" rel=nofollow><font color="#aaaaaa">NEW</font></a>&mdash;<a
+ href="http://deoxy.org/videx?pop=1&seen=1" target="mc" title="recently watched video" rel=nofollow><font color="#aaaaaa">WATCHED</font></a>&mdash;<a
+ href="http://deoxy.org/videx?pop=1&rand=1" target="mc" title="random video list" rel=nofollow><font color="#aaaaaa">RANDOM</font></a>
+</font></td>
+
+<td align="center" background="img/thin_horizontal_lines.gif">
+<font color="#888888" size="-2"><INPUT
+ type="button" class="button" value="&lt;" id=mcback title="rewind frame"><INPUT
+ type="button" class="button" value="&gt;" onClick="parent.mc.history.forward()" title="frame forward">
+<select name="to" class="select" onChange="gomc(this)" onDblClick="gomc(this)">
+<option value="http://deoxy.org/time/d2k/acalc/index.htm">Astro</option>
+<option value=http://deoxy.org/chatr>Chatter</option>
+<option value="http://deoxy.org/find#code">Cloud</option>
+<option value=http://deoxy.org/chatcloud?s=1>&nbsp;|_Chat</option>
+<option value="http://deoxy.org/topicloud?target=_blank">&nbsp;|_Topics</option>
+<option value="http://deoxy.org/vidcloud?s=1&m=1&small=1&js=1">&nbsp;|_Video</option>
+<option value="http://deoxy.org/news/cloud?n=10&m=1&s=1&t=_blank">&nbsp;|_News</option>
+<option value="http://deoxy.org/news/cloud/today?n=5&m=1&s=1&t=_blank">&nbsp;\__Today</option>
+<option value="http://deoxy.org/colors">Colors</option>
+<option value="http://deoxy.org/contact" selected>Contact</option>
+<option value="http://deoxy.org/find?target=_blank">Find</option>
+<!-- option value="http://deoxy.org/chat/java.htm">IRC</option -->
+<option value="http://deoxy.org/map">Map</option>
+<option value="http://deoxy.org/searchbot">Search</option>
+<option value="http://deoxy.org/time/d2k/today3.htm">Today</option>
+<option value="http://deoxy.org/vid">Video</option>
+</select>
+
+</font></td></form>
+
+<td align="right" nowrap background="img/thin_horizontal_lines.gif" width=100>
+<font color="#888888" size="-1">
+<!-- a href="/axis_dd.htm" target=mc><font color="#aaaaaa" title=off rel=nofollow>x</font></a -->&nbsp;
+<a onclick=resizeMC('dec')><font color="#aaaaaa" title=shrink>&ndash;</font></a>&nbsp;
+<a onclick=resizeMC('inc')><font color="#aaaaaa" title=grow>+</font></a>&nbsp;
+<a onclick=resizeMC('set')><font color="#444444" title="reset height">o</font></a>&nbsp;
+<a
+ href="chatr.html" target=cbWin rel=nofollow
+ onclick="if (mc.location.href.match(/chatr/)) { mc.location.href='http://deoxy.org/axis_dd.htm' } chatterWindow(); return false;"
+ title="open chatter window"><font color="#aaaaaa">^</font></a>&nbsp;
+
+</font></td></tr>
+
+<tr><td colspan=3>
+
+<script type="text/javascript">
+document.write('<iframe src="http://deoxy.org/')document.write('img/d3/index.htm')document.write('" style="width:100%;height:')
+
+if (fh) {
+ document.write(fh)
+} else {
+ document.write('440')
+}
+document.write('px;padding:0px;margin:0px;" frameborder=0 border=0 id=mc name=mc>embed requires iframes</iframe>')
+
+document.getElementById('mcback').onclick = function () {
+ if (window.frames['mc'].location.hash !== '#mcstop') {
+  window.history.back()
+ }
+ return false
+}
+window.frames['mc'].onload = function () {
+ this.location.hash = 'mcstop'
+}
+</script>
+
+<noscript><iframe
+ src="axis_dd.htm"
+ style="width:100%;height:440px;padding:0px;margin:0px;"
+ frameborder=0 border=0 id=mc name=mc>
+embed requires iframes</iframe></noscript>
+
+</td></tr></table></td></tr></table></div>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+<tr bgcolor="#202020">
+<td width="33%" background="img/vortex0b.gif">&nbsp;
+&nbsp;<a
+ onclick=resizeMC('dec')><font color="#aaaaaa" title=shrink>&ndash;</font></a>&nbsp;&nbsp;<a
+ onclick=resizeMC('inc')><font color="#666666" title=grow>+</font></a>&nbsp;&nbsp;<a
+ onclick=resizeMC('set')><font color="#444444" title="reset height">o</font></a>
+</td>
+
+<td align="center">
+
+<table border="0" cellspacing="0" cellpadding="0" bgcolor="#000000" width=100%><tr>
+<td width="33%" bgcolor=#101010 background="gif/background2.jpg">&nbsp;</td>
+
+<td align=center>
+
+<a href='t_peterm.htm#top'>
+<img src="gif/arrow_u.gif" style="width: 15px; height: 15px; 
+border: 0; margin-right: 10px; margin-left: 10px;" alt="top"  /></a>
+
+</td>
+
+<td width="33%" bgcolor=#101010 background="gif/background2.jpg">&nbsp;
+
+</td></tr></table>
+
+</td>
+
+<td width='33%' align='right' valign='middle' background="img/vortex0b.gif"><!-- a 
+ href="http://deoxy.org/meme/Perl"><img
+ src="http://deoxy.org/img/perlpower.gif" 
+ width="80" height="15" border="0" vspace=0></a>&nbsp;--><a name=end
+ href="rss.html"><img
+ src="img/rss2.gif"
+ width="80" height="15" border="0" vspace=0></a>&nbsp;</td>
+</tr></table></div>
+<script type="text/javascript">
+
+
+if (self == top) {
+ var links = document.getElementsByTagName('a')
+ for (var i=0; i<links.length; i++) {
+  var t = links[i].getAttribute('target')
+  if (t == 'remotes') {
+   links[i].setAttribute('target','_top')
+  }
+ }
+}
+</script>
+</body>
+</html>

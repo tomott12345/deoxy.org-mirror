@@ -1,0 +1,33 @@
+.input {
+ font-size: 13px;
+ background-color: #555555;
+ color: #dddddd;
+ border: 1px solid #777777;
+}
+.inputr {
+ font-size: 13px;
+ background-color: #555555;
+ color: #dddddd;
+ border: 1px solid #777777;
+ margin-right: 4px;
+ margin-left: 4px;
+}
+.button {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 11px;
+ background-color: #555555;
+ color: #dddddd;
+ margin-right: 4px;
+ margin-left: 4px;
+ border: 1px solid #777777;
+}
+.select {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 11px;
+ background-color: #555555;
+ color: #dddddd;
+ border: 1px solid #777777;
+}
+.iframe {
+ background-color: #ffffff;
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+  <rss version="2.0">
+  <channel>
+  <title>random koan from deoxy.org</title>
+  <link>http://deoxy.org/koan/random</link>
+  <description>&quot;A koan is a story, dialog, question, or statement in the history and lore of Chan (Zen) 
+Buddhism, generally containing aspects that are inaccessible to rational understanding, yet that may be 
+accessible to intuition.&quot; -- http://search.cpan.org/~lukec/Zen-Koans</description>
+  <language>en-us</language>
+  <item>
+    <title>Time to Die</title>
+    <link>http://deoxy.org/koan/85</link>
+    <description>Ikkyu, the Zen master, was very clever even as a boy. His teacher had a precious teacup, a rare antique. Ikkyu happened to break this cup and was greatly perplexed. Hearing the footsteps of his teacher, he held the pieces of the cup behind him. When the master appeared, Ikkyu asked: &quot;Why do people have to die?&quot;
+&quot;This is natural,&quot; explained the older man. &quot;Everything has to die and has just so long to live.&quot;
+Ikkyu, producing the shattered cup, added: &quot;It was time for your cup to die.&quot;
+</description>
+  </item>
+  </channel>
+</rss>

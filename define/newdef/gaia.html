@@ -1,0 +1,77 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>New</title>
+<link rel="stylesheet" type="text/css" href="../../_includes/css/deoxy.org.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body link="#ffffff" alink="#FF00ff" vlink="#ffffff" bgcolor="#000000" text="#C0C0C0">
+<blockquote>
+<form method="get" action="../../def/index.htm">
+<p><big>Add a new definition to deoxyHyperdictionary.</big><br>
+Use these <a href="gaia.html#markup">markup tags</a> to format text and make links.
+<p>Word or phrase <small>(valid characters include letters, numbers, space and -)</small><br>
+<input type="Text" name="define" size="64" value="gaia"><br>
+<p>
+Definition<br><textarea name="definition" cols="80" rows="20" wrap="VIRTUAL"></textarea>
+<p>
+Source<br><textarea name="source" cols="80" rows="5" wrap="VIRTUAL"></textarea>
+<p>
+<input type="Submit" name="op" value="add"></form><p><a name="markup"></a>
+<big><big><big>Markup syntax</big></big></big><br>
+<table border=1 cellpadding=3 cellspacing=0 width=600>
+
+<tr><td colspan=2 bgcolor="#303030"><big><big>Format text</td></tr>
+
+<tr>
+<td><pre>[b|text] or [i|text]</pre></td>
+<td>bold or italic, use for any symmetric html tags, can be nested.</td></tr>
+
+<tr>
+<td><pre>
+&lt;bq> and &lt;/bq> or
+[bq] and [/bq]</td>
+<td>blockquote</td></tr>
+
+<tr>
+<td><pre>&lt;nb> or [nb]</td>
+<td>&amp;nbsp;</td></tr>
+
+<tr>
+<td><pre>&lt;hr> or [hr]</td>
+<td><hr></td></tr>
+
+<tr>
+<td><pre>--</td>
+<td>&#151;</td></tr>
+
+<tr><td colspan=2 bgcolor="#303030"><big><big>Link to web resources</td></tr>
+
+<tr>
+<td><pre>
+[site://document.htm]
+[site://document.htm|text]</pre></td>
+<td>Link to http://deoxy.org/document.htm as either <a href="http://deoxy.org/document.htm">document.htm</a> or <a href="http://deoxy.org/document.htm">text</a>. The following tags work in a similar way.</td></tr>
+
+<tr>
+<td><pre>
+[google://keyword]
+[google://keyword|text]</pre></td>
+<td>Search google for keyword</td></tr>
+
+<tr>
+<td><pre>
+[dict://keyword]
+[dict://keyword|text]</pre></td>
+<td>Search <a href="http://dict.org">dict.org</a> for keyword</td></tr>
+
+
+<tr>
+<td><pre>
+[wiki://keyword]
+[wiki://keyword|text]</pre></td>
+<td>Search <a href="http://wikipedia.org">wikipedia.org</a> for keyword</td></tr>
+
+</table></blockquote></body></html>
