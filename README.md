@@ -1,9 +1,6 @@
 # deoxy.org-mirror
 
-building the most complete deoxy.org mirror possible...
-
-
-## README
+"building the most complete deoxy.org mirror possible...""
 
 This repo is intended to be the most complete Deoxy.org mirror that can be cobbled together from many different mirror sites. There are missing scripts, files, etc. but the goal is to build the most complete site possible from right before website author dimitri took Deoxy.org off the Internet. Feel free to download and host but try to keep it as pristine as possible.
 
